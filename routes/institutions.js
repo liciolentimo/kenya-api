@@ -1,4 +1,7 @@
+// routes/institutions.js
+
 const express = require('express');
+const router = express.Router();
 const {
   getAllInstitutions,
   getInstitutionById,
@@ -7,12 +10,13 @@ const {
   searchInstitutions,
 } = require('../controllers/institutionsController');
 
-const router = express.Router();
-
-router.get('/', getAllInstitutions);
+// Static/named paths FIRST
 router.get('/search', searchInstitutions);
 router.get('/county/:county_id', getInstitutionsByCounty);
 router.get('/type/:type', getInstitutionsByType);
+
+// Wildcard LAST
+router.get('/', getAllInstitutions);
 router.get('/:id', getInstitutionById);
 
 module.exports = router;
