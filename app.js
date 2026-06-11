@@ -5,6 +5,7 @@ const holidaysRouter = require('./routes/holidays');
 const populationRouter = require('./routes/population');
 const exchangeRatesRouter = require('./routes/exchangeRates');
 const institutionsRouter = require('./routes/institutions');
+const constituenciesRouter = require('./routes/constituencies');
 const notFound = require('./middleware/notFound');
 const errorHandler = require('./middleware/errorHandler');
 
@@ -18,6 +19,7 @@ app.use('/api/v1/holidays', holidaysRouter);
 app.use('/api/v1/population', populationRouter);
 app.use('/api/v1/exchange-rates', exchangeRatesRouter);
 app.use('/api/v1/institutions', institutionsRouter);
+app.use('/api/v1/constituencies', constituenciesRouter);
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
