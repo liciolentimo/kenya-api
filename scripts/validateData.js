@@ -207,6 +207,7 @@ function run() {
     ok = false;
   }
 
+  // 21–24: university checks
   // 21. institutions.json has at least 41 universities
   const universities = institutions.filter((i) => i.type === 'University');
   if (universities.length >= 41) {
@@ -243,6 +244,38 @@ function run() {
     logPass('No duplicate university initials found');
   } else {
     logFail('Duplicate university initials: ' + Array.from(new Set(dupInitials)).join(', '));
+    ok = false;
+  }
+
+  // 25–27: TVET checks
+  const tvetTypes = ['Technical and Vocational College (TVET)', 'National Polytechnic'];
+  const tvets = institutions.filter((i) => tvetTypes.includes(i.type));
+
+  // 25. At least 600 TVET institutions
+  if (tvets.length >= 600) {
+    logPass(`institutions.json contains ${tvets.length} TVET institutions (≥ 600)`);
+  } else {
+    logFail(`expected at least 600 TVET institutions, found ${tvets.length}`);
+    ok = false;
+  }
+
+  // 26. Every TVET has a non-empty county_name
+  const missingTvetCountyName = tvets.filter((t) => !t.county_name);
+  if (missingTvetCountyName.length === 0) {
+    logPass('All TVET institutions have a non-empty county_name');
+  } else {
+    logFail('Some TVET institutions are missing county_name:');
+    missingTvetCountyName.forEach((t) => console.error(`  id=${t.id} name="${t.name}"`));
+    ok = false;
+  }
+
+  // 27. Every TVET county_id maps to a valid county
+  const invalidTvetCounty = tvets.filter((t) => !countyIds.has(t.county_id));
+  if (invalidTvetCounty.length === 0) {
+    logPass('All TVET county_id values match a county in counties.json');
+  } else {
+    logFail('Some TVET institutions reference invalid county_id values:');
+    invalidTvetCounty.forEach((t) => console.error(`  id=${t.id} name="${t.name}" county_id=${t.county_id}`));
     ok = false;
   }
 

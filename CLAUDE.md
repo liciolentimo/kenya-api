@@ -109,13 +109,15 @@ https://kenya-api.netlify.app/api/v1
 ### Educational Institutions
 | Method | Path                                          | Description                                        |
 |--------|-----------------------------------------------|----------------------------------------------------|
-| GET    | `/api/v1/institutions`                        | List institutions with optional pagination/filters |
-| GET    | `/api/v1/institutions/universities`           | All universities (?category, ?county_id)           |
-| GET    | `/api/v1/institutions?initials=UON`           | Filter by initials                                 |
-| GET    | `/api/v1/institutions/:id`                    | Single institution by ID                           |
-| GET    | `/api/v1/institutions/county/:county_id`      | Institutions in a specific county                  |
-| GET    | `/api/v1/institutions/type/:type`             | Institutions by type (University, TVET, etc.)      |
-| GET    | `/api/v1/institutions/search?q=term`          | Search institutions by name, county, or address    |
+| GET    | `/api/v1/institutions`                            | List institutions with optional pagination/filters |
+| GET    | `/api/v1/institutions/universities`               | All universities (?category, ?county_id)           |
+| GET    | `/api/v1/institutions/tvets`                      | All TVET institutions (?subtype, ?county_id)       |
+| GET    | `/api/v1/institutions/tvets?subtype=polytechnic`  | National Polytechnics only                         |
+| GET    | `/api/v1/institutions?initials=UON`               | Filter by initials                                 |
+| GET    | `/api/v1/institutions/:id`                        | Single institution by ID                           |
+| GET    | `/api/v1/institutions/county/:county_id`          | Institutions in a specific county                  |
+| GET    | `/api/v1/institutions/type/:type`                 | Institutions by type (University, TVET, etc.)      |
+| GET    | `/api/v1/institutions/search?q=term`              | Search institutions by name, county, or address    |
 
 ### Ministries
 | Method | Path                                      | Description                                        |
@@ -289,6 +291,7 @@ County descriptions: one-sentence factual summaries synthesised from official co
 - **Population**: Kenya National Bureau of Statistics (2019 Census) — sourced April 2026
 - **Exchange Rates**: Central Bank of Kenya (CBK) indicative rates — last seeded April 2026
 - **Public Universities**: Commission for University Education (CUE) — 41 accredited institutions as of 2025
+- **TVET Institutions**: TVETA Kenya — 613 accredited institutions across all 47 counties (2025)
 
 ---
 

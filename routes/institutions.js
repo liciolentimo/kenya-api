@@ -9,11 +9,13 @@ const {
   getInstitutionsByType,
   searchInstitutions,
   getUniversities,
+  getTVETs,
 } = require('../controllers/institutionsController');
 
 // Static/named paths FIRST
 router.get('/search', searchInstitutions);
 router.get('/universities', getUniversities);
+router.get('/tvets', getTVETs);
 router.get('/county/:county_id', getInstitutionsByCounty);
 router.get('/type/:type', getInstitutionsByType);
 

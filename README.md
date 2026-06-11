@@ -63,6 +63,8 @@ No API key or authentication required.
 |--------|------|-------------|
 | GET | `/api/v1/institutions` | All institutions (supports pagination and filters) |
 | GET | `/api/v1/institutions/universities` | All universities (filter by `?category`, `?county_id`) |
+| GET | `/api/v1/institutions/tvets` | All TVET institutions (filter by `?subtype`, `?county_id`) |
+| GET | `/api/v1/institutions/tvets?subtype=polytechnic` | National Polytechnics only |
 | GET | `/api/v1/institutions?initials=UON` | Lookup institution by initials |
 | GET | `/api/v1/institutions/:id` | Single institution by ID |
 | GET | `/api/v1/institutions/county/:county_id` | Institutions in a specific county |
@@ -70,6 +72,8 @@ No API key or authentication required.
 | GET | `/api/v1/institutions/search?q=term` | Search by name, county, or address |
 
 > University data covers all 41 public universities accredited by the Commission for University Education (CUE) as of 2025. Each entry includes the official initials, county location, and website.
+
+> TVET data covers 613 public institutions including National Polytechnics, Technical Training Institutes, and Vocational Training Centers accredited by TVETA as of 2025.
 
 ### Ministries
 | Method | Path | Description |

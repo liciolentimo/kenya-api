@@ -135,6 +135,35 @@ async function searchInstitutions(req, res, next) {
   });
 }
 
+async function getTVETs(req, res) {
+  const { category, county_id, subtype } = req.query;
+  const tvetTypes = ['Technical and Vocational College (TVET)', 'National Polytechnic'];
+  let result = institutions.filter((i) => tvetTypes.includes(i.type));
+
+  if (subtype === 'polytechnic') {
+    result = result.filter((i) => i.type === 'National Polytechnic');
+  } else if (subtype === 'tvc') {
+    result = result.filter((i) => i.type === 'Technical and Vocational College (TVET)');
+  }
+
+  if (category) {
+    result = result.filter((i) => i.category.toLowerCase() === category.toLowerCase());
+  }
+
+  if (county_id) {
+    result = result.filter((i) => i.county_id === parseInt(county_id, 10));
+  }
+
+  result.sort((a, b) => a.name.localeCompare(b.name));
+
+  res.status(200).json({
+    success: true,
+    count: result.length,
+    accreditor: 'Technical and Vocational Education and Training Authority (TVETA)',
+    data: result,
+  });
+}
+
 async function getUniversities(req, res) {
   const { category, county_id } = req.query;
   let result = institutions.filter((i) => i.type === 'University');
@@ -164,4 +193,5 @@ module.exports = {
   getInstitutionsByType,
   searchInstitutions,
   getUniversities,
+  getTVETs,
 };
