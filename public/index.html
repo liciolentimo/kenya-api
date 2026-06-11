@@ -388,7 +388,7 @@
             <span class="terminal-dot"></span>
           </div>
           <div class="terminal-body">
-            <code>curl https://localhost:3000/api/v1/counties<span class="cursor"></span></code>
+            <code>curl https://kenya-api.netlify.app/api/v1/counties<span class="cursor"></span></code>
           </div>
         </div>
       </div>
@@ -573,9 +573,9 @@
   </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+  <script src="config.js"></script>
   <script>
     (function(){
-      const API_ROOT = 'http://localhost:3000/api/v1';
       const GEOJSON_URL = 'https://raw.githubusercontent.com/mikelmaron/kenya-election-data/master/data/counties.geojson';
       const map = L.map('kenya-map', {
         zoomControl: true,
@@ -685,7 +685,7 @@
         panelPopulation.textContent = population ? formatPopulation(population) : '—';
         panelConstituencies.textContent = constituencies.length || '—';
         panelInstitutions.textContent = institutions.length || '—';
-        panelApiLink.href = `${API_ROOT}/counties/${county.id}`;
+        panelApiLink.href = `${API_BASE}/counties/${county.id}`;
         panelTagList.innerHTML = '';
         constituencies.slice(0, 12).forEach((item) => {
           const tag = document.createElement('div');
@@ -706,10 +706,10 @@
 
       function loadMapData() {
         return Promise.all([
-          fetch(`${API_ROOT}/counties`).then((res) => res.json()),
-          fetch(`${API_ROOT}/constituencies`).then((res) => res.json()),
-          fetch(`${API_ROOT}/population/counties`).then((res) => res.json()),
-          fetch(`${API_ROOT}/institutions`).then((res) => res.json()).catch(() => ({ data: [] })),
+          fetch(`${API_BASE}/counties`).then((res) => res.json()),
+          fetch(`${API_BASE}/constituencies`).then((res) => res.json()),
+          fetch(`${API_BASE}/population/counties`).then((res) => res.json()),
+          fetch(`${API_BASE}/institutions`).then((res) => res.json()).catch(() => ({ data: [] })),
         ])
         .then(([countiesRes, constituenciesRes, populationRes, institutionsRes]) => {
           const counties = (countiesRes.data || []);

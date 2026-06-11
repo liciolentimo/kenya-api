@@ -64,7 +64,7 @@ kenya-api/
 ## API Base URL
 
 ```
-http://localhost:3000/api/v1
+https://kenya-api.netlify.app/api/v1
 ```
 
 ---

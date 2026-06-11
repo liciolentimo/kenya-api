@@ -22,7 +22,7 @@ npm install
 npm start
 ```
 
-The API listens on `http://localhost:3000` by default.
+The API is live at `https://kenya-api.netlify.app`.
 
 ## Endpoints
 
@@ -37,5 +37,5 @@ The API listens on `http://localhost:3000` by default.
 
 ## Documentation
 
-- HTML docs: `http://localhost:3000/docs`
+- HTML docs: `https://kenya-api.netlify.app/docs`
 - Markdown docs: `API_DOCS.md`
