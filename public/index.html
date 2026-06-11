@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
   <style>
     :root {
       color-scheme: dark;
@@ -120,6 +121,218 @@
       .stats-row { grid-template-columns: 1fr; }
       .cta-group { flex-direction: column; }
     }
+    .map-section {
+      padding: 80px 0;
+    }
+
+    .map-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 24px;
+      align-items: start;
+      margin-top: 40px;
+    }
+
+    .map-wrapper {
+      position: relative;
+      border: 1px solid #30363D;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #0D1117;
+    }
+
+    #kenya-map {
+      height: 580px;
+      width: 100%;
+      background: #0D1117;
+    }
+
+    .leaflet-container {
+      background: #0D1117 !important;
+    }
+
+    .leaflet-tile-pane {
+      display: none;
+    }
+
+    .leaflet-control-attribution {
+      display: none;
+    }
+
+    .leaflet-control-zoom a {
+      background: #161B22 !important;
+      color: #ffffff !important;
+      border-color: #30363D !important;
+    }
+
+    .leaflet-control-zoom a:hover {
+      background: #00A550 !important;
+    }
+
+    .map-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #0D1117;
+      color: #8B949E;
+      gap: 12px;
+      z-index: 999;
+      transition: opacity 0.4s ease;
+    }
+
+    .map-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .map-spinner {
+      width: 32px;
+      height: 32px;
+      border: 3px solid #30363D;
+      border-top-color: #00A550;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .map-stats-panel {
+      background: #161B22;
+      border: 1px solid #30363D;
+      border-radius: 12px;
+      padding: 24px;
+      min-height: 420px;
+      position: sticky;
+      top: 80px;
+    }
+
+    .stats-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      min-height: 360px;
+      text-align: center;
+      color: #8B949E;
+      gap: 12px;
+    }
+
+    .placeholder-icon { font-size: 48px; }
+
+    .stats-content.hidden { display: none; }
+
+    .stats-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .stats-header h3 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .county-badge {
+      background: #0D2A1A;
+      color: #00A550;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      border: 1px solid #00A550;
+    }
+
+    .stats-hq {
+      color: #8B949E;
+      font-size: 13px;
+      margin: 4px 0 16px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .stat-card {
+      background: #0D1117;
+      border: 1px solid #30363D;
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 22px;
+      font-weight: 700;
+      color: #00A550;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: #8B949E;
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .constituency-section h4 {
+      font-size: 12px;
+      color: #8B949E;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 0 0 10px;
+    }
+
+    .constituency-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      max-height: 120px;
+      overflow-y: auto;
+    }
+
+    .constituency-tag {
+      background: #0D2A1A;
+      color: #00A550;
+      border: 1px solid rgba(0,165,80,0.3);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+    }
+
+    .api-link-btn {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 8px 16px;
+      border: 1px solid #00A550;
+      color: #00A550;
+      border-radius: 6px;
+      font-size: 12px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .api-link-btn:hover {
+      background: rgba(0,165,80,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .map-layout {
+        grid-template-columns: 1fr;
+      }
+      #kenya-map { height: 380px; }
+      .map-stats-panel { position: static; top: auto; }
+    }
   </style>
 </head>
 <body>
@@ -131,7 +344,8 @@
         <nav class="nav-links" aria-label="Primary navigation">
           <a class="nav-link" href="#docs">Docs</a>
           <a class="nav-link" href="#endpoints">Endpoints</a>
-<a class="nav-link" href="https://github.com/liciolentimo/kenya-api" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="nav-link" href="#map">Map</a>
+          <a class="nav-link" href="https://github.com/liciolentimo/kenya-api" target="_blank" rel="noreferrer">GitHub</a>
         </nav>
       </div>
     </header>
@@ -208,6 +422,54 @@
       </div>
     </section>
 
+    <section class="section" id="map">
+      <div class="section-eyebrow">EXPLORE KENYA</div>
+      <h2 class="section-title">Kenya by County</h2>
+      <p class="section-subtitle">Hover over any county to explore live data from KenyaAPI. Click to pin the stats panel.</p>
+
+      <div class="map-layout">
+        <div class="map-wrapper">
+          <div id="kenya-map"></div>
+          <div id="map-loading" class="map-loading">
+            <div class="map-spinner"></div>
+            <span>Loading map data...</span>
+          </div>
+        </div>
+
+        <div class="map-stats-panel" id="map-stats-panel">
+          <div class="stats-placeholder" id="stats-placeholder">
+            <div class="placeholder-icon">🗺️</div>
+            <p>Hover over a county to explore its live data.</p>
+          </div>
+          <div class="stats-content hidden" id="stats-content">
+            <div class="stats-header">
+              <h3 id="panel-name">—</h3>
+              <span class="county-badge" id="panel-code">—</span>
+            </div>
+            <p class="stats-hq">📍 <span id="panel-hq">—</span></p>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-value" id="panel-population">—</div>
+                <div class="stat-label">Population</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" id="panel-constituencies">—</div>
+                <div class="stat-label">Constituencies</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" id="panel-institutions">—</div>
+                <div class="stat-label">Institutions</div>
+              </div>
+            </div>
+            <div class="constituency-section">
+              <h4>Constituencies</h4>
+              <div id="panel-constituency-tags" class="constituency-tags"></div>
+            </div>
+            <a id="panel-api-link" href="#" target="_blank" class="api-link-btn">View API response ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="section" id="code-example">
       <h2 class="section-title">Sample Response</h2>
       <div class="code-card">
@@ -259,5 +521,257 @@
       }
     });
   </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+  <script>
+    (function(){
+      const API_ROOT = 'http://localhost:3000/api/v1';
+      const GEOJSON_URL = 'https://raw.githubusercontent.com/mikelmaron/kenya-election-data/master/data/counties.geojson';
+      const map = L.map('kenya-map', {
+        zoomControl: true,
+        minZoom: 5,
+        maxZoom: 12,
+        maxBounds: [[-5, 28], [6, 48]],
+      }).setView([0.5, 37.8], 6);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '',
+        maxZoom: 12,
+        minZoom: 5,
+      }).addTo(map);
+
+      const defaultStyle = {
+        color: '#4D6471',
+        weight: 1.5,
+        opacity: 1,
+        fillColor: '#0D1117',
+        fillOpacity: 0.5,
+      };
+      const highlightStyle = {
+        color: '#00A550',
+        weight: 2.5,
+        opacity: 1,
+        fillColor: '#082111',
+        fillOpacity: 0.65,
+      };
+      const selectedStyle = {
+        color: '#00F281',
+        weight: 3,
+        opacity: 1,
+        fillColor: '#04321D',
+        fillOpacity: 0.75,
+      };
+
+      let countiesById = {};
+      let constituenciesByCounty = {};
+      let populationByCounty = {};
+      let institutionsByCounty = {};
+      let pinnedLayer = null;
+      let geoJsonLayer = null;
+
+      const statsPlaceholder = document.getElementById('stats-placeholder');
+      const statsContent = document.getElementById('stats-content');
+      const panelName = document.getElementById('panel-name');
+      const panelCode = document.getElementById('panel-code');
+      const panelHq = document.getElementById('panel-hq');
+      const panelPopulation = document.getElementById('panel-population');
+      const panelConstituencies = document.getElementById('panel-constituencies');
+      const panelInstitutions = document.getElementById('panel-institutions');
+      const panelTagList = document.getElementById('panel-constituency-tags');
+      const panelApiLink = document.getElementById('panel-api-link');
+      const mapLoading = document.getElementById('map-loading');
+
+      function formatPopulation(n) {
+        if (n == null) return '—';
+        if (n >= 1000000) return (n / 1000000).toFixed(2) + 'M';
+        if (n >= 1000) return Math.round(n / 1000) + 'K';
+        return n.toString();
+      }
+
+      function formatNumber(n) {
+        return n != null ? n.toLocaleString() : '—';
+      }
+
+      function showPlaceholder() {
+        statsPlaceholder.style.display = 'flex';
+        statsContent.classList.add('hidden');
+      }
+
+      function showStats() {
+        statsPlaceholder.style.display = 'none';
+        statsContent.classList.remove('hidden');
+      }
+
+      function clearPanel() {
+        panelName.textContent = '—';
+        panelCode.textContent = '—';
+        panelHq.textContent = '—';
+        panelPopulation.textContent = '—';
+        panelConstituencies.textContent = '—';
+        panelInstitutions.textContent = '—';
+        panelTagList.innerHTML = '';
+        panelApiLink.href = '#';
+        showPlaceholder();
+      }
+
+      function getCountyDetails(code) {
+        return countiesById[code] || null;
+      }
+
+      function setPanelData(code) {
+        const county = getCountyDetails(code);
+        if (!county) {
+          clearPanel();
+          return;
+        }
+
+        const population = populationByCounty[code] && populationByCounty[code].population;
+        const constituencies = constituenciesByCounty[code] || [];
+        const institutions = institutionsByCounty[code] || [];
+
+        panelName.textContent = county.name;
+        panelCode.textContent = county.code || String(code).padStart(3, '0');
+        panelHq.textContent = county.capital || '—';
+        panelPopulation.textContent = population ? formatPopulation(population) : '—';
+        panelConstituencies.textContent = constituencies.length || '—';
+        panelInstitutions.textContent = institutions.length || '—';
+        panelApiLink.href = `${API_ROOT}/counties/${county.id}`;
+        panelTagList.innerHTML = '';
+        constituencies.slice(0, 12).forEach((item) => {
+          const tag = document.createElement('div');
+          tag.className = 'tag';
+          tag.textContent = item.name;
+          panelTagList.appendChild(tag);
+        });
+        showStats();
+      }
+
+      function hideLoading() {
+        mapLoading.classList.add('hidden');
+      }
+
+      function normalizeCountyCode(value) {
+        return Number(value) || null;
+      }
+
+      function loadMapData() {
+        return Promise.all([
+          fetch(`${API_ROOT}/counties`).then((res) => res.json()),
+          fetch(`${API_ROOT}/constituencies`).then((res) => res.json()),
+          fetch(`${API_ROOT}/population/counties`).then((res) => res.json()),
+          fetch(`${API_ROOT}/institutions`).then((res) => res.json()).catch(() => ({ data: [] })),
+        ])
+        .then(([countiesRes, constituenciesRes, populationRes, institutionsRes]) => {
+          const counties = (countiesRes.data || []);
+          countiesById = counties.reduce((acc, county) => {
+            acc[county.id] = county;
+            return acc;
+          }, {});
+
+          constituenciesByCounty = (constituenciesRes.data || []).reduce((acc, item) => {
+            acc[item.county_id] = acc[item.county_id] || [];
+            acc[item.county_id].push(item);
+            return acc;
+          }, {});
+
+          populationByCounty = (populationRes.data || []).reduce((acc, item) => {
+            acc[item.county_id] = item;
+            return acc;
+          }, {});
+
+          institutionsByCounty = (institutionsRes.data || []).reduce((acc, item) => {
+            acc[item.county_id] = acc[item.county_id] || [];
+            acc[item.county_id].push(item);
+            return acc;
+          }, {});
+        })
+        .catch((err) => {
+          console.error('Live API data load failed', err);
+          clearPanel();
+          hideLoading();
+        });
+      }
+
+      function getFeatureCode(feature) {
+        if (!feature || !feature.properties) return null;
+        return normalizeCountyCode(feature.properties.COUNTY_COD || feature.properties.COUNTY_COD) || normalizeCountyCode(feature.properties.COUNTY_COD);
+      }
+
+      function highlightLayer(layer) {
+        layer.setStyle(highlightStyle);
+        if (!layer.bringToFront) return;
+        layer.bringToFront();
+      }
+
+      function resetLayer(layer) {
+        if (layer === pinnedLayer) {
+          layer.setStyle(selectedStyle);
+          return;
+        }
+        geoJsonLayer.resetStyle(layer);
+      }
+
+      function updateLayerState(targetLayer, code) {
+        if (!targetLayer || !targetLayer.feature) return;
+        if (pinnedLayer && pinnedLayer !== targetLayer) {
+          geoJsonLayer.resetStyle(pinnedLayer);
+        }
+        if (pinnedLayer === targetLayer) {
+          pinnedLayer = null;
+          targetLayer.setStyle(defaultStyle);
+          clearPanel();
+          return;
+        }
+        pinnedLayer = targetLayer;
+        targetLayer.setStyle(selectedStyle);
+        setPanelData(code);
+      }
+
+      function onEachFeature(feature, layer) {
+        const code = getFeatureCode(feature);
+        const label = feature.properties.COUNTY_NAM || feature.properties.COUNTY_NAME || 'Unknown';
+        layer.bindTooltip(label, { sticky: true, offset: [0, -10], direction: 'top', opacity: 0.9 });
+
+        layer.on({
+          mouseover: () => {
+            highlightLayer(layer);
+            if (!pinnedLayer) {
+              setPanelData(code);
+            }
+          },
+          mouseout: () => {
+            if (!pinnedLayer) {
+              resetLayer(layer);
+              clearPanel();
+            }
+          },
+          click: () => {
+            updateLayerState(layer, code);
+          },
+        });
+      }
+
+      function loadGeoJson() {
+        return fetch(GEOJSON_URL)
+          .then((res) => res.json())
+          .then((data) => {
+            geoJsonLayer = L.geoJSON(data, {
+              style: defaultStyle,
+              onEachFeature,
+            }).addTo(map);
+            map.fitBounds(geoJsonLayer.getBounds(), { padding: [24, 24] });
+            hideLoading();
+          })
+          .catch((err) => {
+            console.error('GeoJSON load failed', err);
+            hideLoading();
+          });
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        clearPanel();
+        Promise.all([loadMapData(), loadGeoJson()]);
+      });
+    })();
+  </script>
 </body>
-</html>
