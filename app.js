@@ -1,0 +1,31 @@
+const express = require('express');
+const path = require('path');
+const countiesRouter = require('./routes/counties');
+const holidaysRouter = require('./routes/holidays');
+const populationRouter = require('./routes/population');
+const exchangeRatesRouter = require('./routes/exchangeRates');
+const notFound = require('./middleware/notFound');
+const errorHandler = require('./middleware/errorHandler');
+
+const app = express();
+
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/api/v1/counties', countiesRouter);
+app.use('/api/v1/holidays', holidaysRouter);
+app.use('/api/v1/population', populationRouter);
+app.use('/api/v1/exchange-rates', exchangeRatesRouter);
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+app.get('/docs', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'docs.html'));
+});
+
+app.use(notFound);
+app.use(errorHandler);
+
+module.exports = app;

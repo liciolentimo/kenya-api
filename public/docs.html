@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KenyaAPI Docs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: 'Inter', sans-serif;
+      background: #0D1117;
+      color: #FFFFFF;
+      --bg: #0D1117;
+      --surface: #161B22;
+      --surface-soft: #0D1724;
+      --accent: #00A550;
+      --text-muted: #8B949E;
+      --code-purple: #BB9AF7;
+      --border: #30363D;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; min-height: 100vh; background: var(--bg); color: #FFFFFF; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+    .navbar { position: sticky; top: 0; z-index: 30; background: rgba(13,17,23,0.98); border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; font-size: 1rem; font-weight: 800; letter-spacing: -0.03em; }
+    .brand .flag { font-size: 1.1rem; }
+    .top-links { display: flex; gap: 20px; align-items: center; }
+    .top-link { color: #C9D1D9; font-weight: 500; transition: color .2s ease; }
+    .top-link:hover { color: #FFFFFF; }
+    .drawer-toggle { display: none; border: 1px solid rgba(255,255,255,0.12); background: transparent; color: #FFFFFF; padding: 10px 14px; border-radius: 14px; cursor: pointer; }
+
+    .layout { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 24px; max-width: 1200px; margin: 0 auto; padding: 24px; }
+
+    .sidebar { position: sticky; top: 84px; align-self: start; height: calc(100vh - 104px); min-height: 450px; overflow-y: auto; padding: 22px; border: 1px solid var(--border); background: var(--surface); border-radius: 24px; }
+    .sidebar-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 24px; }
+    .sidebar-title { margin: 0; font-size: 1.05rem; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+    .version-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(0,165,80,0.15); color: var(--accent); padding: 8px 12px; border-radius: 999px; font-size: 0.82rem; font-weight: 700; }
+    .search-wrapper { position: relative; margin-bottom: 24px; }
+    .search-input { width: 100%; border-radius: 16px; border: 1px solid var(--border); background: rgba(255,255,255,0.04); color: #FFFFFF; font-size: 0.95rem; padding: 14px 16px; }
+    .search-input::placeholder { color: #8B949E; }
+    .groups { display: grid; gap: 18px; }
+    .group { border: 1px solid var(--border); border-radius: 18px; overflow: hidden; background: rgba(255,255,255,0.02); }
+    .group-header { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 18px; background: rgba(255,255,255,0.03); cursor: pointer; color: #FFFFFF; font-size: 0.95rem; font-weight: 700; }
+    .group-toggle { background: none; border: none; color: inherit; width: 100%; text-align: left; cursor: pointer; display: inline-flex; align-items: center; justify-content: space-between; }
+    .group-list { margin: 0; padding: 12px 0 14px; list-style: none; display: grid; gap: 4px; }
+    .group-list.collapsed { display: none; }
+    .group-item { margin: 0; opacity: 0; transform: translateY(8px); animation: fadeInUp .35s ease forwards; }
+    .sidebar-link { display: block; padding: 10px 18px; border-left: 4px solid transparent; border-radius: 0 12px 12px 0; color: #C9D1D9; font-size: 0.95rem; transition: background .2s ease, color .2s ease, border-color .2s ease; }
+    .sidebar-link:hover { background: rgba(255,255,255,0.05); color: #FFFFFF; }
+    .sidebar-link.active { background: rgba(0,165,80,0.14); color: #FFFFFF; border-color: var(--accent); }
+
+    .content { padding: 0; }
+    .content section { margin-bottom: 42px; }
+    .doc-header { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
+    .doc-header h1 { margin: 0; font-size: clamp(2.1rem, 3vw, 3rem); letter-spacing: -0.04em; }
+    .badge-pill { display: inline-flex; align-items: center; gap: 10px; border-radius: 999px; padding: 9px 16px; background: rgba(0,165,80,0.16); color: var(--accent); font-weight: 700; font-size: 0.85rem; }
+    .section-title { font-size: 1.7rem; margin: 0 0 18px; }
+    .section-copy { max-width: 760px; color: #C9D1D9; line-height: 1.75; margin: 0 0 20px; }
+
+    .panel { background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 24px; }
+    .panel-title { font-size: 1.1rem; margin: 0 0 16px; }
+    .code-panel { position: relative; background: #0B111A; border: 1px solid var(--border); border-radius: 18px; padding: 22px; overflow: hidden; }
+    .code-block { font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; line-height: 1.8; color: #C9D1D9; white-space: pre-wrap; word-break: break-word; }
+    .code-wrapper { position: relative; }
+    .copy-button { position: absolute; top: 14px; right: 14px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); color: #C9D1D9; padding: 8px 12px; border-radius: 999px; cursor: pointer; transition: background .2s ease; }
+    .copy-button:hover { background: rgba(255,255,255,0.12); }
+    .info-box { display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; border-radius: 18px; background: #0D2137; border: 1px solid rgba(0,126,255,0.18); color: #A5D8FF; }
+    .info-icon { width: 36px; height: 36px; border-radius: 50%; background: rgba(0,126,255,0.16); display: grid; place-items: center; color: #8EDBFF; font-weight: 700; }
+    .table-wrapper { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    th, td { text-align: left; padding: 14px 16px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    th { color: #C9D1D9; font-weight: 700; }
+    td { color: #E1E8F0; }
+    .endpoint-grid { display: grid; gap: 20px; }
+    .endpoint-card { border: 1px solid var(--border); border-radius: 22px; padding: 22px; background: var(--surface); }
+    .endpoint-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 16px; }
+    .method-badge { display: inline-flex; align-items: center; justify-content: center; padding: 8px 14px; border-radius: 999px; font-size: 0.82rem; font-weight: 700; color: #0D1117; background: #00A550; }
+    .endpoint-path { margin: 0; font-size: 1rem; color: #FFFFFF; font-weight: 700; }
+    .endpoint-desc { margin: 0 0 18px; color: #C9D1D9; line-height: 1.75; }
+    .params-table th:first-child, .params-table td:first-child { min-width: 120px; }
+    .try-button { border: 1px solid var(--accent); background: transparent; color: var(--accent); padding: 10px 16px; border-radius: 999px; cursor: pointer; font-weight: 700; transition: background .2s ease, color .2s ease; }
+    .try-button:hover { background: rgba(0,165,80,0.12); }
+    .try-panel { max-height: 0; opacity: 0; overflow: hidden; transform: translateY(-10px); transition: all .2s ease; margin-top: 16px; }
+    .try-panel.open { max-height: 800px; opacity: 1; transform: translateY(0); }
+    .try-panel-content { background: #0B111A; border: 1px solid var(--border); border-radius: 18px; padding: 20px; }
+    .response-label { font-size: 0.85rem; color: #8B949E; margin: 14px 0 8px; }
+    .token-key { color: #79C0FF; }
+    .token-string { color: #A5D6FF; }
+    .token-number { color: #FFA657; }
+    .token-boolean { color: #FF7B72; }
+    .token-brace { color: #FFFFFF; }
+    .token-punct { color: #C9D1D9; }
+
+    .footer { max-width: 1200px; margin: 0 auto; padding: 30px 24px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; color: #8B949E; font-size: 0.95rem; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; }
+    .footer-links a { color: #8B949E; }
+    .footer-links a:hover { color: #FFFFFF; }
+
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar { position: relative; top: auto; height: auto; max-height: none; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-inner { flex-wrap: wrap; }
+      .top-links { display: none; }
+      .drawer-toggle { display: inline-flex; }
+      .sidebar { position: fixed; inset: 0 0 0 0; width: 100%; max-width: 320px; transform: translateX(-110%); transition: transform .25s ease; z-index: 40; box-shadow: 24px 0 48px rgba(0,0,0,.35); }
+      .sidebar.open { transform: translateX(0); }
+      .layout { padding-top: 0; }
+      .content { padding-top: 20px; }
+      .footer { padding-bottom: 40px; }
+    }
+
+    @media (max-width: 560px) {
+      .section-title { font-size: 1.45rem; }
+      .copy-button { top: 10px; right: 10px; padding: 8px 10px; }
+    }
+
+    .nav-animate { animation: fadeInUp .45s ease forwards; opacity: 0; }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="/"><span class="flag">🇰🇪</span> KenyaAPI</a>
+      <div class="top-links">
+        <a class="top-link" href="/docs">Docs</a>
+        <a class="top-link" href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+      <button class="drawer-toggle" type="button" aria-expanded="false">Menu</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Documentation navigation">
+      <div class="sidebar-header">
+        <div>
+          <p class="sidebar-title"><span class="flag">🇰🇪</span> KenyaAPI Docs</p>
+        </div>
+        <span class="version-badge">v1.0.0</span>
+      </div>
+
+      <div class="search-wrapper">
+        <label class="visually-hidden" for="nav-search">Search docs</label>
+        <input id="nav-search" class="search-input" type="search" placeholder="Search docs..." autocomplete="off" />
+      </div>
+
+      <div class="groups">
+        <div class="group nav-animate" style="animation-delay: 0ms;">
+          <button class="group-header" type="button">
+            <span>GETTING STARTED</span>
+            <span>▾</span>
+          </button>
+          <ul class="group-list">
+            <li class="group-item"><a class="sidebar-link" href="#introduction">Introduction</a></li>
+            <li class="group-item"><a class="sidebar-link" href="#base-url">Base URL</a></li>
+            <li class="group-item"><a class="sidebar-link" href="#authentication">Authentication</a></li>
+            <li class="group-item"><a class="sidebar-link" href="#response-format">Response Format</a></li>
+            <li class="group-item"><a class="sidebar-link" href="#error-codes">Error Codes</a></li>
+          </ul>
+        </div>
+
+        <div class="group nav-animate" style="animation-delay: 30ms;">
+          <button class="group-header" type="button">
+            <span>ENDPOINTS</span>
+            <span>▾</span>
+          </button>
+          <ul class="group-list">
+            <li class="group-item"><a class="sidebar-link" href="#counties">Counties</a></li>
+            <li class="group-item"><a class="sidebar-link" href="#constituencies">Constituencies</a></li>
+            <li class="group-item"><a class="sidebar-link" href="#public-holidays">Public Holidays</a></li>
+            <li class="group-item"><a class="sidebar-link" href="#population">Population</a></li>
+            <li class="group-item"><a class="sidebar-link" href="#exchange-rates">Exchange Rates</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <section id="introduction" class="panel">
+        <div class="doc-header">
+          <div>
+            <h1>KenyaAPI Documentation</h1>
+            <p class="section-copy">Free, open REST API for Kenyan public data. No API key required.</p>
+          </div>
+          <div class="badge-pill">Free Forever</div>
+          <div class="badge-pill">No Auth Required</div>
+        </div>
+      </section>
+
+      <section id="base-url" class="panel">
+        <h2 class="section-title">Base URL</h2>
+        <p class="section-copy">All endpoints below are relative to this base URL.</p>
+        <div class="code-panel">
+          <div class="code-wrapper">
+            <button class="copy-button" type="button">Copy</button>
+            <pre class="code-block">https://kenyaapi.dev/api/v1</pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="authentication" class="panel">
+        <h2 class="section-title">Authentication</h2>
+        <p class="section-copy">No authentication required. All endpoints are publicly accessible.</p>
+        <div class="info-box">
+          <span class="info-icon">i</span>
+          <div>Rate limiting is enforced for availability: 100 requests per minute per IP.</div>
+        </div>
+      </section>
+
+      <section id="response-format" class="panel">
+        <h2 class="section-title">Response Format</h2>
+        <p class="section-copy">All successful responses use a consistent JSON shape.</p>
+
+        <div class="code-panel" style="margin-bottom: 18px;">
+          <div class="code-wrapper">
+            <button class="copy-button" type="button">Copy</button>
+            <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">47</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span> ... <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre>
+          </div>
+        </div>
+
+        <div class="code-panel">
+          <div class="code-wrapper">
+            <button class="copy-button" type="button">Copy</button>
+            <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">false</span><span class="token-punct">,</span>
+  <span class="token-string">"error"</span><span class="token-punct">:</span> <span class="token-string">"County with ID 99 not found"</span><span class="token-punct">,</span>
+  <span class="token-string">"statusCode"</span><span class="token-punct">:</span> <span class="token-number">404</span>
+<span class="token-brace">}</span></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="error-codes" class="panel">
+        <h2 class="section-title">Error Codes</h2>
+        <p class="section-copy">Common HTTP response codes and their typical causes.</p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Code</th>
+                <th>Meaning</th>
+                <th>Common Cause</th>
+                <th>Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>200</td><td>OK</td><td>Successful request</td><td>GET /counties</td></tr>
+              <tr><td>400</td><td>Bad Request</td><td>Invalid query or missing path param</td><td>GET /holidays?year=abc</td></tr>
+              <tr><td>404</td><td>Not Found</td><td>Resource ID does not exist</td><td>GET /counties/99</td></tr>
+              <tr><td>429</td><td>Too Many Requests</td><td>Rate limit exceeded</td><td>100 requests per minute</td></tr>
+              <tr><td>500</td><td>Server Error</td><td>Unexpected service failure</td><td>Internal API error</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="counties" class="panel">
+        <h2 class="section-title">Counties</h2>
+        <p class="section-copy">Retrieve county-level data for all 47 Kenyan counties.</p>
+        <div class="endpoint-grid">
+          <div class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path">/counties</p>
+            </div>
+            <p class="endpoint-desc">Returns the full list of counties.</p>
+            <div class="code-panel" style="margin-bottom: 18px;">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block">curl https://kenyaapi.dev/api/v1/counties</pre>
+              </div>
+            </div>
+            <p class="response-label">Example response</p>
+            <div class="code-panel">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">47</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span> ... <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre>
+              </div>
+            </div>
+            <button class="try-button" type="button">Try It</button>
+            <div class="try-panel">
+              <div class="try-panel-content"><pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">47</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span>
+    <span class="token-brace">{</span> <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa"</span> <span class="token-brace">}</span>
+  <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre></div>
+            </div>
+          </div>
+
+          <div class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path">/counties/:id</p>
+            </div>
+            <p class="endpoint-desc">Returns data for a single county by ID.</p>
+            <div class="params-panel table-wrapper" style="margin-bottom: 18px;">
+              <table class="params-table">
+                <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr><td>id</td><td>integer</td><td>path</td><td>yes</td><td>County ID from 1 to 47</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="code-panel" style="margin-bottom: 18px;">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block">curl https://kenyaapi.dev/api/v1/counties/1</pre>
+              </div>
+            </div>
+            <p class="response-label">Example response</p>
+            <div class="code-panel">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">{</span>
+    <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span>
+    <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa"</span>
+  <span class="token-brace">}</span>
+<span class="token-brace">}</span></pre>
+              </div>
+            </div>
+            <button class="try-button" type="button">Try It</button>
+            <div class="try-panel">
+              <div class="try-panel-content"><pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">{</span>
+    <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa"</span>
+  <span class="token-brace">}</span>
+<span class="token-brace">}</span></pre></div>
+            </div>
+          </div>
+
+          <div class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path">/counties/:id/constituencies</p>
+            </div>
+            <p class="endpoint-desc">Returns constituencies within a specific county.</p>
+            <div class="params-panel table-wrapper" style="margin-bottom: 18px;">
+              <table class="params-table">
+                <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr><td>id</td><td>integer</td><td>path</td><td>yes</td><td>County ID from 1 to 47</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="code-panel" style="margin-bottom: 18px;">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block">curl https://kenyaapi.dev/api/v1/counties/1/constituencies</pre>
+              </div>
+            </div>
+            <p class="response-label">Example response</p>
+            <div class="code-panel">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span>
+    <span class="token-brace">{</span> <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span> <span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Changamwe"</span> <span class="token-brace">}</span>
+  <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre>
+              </div>
+            </div>
+            <button class="try-button" type="button">Try It</button>
+            <div class="try-panel">
+              <div class="try-panel-content"><pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span>
+    <span class="token-brace">{</span> <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span> <span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Changamwe"</span> <span class="token-brace">}</span>
+  <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="constituencies" class="panel">
+        <h2 class="section-title">Constituencies</h2>
+        <p class="section-copy">Explore constituency-level data across Kenya.</p>
+        <div class="endpoint-grid">
+          <div class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path">/constituencies</p>
+            </div>
+            <p class="endpoint-desc">Returns all 290 constituencies.</p>
+            <div class="code-panel" style="margin-bottom: 18px;">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block">curl https://kenyaapi.dev/api/v1/constituencies</pre>
+              </div>
+            </div>
+            <p class="response-label">Example response</p>
+            <div class="code-panel">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">290</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span> ... <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre>
+              </div>
+            </div>
+            <button class="try-button" type="button">Try It</button>
+            <div class="try-panel">
+              <div class="try-panel-content"><pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">290</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span> ... <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre></div>
+            </div>
+          </div>
+
+          <div class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path">/constituencies/:id</p>
+            </div>
+            <p class="endpoint-desc">Returns a single constituency.</p>
+            <div class="params-panel table-wrapper" style="margin-bottom: 18px;">
+              <table class="params-table">
+                <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr><td>id</td><td>integer</td><td>path</td><td>yes</td><td>Constituency ID</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="code-panel" style="margin-bottom: 18px;">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block">curl https://kenyaapi.dev/api/v1/constituencies/1</pre>
+              </div>
+            </div>
+            <p class="response-label">Example response</p>
+            <div class="code-panel">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">{</span>
+    <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Changamwe"</span>
+  <span class="token-brace">}</span>
+<span class="token-brace">}</span></pre>
+              </div>
+            </div>
+            <button class="try-button" type="button">Try It</button>
+            <div class="try-panel">
+              <div class="try-panel-content"><pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">{</span>
+    <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Changamwe"</span>
+  <span class="token-brace">}</span>
+<span class="token-brace">}</span></pre></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="public-holidays" class="panel">
+        <h2 class="section-title">Public Holidays</h2>
+        <p class="section-copy">Access national holiday information for any supported year.</p>
+        <div class="endpoint-grid">
+          <div class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path">/holidays</p>
+            </div>
+            <p class="endpoint-desc">Returns all public holidays. Optionally filter by year.</p>
+            <div class="params-panel table-wrapper" style="margin-bottom: 18px;">
+              <table class="params-table">
+                <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr><td>year</td><td>integer</td><td>query</td><td>no</td><td>Year to filter holidays by, e.g. 2025</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="code-panel" style="margin-bottom: 18px;">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block">curl https://kenyaapi.dev/api/v1/holidays?year=2025</pre>
+              </div>
+            </div>
+            <p class="response-label">Example response</p>
+            <div class="code-panel">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">8</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span> ... <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre>
+              </div>
+            </div>
+            <button class="try-button" type="button">Try It</button>
+            <div class="try-panel">
+              <div class="try-panel-content"><pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">9</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span> ... <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre></div>
+            </div>
+          </div>
+
+          <div class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path">/holidays/:id</p>
+            </div>
+            <p class="endpoint-desc">Returns details for a single holiday by ID.</p>
+            <div class="params-panel table-wrapper" style="margin-bottom: 18px;">
+              <table class="params-table">
+                <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr><td>id</td><td>integer</td><td>path</td><td>yes</td><td>Holiday ID</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="code-panel" style="margin-bottom: 18px;">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block">curl https://kenyaapi.dev/api/v1/holidays/1</pre>
+              </div>
+            </div>
+            <p class="response-label">Example response</p>
+            <div class="code-panel">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">{</span>
+    <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"New Year's Day"</span>
+  <span class="token-brace">}</span>
+<span class="token-brace">}</span></pre>
+              </div>
+            </div>
+            <button class="try-button" type="button">Try It</button>
+            <div class="try-panel">
+              <div class="try-panel-content"><pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">{</span>
+    <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"New Year's Day"</span>
+  <span class="token-brace">}</span>
+<span class="token-brace">}</span></pre></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="population" class="panel">
+        <h2 class="section-title">Population</h2>
+        <p class="section-copy">Retrieve national population statistics and county breakdowns.</p>
+        <div class="endpoint-grid">
+          <div class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path">/population</p>
+            </div>
+            <p class="endpoint-desc">Returns a summary of national population totals.</p>
+            <div class="code-panel" style="margin-bottom: 18px;">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block">curl https://kenyaapi.dev/api/v1/population</pre>
+              </div>
+            </div>
+            <p class="response-label">Example response</p>
+            <div class="code-panel">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">{</span>
+    <span class="token-string">"population"</span><span class="token-punct">:</span> <span class="token-number">53771296</span><span class="token-punct">,</span>
+    <span class="token-string">"male"</span><span class="token-punct">:</span> <span class="token-number">26413000</span>
+  <span class="token-brace">}</span>
+<span class="token-brace">}</span></pre>
+              </div>
+            </div>
+            <button class="try-button" type="button">Try It</button>
+            <div class="try-panel">
+              <div class="try-panel-content"><pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">{</span>
+    <span class="token-string">"population"</span><span class="token-punct">:</span> <span class="token-number">53771296</span><span class="token-punct">,</span>
+    <span class="token-string">"female"</span><span class="token-punct">:</span> <span class="token-number">27358296</span>
+  <span class="token-brace">}</span>
+<span class="token-brace">}</span></pre></div>
+            </div>
+          </div>
+
+          <div class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path">/population/counties</p>
+            </div>
+            <p class="endpoint-desc">Returns population breakdown for each county.</p>
+            <div class="code-panel" style="margin-bottom: 18px;">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block">curl https://kenyaapi.dev/api/v1/population/counties</pre>
+              </div>
+            </div>
+            <p class="response-label">Example response</p>
+            <div class="code-panel">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span> ... <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre>
+              </div>
+            </div>
+            <button class="try-button" type="button">Try It</button>
+            <div class="try-panel">
+              <div class="try-panel-content"><pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span> ... <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="exchange-rates" class="panel">
+        <h2 class="section-title">Exchange Rates</h2>
+        <p class="section-copy">Retrieve KES exchange rates for supported currencies.</p>
+        <div class="endpoint-grid">
+          <div class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path">/exchange-rates</p>
+            </div>
+            <p class="endpoint-desc">Returns exchange rates for all supported currencies.</p>
+            <div class="code-panel" style="margin-bottom: 18px;">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block">curl https://kenyaapi.dev/api/v1/exchange-rates</pre>
+              </div>
+            </div>
+            <p class="response-label">Example response</p>
+            <div class="code-panel">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">5</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span> ... <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre>
+              </div>
+            </div>
+            <button class="try-button" type="button">Try It</button>
+            <div class="try-panel">
+              <div class="try-panel-content"><pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">5</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span> ... <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre></div>
+            </div>
+          </div>
+
+          <div class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path">/exchange-rates/:currency</p>
+            </div>
+            <p class="endpoint-desc">Returns the KES rate for a specific currency.</p>
+            <div class="params-panel table-wrapper" style="margin-bottom: 18px;">
+              <table class="params-table">
+                <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr><td>currency</td><td>string</td><td>path</td><td>yes</td><td>ISO currency code such as USD, EUR, GBP</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="code-panel" style="margin-bottom: 18px;">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block">curl https://kenyaapi.dev/api/v1/exchange-rates/USD</pre>
+              </div>
+            </div>
+            <p class="response-label">Example response</p>
+            <div class="code-panel">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">{</span>
+    <span class="token-string">"currency"</span><span class="token-punct">:</span> <span class="token-string">"USD"</span><span class="token-punct">,</span>
+    <span class="token-string">"buy"</span><span class="token-punct">:</span> <span class="token-number">148.50</span>
+  <span class="token-brace">}</span>
+<span class="token-brace">}</span></pre>
+              </div>
+            </div>
+            <button class="try-button" type="button">Try It</button>
+            <div class="try-panel">
+              <div class="try-panel-content"><pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">{</span>
+    <span class="token-string">"currency"</span><span class="token-punct">:</span> <span class="token-string">"USD"</span><span class="token-punct">,</span>
+    <span class="token-string">"buy"</span><span class="token-punct">:</span> <span class="token-number">148.50</span>
+  <span class="token-brace">}</span>
+<span class="token-brace">}</span></pre></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div>Built for Kenyan developers. Free and open source.</div>
+    <div class="footer-links">
+      <a href="/docs">Docs</a>
+      <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="#">API Status</a>
+    </div>
+    <div>&copy; 2026 KenyaAPI</div>
+  </footer>
+
+  <script>
+    const drawerToggle = document.querySelector('.drawer-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    const groupHeaders = document.querySelectorAll('.group-header');
+    const searchInput = document.querySelector('#nav-search');
+    const navLinks = document.querySelectorAll('.sidebar-link');
+    const sections = document.querySelectorAll('main section[id]');
+    const copyButtons = document.querySelectorAll('.copy-button');
+    const tryButtons = document.querySelectorAll('.try-button');
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      drawerToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    drawerToggle.addEventListener('click', () => {
+      const isOpen = sidebar.classList.toggle('open');
+      drawerToggle.setAttribute('aria-expanded', isOpen.toString());
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 768) closeSidebar();
+      });
+    });
+
+    groupHeaders.forEach((header) => {
+      header.addEventListener('click', () => {
+        const group = header.closest('.group');
+        const list = group.querySelector('.group-list');
+        list.classList.toggle('collapsed');
+      });
+    });
+
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase().trim();
+      const groups = document.querySelectorAll('.group');
+
+      groups.forEach((group) => {
+        let visibleCount = 0;
+        group.querySelectorAll('.group-item').forEach((item) => {
+          const link = item.querySelector('.sidebar-link');
+          const text = link.textContent.toLowerCase();
+          const match = text.includes(query);
+          item.style.display = match ? 'block' : 'none';
+          if (match) visibleCount += 1;
+        });
+        group.style.display = visibleCount > 0 ? 'block' : 'none';
+      });
+    });
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const id = entry.target.id;
+        const activeLink = document.querySelector(`.sidebar-link[href="#${id}"]`);
+        if (entry.isIntersecting) {
+          navLinks.forEach((link) => link.classList.remove('active'));
+          if (activeLink) activeLink.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-28% 0px -55% 0px', threshold: 0.1 });
+
+    sections.forEach((section) => sectionObserver.observe(section));
+
+    document.querySelectorAll('.group-item').forEach((item, index) => {
+      item.style.animationDelay = `${index * 30}ms`;
+    });
+
+    copyButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const code = button.nextElementSibling || button.parentElement.querySelector('.code-block');
+        const text = code.textContent;
+        navigator.clipboard.writeText(text.trim()).then(() => {
+          const original = button.textContent;
+          button.textContent = 'Copied ✓';
+          setTimeout(() => { button.textContent = original; }, 2000);
+        });
+      });
+    });
+
+    tryButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const panel = button.nextElementSibling;
+        panel.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KenyaAPI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: 'Inter', sans-serif;
+      background: #0D1117;
+      color: #FFFFFF;
+      --bg: #0D1117;
+      --surface: #161B22;
+      --surface-strong: #21262D;
+      --text-muted: #8B949E;
+      --accent: #00A550;
+      --accent-soft: rgba(0,165,80,0.12);
+      --code: #BB9AF7;
+      --border: rgba(255,255,255,0.08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; min-height: 100vh; background: var(--bg); }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+
+    .page { max-width: 1200px; margin: 0 auto; padding: 0 24px 48px; }
+    .navbar { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(16px); background: rgba(13,17,23,0.96); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 0; }
+    .brand { display: flex; align-items: center; gap: 10px; font-size: 1.05rem; font-weight: 800; letter-spacing: -0.03em; }
+    .brand .flag { font-size: 1.1rem; }
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-link { color: #C9D1D9; font-weight: 500; transition: color .2s ease; }
+    .nav-link:hover { color: #FFFFFF; }
+    .menu-toggle { display: none; background: none; border: none; color: #C9D1D9; cursor: pointer; }
+
+    .hero { min-height: calc(100vh - 84px); display: grid; align-items: center; gap: 32px; padding: 80px 0 64px; }
+    .hero-copy { max-width: 640px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 20px; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: .14em; font-size: .8rem; }
+    .hero-title { font-size: clamp(2.8rem, 5vw, 4.6rem); line-height: 0.98; margin: 0 0 24px; }
+    .hero-copy p { font-size: 1.05rem; line-height: 1.8; color: #C9D1D9; margin: 0; }
+
+    .cta-group { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 26px; border-radius: 999px; font-weight: 700; transition: transform .2s ease, box-shadow .2s ease; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--accent); color: #0D1117; }
+    .btn-secondary { border: 1px solid rgba(255,255,255,0.18); color: #FFFFFF; background: transparent; }
+
+    .terminal-card { margin-top: 40px; background: #161B22; border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,.25); }
+    .terminal-bar { display: flex; gap: 10px; padding: 12px 16px; background: rgba(255,255,255,0.03); }
+    .terminal-dot { width: 12px; height: 12px; border-radius: 999px; background: #FF5F56; }
+    .terminal-dot:nth-child(2) { background: #FFBD2E; }
+    .terminal-dot:nth-child(3) { background: #27C93F; }
+    .terminal-body { padding: 26px; font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; color: #C9D1D9; line-height: 1.7; }
+    .terminal-body code { display: block; white-space: pre-wrap; }
+    .cursor { display: inline-block; width: 10px; height: 18px; margin-left: 4px; background: #C9D1D9; animation: blink 1s steps(1) infinite; vertical-align: middle; }
+
+    .stats-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin: 0 auto 56px; padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 24px; }
+    .stat-card { padding: 22px 20px; border-radius: 18px; background: rgba(255,255,255,0.02); }
+    .stat-number { font-size: 2rem; font-weight: 800; margin: 0 0 8px; }
+    .stat-label { color: var(--text-muted); font-size: 0.95rem; }
+
+    .section { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+    .section.visible { opacity: 1; transform: translateY(0); }
+    .section-title { font-size: clamp(2rem, 3vw, 2.8rem); margin: 0 0 18px; }
+    .section-description { max-width: 760px; color: #C9D1D9; margin: 0 0 28px; }
+
+    .about-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items: start; }
+    .about-copy p { margin: 0 0 18px; font-size: 1rem; color: #C9D1D9; line-height: 1.85; }
+    .feature-list { display: grid; gap: 14px; }
+    .feature-item { display: flex; gap: 14px; align-items: flex-start; border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; padding: 20px; background: rgba(255,255,255,0.02); }
+    .feature-icon { width: 34px; height: 34px; border-radius: 50%; background: rgba(0,165,80,0.16); color: var(--accent); display: grid; place-items: center; font-weight: 700; }
+    .feature-copy { color: #C9D1D9; font-size: 0.98rem; line-height: 1.7; }
+
+    .endpoints-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .endpoint-card { background: var(--surface); padding: 24px; border-radius: 22px; border: 1px solid rgba(255,255,255,0.08); transition: transform .2s ease, border-color .2s ease; }
+    .endpoint-card:hover { transform: translateY(-3px); border-color: rgba(0,165,80,0.35); }
+    .badge { display: inline-flex; align-items: center; justify-content: center; padding: 6px 12px; border-radius: 999px; font-size: 0.82rem; font-weight: 700; color: #0D1117; background: #00A550; margin-bottom: 16px; }
+    .endpoint-path { color: #FFFFFF; font-weight: 600; margin: 0 0 14px; word-break: break-word; }
+    .endpoint-desc { color: #8B949E; font-size: 0.96rem; line-height: 1.75; margin: 0; }
+
+    .code-card { background: #0B0F17; border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 28px; margin-top: 16px; }
+    .code-block { font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; line-height: 1.8; color: #C9D1D9; white-space: pre-wrap; overflow-x: auto; }
+    .token-key { color: #7AA2F7; }
+    .token-string { color: #8BD49E; }
+    .token-number { color: #F5C36E; }
+    .token-brace { color: #FFFFFF; }
+    .token-punct { color: #C9D1D9; }
+
+    .footer { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 30px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; color: #8B949E; font-size: 0.95rem; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
+    .footer-links a { color: #8B949E; }
+    .footer-links a:hover { color: #FFFFFF; }
+
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .endpoints-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 760px) {
+      .nav-inner { flex-wrap: wrap; }
+      .menu-toggle { display: inline-flex; }
+      .nav-links { width: 100%; justify-content: flex-end; flex-wrap: wrap; display: none; }
+      .nav-links.open { display: flex; }
+      .nav-links a { width: auto; }
+      .hero { padding-top: 56px; }
+      .stats-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 520px) {
+      .hero-title { font-size: 2.6rem; }
+      .stats-row { grid-template-columns: 1fr; }
+      .cta-group { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="navbar">
+      <div class="nav-inner">
+        <a class="brand" href="#hero"><span class="flag">🇰🇪</span> KenyaAPI</a>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a class="nav-link" href="#docs">Docs</a>
+          <a class="nav-link" href="#endpoints">Endpoints</a>
+          <a class="nav-link" href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <section id="hero" class="hero section visible">
+      <div class="hero-copy">
+        <div class="eyebrow">Open Kenyan Data</div>
+        <h1 class="hero-title">Kenya's Data, One Request Away</h1>
+        <p>A free, open REST API for developers building with Kenyan public data — counties, constituencies, public holidays, population statistics, and live exchange rates.</p>
+
+        <div class="cta-group">
+          <a class="btn btn-primary" href="/docs">Explore the Docs</a>
+          <a class="btn btn-secondary" href="https://github.com" target="_blank" rel="noreferrer">View on GitHub</a>
+        </div>
+
+        <div class="terminal-card" aria-label="Sample API request">
+          <div class="terminal-bar">
+            <span class="terminal-dot"></span>
+            <span class="terminal-dot"></span>
+            <span class="terminal-dot"></span>
+          </div>
+          <div class="terminal-body">
+            <code>curl https://kenyaapi.dev/api/v1/counties<span class="cursor"></span></code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-row section" id="stats">
+      <div class="stat-card">
+        <div class="stat-number">47</div>
+        <div class="stat-label">Counties</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">290</div>
+        <div class="stat-label">Constituencies</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">25+</div>
+        <div class="stat-label">Holidays</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">30+</div>
+        <div class="stat-label">Currencies</div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <h2 class="section-title">What is KenyaAPI?</h2>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>KenyaAPI is built to make Kenyan public data easy to access for developers. From county boundaries to national holidays, population summaries, and currency rates, every endpoint is designed to be fast, reliable, and free forever.</p>
+          <p>Use the API for civic apps, education tools, dashboards, and integrations that celebrate Kenyan data without barriers.</p>
+        </div>
+        <div class="feature-list">
+          <div class="feature-item"><span class="feature-icon">✓</span><div class="feature-copy">Open data for counties, constituencies, and public holidays.</div></div>
+          <div class="feature-item"><span class="feature-icon">✓</span><div class="feature-copy">Developer-friendly JSON responses with consistent error handling.</div></div>
+          <div class="feature-item"><span class="feature-icon">✓</span><div class="feature-copy">Lightweight Express API with no sign-up required.</div></div>
+          <div class="feature-item"><span class="feature-icon">✓</span><div class="feature-copy">Built for modern apps, dashboards, and mobile services.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="endpoints">
+      <h2 class="section-title">What can you build with it?</h2>
+      <p class="section-description">Access data quickly using simple REST paths for Kenyan counties, constituencies, national holidays, population statistics, and real-time exchange rates.</p>
+      <div class="endpoints-grid">
+        <div class="endpoint-card"><div class="badge">GET</div><p class="endpoint-path">/api/v1/counties</p><p class="endpoint-desc">Fetch the full list of Kenya's 47 counties.</p></div>
+        <div class="endpoint-card"><div class="badge">GET</div><p class="endpoint-path">/api/v1/constituencies</p><p class="endpoint-desc">Retrieve all constituencies across Kenya.</p></div>
+        <div class="endpoint-card"><div class="badge">GET</div><p class="endpoint-path">/api/v1/holidays</p><p class="endpoint-desc">List upcoming and national public holidays.</p></div>
+        <div class="endpoint-card"><div class="badge">GET</div><p class="endpoint-path">/api/v1/population</p><p class="endpoint-desc">Get high-level national population totals.</p></div>
+        <div class="endpoint-card"><div class="badge">GET</div><p class="endpoint-path">/api/v1/exchange-rates/:currency</p><p class="endpoint-desc">Lookup KES exchange rates for a specific currency.</p></div>
+        <div class="endpoint-card"><div class="badge">GET</div><p class="endpoint-path">/api/v1/counties/:id/constituencies</p><p class="endpoint-desc">Fetch all constituencies inside a given county.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="code-example">
+      <h2 class="section-title">Sample Response</h2>
+      <div class="code-card">
+        <div class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-key">true</span><span class="token-punct">,</span>
+  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">47</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span>
+    <span class="token-brace">{</span>
+      <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span>
+      <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa"</span><span class="token-punct">,</span>
+      <span class="token-string">"capital"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa City"</span>
+    <span class="token-brace">}</span>
+  <span class="token-brace">]</span>
+<span class="token-brace">}</span></div>
+      </div>
+    </section>
+
+    <footer class="footer section">
+      <div>Built for Kenyan developers. Free and open source.</div>
+      <div class="footer-links">
+        <a href="/docs">Docs</a>
+        <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="#">API Status</a>
+      </div>
+      <div>&copy; 2026 KenyaAPI</div>
+    </footer>
+  </div>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.18 });
+
+    document.querySelectorAll('.section').forEach((section) => {
+      if (!section.classList.contains('visible')) {
+        observer.observe(section);
+      }
+    });
+  </script>
+</body>
+</html>

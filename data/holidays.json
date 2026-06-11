@@ -1,0 +1,11 @@
+[
+  {"id":1,"name":"New Year's Day","date":"2025-01-01","day":"Wednesday","type":"National"},
+  {"id":2,"name":"Good Friday","date":"2025-04-18","day":"Friday","type":"National"},
+  {"id":3,"name":"Labour Day","date":"2025-05-01","day":"Thursday","type":"National"},
+  {"id":4,"name":"Madaraka Day","date":"2025-06-01","day":"Sunday","type":"National"},
+  {"id":5,"name":"Huduma Day","date":"2025-10-10","day":"Friday","type":"National"},
+  {"id":6,"name":"Mashujaa Day","date":"2025-10-20","day":"Monday","type":"National"},
+  {"id":7,"name":"Jamhuri Day","date":"2025-12-12","day":"Friday","type":"National"},
+  {"id":8,"name":"Christmas Day","date":"2025-12-25","day":"Thursday","type":"National"},
+  {"id":9,"name":"Boxing Day","date":"2025-12-26","day":"Friday","type":"National"}
+]

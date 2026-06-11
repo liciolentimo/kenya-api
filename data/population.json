@@ -1,0 +1,20 @@
+{
+  "summary": {
+    "year": 2019,
+    "population": 53771296,
+    "male": 26413000,
+    "female": 27358296
+  },
+  "counties": [
+    {"county_id":1,"county_name":"Mombasa","population":1208333,"male":601234,"female":607099},
+    {"county_id":2,"county_name":"Kwale","population":649931,"male":316229,"female":333702},
+    {"county_id":3,"county_name":"Kilifi","population":1329662,"male":641993,"female":687669},
+    {"county_id":4,"county_name":"Tana River","population":315943,"male":162219,"female":153724},
+    {"county_id":5,"county_name":"Lamu","population":143920,"male":70635,"female":73285},
+    {"county_id":6,"county_name":"Taita-Taveta","population":340671,"male":167555,"female":173116},
+    {"county_id":7,"county_name":"Garissa","population":841353,"male":420195,"female":421158},
+    {"county_id":8,"county_name":"Wajir","population":781263,"male":392091,"female":389172},
+    {"county_id":9,"county_name":"Mandera","population":867457,"male":434334,"female":433123},
+    {"county_id":10,"county_name":"Marsabit","population":459785,"male":230481,"female":229304}
+  ]
+}

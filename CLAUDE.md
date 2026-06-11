@@ -1,0 +1,225 @@
+# KenyaAPI — Claude Code Project Guide
+
+## Project Overview
+
+**KenyaAPI** is a free, open REST API providing structured data about Kenya — counties, constituencies, public holidays, population statistics,currency/exchange rate information and more. It is built with Node.js and Express.
+
+**Primary goal:** Make Kenyan public data accessible to developers in a clean, consistent JSON format.
+
+---
+
+## Stack
+
+| Layer        | Technology              |
+|--------------|-------------------------|
+| Runtime      | Node.js 18+             |
+| Framework    | Express 4.x             |
+| Data         | JSON flat files (`/data`) |
+| Docs         | HTML page at `/docs`    |
+| Testing      | Jest + Supertest        |
+| Linting      | ESLint (Airbnb style)   |
+
+---
+
+## Project Structure
+
+```
+kenya-api/
+├── CLAUDE.md               ← You are here
+├── README.md
+├── package.json
+├── server.js               ← Entry point
+├── app.js                  ← Express app (no listen call)
+├── routes/
+│   ├── counties.js
+│   ├── constituencies.js
+│   ├── holidays.js
+│   ├── population.js
+│   └── exchange-rates.js
+├── controllers/
+│   ├── countiesController.js
+│   ├── constituenciesController.js
+│   ├── holidaysController.js
+│   ├── populationController.js
+│   └── exchangeRatesController.js
+├── data/
+│   ├── counties.json
+│   ├── constituencies.json
+│   ├── holidays.json
+│   ├── population.json
+│   └── exchange-rates.json
+├── middleware/
+│   ├── errorHandler.js
+│   └── notFound.js
+├── public/
+│   ├── index.html          ← Landing page
+│   └── docs.html           ← API documentation page
+└── tests/
+    ├── counties.test.js
+    └── holidays.test.js
+```
+
+---
+
+## API Base URL
+
+```
+http://localhost:3000/api/v1
+```
+
+---
+
+## Routes & Endpoints
+
+### Counties
+| Method | Path                        | Description                        |
+|--------|-----------------------------|------------------------------------|
+| GET    | `/api/v1/counties`          | List all 47 counties               |
+| GET    | `/api/v1/counties/:id`      | Single county by numeric ID        |
+| GET    | `/api/v1/counties/:id/constituencies` | All constituencies in a county |
+
+### Constituencies
+| Method | Path                              | Description                     |
+|--------|-----------------------------------|---------------------------------|
+| GET    | `/api/v1/constituencies`          | List all 290 constituencies     |
+| GET    | `/api/v1/constituencies/:id`      | Single constituency by ID       |
+
+### Public Holidays
+| Method | Path                              | Description                     |
+|--------|-----------------------------------|---------------------------------|
+| GET    | `/api/v1/holidays`                | All public holidays             |
+| GET    | `/api/v1/holidays?year=2025`      | Holidays filtered by year       |
+| GET    | `/api/v1/holidays/:id`            | Single holiday by ID            |
+
+### Population
+| Method | Path                              | Description                     |
+|--------|-----------------------------------|---------------------------------|
+| GET    | `/api/v1/population`              | National population summary     |
+| GET    | `/api/v1/population/counties`     | Population breakdown by county  |
+
+### Exchange Rates
+| Method | Path                              | Description                     |
+|--------|-----------------------------------|---------------------------------|
+| GET    | `/api/v1/exchange-rates`          | KES rates against major currencies |
+| GET    | `/api/v1/exchange-rates/:currency`| KES rate for a specific currency (e.g. USD, EUR) |
+
+---
+
+## Response Format
+
+All endpoints return consistent JSON:
+
+```json
+{
+  "success": true,
+  "count": 47,
+  "data": [ ... ]
+}
+```
+
+Errors follow this shape:
+
+```json
+{
+  "success": false,
+  "error": "County with ID 99 not found",
+  "statusCode": 404
+}
+```
+
+---
+
+## Data Models
+
+### County
+```json
+{
+  "id": 1,
+  "name": "Mombasa",
+  "code": "001",
+  "capital": "Mombasa City",
+  "region": "Coast",
+  "area_km2": 218,
+  "population": 1208333
+}
+```
+
+### Constituency
+```json
+{
+  "id": 1,
+  "name": "Changamwe",
+  "county_id": 1,
+  "county_name": "Mombasa",
+  "mp_seats": 1
+}
+```
+
+### Holiday
+```json
+{
+  "id": 1,
+  "name": "New Year's Day",
+  "date": "2025-01-01",
+  "day": "Wednesday",
+  "type": "National"
+}
+```
+
+### Population Entry
+```json
+{
+  "county_id": 1,
+  "county_name": "Mombasa",
+  "population": 1208333,
+  "male": 601234,
+  "female": 607099,
+  "census_year": 2019
+}
+```
+
+### Exchange Rate
+```json
+{
+  "currency": "USD",
+  "currency_name": "US Dollar",
+  "buy": 129.50,
+  "sell": 130.20,
+  "last_updated": "2025-06-11"
+}
+```
+
+---
+
+## Coding Conventions
+
+- Use `async/await` — no raw callbacks or `.then()` chains
+- All route files use `express.Router()`
+- Controllers handle business logic; routes only wire paths to controllers
+- Always return `next(error)` rather than swallowing errors
+- HTTP status codes: `200` success, `201` created, `400` bad request, `404` not found, `500` server error
+- No magic numbers — export constants from a shared `config.js`
+
+---
+
+## What Claude Should NOT Do
+
+- Do not install `mongoose` or any database ORM — data lives in JSON files for now
+- Do not modify `data/*.json` files directly — only read from them
+- Do not add authentication middleware unless explicitly asked
+- Do not create a frontend framework (React/Vue) — the `public/` pages are plain HTML/CSS/JS
+
+---
+
+## Current Task for Claude Code
+
+> **Build the initial Express app with all five route groups wired up, controllers reading from JSON data files, a global error handler, and a 404 middleware. Also serve `public/index.html` as the root (`/`) and `public/docs.html` at `/docs`.**
+
+Start with:
+1. `app.js` and `server.js`
+2. `middleware/errorHandler.js` and `middleware/notFound.js`
+3. `routes/counties.js` + `controllers/countiesController.js`
+4. Seed data file `data/counties.json` with all 47 Kenyan counties
+5. Repeat pattern for the remaining four route groups
+
+Write a Jest test for the `/api/v1/counties` endpoint before moving to the next route group.

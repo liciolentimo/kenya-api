@@ -1,0 +1,7 @@
+[
+  {"currency":"USD","currency_name":"US Dollar","buy":148.50,"sell":149.20,"last_updated":"2026-06-11"},
+  {"currency":"EUR","currency_name":"Euro","buy":161.30,"sell":162.10,"last_updated":"2026-06-11"},
+  {"currency":"GBP","currency_name":"British Pound","buy":187.90,"sell":188.70,"last_updated":"2026-06-11"},
+  {"currency":"JPY","currency_name":"Japanese Yen","buy":1.08,"sell":1.10,"last_updated":"2026-06-11"},
+  {"currency":"UGX","currency_name":"Ugandan Shilling","buy":0.036,"sell":0.037,"last_updated":"2026-06-11"}
+]
