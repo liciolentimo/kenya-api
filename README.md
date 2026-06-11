@@ -62,10 +62,14 @@ No API key or authentication required.
 | Method | Path | Description |
 |--------|------|-------------|
 | GET | `/api/v1/institutions` | All institutions (supports pagination and filters) |
+| GET | `/api/v1/institutions/universities` | All universities (filter by `?category`, `?county_id`) |
+| GET | `/api/v1/institutions?initials=UON` | Lookup institution by initials |
 | GET | `/api/v1/institutions/:id` | Single institution by ID |
 | GET | `/api/v1/institutions/county/:county_id` | Institutions in a specific county |
 | GET | `/api/v1/institutions/type/:type` | Institutions by type |
 | GET | `/api/v1/institutions/search?q=term` | Search by name, county, or address |
+
+> University data covers all 41 public universities accredited by the Commission for University Education (CUE) as of 2025. Each entry includes the official initials, county location, and website.
 
 ### Ministries
 | Method | Path | Description |

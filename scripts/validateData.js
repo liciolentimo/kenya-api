@@ -13,6 +13,7 @@ function run() {
   const counties = loadJSON('data/counties.json');
   const population = loadJSON('data/population.json');
   const ministries = loadJSON('data/ministries.json');
+  const institutions = loadJSON('data/institutions.json');
 
   let ok = true;
 
@@ -203,6 +204,45 @@ function run() {
     logPass('No duplicate ministry names found');
   } else {
     logFail('Duplicate ministry names: ' + Array.from(new Set(dupMinistries)).join(', '));
+    ok = false;
+  }
+
+  // 21. institutions.json has at least 41 universities
+  const universities = institutions.filter((i) => i.type === 'University');
+  if (universities.length >= 41) {
+    logPass(`institutions.json contains ${universities.length} universities (≥ 41)`);
+  } else {
+    logFail(`expected at least 41 universities, found ${universities.length}`);
+    ok = false;
+  }
+
+  // 22. Every university has a non-null initials field
+  const missingInitials = universities.filter((u) => !u.initials);
+  if (missingInitials.length === 0) {
+    logPass('All universities have a non-null initials field');
+  } else {
+    logFail('Some universities are missing initials:');
+    missingInitials.forEach((u) => console.error(`  id=${u.id} name="${u.name}"`));
+    ok = false;
+  }
+
+  // 23. Every university county_id maps to a valid county
+  const invalidUniCounty = universities.filter((u) => !countyIds.has(u.county_id));
+  if (invalidUniCounty.length === 0) {
+    logPass('All university county_id values match a county in counties.json');
+  } else {
+    logFail('Some universities reference invalid county_id values:');
+    invalidUniCounty.forEach((u) => console.error(`  id=${u.id} name="${u.name}" county_id=${u.county_id}`));
+    ok = false;
+  }
+
+  // 24. No two universities share the same initials
+  const initialsArr = universities.map((u) => u.initials);
+  const dupInitials = initialsArr.filter((v, i) => initialsArr.indexOf(v) !== i);
+  if (dupInitials.length === 0) {
+    logPass('No duplicate university initials found');
+  } else {
+    logFail('Duplicate university initials: ' + Array.from(new Set(dupInitials)).join(', '));
     ok = false;
   }
 

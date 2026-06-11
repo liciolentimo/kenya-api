@@ -107,13 +107,15 @@ https://kenya-api.netlify.app/api/v1
 | GET    | `/api/v1/exchange-rates/:currency`| KES rate for a specific currency |
 
 ### Educational Institutions
-| Method | Path                                      | Description                                        |
-|--------|-------------------------------------------|----------------------------------------------------|
-| GET    | `/api/v1/institutions`                    | List institutions with optional pagination/filters |
-| GET    | `/api/v1/institutions/:id`                | Single institution by ID                           |
-| GET    | `/api/v1/institutions/county/:county_id`  | Institutions in a specific county                  |
-| GET    | `/api/v1/institutions/type/:type`         | Institutions by type (University, TVET, etc.)      |
-| GET    | `/api/v1/institutions/search?q=term`      | Search institutions by name, county, or address    |
+| Method | Path                                          | Description                                        |
+|--------|-----------------------------------------------|----------------------------------------------------|
+| GET    | `/api/v1/institutions`                        | List institutions with optional pagination/filters |
+| GET    | `/api/v1/institutions/universities`           | All universities (?category, ?county_id)           |
+| GET    | `/api/v1/institutions?initials=UON`           | Filter by initials                                 |
+| GET    | `/api/v1/institutions/:id`                    | Single institution by ID                           |
+| GET    | `/api/v1/institutions/county/:county_id`      | Institutions in a specific county                  |
+| GET    | `/api/v1/institutions/type/:type`             | Institutions by type (University, TVET, etc.)      |
+| GET    | `/api/v1/institutions/search?q=term`          | Search institutions by name, county, or address    |
 
 ### Ministries
 | Method | Path                                      | Description                                        |
@@ -234,13 +236,23 @@ County descriptions: one-sentence factual summaries synthesised from official co
 ### Educational Institution
 ```json
 {
-  "id": 1,
-  "name": "Technical University of Mombasa",
+  "id": 35,
+  "name": "Alupe University",
   "type": "University",
   "category": "Public",
-  "address": "Jomo Kenyatta Avenue, Mombasa",
-  "county_id": 1,
-  "county_name": "Mombasa"
+  "county_id": 40,
+  "county_name": "Busia",
+  "constituency": "",
+  "address": "Busia Town, Busia",
+  "postal_code": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.alupe.ac.ke",
+  "accredited_by": "Commission for University Education (CUE)",
+  "source": "Commission for University Education (CUE)",
+  "initials": "AU",
+  "year_established": null,
+  "coordinates": { "lat": null, "lng": null }
 }
 ```
 
@@ -276,6 +288,7 @@ County descriptions: one-sentence factual summaries synthesised from official co
 - **Counties & Constituencies**: IEBC (2022 constituency boundaries) + KNBS Census 2019 population data
 - **Population**: Kenya National Bureau of Statistics (2019 Census) — sourced April 2026
 - **Exchange Rates**: Central Bank of Kenya (CBK) indicative rates — last seeded April 2026
+- **Public Universities**: Commission for University Education (CUE) — 41 accredited institutions as of 2025
 
 ---
 

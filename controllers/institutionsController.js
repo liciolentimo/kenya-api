@@ -33,6 +33,11 @@ async function getAllInstitutions(req, res, next) {
       results = results.filter((item) => normalizeKey(item.category) === normalizedCategory);
     }
 
+    if (req.query.initials) {
+      const code = req.query.initials.toUpperCase();
+      results = results.filter((i) => i.initials && i.initials.toUpperCase() === code);
+    }
+
     const pageNumber = Math.max(1, Number(page) || 1);
     const pageSize = Math.max(1, Number(limit) || 10);
     const total = results.length;
@@ -130,10 +135,33 @@ async function searchInstitutions(req, res, next) {
   });
 }
 
+async function getUniversities(req, res) {
+  const { category, county_id } = req.query;
+  let result = institutions.filter((i) => i.type === 'University');
+
+  if (category) {
+    result = result.filter((i) => i.category.toLowerCase() === category.toLowerCase());
+  }
+
+  if (county_id) {
+    result = result.filter((i) => i.county_id === parseInt(county_id, 10));
+  }
+
+  result.sort((a, b) => a.name.localeCompare(b.name));
+
+  res.status(200).json({
+    success: true,
+    count: result.length,
+    accreditor: 'Commission for University Education (CUE)',
+    data: result,
+  });
+}
+
 module.exports = {
   getAllInstitutions,
   getInstitutionById,
   getInstitutionsByCounty,
   getInstitutionsByType,
   searchInstitutions,
+  getUniversities,
 };

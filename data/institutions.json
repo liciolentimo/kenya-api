@@ -1,21 +1,13 @@
 [
   {
-    "id": 1,
-    "name": "Technical University of Mombasa",
-    "type": "University",
-    "category": "Public",
-    "address": "Jomo Kenyatta Avenue, Mombasa",
-    "county_id": 1,
-    "county_name": "Mombasa"
-  },
-  {
     "id": 2,
     "name": "Kenya Medical Training College Mombasa Campus",
     "type": "TVET",
     "category": "Public",
     "address": "Mombasa-Malindi Road, Mombasa",
     "county_id": 1,
-    "county_name": "Mombasa"
+    "county_name": "Mombasa",
+    "initials": null
   },
   {
     "id": 3,
@@ -24,7 +16,8 @@
     "category": "Private",
     "address": "Likoni Road, Mombasa",
     "county_id": 1,
-    "county_name": "Mombasa"
+    "county_name": "Mombasa",
+    "initials": null
   },
   {
     "id": 4,
@@ -33,7 +26,8 @@
     "category": "Public",
     "address": "Tudor, Mombasa",
     "county_id": 1,
-    "county_name": "Mombasa"
+    "county_name": "Mombasa",
+    "initials": null
   },
   {
     "id": 5,
@@ -42,7 +36,8 @@
     "category": "Public",
     "address": "Kwale Town, Kwale",
     "county_id": 2,
-    "county_name": "Kwale"
+    "county_name": "Kwale",
+    "initials": null
   },
   {
     "id": 6,
@@ -51,7 +46,8 @@
     "category": "Private",
     "address": "Diani Beach Road, Kwale",
     "county_id": 2,
-    "county_name": "Kwale"
+    "county_name": "Kwale",
+    "initials": null
   },
   {
     "id": 7,
@@ -60,7 +56,8 @@
     "category": "Public",
     "address": "Bomu Bay, Kwale",
     "county_id": 2,
-    "county_name": "Kwale"
+    "county_name": "Kwale",
+    "initials": null
   },
   {
     "id": 8,
@@ -69,16 +66,8 @@
     "category": "Public",
     "address": "Kwale Town, Kwale",
     "county_id": 2,
-    "county_name": "Kwale"
-  },
-  {
-    "id": 9,
-    "name": "Pwani University",
-    "type": "University",
-    "category": "Public",
-    "address": "Kilifi Campus, Kilifi",
-    "county_id": 3,
-    "county_name": "Kilifi"
+    "county_name": "Kwale",
+    "initials": null
   },
   {
     "id": 10,
@@ -87,7 +76,8 @@
     "category": "Public",
     "address": "Mnarani Road, Kilifi",
     "county_id": 3,
-    "county_name": "Kilifi"
+    "county_name": "Kilifi",
+    "initials": null
   },
   {
     "id": 11,
@@ -96,7 +86,8 @@
     "category": "Private",
     "address": "Ganda Road, Kilifi",
     "county_id": 3,
-    "county_name": "Kilifi"
+    "county_name": "Kilifi",
+    "initials": null
   },
   {
     "id": 12,
@@ -105,7 +96,8 @@
     "category": "Public",
     "address": "Kilifi County, Kilifi",
     "county_id": 3,
-    "county_name": "Kilifi"
+    "county_name": "Kilifi",
+    "initials": null
   },
   {
     "id": 13,
@@ -114,7 +106,8 @@
     "category": "Public",
     "address": "Aldina, Tana River",
     "county_id": 4,
-    "county_name": "Tana River"
+    "county_name": "Tana River",
+    "initials": null
   },
   {
     "id": 14,
@@ -123,7 +116,8 @@
     "category": "Public",
     "address": "Galole, Tana River",
     "county_id": 4,
-    "county_name": "Tana River"
+    "county_name": "Tana River",
+    "initials": null
   },
   {
     "id": 15,
@@ -132,7 +126,8 @@
     "category": "Public",
     "address": "Garsen Town, Tana River",
     "county_id": 4,
-    "county_name": "Tana River"
+    "county_name": "Tana River",
+    "initials": null
   },
   {
     "id": 16,
@@ -141,7 +136,8 @@
     "category": "Public",
     "address": "Lamu Island, Lamu",
     "county_id": 5,
-    "county_name": "Lamu"
+    "county_name": "Lamu",
+    "initials": null
   },
   {
     "id": 17,
@@ -150,7 +146,8 @@
     "category": "Public",
     "address": "Shela Road, Lamu",
     "county_id": 5,
-    "county_name": "Lamu"
+    "county_name": "Lamu",
+    "initials": null
   },
   {
     "id": 18,
@@ -159,16 +156,8 @@
     "category": "Public",
     "address": "Kiunga, Lamu",
     "county_id": 5,
-    "county_name": "Lamu"
-  },
-  {
-    "id": 19,
-    "name": "Taita Taveta University",
-    "type": "University",
-    "category": "Public",
-    "address": "Voi-Mwatate Road, Voi",
-    "county_id": 6,
-    "county_name": "Taita Taveta"
+    "county_name": "Lamu",
+    "initials": null
   },
   {
     "id": 20,
@@ -177,7 +166,8 @@
     "category": "Public",
     "address": "Voi Town, Taita-Taveta",
     "county_id": 6,
-    "county_name": "Taita Taveta"
+    "county_name": "Taita Taveta",
+    "initials": null
   },
   {
     "id": 21,
@@ -186,16 +176,8 @@
     "category": "Public",
     "address": "Voi, Taita-Taveta",
     "county_id": 6,
-    "county_name": "Taita Taveta"
-  },
-  {
-    "id": 22,
-    "name": "Garissa University",
-    "type": "University",
-    "category": "Public",
-    "address": "University Road, Garissa",
-    "county_id": 7,
-    "county_name": "Garissa"
+    "county_name": "Taita Taveta",
+    "initials": null
   },
   {
     "id": 23,
@@ -204,7 +186,8 @@
     "category": "Public",
     "address": "Lagdera Road, Garissa",
     "county_id": 7,
-    "county_name": "Garissa"
+    "county_name": "Garissa",
+    "initials": null
   },
   {
     "id": 24,
@@ -213,7 +196,8 @@
     "category": "Public",
     "address": "Garissa Town, Garissa",
     "county_id": 7,
-    "county_name": "Garissa"
+    "county_name": "Garissa",
+    "initials": null
   },
   {
     "id": 25,
@@ -222,7 +206,8 @@
     "category": "Public",
     "address": "Wajir Town, Wajir",
     "county_id": 8,
-    "county_name": "Wajir"
+    "county_name": "Wajir",
+    "initials": null
   },
   {
     "id": 26,
@@ -231,7 +216,8 @@
     "category": "Public",
     "address": "Wajir Town, Wajir",
     "county_id": 8,
-    "county_name": "Wajir"
+    "county_name": "Wajir",
+    "initials": null
   },
   {
     "id": 27,
@@ -240,7 +226,8 @@
     "category": "Public",
     "address": "Wajir Town, Wajir",
     "county_id": 8,
-    "county_name": "Wajir"
+    "county_name": "Wajir",
+    "initials": null
   },
   {
     "id": 28,
@@ -249,7 +236,8 @@
     "category": "Public",
     "address": "Mandera Town, Mandera",
     "county_id": 9,
-    "county_name": "Mandera"
+    "county_name": "Mandera",
+    "initials": null
   },
   {
     "id": 29,
@@ -258,7 +246,8 @@
     "category": "Public",
     "address": "Mandera Town, Mandera",
     "county_id": 9,
-    "county_name": "Mandera"
+    "county_name": "Mandera",
+    "initials": null
   },
   {
     "id": 30,
@@ -267,16 +256,8 @@
     "category": "Public",
     "address": "Mandera Town, Mandera",
     "county_id": 9,
-    "county_name": "Mandera"
-  },
-  {
-    "id": 31,
-    "name": "Mount Kenya University Marsabit Campus",
-    "type": "University",
-    "category": "Private",
-    "address": "Saku Town, Marsabit",
-    "county_id": 10,
-    "county_name": "Marsabit"
+    "county_name": "Mandera",
+    "initials": null
   },
   {
     "id": 32,
@@ -285,7 +266,8 @@
     "category": "Public",
     "address": "Marsabit Town, Marsabit",
     "county_id": 10,
-    "county_name": "Marsabit"
+    "county_name": "Marsabit",
+    "initials": null
   },
   {
     "id": 33,
@@ -294,7 +276,8 @@
     "category": "Public",
     "address": "Marsabit Town, Marsabit",
     "county_id": 10,
-    "county_name": "Marsabit"
+    "county_name": "Marsabit",
+    "initials": null
   },
   {
     "id": 34,
@@ -303,6 +286,909 @@
     "category": "Public",
     "address": "Eliye Springs, Marsabit",
     "county_id": 10,
-    "county_name": "Marsabit"
+    "county_name": "Marsabit",
+    "initials": null
+  },
+  {
+    "id": 35,
+    "name": "Alupe University",
+    "type": "University",
+    "category": "Public",
+    "county_id": 40,
+    "county_name": "Busia",
+    "constituency": "",
+    "address": "Busia Town, Busia",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.alupe.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "AU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 36,
+    "name": "Bomet University College",
+    "type": "University",
+    "category": "Public",
+    "county_id": 36,
+    "county_name": "Bomet",
+    "constituency": "",
+    "address": "Bomet Town, Bomet",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.buc.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "BUC",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 37,
+    "name": "Chuka University",
+    "type": "University",
+    "category": "Public",
+    "county_id": 13,
+    "county_name": "Tharaka-Nithi",
+    "constituency": "",
+    "address": "Chuka Town, Tharaka-Nithi",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.chuka.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "CU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 38,
+    "name": "Co-operative University of Kenya",
+    "type": "University",
+    "category": "Public",
+    "county_id": 47,
+    "county_name": "Nairobi",
+    "constituency": "",
+    "address": "Karen, Nairobi",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.cuk.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "COPUK",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 39,
+    "name": "Dedan Kimathi University of Technology",
+    "type": "University",
+    "category": "Public",
+    "county_id": 19,
+    "county_name": "Nyeri",
+    "constituency": "",
+    "address": "Nyeri-Mweiga Road, Nyeri",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.dkut.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "DKUT",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 40,
+    "name": "Egerton University",
+    "type": "University",
+    "category": "Public",
+    "county_id": 32,
+    "county_name": "Nakuru",
+    "constituency": "",
+    "address": "Njoro, Nakuru",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.egerton.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "EU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 41,
+    "name": "Garissa University",
+    "type": "University",
+    "category": "Public",
+    "county_id": 7,
+    "county_name": "Garissa",
+    "constituency": "",
+    "address": "University Road, Garissa",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.garissauniversity.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "GU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 42,
+    "name": "Jaramogi Oginga Odinga University of Science and Technology",
+    "type": "University",
+    "category": "Public",
+    "county_id": 41,
+    "county_name": "Siaya",
+    "constituency": "",
+    "address": "Bondo, Siaya",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.jooust.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "JOOUST",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 43,
+    "name": "Jomo Kenyatta University of Agriculture and Technology",
+    "type": "University",
+    "category": "Public",
+    "county_id": 22,
+    "county_name": "Kiambu",
+    "constituency": "",
+    "address": "Juja, Kiambu",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.jkuat.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "JKUAT",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 44,
+    "name": "Kaimosi Friends University",
+    "type": "University",
+    "category": "Public",
+    "county_id": 38,
+    "county_name": "Vihiga",
+    "constituency": "",
+    "address": "Kaimosi, Vihiga",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.kafu.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "KAFU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 45,
+    "name": "Karatina University",
+    "type": "University",
+    "category": "Public",
+    "county_id": 19,
+    "county_name": "Nyeri",
+    "constituency": "",
+    "address": "Karatina Town, Nyeri",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.karatinauniversity.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "KARU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 46,
+    "name": "Kenyatta University",
+    "type": "University",
+    "category": "Public",
+    "county_id": 47,
+    "county_name": "Nairobi",
+    "constituency": "",
+    "address": "Thika Road, Nairobi",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.ku.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "KU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 47,
+    "name": "Kenyatta University Mama Ngina University College",
+    "type": "University",
+    "category": "Public",
+    "county_id": 22,
+    "county_name": "Kiambu",
+    "constituency": "",
+    "address": "Thika Road, Kiambu",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.ku.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "MNUC",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 48,
+    "name": "Kibabii University",
+    "type": "University",
+    "category": "Public",
+    "county_id": 39,
+    "county_name": "Bungoma",
+    "constituency": "",
+    "address": "Bungoma Town, Bungoma",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.kibabii.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "KBBU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 49,
+    "name": "Kirinyaga University",
+    "type": "University",
+    "category": "Public",
+    "county_id": 20,
+    "county_name": "Kirinyaga",
+    "constituency": "",
+    "address": "Kutus, Kirinyaga",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.kyu.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "KYU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 50,
+    "name": "Kisii University",
+    "type": "University",
+    "category": "Public",
+    "county_id": 45,
+    "county_name": "Kisii",
+    "constituency": "",
+    "address": "Kisii Town, Kisii",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.kisiiuniversity.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "KSU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 51,
+    "name": "Koitaleel Samoei University College",
+    "type": "University",
+    "category": "Public",
+    "county_id": 29,
+    "county_name": "Nandi",
+    "constituency": "",
+    "address": "Nandi Hills, Nandi",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.ksuc.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "KSUC",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 52,
+    "name": "Laikipia University",
+    "type": "University",
+    "category": "Public",
+    "county_id": 31,
+    "county_name": "Laikipia",
+    "constituency": "",
+    "address": "Nyahururu, Laikipia",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.laikipia.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "LU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 53,
+    "name": "Maasai Mara University",
+    "type": "University",
+    "category": "Public",
+    "county_id": 33,
+    "county_name": "Narok",
+    "constituency": "",
+    "address": "Narok Town, Narok",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.mmarau.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "MMARAU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 54,
+    "name": "Machakos University",
+    "type": "University",
+    "category": "Public",
+    "county_id": 16,
+    "county_name": "Machakos",
+    "constituency": "",
+    "address": "Machakos Town, Machakos",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.mksu.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "MCKU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 55,
+    "name": "Maseno University",
+    "type": "University",
+    "category": "Public",
+    "county_id": 42,
+    "county_name": "Kisumu",
+    "constituency": "",
+    "address": "Maseno, Kisumu",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.maseno.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "MSU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 56,
+    "name": "Masinde Muliro University of Science and Technology",
+    "type": "University",
+    "category": "Public",
+    "county_id": 37,
+    "county_name": "Kakamega",
+    "constituency": "",
+    "address": "Kakamega Town, Kakamega",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.mmust.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "MMUST",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 57,
+    "name": "Meru University of Science and Technology",
+    "type": "University",
+    "category": "Public",
+    "county_id": 12,
+    "county_name": "Meru",
+    "constituency": "",
+    "address": "Meru Town, Meru",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.must.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "MUST",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 58,
+    "name": "Moi University",
+    "type": "University",
+    "category": "Public",
+    "county_id": 27,
+    "county_name": "Uasin Gishu",
+    "constituency": "",
+    "address": "Eldoret, Uasin Gishu",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.mu.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "MU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 59,
+    "name": "Multimedia University of Kenya",
+    "type": "University",
+    "category": "Public",
+    "county_id": 47,
+    "county_name": "Nairobi",
+    "constituency": "",
+    "address": "Magadi Road, Nairobi",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.mmu.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "MMU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 60,
+    "name": "Murang'a University of Technology",
+    "type": "University",
+    "category": "Public",
+    "county_id": 21,
+    "county_name": "Murang'a",
+    "constituency": "",
+    "address": "Murang'a Town, Murang'a",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.mut.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "MUT",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 61,
+    "name": "Nyandarua University College",
+    "type": "University",
+    "category": "Public",
+    "county_id": 18,
+    "county_name": "Nyandarua",
+    "constituency": "",
+    "address": "Ol Kalou, Nyandarua",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.nuc.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "NUC",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 62,
+    "name": "Open University of Kenya",
+    "type": "University",
+    "category": "Public",
+    "county_id": 16,
+    "county_name": "Machakos",
+    "constituency": "",
+    "address": "Athi River, Machakos",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.ouk.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "OUK",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 63,
+    "name": "Pwani University",
+    "type": "University",
+    "category": "Public",
+    "county_id": 3,
+    "county_name": "Kilifi",
+    "constituency": "",
+    "address": "Kilifi Town, Kilifi",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.pu.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "PU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 64,
+    "name": "Rongo University",
+    "type": "University",
+    "category": "Public",
+    "county_id": 44,
+    "county_name": "Migori",
+    "constituency": "",
+    "address": "Rongo Town, Migori",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.rongovarsity.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "RNU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 65,
+    "name": "South Eastern Kenya University",
+    "type": "University",
+    "category": "Public",
+    "county_id": 15,
+    "county_name": "Kitui",
+    "constituency": "",
+    "address": "Kitui Town, Kitui",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.seku.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "SEKU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 66,
+    "name": "Taita Taveta University",
+    "type": "University",
+    "category": "Public",
+    "county_id": 6,
+    "county_name": "Taita Taveta",
+    "constituency": "",
+    "address": "Voi-Mwatate Road, Voi",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.ttu.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "TTU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 67,
+    "name": "Technical University of Kenya",
+    "type": "University",
+    "category": "Public",
+    "county_id": 47,
+    "county_name": "Nairobi",
+    "constituency": "",
+    "address": "Haile Selassie Avenue, Nairobi",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.tukenya.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "TUK",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 68,
+    "name": "Technical University of Mombasa",
+    "type": "University",
+    "category": "Public",
+    "county_id": 1,
+    "county_name": "Mombasa",
+    "constituency": "",
+    "address": "Jomo Kenyatta Avenue, Mombasa",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.tum.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "TUM",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 69,
+    "name": "Tharaka University",
+    "type": "University",
+    "category": "Public",
+    "county_id": 13,
+    "county_name": "Tharaka-Nithi",
+    "constituency": "",
+    "address": "Marimanti, Tharaka-Nithi",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.tharaka.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "THRKU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 70,
+    "name": "Tom Mboya University",
+    "type": "University",
+    "category": "Public",
+    "county_id": 43,
+    "county_name": "Homa Bay",
+    "constituency": "",
+    "address": "Homabay Town, Homa Bay",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.tmu.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "TMU",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 71,
+    "name": "Turkana University College",
+    "type": "University",
+    "category": "Public",
+    "county_id": 23,
+    "county_name": "Turkana",
+    "constituency": "",
+    "address": "Lodwar, Turkana",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.tuc.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "TRUC",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 72,
+    "name": "University of Eldoret",
+    "type": "University",
+    "category": "Public",
+    "county_id": 27,
+    "county_name": "Uasin Gishu",
+    "constituency": "",
+    "address": "Eldoret, Uasin Gishu",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.uoeld.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "UOE",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 73,
+    "name": "University of Embu",
+    "type": "University",
+    "category": "Public",
+    "county_id": 14,
+    "county_name": "Embu",
+    "constituency": "",
+    "address": "Embu Town, Embu",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.embuni.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "UOEM",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 74,
+    "name": "University of Kabianga",
+    "type": "University",
+    "category": "Public",
+    "county_id": 35,
+    "county_name": "Kericho",
+    "constituency": "",
+    "address": "Kabianga, Kericho",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.kabianga.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "UOK",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
+  },
+  {
+    "id": 75,
+    "name": "University of Nairobi",
+    "type": "University",
+    "category": "Public",
+    "county_id": 47,
+    "county_name": "Nairobi",
+    "constituency": "",
+    "address": "University Way, Nairobi",
+    "postal_code": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.uonbi.ac.ke",
+    "accredited_by": "Commission for University Education (CUE)",
+    "source": "Commission for University Education (CUE)",
+    "initials": "UON",
+    "year_established": null,
+    "coordinates": {
+      "lat": null,
+      "lng": null
+    }
   }
 ]
