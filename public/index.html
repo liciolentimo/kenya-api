@@ -689,7 +689,7 @@
         panelTagList.innerHTML = '';
         constituencies.slice(0, 12).forEach((item) => {
           const tag = document.createElement('div');
-          tag.className = 'tag';
+          tag.className = 'constituency-tag';
           tag.textContent = item.name;
           panelTagList.appendChild(tag);
         });
@@ -705,11 +705,12 @@
       }
 
       function loadMapData() {
+        const safe = (p) => p.catch(() => ({ data: [] }));
         return Promise.all([
-          fetch(`${API_BASE}/counties`).then((res) => res.json()),
-          fetch(`${API_BASE}/constituencies`).then((res) => res.json()),
-          fetch(`${API_BASE}/population/counties`).then((res) => res.json()),
-          fetch(`${API_BASE}/institutions`).then((res) => res.json()).catch(() => ({ data: [] })),
+          safe(fetch('/data/counties.json').then((res) => res.json())),
+          safe(fetch('/data/constituencies.json').then((res) => res.json())),
+          safe(fetch('/data/population.json').then((res) => res.json())),
+          safe(fetch(`${API_BASE}/institutions`).then((res) => res.json())),
         ])
         .then(([countiesRes, constituenciesRes, populationRes, institutionsRes]) => {
           const counties = (countiesRes.data || []);
@@ -744,7 +745,7 @@
 
       function getFeatureCode(feature) {
         if (!feature || !feature.properties) return null;
-        return normalizeCountyCode(feature.properties.COUNTY_COD || feature.properties.COUNTY_COD) || normalizeCountyCode(feature.properties.COUNTY_COD);
+        return normalizeCountyCode(feature.properties.COUNTY_COD);
       }
 
       function highlightLayer(layer) {
