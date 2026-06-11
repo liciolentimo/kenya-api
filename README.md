@@ -67,6 +67,13 @@ No API key or authentication required.
 | GET | `/api/v1/institutions/type/:type` | Institutions by type |
 | GET | `/api/v1/institutions/search?q=term` | Search by name, county, or address |
 
+### Ministries
+| Method | Path | Description |
+|--------|------|-------------|
+| GET | `/api/v1/ministries` | All 22 ministries and Cabinet Secretaries |
+| GET | `/api/v1/ministries/:id` | Single ministry by ID |
+| GET | `/api/v1/ministries/search?q=` | Search by ministry or CS name |
+
 ---
 
 ## Response format
@@ -166,6 +173,9 @@ kenya-api/
 | Population | Kenya National Bureau of Statistics — 2019 Census |
 | Exchange rates | Central Bank of Kenya — indicative rates, seeded April 2026 |
 | Institutions | Curated from public records, first 10 counties |
+| Kenya Cabinet | Office of the President (president.go.ke) — 2024 |
+
+> Cabinet data reflects appointments as of 2024 following the broad-based government formation by President William Ruto. Images are sourced from the official presidential website.
 
 ---
 

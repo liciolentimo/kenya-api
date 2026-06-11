@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "ministry": "Foreign and Diaspora Affairs",
+    "cabinet_secretary": "Dr. Musalia Mudavadi E.G.H.",
+    "title": "Prime Cabinet Secretary and Cabinet Secretary",
+    "appointed": "2022",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/Mudavadi.jpg",
+    "ministry_website": "https://www.mfa.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  },
+  {
+    "id": 2,
+    "ministry": "Interior and National Administration",
+    "cabinet_secretary": "Onesimus Kipchumba Murkomen",
+    "title": "Cabinet Secretary",
+    "appointed": "2024",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/Mukomen.jpg",
+    "ministry_website": "https://www.interior.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  },
+  {
+    "id": 3,
+    "ministry": "Roads and Transport",
+    "cabinet_secretary": "Davis Chirchir E.G.H.",
+    "title": "Cabinet Secretary",
+    "appointed": "2024",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/Davis-Chirchir.jpg",
+    "ministry_website": "https://www.transport.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  },
+  {
+    "id": 4,
+    "ministry": "Mining, Blue Economy and Maritime Affairs",
+    "cabinet_secretary": "Hassan Ali Joho E.G.H.",
+    "title": "Cabinet Secretary",
+    "appointed": "2024",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/Joho.jpg",
+    "ministry_website": "https://www.mining.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  },
+  {
+    "id": 5,
+    "ministry": "Health",
+    "cabinet_secretary": "Aden Duale E.G.H.",
+    "title": "Cabinet Secretary",
+    "appointed": "2024",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/Aden-Duale.jpg",
+    "ministry_website": "https://www.health.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  },
+  {
+    "id": 6,
+    "ministry": "Lands, Public Works, Housing and Urban Development",
+    "cabinet_secretary": "Alice Wahome E.G.H.",
+    "title": "Cabinet Secretary",
+    "appointed": "2022",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/alice-wahome.jpg",
+    "ministry_website": "https://www.lands.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  },
+  {
+    "id": 7,
+    "ministry": "Labour and Social Protection",
+    "cabinet_secretary": "Dr. Alfred Mutua E.G.H.",
+    "title": "Cabinet Secretary",
+    "appointed": "2024",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/Alfred.jpg",
+    "ministry_website": "https://www.labour.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  },
+  {
+    "id": 8,
+    "ministry": "Education",
+    "cabinet_secretary": "Julius Migos Ogamba",
+    "title": "Cabinet Secretary",
+    "appointed": "2024",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/Julius-Migosi.jpg",
+    "ministry_website": "https://www.education.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  },
+  {
+    "id": 9,
+    "ministry": "Tourism and Wildlife",
+    "cabinet_secretary": "Rebecca Miano E.G.H.",
+    "title": "Cabinet Secretary",
+    "appointed": "2024",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/Rebecca-Miano.jpg",
+    "ministry_website": "https://www.tourism.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  },
+  {
+    "id": 10,
+    "ministry": "Youth Affairs, Creative Economy and Sports",
+    "cabinet_secretary": "Salim Mvurya",
+    "title": "Cabinet Secretary",
+    "appointed": "2024",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/Salim-Mvurya.jpg",
+    "ministry_website": "https://www.sports.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  },
+  {
+    "id": 11,
+    "ministry": "Defence",
+    "cabinet_secretary": "Roselinda Soipan Tuya E.G.H.",
+    "title": "Cabinet Secretary",
+    "appointed": "2024",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/Soipan-Tuya.jpg",
+    "ministry_website": "https://www.mod.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  },
+  {
+    "id": 12,
+    "ministry": "Co-operatives and MSMEs Development",
+    "cabinet_secretary": "Wycliffe Ambetsa Oparanya FCPA E.G.H.",
+    "title": "Cabinet Secretary",
+    "appointed": "2024",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/Oparanya.jpg",
+    "ministry_website": "https://www.cooperative.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  },
+  {
+    "id": 13,
+    "ministry": "National Treasury and Economic Planning",
+    "cabinet_secretary": "John Mbadi Ng'ongo E.G.H.",
+    "title": "Cabinet Secretary",
+    "appointed": "2024",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/John-Mbadi.jpg",
+    "ministry_website": "https://www.treasury.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  },
+  {
+    "id": 14,
+    "ministry": "Water, Sanitation and Irrigation",
+    "cabinet_secretary": "Eric Muriithi Muuga",
+    "title": "Cabinet Secretary",
+    "appointed": "2024",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/Eric-Murithi.jpg",
+    "ministry_website": "https://www.water.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  },
+  {
+    "id": 15,
+    "ministry": "Environment, Climate Change and Forestry",
+    "cabinet_secretary": "Dr. Deborah Mulongo Barasa",
+    "title": "Cabinet Secretary",
+    "appointed": "2024",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/DR-DEBORAH-MLONGO-BARASA-HEALTH-CS.jpg",
+    "ministry_website": "https://www.environment.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  },
+  {
+    "id": 16,
+    "ministry": "Investments, Trade and Industry",
+    "cabinet_secretary": "Lee Maiyani Kinyanjui",
+    "title": "Cabinet Secretary",
+    "appointed": "2024",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/1.jpg",
+    "ministry_website": "https://www.industrialization.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  },
+  {
+    "id": 17,
+    "ministry": "Agriculture and Livestock Development",
+    "cabinet_secretary": "Mutahi Kagwe E.G.H.",
+    "title": "Cabinet Secretary",
+    "appointed": "2024",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/2.jpg",
+    "ministry_website": "https://www.kilimo.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  },
+  {
+    "id": 18,
+    "ministry": "Energy and Petroleum",
+    "cabinet_secretary": "James Opiyo Wandayi E.G.H.",
+    "title": "Cabinet Secretary",
+    "appointed": "2024",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/Opiyo-Wandayi.jpg",
+    "ministry_website": "https://www.energy.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  },
+  {
+    "id": 19,
+    "ministry": "Information, Communication and the Digital Economy",
+    "cabinet_secretary": "William Kabogo Gitau",
+    "title": "Cabinet Secretary",
+    "appointed": "2024",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/3.jpg",
+    "ministry_website": "https://www.ict.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  },
+  {
+    "id": 20,
+    "ministry": "Public Service and Human Capital Development",
+    "cabinet_secretary": "Geoffrey Kiringa Ruku",
+    "title": "Cabinet Secretary",
+    "appointed": "2024",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/RUKU.jpg",
+    "ministry_website": "https://www.publicservice.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  },
+  {
+    "id": 21,
+    "ministry": "East Africa Community and Regional Affairs",
+    "cabinet_secretary": "Ms. Beatrice Asukul Moe",
+    "title": "Cabinet Secretary",
+    "appointed": "2024",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/Beatrice-Askul-Profile.jpg",
+    "ministry_website": "https://www.eac.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  },
+  {
+    "id": 22,
+    "ministry": "Gender",
+    "cabinet_secretary": "Hanna Wendot Cheptumo",
+    "title": "Cabinet Secretary",
+    "appointed": "2024",
+    "image_url": "https://www.president.go.ke/wp-content/uploads/cheptumo.jpg",
+    "ministry_website": "https://www.gender.go.ke",
+    "source": "https://www.president.go.ke/cabinet/"
+  }
+]

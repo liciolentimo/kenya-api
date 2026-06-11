@@ -115,6 +115,13 @@ https://kenya-api.netlify.app/api/v1
 | GET    | `/api/v1/institutions/type/:type`         | Institutions by type (University, TVET, etc.)      |
 | GET    | `/api/v1/institutions/search?q=term`      | Search institutions by name, county, or address    |
 
+### Ministries
+| Method | Path                                      | Description                                        |
+|--------|-------------------------------------------|----------------------------------------------------|
+| GET    | `/api/v1/ministries`                      | All ministries (?appointed= filter)                |
+| GET    | `/api/v1/ministries/:id`                  | Single ministry by ID                              |
+| GET    | `/api/v1/ministries/search?q=`            | Search by ministry name or CS name                 |
+
 ---
 
 ## Response Format
@@ -220,6 +227,20 @@ County descriptions: one-sentence factual summaries synthesised from official co
   "address": "Jomo Kenyatta Avenue, Mombasa",
   "county_id": 1,
   "county_name": "Mombasa"
+}
+```
+
+### Ministry
+```json
+{
+  "id": 1,
+  "ministry": "Foreign and Diaspora Affairs",
+  "cabinet_secretary": "Dr. Musalia Mudavadi E.G.H.",
+  "title": "Prime Cabinet Secretary and Cabinet Secretary",
+  "appointed": "2022",
+  "image_url": "https://www.president.go.ke/wp-content/uploads/Mudavadi.jpg",
+  "ministry_website": "https://www.mfa.go.ke",
+  "source": "https://www.president.go.ke/cabinet/"
 }
 ```
 

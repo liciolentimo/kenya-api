@@ -12,6 +12,7 @@ function run() {
   const constituencies = loadJSON('data/constituencies.json');
   const counties = loadJSON('data/counties.json');
   const population = loadJSON('data/population.json');
+  const ministries = loadJSON('data/ministries.json');
 
   let ok = true;
 
@@ -154,6 +155,54 @@ function run() {
   } else {
     logFail('Some descriptions are too short (< 20 chars):');
     shortDesc.forEach((c) => console.error(`  id=${c.id} name="${c.name}" length=${c.description.length}`));
+    ok = false;
+  }
+
+  // 16. ministries.json has exactly 22 entries
+  if (ministries.length === 22) {
+    logPass('ministries.json contains 22 entries');
+  } else {
+    logFail(`expected 22 ministries, found ${ministries.length}`);
+    ok = false;
+  }
+
+  // 17. Every ministry has a non-empty cabinet_secretary
+  const missingCS = ministries.filter((m) => !m.cabinet_secretary);
+  if (missingCS.length === 0) {
+    logPass('All ministries include cabinet_secretary');
+  } else {
+    logFail('Some ministries are missing cabinet_secretary:');
+    missingCS.forEach((m) => console.error(`  id=${m.id} ministry="${m.ministry}"`));
+    ok = false;
+  }
+
+  // 18. Every ministry has a non-empty image_url
+  const missingImage = ministries.filter((m) => !m.image_url);
+  if (missingImage.length === 0) {
+    logPass('All ministries include image_url');
+  } else {
+    logFail('Some ministries are missing image_url:');
+    missingImage.forEach((m) => console.error(`  id=${m.id} ministry="${m.ministry}"`));
+    ok = false;
+  }
+
+  // 19. All image_urls start with https://
+  const badImage = ministries.filter((m) => m.image_url && !m.image_url.startsWith('https://'));
+  if (badImage.length === 0) {
+    logPass('All ministry image_url values start with https://');
+  } else {
+    logFail('Some image_url values do not start with https://:');
+    badImage.forEach((m) => console.error(`  id=${m.id} image_url="${m.image_url}"`));
+    ok = false;
+  }
+
+  // 20. No duplicate ministry names
+  const ministryNames = ministries.map((m) => m.ministry);
+  const dupMinistries = ministryNames.filter((n, i) => ministryNames.indexOf(n) !== i);
+  if (dupMinistries.length === 0) {
+    logPass('No duplicate ministry names found');
+  } else {
+    logFail('Duplicate ministry names: ' + Array.from(new Set(dupMinistries)).join(', '));
     ok = false;
   }
 
