@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <style>
     :root {
       color-scheme: dark;
@@ -99,11 +100,27 @@
     .footer-links a { color: #8B949E; }
     .footer-links a:hover { color: #FFFFFF; }
 
+    .site-footer { border-top: 1px solid rgba(255,255,255,0.08); padding: 60px 0 40px; margin-top: 80px; }
+    .site-footer .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-bottom: 48px; }
+    .footer-brand { max-width: 280px; }
+    .footer-logo { font-size: 1.3rem; font-weight: 800; margin-bottom: 12px; }
+    .footer-tagline { margin: 0; font-size: 0.95rem; color: #8B949E; line-height: 1.6; }
+    .footer-links { flex-direction: column; gap: 0; }
+    .footer-links h4 { margin: 0 0 16px; font-size: 0.95rem; font-weight: 600; color: #FFFFFF; }
+    .footer-links ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+    .footer-links li a { display: block; color: #8B949E; font-size: 0.9rem; transition: color .2s ease; }
+    .footer-links li a:hover { color: var(--accent); }
+    .footer-bottom { padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+    .footer-credit { margin: 0; font-size: 0.9rem; color: #8B949E; }
+    .footer-copy { margin: 0; font-size: 0.9rem; color: #8B949E; }
+
     @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
     @media (max-width: 900px) {
       .about-grid { grid-template-columns: 1fr; }
       .endpoints-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
     }
 
     @media (max-width: 760px) {
@@ -114,6 +131,9 @@
       .nav-links a { width: auto; }
       .hero { padding-top: 56px; }
       .stats-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-brand { max-width: 100%; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
     }
 
     @media (max-width: 520px) {
@@ -342,7 +362,7 @@
         <a class="brand" href="#hero"><span class="flag">🇰🇪</span> KenyaAPI</a>
         <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
         <nav class="nav-links" aria-label="Primary navigation">
-          <a class="nav-link" href="#docs">Docs</a>
+          <a class="nav-link" href="docs.html">Docs</a>
           <a class="nav-link" href="#endpoints">Endpoints</a>
           <a class="nav-link" href="#map">Map</a>
           <a class="nav-link" href="https://github.com/liciolentimo/kenya-api" target="_blank" rel="noreferrer">GitHub</a>
@@ -488,14 +508,43 @@
       </div>
     </section>
 
-    <footer class="footer section">
-      <div>Built for Kenyan developers. Free and open source.</div>
-      <div class="footer-links">
-        <a href="/docs">Docs</a>
-        <a href="https://github.com/liciolentimo/kenya-api" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="#">API Status</a>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">🇰🇪 KenyaAPI</div>
+            <p class="footer-tagline">
+              Free and open Kenyan public data,<br>
+              one request away.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="docs.html">Documentation</a></li>
+              <li><a href="#endpoints">Endpoints</a></li>
+              <li><a href="#map">Map Explorer</a></li>
+              <li><a href="https://github.com/liciolentimo/kenya-api" target="_blank">GitHub</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Data Sources</h4>
+            <ul>
+              <li><a href="https://www.knbs.or.ke" target="_blank">KNBS Census 2019</a></li>
+              <li><a href="https://www.iebc.or.ke" target="_blank">IEBC</a></li>
+              <li><a href="https://www.centralbank.go.ke" target="_blank">Central Bank of Kenya</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-credit">
+            Developed by <strong>Licio Lentimo</strong>
+          </p>
+          <p class="footer-copy">
+            © 2026 KenyaAPI. Free and open source.
+          </p>
+        </div>
       </div>
-      <div>&copy; 2026 KenyaAPI</div>
     </footer>
   </div>
 

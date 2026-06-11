@@ -100,8 +100,8 @@ http://localhost:3000/api/v1
 ### Exchange Rates
 | Method | Path                              | Description                     |
 |--------|-----------------------------------|---------------------------------|
-| GET    | `/api/v1/exchange-rates`          | KES rates against major currencies |
-| GET    | `/api/v1/exchange-rates/:currency`| KES rate for a specific currency (e.g. USD, EUR) |
+| GET    | `/api/v1/exchange-rates`          | KES rates for 25 currencies (CBK) |
+| GET    | `/api/v1/exchange-rates/:currency`| KES rate for a specific currency |
 
 ### Educational Institutions
 | Method | Path                                      | Description                                        |
@@ -187,11 +187,14 @@ Errors follow this shape:
 ### Exchange Rate
 ```json
 {
+  "id": 1,
   "currency": "USD",
   "currency_name": "US Dollar",
-  "buy": 129.50,
-  "sell": 130.20,
-  "last_updated": "2025-06-11"
+  "buy": 128.50,
+  "mean": 129.21,
+  "sell": 129.92,
+  "last_updated": "2026-04-23",
+  "source": "Central Bank of Kenya"
 }
 ```
 
@@ -221,12 +224,11 @@ Errors follow this shape:
 
 ---
 
-## What Claude Should NOT Do
+## Data Sources
 
-- Do not install `mongoose` or any database ORM — data lives in JSON files for now
-- Do not modify `data/*.json` files directly — only read from them
-- Do not add authentication middleware unless explicitly asked
-- Do not create a frontend framework (React/Vue) — the `public/` pages are plain HTML/CSS/JS
+- **Counties & Constituencies**: IEBC (2022 constituency boundaries) + KNBS Census 2019 population data
+- **Population**: Kenya National Bureau of Statistics (2019 Census) — sourced April 2026
+- **Exchange Rates**: Central Bank of Kenya (CBK) indicative rates — last seeded April 2026
 
 ---
 

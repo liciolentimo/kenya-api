@@ -1,7 +1,252 @@
 [
-  {"currency":"USD","currency_name":"US Dollar","buy":148.50,"sell":149.20,"last_updated":"2026-06-11"},
-  {"currency":"EUR","currency_name":"Euro","buy":161.30,"sell":162.10,"last_updated":"2026-06-11"},
-  {"currency":"GBP","currency_name":"British Pound","buy":187.90,"sell":188.70,"last_updated":"2026-06-11"},
-  {"currency":"JPY","currency_name":"Japanese Yen","buy":1.08,"sell":1.10,"last_updated":"2026-06-11"},
-  {"currency":"UGX","currency_name":"Ugandan Shilling","buy":0.036,"sell":0.037,"last_updated":"2026-06-11"}
+  {
+    "id": 1,
+    "currency": "USD",
+    "currency_name": "US Dollar",
+    "buy": 128.5,
+    "mean": 129.21,
+    "sell": 129.92,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 2,
+    "currency": "GBP",
+    "currency_name": "British Pound",
+    "buy": 173.68,
+    "mean": 174.41,
+    "sell": 175.14,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 3,
+    "currency": "EUR",
+    "currency_name": "Euro",
+    "buy": 150.75,
+    "mean": 151.51,
+    "sell": 152.27,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 4,
+    "currency": "JPY",
+    "currency_name": "Japanese Yen",
+    "buy": 0.8821,
+    "mean": 0.8865,
+    "sell": 0.8909,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 5,
+    "currency": "ZAR",
+    "currency_name": "South African Rand",
+    "buy": 7.01,
+    "mean": 7.0551,
+    "sell": 7.1002,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 6,
+    "currency": "AED",
+    "currency_name": "UAE Dirham",
+    "buy": 35.16,
+    "mean": 35.35,
+    "sell": 35.54,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 7,
+    "currency": "CAD",
+    "currency_name": "Canadian Dollar",
+    "buy": 93.45,
+    "mean": 93.95,
+    "sell": 94.45,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 8,
+    "currency": "AUD",
+    "currency_name": "Australian Dollar",
+    "buy": 80.25,
+    "mean": 80.75,
+    "sell": 81.25,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 9,
+    "currency": "CHF",
+    "currency_name": "Swiss Franc",
+    "buy": 155.5,
+    "mean": 156.31,
+    "sell": 157.12,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 10,
+    "currency": "CNY",
+    "currency_name": "Chinese Yuan",
+    "buy": 17.55,
+    "mean": 17.64,
+    "sell": 17.73,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 11,
+    "currency": "INR",
+    "currency_name": "Indian Rupee",
+    "buy": 1.49,
+    "mean": 1.499,
+    "sell": 1.508,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 12,
+    "currency": "SEK",
+    "currency_name": "Swedish Krona",
+    "buy": 12.15,
+    "mean": 12.22,
+    "sell": 12.29,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 13,
+    "currency": "NOK",
+    "currency_name": "Norwegian Krone",
+    "buy": 12.05,
+    "mean": 12.12,
+    "sell": 12.19,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 14,
+    "currency": "DKK",
+    "currency_name": "Danish Krone",
+    "buy": 18.55,
+    "mean": 18.65,
+    "sell": 18.75,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 15,
+    "currency": "SAR",
+    "currency_name": "Saudi Riyal",
+    "buy": 34.35,
+    "mean": 34.53,
+    "sell": 34.71,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 16,
+    "currency": "QAR",
+    "currency_name": "Qatari Riyal",
+    "buy": 35.25,
+    "mean": 35.44,
+    "sell": 35.63,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 17,
+    "currency": "HKD",
+    "currency_name": "Hong Kong Dollar",
+    "buy": 16.55,
+    "mean": 16.63,
+    "sell": 16.71,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 18,
+    "currency": "SGD",
+    "currency_name": "Singapore Dollar",
+    "buy": 95.8,
+    "mean": 96.31,
+    "sell": 96.82,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 19,
+    "currency": "UGX",
+    "currency_name": "Ugandan Shilling",
+    "buy": 0.0347,
+    "mean": 0.0349,
+    "sell": 0.0351,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 20,
+    "currency": "TZS",
+    "currency_name": "Tanzanian Shilling",
+    "buy": 0.049,
+    "mean": 0.0493,
+    "sell": 0.0496,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 21,
+    "currency": "RWF",
+    "currency_name": "Rwandan Franc",
+    "buy": 0.0915,
+    "mean": 0.092,
+    "sell": 0.0925,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 22,
+    "currency": "ETB",
+    "currency_name": "Ethiopian Birr",
+    "buy": 0.875,
+    "mean": 0.88,
+    "sell": 0.885,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 23,
+    "currency": "NGN",
+    "currency_name": "Nigerian Naira",
+    "buy": 0.078,
+    "mean": 0.0785,
+    "sell": 0.079,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 24,
+    "currency": "ZMW",
+    "currency_name": "Zambian Kwacha",
+    "buy": 4.55,
+    "mean": 4.58,
+    "sell": 4.61,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  },
+  {
+    "id": 25,
+    "currency": "MUR",
+    "currency_name": "Mauritian Rupee",
+    "buy": 2.8,
+    "mean": 2.82,
+    "sell": 2.84,
+    "last_updated": "2026-04-23",
+    "source": "Central Bank of Kenya"
+  }
 ]
