@@ -40,10 +40,19 @@ Errors return:
 
 `GET /api/v1/counties`
 
+Optional query parameters:
+
+- `region`: filter counties by region, e.g. `Coast`
+- `sort`: sort by `area_asc`, `area_desc`, `population_asc`, or `population_desc`
+
 Response:
 
 - `count`: total number of counties
-- `data`: array of county records
+- `data`: array of county records, each including `headquarters`, `area_km2`, `region`, and `population`
+
+Example:
+
+`GET /api/v1/counties?region=Coast&sort=population_desc`
 
 ### Get a single county
 
@@ -51,7 +60,7 @@ Response:
 
 Response:
 
-- `data`: county object
+- `data`: county object with `headquarters`, `area_km2`, `region`, and `population`
 
 Example:
 

@@ -1,425 +1,378 @@
 [
   {
     "id": 1,
-    "name": "Mombasa",
     "code": "001",
-    "capital": "Mombasa City",
-    "region": "Coast",
-    "area_km2": 218,
-    "population": 1208333
+    "name": "Mombasa",
+    "headquarters": "Mombasa City",
+    "area_km2": 212.5,
+    "region": "Coast"
   },
   {
     "id": 2,
-    "name": "Kwale",
     "code": "002",
-    "capital": "Kwale",
-    "region": "Coast",
-    "area_km2": 8262,
-    "population": 649931
+    "name": "Kwale",
+    "headquarters": "Kwale",
+    "area_km2": 8270.3,
+    "region": "Coast"
   },
   {
     "id": 3,
-    "name": "Kilifi",
     "code": "003",
-    "capital": "Kilifi",
-    "region": "Coast",
-    "area_km2": 12182,
-    "population": 1329662
+    "name": "Kilifi",
+    "headquarters": "Kilifi",
+    "area_km2": 12245.9,
+    "region": "Coast"
   },
   {
     "id": 4,
-    "name": "Tana River",
     "code": "004",
-    "capital": "Hola",
-    "region": "Coast",
-    "area_km2": 38963,
-    "population": 315943
+    "name": "Tana River",
+    "headquarters": "Hola",
+    "area_km2": 35375.8,
+    "region": "Coast"
   },
   {
     "id": 5,
-    "name": "Lamu",
     "code": "005",
-    "capital": "Lamu",
-    "region": "Coast",
-    "area_km2": 6431,
-    "population": 143920
+    "name": "Lamu",
+    "headquarters": "Lamu",
+    "area_km2": 6497.7,
+    "region": "Coast"
   },
   {
     "id": 6,
-    "name": "Taita Taveta",
     "code": "006",
-    "capital": "Mwatate",
-    "region": "Coast",
-    "area_km2": 17054,
-    "population": 340671
+    "name": "Taita Taveta",
+    "headquarters": "Mwatate",
+    "area_km2": 17083.9,
+    "region": "Coast"
   },
   {
     "id": 7,
-    "name": "Garissa",
     "code": "007",
-    "capital": "Garissa",
-    "region": "North Eastern",
-    "area_km2": 44557,
-    "population": 841353
+    "name": "Garissa",
+    "headquarters": "Garissa",
+    "area_km2": 45720.2,
+    "region": "North Eastern"
   },
   {
     "id": 8,
-    "name": "Wajir",
     "code": "008",
-    "capital": "Wajir",
-    "region": "North Eastern",
-    "area_km2": 55693,
-    "population": 781263
+    "name": "Wajir",
+    "headquarters": "Wajir",
+    "area_km2": 55840.6,
+    "region": "North Eastern"
   },
   {
     "id": 9,
-    "name": "Mandera",
     "code": "009",
-    "capital": "Mandera",
-    "region": "North Eastern",
-    "area_km2": 26632,
-    "population": 867457
+    "name": "Mandera",
+    "headquarters": "Mandera",
+    "area_km2": 25797.7,
+    "region": "North Eastern"
   },
   {
     "id": 10,
-    "name": "Marsabit",
     "code": "010",
-    "capital": "Marsabit",
-    "region": "Rift Valley",
-    "area_km2": 65014,
-    "population": 459785
+    "name": "Marsabit",
+    "headquarters": "Marsabit",
+    "area_km2": 66923.1,
+    "region": "Eastern"
   },
   {
     "id": 11,
-    "name": "Isiolo",
     "code": "011",
-    "capital": "Isiolo",
-    "region": "Rift Valley",
-    "area_km2": 25718,
-    "population": 268002
+    "name": "Isiolo",
+    "headquarters": "Isiolo",
+    "area_km2": 25336.1,
+    "region": "Eastern"
   },
   {
     "id": 12,
-    "name": "Meru",
     "code": "012",
-    "capital": "Meru",
-    "region": "Rift Valley",
-    "area_km2": 6921,
-    "population": 1549274
+    "name": "Meru",
+    "headquarters": "Meru",
+    "area_km2": 7003.1,
+    "region": "Eastern"
   },
   {
     "id": 13,
-    "name": "Tharaka-Nithi",
     "code": "013",
-    "capital": "Kathwana",
-    "region": "Rift Valley",
-    "area_km2": 2604,
-    "population": 393177
+    "name": "Tharaka-Nithi",
+    "headquarters": "Kathwana",
+    "area_km2": 2609.5,
+    "region": "Eastern"
   },
   {
     "id": 14,
-    "name": "Embu",
     "code": "014",
-    "capital": "Embu",
-    "region": "Rift Valley",
-    "area_km2": 2788,
-    "population": 608599
+    "name": "Embu",
+    "headquarters": "Embu",
+    "area_km2": 2555.9,
+    "region": "Eastern"
   },
   {
     "id": 15,
-    "name": "Kitui",
     "code": "015",
-    "capital": "Kitui",
-    "region": "Eastern",
-    "area_km2": 30009,
-    "population": 1666670
+    "name": "Kitui",
+    "headquarters": "Kitui",
+    "area_km2": 24385.1,
+    "region": "Eastern"
   },
   {
     "id": 16,
-    "name": "Machakos",
     "code": "016",
-    "capital": "Machakos",
-    "region": "Eastern",
-    "area_km2": 6255,
-    "population": 1470190
+    "name": "Machakos",
+    "headquarters": "Machakos",
+    "area_km2": 5952.9,
+    "region": "Eastern"
   },
   {
     "id": 17,
-    "name": "Makueni",
     "code": "017",
-    "capital": "Wote",
-    "region": "Eastern",
-    "area_km2": 8106,
-    "population": 987653
+    "name": "Makueni",
+    "headquarters": "Wote",
+    "area_km2": 8008.9,
+    "region": "Eastern"
   },
   {
     "id": 18,
-    "name": "Nyandarua",
     "code": "018",
-    "capital": "Ol Kalou",
-    "region": "Rift Valley",
-    "area_km2": 3182,
-    "population": 596268
+    "name": "Nyandarua",
+    "headquarters": "Ol Kalou",
+    "area_km2": 3107.7,
+    "region": "Central"
   },
   {
     "id": 19,
-    "name": "Nyeri",
     "code": "019",
-    "capital": "Nyeri",
-    "region": "Rift Valley",
-    "area_km2": 2453,
-    "population": 759164
+    "name": "Nyeri",
+    "headquarters": "Nyeri",
+    "area_km2": 2361.0,
+    "region": "Central"
   },
   {
     "id": 20,
-    "name": "Kirinyaga",
     "code": "020",
-    "capital": "Kerugoya/Kutus",
-    "region": "Central",
-    "area_km2": 1293,
-    "population": 610411
+    "name": "Kirinyaga",
+    "headquarters": "Kerugoya",
+    "area_km2": 1205.4,
+    "region": "Central"
   },
   {
     "id": 21,
-    "name": "Murang'a",
     "code": "021",
-    "capital": "Murang'a",
-    "region": "Central",
-    "area_km2": 2457,
-    "population": 942581
+    "name": "Murang'a",
+    "headquarters": "Murang'a",
+    "area_km2": 2325.8,
+    "region": "Central"
   },
   {
     "id": 22,
-    "name": "Kiambu",
     "code": "022",
-    "capital": "Kiambu",
-    "region": "Central",
-    "area_km2": 2187,
-    "population": 2680449
+    "name": "Kiambu",
+    "headquarters": "Kiambu",
+    "area_km2": 2449.2,
+    "region": "Central"
   },
   {
     "id": 23,
-    "name": "Turkana",
     "code": "023",
-    "capital": "Lodwar",
-    "region": "Rift Valley",
-    "area_km2": 68888,
-    "population": 926976
+    "name": "Turkana",
+    "headquarters": "Lodwar",
+    "area_km2": 98597.8,
+    "region": "Rift Valley"
   },
   {
     "id": 24,
-    "name": "West Pokot",
     "code": "024",
-    "capital": "Kapenguria",
-    "region": "Rift Valley",
-    "area_km2": 9030,
-    "population": 621241
+    "name": "West Pokot",
+    "headquarters": "Kapenguria",
+    "area_km2": 8418.2,
+    "region": "Rift Valley"
   },
   {
     "id": 25,
-    "name": "Samburu",
     "code": "025",
-    "capital": "Maralal",
-    "region": "Rift Valley",
-    "area_km2": 21031,
-    "population": 310327
+    "name": "Samburu",
+    "headquarters": "Maralal",
+    "area_km2": 20182.5,
+    "region": "Rift Valley"
   },
   {
     "id": 26,
-    "name": "Trans-Nzoia",
     "code": "026",
-    "capital": "Kitale",
-    "region": "Rift Valley",
-    "area_km2": 2695,
-    "population": 990341
+    "name": "Trans-Nzoia",
+    "headquarters": "Kitale",
+    "area_km2": 2469.9,
+    "region": "Rift Valley"
   },
   {
     "id": 27,
-    "name": "Uasin Gishu",
     "code": "027",
-    "capital": "Eldoret",
-    "region": "Rift Valley",
-    "area_km2": 3342,
-    "population": 1163186
+    "name": "Uasin Gishu",
+    "headquarters": "Eldoret",
+    "area_km2": 2955.3,
+    "region": "Rift Valley"
   },
   {
     "id": 28,
-    "name": "Elgeyo Marakwet",
     "code": "028",
-    "capital": "Iten",
-    "region": "Rift Valley",
-    "area_km2": 3037,
-    "population": 454480
+    "name": "Elgeyo Marakwet",
+    "headquarters": "Iten",
+    "area_km2": 3049.7,
+    "region": "Rift Valley"
   },
   {
     "id": 29,
-    "name": "Nandi",
     "code": "029",
-    "capital": "Kapsabet",
-    "region": "Rift Valley",
-    "area_km2": 2667,
-    "population": 885711
+    "name": "Nandi",
+    "headquarters": "Kapsabet",
+    "area_km2": 2884.5,
+    "region": "Rift Valley"
   },
   {
     "id": 30,
-    "name": "Baringo",
     "code": "030",
-    "capital": "Kabarnet",
-    "region": "Rift Valley",
-    "area_km2": 11081,
-    "population": 666763
+    "name": "Baringo",
+    "headquarters": "Kabarnet",
+    "area_km2": 11075.3,
+    "region": "Rift Valley"
   },
   {
     "id": 31,
-    "name": "Laikipia",
     "code": "031",
-    "capital": "Nanyuki",
-    "region": "Rift Valley",
-    "area_km2": 9244,
-    "population": 518560
+    "name": "Laikipia",
+    "headquarters": "Nanyuki",
+    "area_km2": 8696.1,
+    "region": "Rift Valley"
   },
   {
     "id": 32,
-    "name": "Nakuru",
     "code": "032",
-    "capital": "Nakuru",
-    "region": "Rift Valley",
-    "area_km2": 7493,
-    "population": 2162202
+    "name": "Nakuru",
+    "headquarters": "Nakuru",
+    "area_km2": 7509.5,
+    "region": "Rift Valley"
   },
   {
     "id": 33,
-    "name": "Narok",
     "code": "033",
-    "capital": "Narok",
-    "region": "Rift Valley",
-    "area_km2": 17652,
-    "population": 1157873
+    "name": "Narok",
+    "headquarters": "Narok",
+    "area_km2": 17921.2,
+    "region": "Rift Valley"
   },
   {
     "id": 34,
-    "name": "Kajiado",
     "code": "034",
-    "capital": "Kajiado",
-    "region": "Rift Valley",
-    "area_km2": 21003,
-    "population": 1117840
+    "name": "Kajiado",
+    "headquarters": "Kajiado",
+    "area_km2": 21292.7,
+    "region": "Rift Valley"
   },
   {
     "id": 35,
-    "name": "Kericho",
     "code": "035",
-    "capital": "Kericho",
-    "region": "Rift Valley",
-    "area_km2": 2396,
-    "population": 901777
+    "name": "Kericho",
+    "headquarters": "Kericho",
+    "area_km2": 2454.5,
+    "region": "Rift Valley"
   },
   {
     "id": 36,
-    "name": "Bomet",
     "code": "036",
-    "capital": "Bomet",
-    "region": "Rift Valley",
-    "area_km2": 1926,
-    "population": 875689
+    "name": "Bomet",
+    "headquarters": "Bomet",
+    "area_km2": 1997.9,
+    "region": "Rift Valley"
   },
   {
     "id": 37,
-    "name": "Kakamega",
     "code": "037",
-    "capital": "Kakamega",
-    "region": "Western",
-    "area_km2": 3012,
-    "population": 1867579
+    "name": "Kakamega",
+    "headquarters": "Kakamega",
+    "area_km2": 3033.8,
+    "region": "Western"
   },
   {
     "id": 38,
-    "name": "Vihiga",
     "code": "038",
-    "capital": "Vihiga",
-    "region": "Western",
-    "area_km2": 563,
-    "population": 590013
+    "name": "Vihiga",
+    "headquarters": "Vihiga",
+    "area_km2": 531.3,
+    "region": "Western"
   },
   {
     "id": 39,
-    "name": "Bungoma",
     "code": "039",
-    "capital": "Bungoma",
-    "region": "Western",
-    "area_km2": 2068,
-    "population": 1670570
+    "name": "Bungoma",
+    "headquarters": "Bungoma",
+    "area_km2": 2206.9,
+    "region": "Western"
   },
   {
     "id": 40,
-    "name": "Busia",
     "code": "040",
-    "capital": "Busia",
-    "region": "Western",
-    "area_km2": 1610,
-    "population": 743946
+    "name": "Busia",
+    "headquarters": "Busia",
+    "area_km2": 1628.4,
+    "region": "Western"
   },
   {
     "id": 41,
-    "name": "Siaya",
     "code": "041",
-    "capital": "Siaya",
-    "region": "Nyanza",
-    "area_km2": 2496,
-    "population": 993183
+    "name": "Siaya",
+    "headquarters": "Siaya",
+    "area_km2": 2496.1,
+    "region": "Nyanza"
   },
   {
     "id": 42,
-    "name": "Kisumu",
     "code": "042",
-    "capital": "Kisumu",
-    "region": "Nyanza",
-    "area_km2": 2084,
-    "population": 1155574
+    "name": "Kisumu",
+    "headquarters": "Kisumu",
+    "area_km2": 2009.5,
+    "region": "Nyanza"
   },
   {
     "id": 43,
-    "name": "Homa Bay",
     "code": "043",
-    "capital": "Homa Bay",
-    "region": "Nyanza",
-    "area_km2": 3269,
-    "population": 1131950
+    "name": "Homa Bay",
+    "headquarters": "Homa Bay",
+    "area_km2": 3154.7,
+    "region": "Nyanza"
   },
   {
     "id": 44,
-    "name": "Migori",
     "code": "044",
-    "capital": "Migori",
-    "region": "Nyanza",
-    "area_km2": 2595,
-    "population": 1116436
+    "name": "Migori",
+    "headquarters": "Migori",
+    "area_km2": 2586.4,
+    "region": "Nyanza"
   },
   {
     "id": 45,
-    "name": "Kisii",
     "code": "045",
-    "capital": "Kisii",
-    "region": "Nyanza",
-    "area_km2": 1320,
-    "population": 1266860
+    "name": "Kisii",
+    "headquarters": "Kisii",
+    "area_km2": 1317.9,
+    "region": "Nyanza"
   },
   {
     "id": 46,
-    "name": "Nyamira",
     "code": "046",
-    "capital": "Nyamira",
-    "region": "Nyanza",
-    "area_km2": 1296,
-    "population": 605576
+    "name": "Nyamira",
+    "headquarters": "Nyamira",
+    "area_km2": 912.5,
+    "region": "Nyanza"
   },
   {
     "id": 47,
-    "name": "Nairobi",
     "code": "047",
-    "capital": "Nairobi",
-    "region": "Nairobi",
-    "area_km2": 696,
-    "population": 4397073
+    "name": "Nairobi",
+    "headquarters": "Nairobi City",
+    "area_km2": 694.9,
+    "region": "Nairobi"
   }
 ]

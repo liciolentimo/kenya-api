@@ -480,7 +480,8 @@
     <span class="token-brace">{</span>
       <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span>
       <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa"</span><span class="token-punct">,</span>
-      <span class="token-string">"capital"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa City"</span>
+      <span class="token-string">"headquarters"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa City"</span><span class="token-punct">,</span>
+      <span class="token-string">"population"</span><span class="token-punct">:</span> <span class="token-number">1208333</span>
     <span class="token-brace">}</span>
   <span class="token-brace">]</span>
 <span class="token-brace">}</span></div>
@@ -631,7 +632,7 @@
 
         panelName.textContent = county.name;
         panelCode.textContent = county.code || String(code).padStart(3, '0');
-        panelHq.textContent = county.capital || '—';
+        panelHq.textContent = county.headquarters || '—';
         panelPopulation.textContent = population ? formatPopulation(population) : '—';
         panelConstituencies.textContent = constituencies.length || '—';
         panelInstitutions.textContent = institutions.length || '—';

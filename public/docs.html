@@ -280,11 +280,20 @@
               <span class="method-badge">GET</span>
               <p class="endpoint-path">/counties</p>
             </div>
-            <p class="endpoint-desc">Returns the full list of counties.</p>
+            <p class="endpoint-desc">Returns the full list of counties. Supports optional filtering and sorting.</p>
+            <div class="params-panel table-wrapper" style="margin-bottom: 18px;">
+              <table class="params-table">
+                <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr><td>region</td><td>string</td><td>query</td><td>no</td><td>Filter counties by region, e.g. Coast</td></tr>
+                  <tr><td>sort</td><td>string</td><td>query</td><td>no</td><td>Sort by area or population: area_asc, area_desc, population_asc, population_desc</td></tr>
+                </tbody>
+              </table>
+            </div>
             <div class="code-panel" style="margin-bottom: 18px;">
               <div class="code-wrapper">
                 <button class="copy-button" type="button">Copy</button>
-                <pre class="code-block">curl https://localhost:3000/api/v1/counties</pre>
+                <pre class="code-block">curl https://localhost:3000/api/v1/counties?region=Coast&sort=population_desc</pre>
               </div>
             </div>
             <p class="response-label">Example response</p>
@@ -294,7 +303,17 @@
                 <pre class="code-block"><span class="token-brace">{</span>
   <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
   <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">47</span><span class="token-punct">,</span>
-  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span> ... <span class="token-brace">]</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span>
+    <span class="token-brace">{</span>
+      <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span>
+      <span class="token-string">"code"</span><span class="token-punct">:</span> <span class="token-string">"001"</span><span class="token-punct">,</span>
+      <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa"</span><span class="token-punct">,</span>
+      <span class="token-string">"headquarters"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa City"</span><span class="token-punct">,</span>
+      <span class="token-string">"region"</span><span class="token-punct">:</span> <span class="token-string">"Coast"</span><span class="token-punct">,</span>
+      <span class="token-string">"area_km2"</span><span class="token-punct">:</span> <span class="token-number">212.5</span><span class="token-punct">,</span>
+      <span class="token-string">"population"</span><span class="token-punct">:</span> <span class="token-number">1208333</span>
+    <span class="token-brace">}</span>
+  <span class="token-brace">]</span>
 <span class="token-brace">}</span></pre>
               </div>
             </div>
@@ -594,8 +613,13 @@
                 <pre class="code-block"><span class="token-brace">{</span>
   <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
   <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">{</span>
-    <span class="token-string">"population"</span><span class="token-punct">:</span> <span class="token-number">53771296</span><span class="token-punct">,</span>
-    <span class="token-string">"male"</span><span class="token-punct">:</span> <span class="token-number">26413000</span>
+    <span class="token-string">"total_population"</span><span class="token-punct">:</span> <span class="token-number">53771296</span><span class="token-punct">,</span>
+    <span class="token-string">"most_populous_county"</span><span class="token-punct">:</span> <span class="token-brace">{</span>
+      <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Nairobi"</span><span class="token-punct">,</span>
+      <span class="token-string">"population"</span><span class="token-punct">:</span> <span class="token-number">4397073</span>
+    <span class="token-brace">}</span><span class="token-punct">,</span>
+    <span class="token-string">"census_year"</span><span class="token-punct">:</span> <span class="token-number">2019</span><span class="token-punct">,</span>
+    <span class="token-string">"source"</span><span class="token-punct">:</span> <span class="token-string">"Kenya National Bureau of Statistics"</span>
   <span class="token-brace">}</span>
 <span class="token-brace">}</span></pre>
               </div>

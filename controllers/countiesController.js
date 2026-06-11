@@ -1,10 +1,41 @@
 const counties = require('../data/counties.json');
+const populationData = require('../data/population.json');
+
+function buildPopulationLookup() {
+  return populationData.reduce((acc, item) => {
+    acc[item.county_id] = item.population;
+    return acc;
+  }, {});
+}
 
 function getCounties(req, res) {
+  const regionQuery = req.query.region ? String(req.query.region).trim().toLowerCase() : null;
+  const sortQuery = req.query.sort ? String(req.query.sort).trim() : null;
+  const populationLookup = buildPopulationLookup();
+
+  let results = counties.map((county) => ({
+    ...county,
+    population: populationLookup[county.id] ?? null,
+  }));
+
+  if (regionQuery) {
+    results = results.filter((county) => String(county.region || '').toLowerCase() === regionQuery);
+  }
+
+  if (sortQuery === 'area_asc') {
+    results.sort((a, b) => (a.area_km2 || 0) - (b.area_km2 || 0));
+  } else if (sortQuery === 'area_desc') {
+    results.sort((a, b) => (b.area_km2 || 0) - (a.area_km2 || 0));
+  } else if (sortQuery === 'population_asc') {
+    results.sort((a, b) => (a.population || 0) - (b.population || 0));
+  } else if (sortQuery === 'population_desc') {
+    results.sort((a, b) => (b.population || 0) - (a.population || 0));
+  }
+
   res.json({
     success: true,
-    count: counties.length,
-    data: counties,
+    count: results.length,
+    data: results,
   });
 }
 
@@ -20,9 +51,15 @@ function getCountyById(req, res, next) {
     });
   }
 
+  const populationLookup = buildPopulationLookup();
+  const data = {
+    ...county,
+    population: populationLookup[county.id] ?? null,
+  };
+
   res.json({
     success: true,
-    data: county,
+    data,
   });
 }
 

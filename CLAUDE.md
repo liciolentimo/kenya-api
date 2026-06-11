@@ -146,9 +146,9 @@ Errors follow this shape:
   "id": 1,
   "name": "Mombasa",
   "code": "001",
-  "capital": "Mombasa City",
+  "headquarters": "Mombasa City",
   "region": "Coast",
-  "area_km2": 218,
+  "area_km2": 212.5,
   "population": 1208333
 }
 ```
@@ -180,10 +180,7 @@ Errors follow this shape:
 {
   "county_id": 1,
   "county_name": "Mombasa",
-  "population": 1208333,
-  "male": 601234,
-  "female": 607099,
-  "census_year": 2019
+  "population": 1208333
 }
 ```
 
