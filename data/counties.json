@@ -5,7 +5,10 @@
     "name": "Mombasa",
     "headquarters": "Mombasa City",
     "area_km2": 212.5,
-    "region": "Coast"
+    "region": "Coast",
+    "governor": "Abdullswamad Nassir",
+    "governor_party": "ODM",
+    "governor_since": 2022
   },
   {
     "id": 2,
@@ -13,7 +16,10 @@
     "name": "Kwale",
     "headquarters": "Kwale",
     "area_km2": 8270.3,
-    "region": "Coast"
+    "region": "Coast",
+    "governor": "Fatuma Achani",
+    "governor_party": "UDA",
+    "governor_since": 2022
   },
   {
     "id": 3,
@@ -21,7 +27,10 @@
     "name": "Kilifi",
     "headquarters": "Kilifi",
     "area_km2": 12245.9,
-    "region": "Coast"
+    "region": "Coast",
+    "governor": "Gideon Mung'aro",
+    "governor_party": "ODM",
+    "governor_since": 2022
   },
   {
     "id": 4,
@@ -29,7 +38,10 @@
     "name": "Tana River",
     "headquarters": "Hola",
     "area_km2": 35375.8,
-    "region": "Coast"
+    "region": "Coast",
+    "governor": "Dhadho Godhana",
+    "governor_party": "ODM",
+    "governor_since": 2022
   },
   {
     "id": 5,
@@ -37,7 +49,10 @@
     "name": "Lamu",
     "headquarters": "Lamu",
     "area_km2": 6497.7,
-    "region": "Coast"
+    "region": "Coast",
+    "governor": "Issa Timamy",
+    "governor_party": "ANC",
+    "governor_since": 2022
   },
   {
     "id": 6,
@@ -45,7 +60,10 @@
     "name": "Taita Taveta",
     "headquarters": "Mwatate",
     "area_km2": 17083.9,
-    "region": "Coast"
+    "region": "Coast",
+    "governor": "Andrew Mwadime",
+    "governor_party": "Independent",
+    "governor_since": 2022
   },
   {
     "id": 7,
@@ -53,7 +71,10 @@
     "name": "Garissa",
     "headquarters": "Garissa",
     "area_km2": 45720.2,
-    "region": "North Eastern"
+    "region": "North Eastern",
+    "governor": "Nathif Jama",
+    "governor_party": "ODM",
+    "governor_since": 2022
   },
   {
     "id": 8,
@@ -61,7 +82,10 @@
     "name": "Wajir",
     "headquarters": "Wajir",
     "area_km2": 55840.6,
-    "region": "North Eastern"
+    "region": "North Eastern",
+    "governor": "Ahmed Abdullahi",
+    "governor_party": "ODM",
+    "governor_since": 2022
   },
   {
     "id": 9,
@@ -69,7 +93,10 @@
     "name": "Mandera",
     "headquarters": "Mandera",
     "area_km2": 25797.7,
-    "region": "North Eastern"
+    "region": "North Eastern",
+    "governor": "Mohamed Adan Khalif",
+    "governor_party": "UDM",
+    "governor_since": 2022
   },
   {
     "id": 10,
@@ -77,7 +104,10 @@
     "name": "Marsabit",
     "headquarters": "Marsabit",
     "area_km2": 66923.1,
-    "region": "Eastern"
+    "region": "Eastern",
+    "governor": "Mohamud Ali",
+    "governor_party": "ODM",
+    "governor_since": 2022
   },
   {
     "id": 11,
@@ -85,7 +115,10 @@
     "name": "Isiolo",
     "headquarters": "Isiolo",
     "area_km2": 25336.1,
-    "region": "Eastern"
+    "region": "Eastern",
+    "governor": "Abdi Hassan Guyo",
+    "governor_party": "Jubilee",
+    "governor_since": 2022
   },
   {
     "id": 12,
@@ -93,7 +126,10 @@
     "name": "Meru",
     "headquarters": "Meru",
     "area_km2": 7003.1,
-    "region": "Eastern"
+    "region": "Eastern",
+    "governor": "Kawira Mwangaza",
+    "governor_party": "Independent",
+    "governor_since": 2022
   },
   {
     "id": 13,
@@ -101,7 +137,10 @@
     "name": "Tharaka-Nithi",
     "headquarters": "Kathwana",
     "area_km2": 2609.5,
-    "region": "Eastern"
+    "region": "Eastern",
+    "governor": "Muthomi Njuki",
+    "governor_party": "UDA",
+    "governor_since": 2022
   },
   {
     "id": 14,
@@ -109,7 +148,10 @@
     "name": "Embu",
     "headquarters": "Embu",
     "area_km2": 2555.9,
-    "region": "Eastern"
+    "region": "Eastern",
+    "governor": "Cecily Mbarire",
+    "governor_party": "UDA",
+    "governor_since": 2022
   },
   {
     "id": 15,
@@ -117,7 +159,10 @@
     "name": "Kitui",
     "headquarters": "Kitui",
     "area_km2": 24385.1,
-    "region": "Eastern"
+    "region": "Eastern",
+    "governor": "Julius Malombe",
+    "governor_party": "Wiper",
+    "governor_since": 2022
   },
   {
     "id": 16,
@@ -125,7 +170,10 @@
     "name": "Machakos",
     "headquarters": "Machakos",
     "area_km2": 5952.9,
-    "region": "Eastern"
+    "region": "Eastern",
+    "governor": "Wavinya Ndeti",
+    "governor_party": "Wiper",
+    "governor_since": 2022
   },
   {
     "id": 17,
@@ -133,7 +181,10 @@
     "name": "Makueni",
     "headquarters": "Wote",
     "area_km2": 8008.9,
-    "region": "Eastern"
+    "region": "Eastern",
+    "governor": "Mutula Kilonzo",
+    "governor_party": "Wiper",
+    "governor_since": 2022
   },
   {
     "id": 18,
@@ -141,7 +192,10 @@
     "name": "Nyandarua",
     "headquarters": "Ol Kalou",
     "area_km2": 3107.7,
-    "region": "Central"
+    "region": "Central",
+    "governor": "Moses Badilisha Kiarie",
+    "governor_party": "UDA",
+    "governor_since": 2022
   },
   {
     "id": 19,
@@ -149,7 +203,10 @@
     "name": "Nyeri",
     "headquarters": "Nyeri",
     "area_km2": 2361.0,
-    "region": "Central"
+    "region": "Central",
+    "governor": "Mutahi Kahiga",
+    "governor_party": "UDA",
+    "governor_since": 2022
   },
   {
     "id": 20,
@@ -157,7 +214,10 @@
     "name": "Kirinyaga",
     "headquarters": "Kerugoya",
     "area_km2": 1205.4,
-    "region": "Central"
+    "region": "Central",
+    "governor": "Anne Waiguru",
+    "governor_party": "UDA",
+    "governor_since": 2022
   },
   {
     "id": 21,
@@ -165,7 +225,10 @@
     "name": "Murang'a",
     "headquarters": "Murang'a",
     "area_km2": 2325.8,
-    "region": "Central"
+    "region": "Central",
+    "governor": "Irungu Kang'ata",
+    "governor_party": "UDA",
+    "governor_since": 2022
   },
   {
     "id": 22,
@@ -173,7 +236,10 @@
     "name": "Kiambu",
     "headquarters": "Kiambu",
     "area_km2": 2449.2,
-    "region": "Central"
+    "region": "Central",
+    "governor": "Kimani Wamatangi",
+    "governor_party": "UDA",
+    "governor_since": 2022
   },
   {
     "id": 23,
@@ -181,7 +247,10 @@
     "name": "Turkana",
     "headquarters": "Lodwar",
     "area_km2": 98597.8,
-    "region": "Rift Valley"
+    "region": "Rift Valley",
+    "governor": "Jeremiah Lomurkai",
+    "governor_party": "ODM",
+    "governor_since": 2022
   },
   {
     "id": 24,
@@ -189,7 +258,10 @@
     "name": "West Pokot",
     "headquarters": "Kapenguria",
     "area_km2": 8418.2,
-    "region": "Rift Valley"
+    "region": "Rift Valley",
+    "governor": "Simon Kachapin",
+    "governor_party": "UDA",
+    "governor_since": 2022
   },
   {
     "id": 25,
@@ -197,7 +269,10 @@
     "name": "Samburu",
     "headquarters": "Maralal",
     "area_km2": 20182.5,
-    "region": "Rift Valley"
+    "region": "Rift Valley",
+    "governor": "Jonathan Lati Leleliit",
+    "governor_party": "UDA",
+    "governor_since": 2022
   },
   {
     "id": 26,
@@ -205,7 +280,10 @@
     "name": "Trans-Nzoia",
     "headquarters": "Kitale",
     "area_km2": 2469.9,
-    "region": "Rift Valley"
+    "region": "Rift Valley",
+    "governor": "George Natembeya",
+    "governor_party": "DAP-K",
+    "governor_since": 2022
   },
   {
     "id": 27,
@@ -213,7 +291,10 @@
     "name": "Uasin Gishu",
     "headquarters": "Eldoret",
     "area_km2": 2955.3,
-    "region": "Rift Valley"
+    "region": "Rift Valley",
+    "governor": "Jonathan Bii Chelilim",
+    "governor_party": "UDA",
+    "governor_since": 2022
   },
   {
     "id": 28,
@@ -221,7 +302,10 @@
     "name": "Elgeyo Marakwet",
     "headquarters": "Iten",
     "area_km2": 3049.7,
-    "region": "Rift Valley"
+    "region": "Rift Valley",
+    "governor": "Wisley Rotich",
+    "governor_party": "UDA",
+    "governor_since": 2022
   },
   {
     "id": 29,
@@ -229,7 +313,10 @@
     "name": "Nandi",
     "headquarters": "Kapsabet",
     "area_km2": 2884.5,
-    "region": "Rift Valley"
+    "region": "Rift Valley",
+    "governor": "Stephen Sang",
+    "governor_party": "UDA",
+    "governor_since": 2022
   },
   {
     "id": 30,
@@ -237,7 +324,10 @@
     "name": "Baringo",
     "headquarters": "Kabarnet",
     "area_km2": 11075.3,
-    "region": "Rift Valley"
+    "region": "Rift Valley",
+    "governor": "Benjamin Cheboi",
+    "governor_party": "UDA",
+    "governor_since": 2022
   },
   {
     "id": 31,
@@ -245,7 +335,10 @@
     "name": "Laikipia",
     "headquarters": "Nanyuki",
     "area_km2": 8696.1,
-    "region": "Rift Valley"
+    "region": "Rift Valley",
+    "governor": "Joshua Irungu",
+    "governor_party": "UDA",
+    "governor_since": 2022
   },
   {
     "id": 32,
@@ -253,7 +346,10 @@
     "name": "Nakuru",
     "headquarters": "Nakuru",
     "area_km2": 7509.5,
-    "region": "Rift Valley"
+    "region": "Rift Valley",
+    "governor": "Susan Kihika",
+    "governor_party": "UDA",
+    "governor_since": 2022
   },
   {
     "id": 33,
@@ -261,7 +357,10 @@
     "name": "Narok",
     "headquarters": "Narok",
     "area_km2": 17921.2,
-    "region": "Rift Valley"
+    "region": "Rift Valley",
+    "governor": "Patrick Ole Ntutu",
+    "governor_party": "UDA",
+    "governor_since": 2022
   },
   {
     "id": 34,
@@ -269,7 +368,10 @@
     "name": "Kajiado",
     "headquarters": "Kajiado",
     "area_km2": 21292.7,
-    "region": "Rift Valley"
+    "region": "Rift Valley",
+    "governor": "Joseph Ole Lenku",
+    "governor_party": "ODM",
+    "governor_since": 2022
   },
   {
     "id": 35,
@@ -277,7 +379,10 @@
     "name": "Kericho",
     "headquarters": "Kericho",
     "area_km2": 2454.5,
-    "region": "Rift Valley"
+    "region": "Rift Valley",
+    "governor": "Erick Kipkoech Mutai",
+    "governor_party": "UDA",
+    "governor_since": 2022
   },
   {
     "id": 36,
@@ -285,7 +390,10 @@
     "name": "Bomet",
     "headquarters": "Bomet",
     "area_km2": 1997.9,
-    "region": "Rift Valley"
+    "region": "Rift Valley",
+    "governor": "Hillary Barchok",
+    "governor_party": "UDA",
+    "governor_since": 2022
   },
   {
     "id": 37,
@@ -293,7 +401,10 @@
     "name": "Kakamega",
     "headquarters": "Kakamega",
     "area_km2": 3033.8,
-    "region": "Western"
+    "region": "Western",
+    "governor": "Fernandes Barasa",
+    "governor_party": "ODM",
+    "governor_since": 2022
   },
   {
     "id": 38,
@@ -301,7 +412,10 @@
     "name": "Vihiga",
     "headquarters": "Vihiga",
     "area_km2": 531.3,
-    "region": "Western"
+    "region": "Western",
+    "governor": "Wilber K. Ottichilo",
+    "governor_party": "ODM",
+    "governor_since": 2022
   },
   {
     "id": 39,
@@ -309,7 +423,10 @@
     "name": "Bungoma",
     "headquarters": "Bungoma",
     "area_km2": 2206.9,
-    "region": "Western"
+    "region": "Western",
+    "governor": "Ken Lusaka",
+    "governor_party": "Ford Kenya",
+    "governor_since": 2022
   },
   {
     "id": 40,
@@ -317,7 +434,10 @@
     "name": "Busia",
     "headquarters": "Busia",
     "area_km2": 1628.4,
-    "region": "Western"
+    "region": "Western",
+    "governor": "Paul Otuoma",
+    "governor_party": "ODM",
+    "governor_since": 2022
   },
   {
     "id": 41,
@@ -325,7 +445,10 @@
     "name": "Siaya",
     "headquarters": "Siaya",
     "area_km2": 2496.1,
-    "region": "Nyanza"
+    "region": "Nyanza",
+    "governor": "James Orengo",
+    "governor_party": "ODM",
+    "governor_since": 2022
   },
   {
     "id": 42,
@@ -333,7 +456,10 @@
     "name": "Kisumu",
     "headquarters": "Kisumu",
     "area_km2": 2009.5,
-    "region": "Nyanza"
+    "region": "Nyanza",
+    "governor": "Anyang' Nyong'o",
+    "governor_party": "ODM",
+    "governor_since": 2022
   },
   {
     "id": 43,
@@ -341,7 +467,10 @@
     "name": "Homa Bay",
     "headquarters": "Homa Bay",
     "area_km2": 3154.7,
-    "region": "Nyanza"
+    "region": "Nyanza",
+    "governor": "Gladys Wanga",
+    "governor_party": "ODM",
+    "governor_since": 2022
   },
   {
     "id": 44,
@@ -349,7 +478,10 @@
     "name": "Migori",
     "headquarters": "Migori",
     "area_km2": 2586.4,
-    "region": "Nyanza"
+    "region": "Nyanza",
+    "governor": "Ochillo Ayacko",
+    "governor_party": "ODM",
+    "governor_since": 2022
   },
   {
     "id": 45,
@@ -357,7 +489,10 @@
     "name": "Kisii",
     "headquarters": "Kisii",
     "area_km2": 1317.9,
-    "region": "Nyanza"
+    "region": "Nyanza",
+    "governor": "Simba Arati",
+    "governor_party": "ODM",
+    "governor_since": 2022
   },
   {
     "id": 46,
@@ -365,7 +500,10 @@
     "name": "Nyamira",
     "headquarters": "Nyamira",
     "area_km2": 912.5,
-    "region": "Nyanza"
+    "region": "Nyanza",
+    "governor": "Amos Nyaribo",
+    "governor_party": "UPA",
+    "governor_since": 2022
   },
   {
     "id": 47,
@@ -373,6 +511,9 @@
     "name": "Nairobi",
     "headquarters": "Nairobi City",
     "area_km2": 694.9,
-    "region": "Nairobi"
+    "region": "Nairobi",
+    "governor": "Johnson Sakaja",
+    "governor_party": "UDA",
+    "governor_since": 2022
   }
 ]

@@ -272,7 +272,27 @@
     .stats-hq {
       color: #8B949E;
       font-size: 13px;
+      margin: 4px 0 8px;
+    }
+
+    .stats-governor {
+      color: #8B949E;
+      font-size: 13px;
       margin: 4px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .governor-party-badge {
+      background: #0D1117;
+      border: 1px solid #30363D;
+      color: #8B949E;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
     }
 
     .stats-grid {
@@ -467,6 +487,10 @@
               <span class="county-badge" id="panel-code">—</span>
             </div>
             <p class="stats-hq">📍 <span id="panel-hq">—</span></p>
+            <div class="stats-governor">
+              🏛️ <span id="panel-governor">—</span>
+              <span id="panel-governor-party" class="governor-party-badge">—</span>
+            </div>
             <div class="stats-grid">
               <div class="stat-card">
                 <div class="stat-value" id="panel-population">—</div>
@@ -624,6 +648,8 @@
       const panelName = document.getElementById('panel-name');
       const panelCode = document.getElementById('panel-code');
       const panelHq = document.getElementById('panel-hq');
+      const panelGovernor = document.getElementById('panel-governor');
+      const panelGovernorParty = document.getElementById('panel-governor-party');
       const panelPopulation = document.getElementById('panel-population');
       const panelConstituencies = document.getElementById('panel-constituencies');
       const panelInstitutions = document.getElementById('panel-institutions');
@@ -656,6 +682,8 @@
         panelName.textContent = '—';
         panelCode.textContent = '—';
         panelHq.textContent = '—';
+        panelGovernor.textContent = '—';
+        panelGovernorParty.textContent = '—';
         panelPopulation.textContent = '—';
         panelConstituencies.textContent = '—';
         panelInstitutions.textContent = '—';
@@ -682,6 +710,8 @@
         panelName.textContent = county.name;
         panelCode.textContent = county.code || String(code).padStart(3, '0');
         panelHq.textContent = county.headquarters || '—';
+        panelGovernor.textContent = county.governor || '—';
+        panelGovernorParty.textContent = county.governor_party || '—';
         panelPopulation.textContent = population ? formatPopulation(population) : '—';
         panelConstituencies.textContent = constituencies.length || '—';
         panelInstitutions.textContent = institutions.length || '—';
@@ -780,8 +810,19 @@
 
       function onEachFeature(feature, layer) {
         const code = getFeatureCode(feature);
-        const label = feature.properties.COUNTY_NAM || feature.properties.COUNTY_NAME || 'Unknown';
-        layer.bindTooltip(label, { sticky: true, offset: [0, -10], direction: 'top', opacity: 0.9 });
+        const countyName = feature.properties.COUNTY_NAM || feature.properties.COUNTY_NAME || 'Unknown';
+        const county = countiesById[code];
+        const tooltipContent = county
+          ? `<strong>${county.name}</strong><br><span style="font-size:11px;color:#8B949E">👤 ${county.governor}</span>`
+          : `<strong>${countyName}</strong>`;
+        layer.bindTooltip(tooltipContent, {
+          permanent: false,
+          sticky: true,
+          offset: [0, -10],
+          direction: 'top',
+          opacity: 0.9,
+          className: 'county-tooltip',
+        });
 
         layer.on({
           mouseover: () => {

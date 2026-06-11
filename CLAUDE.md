@@ -75,6 +75,8 @@ https://kenya-api.netlify.app/api/v1
 | Method | Path                        | Description                        |
 |--------|-----------------------------|------------------------------------|
 | GET    | `/api/v1/counties`          | List all 47 counties               |
+| GET    | `/api/v1/counties?governor_party=UDA` | Filter counties by governor party |
+| GET    | `/api/v1/counties/governors` | Lightweight directory of all 47 governors |
 | GET    | `/api/v1/counties/:id`      | Single county by numeric ID        |
 | GET    | `/api/v1/counties/:id/constituencies` | All constituencies in a county |
 
@@ -149,9 +151,14 @@ Errors follow this shape:
   "headquarters": "Mombasa City",
   "region": "Coast",
   "area_km2": 212.5,
-  "population": 1208333
+  "population": 1208333,
+  "governor": "Abdullswamad Nassir",
+  "governor_party": "ODM",
+  "governor_since": 2022
 }
 ```
+
+Governor data sourced from 2022 Kenya General Election results.
 
 ### Constituency
 ```json

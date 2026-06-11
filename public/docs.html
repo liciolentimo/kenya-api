@@ -195,6 +195,7 @@
           </button>
           <ul class="group-list">
             <li class="group-item"><a class="sidebar-link" href="#counties">Counties</a></li>
+            <li class="group-item"><a class="sidebar-link" href="#county-governors">County Governors</a></li>
             <li class="group-item"><a class="sidebar-link" href="#constituencies">Constituencies</a></li>
             <li class="group-item"><a class="sidebar-link" href="#public-holidays">Public Holidays</a></li>
             <li class="group-item"><a class="sidebar-link" href="#population">Population</a></li>
@@ -304,6 +305,7 @@
                 <tbody>
                   <tr><td>region</td><td>string</td><td>query</td><td>no</td><td>Filter counties by region, e.g. Coast</td></tr>
                   <tr><td>sort</td><td>string</td><td>query</td><td>no</td><td>Sort by area or population: area_asc, area_desc, population_asc, population_desc</td></tr>
+                  <tr><td>governor_party</td><td>string</td><td>query</td><td>no</td><td>Filter by governor's party, e.g. UDA, ODM, Wiper, Independent</td></tr>
                 </tbody>
               </table>
             </div>
@@ -328,7 +330,10 @@
       <span class="token-string">"headquarters"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa City"</span><span class="token-punct">,</span>
       <span class="token-string">"region"</span><span class="token-punct">:</span> <span class="token-string">"Coast"</span><span class="token-punct">,</span>
       <span class="token-string">"area_km2"</span><span class="token-punct">:</span> <span class="token-number">212.5</span><span class="token-punct">,</span>
-      <span class="token-string">"population"</span><span class="token-punct">:</span> <span class="token-number">1208333</span>
+      <span class="token-string">"population"</span><span class="token-punct">:</span> <span class="token-number">1208333</span><span class="token-punct">,</span>
+      <span class="token-string">"governor"</span><span class="token-punct">:</span> <span class="token-string">"Abdullswamad Nassir"</span><span class="token-punct">,</span>
+      <span class="token-string">"governor_party"</span><span class="token-punct">:</span> <span class="token-string">"ODM"</span><span class="token-punct">,</span>
+      <span class="token-string">"governor_since"</span><span class="token-punct">:</span> <span class="token-number">2022</span>
     <span class="token-brace">}</span>
   <span class="token-brace">]</span>
 <span class="token-brace">}</span></pre>
@@ -340,7 +345,7 @@
   <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
   <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">47</span><span class="token-punct">,</span>
   <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span>
-    <span class="token-brace">{</span> <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa"</span> <span class="token-brace">}</span>
+    <span class="token-brace">{</span> <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa"</span><span class="token-punct">,</span> <span class="token-string">"governor"</span><span class="token-punct">:</span> <span class="token-string">"Abdullswamad Nassir"</span><span class="token-punct">,</span> <span class="token-string">"governor_party"</span><span class="token-punct">:</span> <span class="token-string">"ODM"</span> <span class="token-brace">}</span>
   <span class="token-brace">]</span>
 <span class="token-brace">}</span></pre></div>
             </div>
@@ -351,7 +356,7 @@
               <span class="method-badge">GET</span>
               <p class="endpoint-path">/counties/:id</p>
             </div>
-            <p class="endpoint-desc">Returns data for a single county by ID.</p>
+            <p class="endpoint-desc">Returns data for a single county by ID. Includes all fields from the county record — area, region, population, and governor details.</p>
             <div class="params-panel table-wrapper" style="margin-bottom: 18px;">
               <table class="params-table">
                 <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
@@ -363,7 +368,7 @@
             <div class="code-panel" style="margin-bottom: 18px;">
               <div class="code-wrapper">
                 <button class="copy-button" type="button">Copy</button>
-                <pre class="code-block">curl https://kenya-api.netlify.app/api/v1/counties/1</pre>
+                <pre class="code-block">curl https://kenya-api.netlify.app/api/v1/counties/47</pre>
               </div>
             </div>
             <p class="response-label">Example response</p>
@@ -373,8 +378,16 @@
                 <pre class="code-block"><span class="token-brace">{</span>
   <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
   <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">{</span>
-    <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span>
-    <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa"</span>
+    <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">47</span><span class="token-punct">,</span>
+    <span class="token-string">"code"</span><span class="token-punct">:</span> <span class="token-string">"047"</span><span class="token-punct">,</span>
+    <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Nairobi"</span><span class="token-punct">,</span>
+    <span class="token-string">"headquarters"</span><span class="token-punct">:</span> <span class="token-string">"Nairobi City"</span><span class="token-punct">,</span>
+    <span class="token-string">"region"</span><span class="token-punct">:</span> <span class="token-string">"Nairobi"</span><span class="token-punct">,</span>
+    <span class="token-string">"area_km2"</span><span class="token-punct">:</span> <span class="token-number">694.9</span><span class="token-punct">,</span>
+    <span class="token-string">"population"</span><span class="token-punct">:</span> <span class="token-number">4397073</span><span class="token-punct">,</span>
+    <span class="token-string">"governor"</span><span class="token-punct">:</span> <span class="token-string">"Johnson Sakaja"</span><span class="token-punct">,</span>
+    <span class="token-string">"governor_party"</span><span class="token-punct">:</span> <span class="token-string">"UDA"</span><span class="token-punct">,</span>
+    <span class="token-string">"governor_since"</span><span class="token-punct">:</span> <span class="token-number">2022</span>
   <span class="token-brace">}</span>
 <span class="token-brace">}</span></pre>
               </div>
@@ -384,8 +397,54 @@
               <div class="try-panel-content"><pre class="code-block"><span class="token-brace">{</span>
   <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
   <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">{</span>
-    <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa"</span>
+    <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">47</span><span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Nairobi"</span><span class="token-punct">,</span>
+    <span class="token-string">"governor"</span><span class="token-punct">:</span> <span class="token-string">"Johnson Sakaja"</span><span class="token-punct">,</span> <span class="token-string">"governor_party"</span><span class="token-punct">:</span> <span class="token-string">"UDA"</span><span class="token-punct">,</span> <span class="token-string">"governor_since"</span><span class="token-punct">:</span> <span class="token-number">2022</span>
   <span class="token-brace">}</span>
+<span class="token-brace">}</span></pre></div>
+            </div>
+          </div>
+
+          <div id="county-governors" class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path">/counties/governors</p>
+            </div>
+            <p class="endpoint-desc">Returns a lightweight directory of all 47 county governors, sorted alphabetically by county name. Each record includes the governor's name, party, and year of election alongside the county's code and headquarters. Useful for building a governors index, party breakdown charts, or filtering counties by political affiliation.</p>
+            <div class="code-panel" style="margin-bottom: 18px;">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block">curl https://kenya-api.netlify.app/api/v1/counties/governors</pre>
+              </div>
+            </div>
+            <p class="response-label">Example response</p>
+            <div class="code-panel">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">47</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span>
+    <span class="token-brace">{</span>
+      <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">30</span><span class="token-punct">,</span>
+      <span class="token-string">"code"</span><span class="token-punct">:</span> <span class="token-string">"030"</span><span class="token-punct">,</span>
+      <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Baringo"</span><span class="token-punct">,</span>
+      <span class="token-string">"headquarters"</span><span class="token-punct">:</span> <span class="token-string">"Kabarnet"</span><span class="token-punct">,</span>
+      <span class="token-string">"governor"</span><span class="token-punct">:</span> <span class="token-string">"Benjamin Cheboi"</span><span class="token-punct">,</span>
+      <span class="token-string">"governor_party"</span><span class="token-punct">:</span> <span class="token-string">"UDA"</span><span class="token-punct">,</span>
+      <span class="token-string">"governor_since"</span><span class="token-punct">:</span> <span class="token-number">2022</span>
+    <span class="token-brace">}</span>
+  <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre>
+              </div>
+            </div>
+            <button class="try-button" type="button">Try It</button>
+            <div class="try-panel">
+              <div class="try-panel-content"><pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">47</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span>
+    <span class="token-brace">{</span> <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">47</span><span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Nairobi"</span><span class="token-punct">,</span> <span class="token-string">"governor"</span><span class="token-punct">:</span> <span class="token-string">"Johnson Sakaja"</span><span class="token-punct">,</span> <span class="token-string">"governor_party"</span><span class="token-punct">:</span> <span class="token-string">"UDA"</span><span class="token-punct">,</span> <span class="token-string">"governor_since"</span><span class="token-punct">:</span> <span class="token-number">2022</span> <span class="token-brace">}</span>
+  <span class="token-brace">]</span>
 <span class="token-brace">}</span></pre></div>
             </div>
           </div>

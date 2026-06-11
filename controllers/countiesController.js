@@ -10,6 +10,7 @@ function buildPopulationLookup() {
 
 function getCounties(req, res) {
   const regionQuery = req.query.region ? String(req.query.region).trim().toLowerCase() : null;
+  const partyQuery = req.query.governor_party ? String(req.query.governor_party).trim().toLowerCase() : null;
   const sortQuery = req.query.sort ? String(req.query.sort).trim() : null;
   const populationLookup = buildPopulationLookup();
 
@@ -20,6 +21,10 @@ function getCounties(req, res) {
 
   if (regionQuery) {
     results = results.filter((county) => String(county.region || '').toLowerCase() === regionQuery);
+  }
+
+  if (partyQuery) {
+    results = results.filter((county) => String(county.governor_party || '').toLowerCase() === partyQuery);
   }
 
   if (sortQuery === 'area_asc') {
@@ -63,6 +68,26 @@ function getCountyById(req, res, next) {
   });
 }
 
+function getCountyGovernors(req, res) {
+  const data = counties
+    .map(({ id, code, name, headquarters, governor, governor_party, governor_since }) => ({
+      id,
+      code,
+      name,
+      headquarters,
+      governor,
+      governor_party,
+      governor_since,
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+
+  res.json({
+    success: true,
+    count: data.length,
+    data,
+  });
+}
+
 function getConstituenciesByCounty(req, res, next) {
   try {
     const countyId = Number(req.params.id);
@@ -92,5 +117,6 @@ function getConstituenciesByCounty(req, res, next) {
 module.exports = {
   getCounties,
   getCountyById,
+  getCountyGovernors,
   getConstituenciesByCounty,
 };

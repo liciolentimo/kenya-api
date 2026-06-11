@@ -83,6 +83,40 @@ function run() {
     ok = false;
   }
 
+  // 8. Confirm every county has a non-empty governor field
+  const missingGovernor = counties.filter((c) => !c.governor);
+  if (missingGovernor.length === 0) {
+    logPass('All counties include governor');
+  } else {
+    logFail('Some counties are missing governor:');
+    missingGovernor.forEach((c) => console.error(`  id=${c.id} name="${c.name}"`));
+    ok = false;
+  }
+
+  // 9. Confirm every county has a non-empty governor_party field
+  const missingParty = counties.filter((c) => !c.governor_party);
+  if (missingParty.length === 0) {
+    logPass('All counties include governor_party');
+  } else {
+    logFail('Some counties are missing governor_party:');
+    missingParty.forEach((c) => console.error(`  id=${c.id} name="${c.name}"`));
+    ok = false;
+  }
+
+  // 10. Confirm governor_since is 2022 for all counties
+  const wrongYear = counties.filter((c) => c.governor_since !== 2022);
+  if (wrongYear.length === 0) {
+    logPass('All counties have governor_since === 2022');
+  } else {
+    logFail('Some counties have incorrect governor_since value:');
+    wrongYear.forEach((c) => console.error(`  id=${c.id} name="${c.name}" governor_since=${c.governor_since}`));
+    ok = false;
+  }
+
+  // 11. Report unique parties
+  const parties = [...new Set(counties.map((c) => c.governor_party))].sort();
+  logPass(`Unique parties (${parties.length}): ${parties.join(', ')}`);
+
   if (ok) {
     console.log('\nALL CHECKS PASSED');
     process.exit(0);
