@@ -76,6 +76,7 @@ https://kenya-api.netlify.app/api/v1
 |--------|-----------------------------|------------------------------------|
 | GET    | `/api/v1/counties`          | List all 47 counties               |
 | GET    | `/api/v1/counties?governor_party=UDA` | Filter counties by governor party |
+| GET    | `/api/v1/counties?q=coast`  | Full-text search across name and description |
 | GET    | `/api/v1/counties/governors` | Lightweight directory of all 47 governors |
 | GET    | `/api/v1/counties/:id`      | Single county by numeric ID        |
 | GET    | `/api/v1/counties/:id/constituencies` | All constituencies in a county |
@@ -155,12 +156,14 @@ Errors follow this shape:
   "governor": "Abdullswamad Nassir",
   "governor_party": "ODM",
   "governor_since": 2022,
-  "flag_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Flag_of_Mombasa_County.svg"
+  "flag_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Flag_of_Mombasa_County.svg",
+  "description": "A coastal county along the Indian Ocean in southeastern Kenya, known for tourism, luxurious beach hotels, and the historic Mombasa Old Town."
 }
 ```
 
 Governor data sourced from 2022 Kenya General Election results.
 County flags: Wikimedia Commons (CC BY-SA) — sourced from en.wikipedia.org/wiki/Flags_of_counties_of_Kenya
+County descriptions: one-sentence factual summaries synthesised from official county information.
 
 ### Constituency
 ```json

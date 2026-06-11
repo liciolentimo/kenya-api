@@ -27,6 +27,14 @@ function getCounties(req, res) {
     results = results.filter((county) => String(county.governor_party || '').toLowerCase() === partyQuery);
   }
 
+  if (req.query.q) {
+    const term = String(req.query.q).trim().toLowerCase();
+    results = results.filter((c) =>
+      c.name.toLowerCase().includes(term) ||
+      (c.description && c.description.toLowerCase().includes(term))
+    );
+  }
+
   if (sortQuery === 'area_asc') {
     results.sort((a, b) => (a.area_km2 || 0) - (b.area_km2 || 0));
   } else if (sortQuery === 'area_desc') {

@@ -137,6 +137,26 @@ function run() {
   const parties = [...new Set(counties.map((c) => c.governor_party))].sort();
   logPass(`Unique parties (${parties.length}): ${parties.join(', ')}`);
 
+  // 14. Confirm every county has a non-empty description
+  const missingDesc = counties.filter((c) => !c.description);
+  if (missingDesc.length === 0) {
+    logPass('All counties include description');
+  } else {
+    logFail('Some counties are missing description:');
+    missingDesc.forEach((c) => console.error(`  id=${c.id} name="${c.name}"`));
+    ok = false;
+  }
+
+  // 15. Confirm all descriptions are at least 20 characters
+  const shortDesc = counties.filter((c) => c.description && c.description.length < 20);
+  if (shortDesc.length === 0) {
+    logPass('All descriptions are at least 20 characters');
+  } else {
+    logFail('Some descriptions are too short (< 20 chars):');
+    shortDesc.forEach((c) => console.error(`  id=${c.id} name="${c.name}" length=${c.description.length}`));
+    ok = false;
+  }
+
   if (ok) {
     console.log('\nALL CHECKS PASSED');
     process.exit(0);

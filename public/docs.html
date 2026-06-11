@@ -310,6 +310,7 @@
                   <tr><td>region</td><td>string</td><td>query</td><td>no</td><td>Filter counties by region, e.g. Coast</td></tr>
                   <tr><td>sort</td><td>string</td><td>query</td><td>no</td><td>Sort by area or population: area_asc, area_desc, population_asc, population_desc</td></tr>
                   <tr><td>governor_party</td><td>string</td><td>query</td><td>no</td><td>Filter by governor's party, e.g. UDA, ODM, Wiper, Independent</td></tr>
+                  <tr><td>q</td><td>string</td><td>query</td><td>no</td><td>Full-text search across county name and description, e.g. q=coast or q=lake</td></tr>
                 </tbody>
               </table>
             </div>
@@ -338,7 +339,8 @@
       <span class="token-string">"governor"</span><span class="token-punct">:</span> <span class="token-string">"Abdullswamad Nassir"</span><span class="token-punct">,</span>
       <span class="token-string">"governor_party"</span><span class="token-punct">:</span> <span class="token-string">"ODM"</span><span class="token-punct">,</span>
       <span class="token-string">"governor_since"</span><span class="token-punct">:</span> <span class="token-number">2022</span><span class="token-punct">,</span>
-      <span class="token-string">"flag_url"</span><span class="token-punct">:</span> <span class="token-string">"https://upload.wikimedia.org/wikipedia/commons/a/a6/Flag_of_Mombasa_County.svg"</span>
+      <span class="token-string">"flag_url"</span><span class="token-punct">:</span> <span class="token-string">"https://upload.wikimedia.org/wikipedia/commons/a/a6/Flag_of_Mombasa_County.svg"</span><span class="token-punct">,</span>
+      <span class="token-string">"description"</span><span class="token-punct">:</span> <span class="token-string">"A coastal county along the Indian Ocean in southeastern Kenya, known for tourism, luxurious beach hotels, and the historic Mombasa Old Town."</span>
     <span class="token-brace">}</span>
   <span class="token-brace">]</span>
 <span class="token-brace">}</span></pre>
@@ -350,7 +352,7 @@
   <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
   <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">47</span><span class="token-punct">,</span>
   <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span>
-    <span class="token-brace">{</span> <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa"</span><span class="token-punct">,</span> <span class="token-string">"governor"</span><span class="token-punct">:</span> <span class="token-string">"Abdullswamad Nassir"</span><span class="token-punct">,</span> <span class="token-string">"flag_url"</span><span class="token-punct">:</span> <span class="token-string">"https://upload.wikimedia.org/..."</span> <span class="token-brace">}</span>
+    <span class="token-brace">{</span> <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa"</span><span class="token-punct">,</span> <span class="token-string">"governor"</span><span class="token-punct">:</span> <span class="token-string">"Abdullswamad Nassir"</span><span class="token-punct">,</span> <span class="token-string">"flag_url"</span><span class="token-punct">:</span> <span class="token-string">"https://upload.wikimedia.org/..."</span><span class="token-punct">,</span> <span class="token-string">"description"</span><span class="token-punct">:</span> <span class="token-string">"A coastal county..."</span> <span class="token-brace">}</span>
   <span class="token-brace">]</span>
 <span class="token-brace">}</span></pre></div>
             </div>
@@ -393,7 +395,8 @@
     <span class="token-string">"governor"</span><span class="token-punct">:</span> <span class="token-string">"Johnson Sakaja"</span><span class="token-punct">,</span>
     <span class="token-string">"governor_party"</span><span class="token-punct">:</span> <span class="token-string">"UDA"</span><span class="token-punct">,</span>
     <span class="token-string">"governor_since"</span><span class="token-punct">:</span> <span class="token-number">2022</span><span class="token-punct">,</span>
-    <span class="token-string">"flag_url"</span><span class="token-punct">:</span> <span class="token-string">"https://upload.wikimedia.org/wikipedia/commons/5/5e/Flag_of_Nairobi_County.svg"</span>
+    <span class="token-string">"flag_url"</span><span class="token-punct">:</span> <span class="token-string">"https://upload.wikimedia.org/wikipedia/commons/5/5e/Flag_of_Nairobi_County.svg"</span><span class="token-punct">,</span>
+    <span class="token-string">"description"</span><span class="token-punct">:</span> <span class="token-string">"Kenya's capital and largest city, Nairobi is a major global metropolis, the economic hub of East Africa, home to the United Nations Environment Programme (UNEP), Nairobi National Park, and a fast-growing tech startup ecosystem."</span>
   <span class="token-brace">}</span>
 <span class="token-brace">}</span></pre>
               </div>
@@ -405,7 +408,8 @@
   <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">{</span>
     <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">47</span><span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Nairobi"</span><span class="token-punct">,</span>
     <span class="token-string">"governor"</span><span class="token-punct">:</span> <span class="token-string">"Johnson Sakaja"</span><span class="token-punct">,</span> <span class="token-string">"governor_party"</span><span class="token-punct">:</span> <span class="token-string">"UDA"</span><span class="token-punct">,</span>
-    <span class="token-string">"flag_url"</span><span class="token-punct">:</span> <span class="token-string">"https://upload.wikimedia.org/wikipedia/commons/5/5e/Flag_of_Nairobi_County.svg"</span>
+    <span class="token-string">"flag_url"</span><span class="token-punct">:</span> <span class="token-string">"https://upload.wikimedia.org/wikipedia/commons/5/5e/Flag_of_Nairobi_County.svg"</span><span class="token-punct">,</span>
+    <span class="token-string">"description"</span><span class="token-punct">:</span> <span class="token-string">"Kenya's capital and largest city..."</span>
   <span class="token-brace">}</span>
 <span class="token-brace">}</span></pre></div>
             </div>

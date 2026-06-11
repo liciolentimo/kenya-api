@@ -312,11 +312,19 @@
     .stats-governor {
       color: #8B949E;
       font-size: 13px;
-      margin: 4px 0 16px;
+      margin: 4px 0 8px;
       display: flex;
       align-items: center;
       gap: 8px;
       flex-wrap: wrap;
+    }
+
+    .county-description {
+      font-size: 12px;
+      color: #8B949E;
+      line-height: 1.6;
+      margin: 0 0 16px;
+      font-style: italic;
     }
 
     .governor-party-badge {
@@ -528,6 +536,7 @@
               🏛️ <span id="panel-governor">—</span>
               <span id="panel-governor-party" class="governor-party-badge">—</span>
             </div>
+            <p class="county-description" id="panel-description"></p>
             <div class="stats-grid">
               <div class="stat-card">
                 <div class="stat-value" id="panel-population">—</div>
@@ -687,6 +696,7 @@
       const panelHq = document.getElementById('panel-hq');
       const panelGovernor = document.getElementById('panel-governor');
       const panelGovernorParty = document.getElementById('panel-governor-party');
+      const panelDescription = document.getElementById('panel-description');
       const panelFlag = document.getElementById('panel-flag');
       const panelFlagWrapper = document.getElementById('panel-flag-wrapper');
       const panelPopulation = document.getElementById('panel-population');
@@ -723,6 +733,7 @@
         panelHq.textContent = '—';
         panelGovernor.textContent = '—';
         panelGovernorParty.textContent = '—';
+        panelDescription.textContent = '';
         panelFlag.src = '';
         panelFlagWrapper.style.display = 'none';
         panelPopulation.textContent = '—';
@@ -753,6 +764,7 @@
         panelHq.textContent = county.headquarters || '—';
         panelGovernor.textContent = county.governor || '—';
         panelGovernorParty.textContent = county.governor_party || '—';
+        panelDescription.textContent = county.description || '';
         if (county.flag_url) {
           panelFlag.src = county.flag_url;
           panelFlag.alt = `Flag of ${county.name} County`;
