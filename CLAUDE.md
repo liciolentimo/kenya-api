@@ -154,11 +154,13 @@ Errors follow this shape:
   "population": 1208333,
   "governor": "Abdullswamad Nassir",
   "governor_party": "ODM",
-  "governor_since": 2022
+  "governor_since": 2022,
+  "flag_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Flag_of_Mombasa_County.svg"
 }
 ```
 
 Governor data sourced from 2022 Kenya General Election results.
+County flags: Wikimedia Commons (CC BY-SA) — sourced from en.wikipedia.org/wiki/Flags_of_counties_of_Kenya
 
 ### Constituency
 ```json

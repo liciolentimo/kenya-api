@@ -292,6 +292,10 @@
       <section id="counties" class="panel">
         <h2 class="section-title">Counties</h2>
         <p class="section-copy">Retrieve county-level data for all 47 Kenyan counties.</p>
+        <div class="info-box" style="margin-bottom: 24px;">
+          <span class="info-icon">i</span>
+          <div>County flag images are served directly from Wikimedia Commons (<code>upload.wikimedia.org</code>) under Creative Commons licences. They are referenced by URL — no images are stored in this API.</div>
+        </div>
         <div class="endpoint-grid">
           <div class="endpoint-card">
             <div class="endpoint-head">
@@ -333,7 +337,8 @@
       <span class="token-string">"population"</span><span class="token-punct">:</span> <span class="token-number">1208333</span><span class="token-punct">,</span>
       <span class="token-string">"governor"</span><span class="token-punct">:</span> <span class="token-string">"Abdullswamad Nassir"</span><span class="token-punct">,</span>
       <span class="token-string">"governor_party"</span><span class="token-punct">:</span> <span class="token-string">"ODM"</span><span class="token-punct">,</span>
-      <span class="token-string">"governor_since"</span><span class="token-punct">:</span> <span class="token-number">2022</span>
+      <span class="token-string">"governor_since"</span><span class="token-punct">:</span> <span class="token-number">2022</span><span class="token-punct">,</span>
+      <span class="token-string">"flag_url"</span><span class="token-punct">:</span> <span class="token-string">"https://upload.wikimedia.org/wikipedia/commons/a/a6/Flag_of_Mombasa_County.svg"</span>
     <span class="token-brace">}</span>
   <span class="token-brace">]</span>
 <span class="token-brace">}</span></pre>
@@ -345,7 +350,7 @@
   <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
   <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">47</span><span class="token-punct">,</span>
   <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span>
-    <span class="token-brace">{</span> <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa"</span><span class="token-punct">,</span> <span class="token-string">"governor"</span><span class="token-punct">:</span> <span class="token-string">"Abdullswamad Nassir"</span><span class="token-punct">,</span> <span class="token-string">"governor_party"</span><span class="token-punct">:</span> <span class="token-string">"ODM"</span> <span class="token-brace">}</span>
+    <span class="token-brace">{</span> <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa"</span><span class="token-punct">,</span> <span class="token-string">"governor"</span><span class="token-punct">:</span> <span class="token-string">"Abdullswamad Nassir"</span><span class="token-punct">,</span> <span class="token-string">"flag_url"</span><span class="token-punct">:</span> <span class="token-string">"https://upload.wikimedia.org/..."</span> <span class="token-brace">}</span>
   <span class="token-brace">]</span>
 <span class="token-brace">}</span></pre></div>
             </div>
@@ -387,7 +392,8 @@
     <span class="token-string">"population"</span><span class="token-punct">:</span> <span class="token-number">4397073</span><span class="token-punct">,</span>
     <span class="token-string">"governor"</span><span class="token-punct">:</span> <span class="token-string">"Johnson Sakaja"</span><span class="token-punct">,</span>
     <span class="token-string">"governor_party"</span><span class="token-punct">:</span> <span class="token-string">"UDA"</span><span class="token-punct">,</span>
-    <span class="token-string">"governor_since"</span><span class="token-punct">:</span> <span class="token-number">2022</span>
+    <span class="token-string">"governor_since"</span><span class="token-punct">:</span> <span class="token-number">2022</span><span class="token-punct">,</span>
+    <span class="token-string">"flag_url"</span><span class="token-punct">:</span> <span class="token-string">"https://upload.wikimedia.org/wikipedia/commons/5/5e/Flag_of_Nairobi_County.svg"</span>
   <span class="token-brace">}</span>
 <span class="token-brace">}</span></pre>
               </div>
@@ -398,7 +404,8 @@
   <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
   <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">{</span>
     <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">47</span><span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Nairobi"</span><span class="token-punct">,</span>
-    <span class="token-string">"governor"</span><span class="token-punct">:</span> <span class="token-string">"Johnson Sakaja"</span><span class="token-punct">,</span> <span class="token-string">"governor_party"</span><span class="token-punct">:</span> <span class="token-string">"UDA"</span><span class="token-punct">,</span> <span class="token-string">"governor_since"</span><span class="token-punct">:</span> <span class="token-number">2022</span>
+    <span class="token-string">"governor"</span><span class="token-punct">:</span> <span class="token-string">"Johnson Sakaja"</span><span class="token-punct">,</span> <span class="token-string">"governor_party"</span><span class="token-punct">:</span> <span class="token-string">"UDA"</span><span class="token-punct">,</span>
+    <span class="token-string">"flag_url"</span><span class="token-punct">:</span> <span class="token-string">"https://upload.wikimedia.org/wikipedia/commons/5/5e/Flag_of_Nairobi_County.svg"</span>
   <span class="token-brace">}</span>
 <span class="token-brace">}</span></pre></div>
             </div>
@@ -431,7 +438,8 @@
       <span class="token-string">"headquarters"</span><span class="token-punct">:</span> <span class="token-string">"Kabarnet"</span><span class="token-punct">,</span>
       <span class="token-string">"governor"</span><span class="token-punct">:</span> <span class="token-string">"Benjamin Cheboi"</span><span class="token-punct">,</span>
       <span class="token-string">"governor_party"</span><span class="token-punct">:</span> <span class="token-string">"UDA"</span><span class="token-punct">,</span>
-      <span class="token-string">"governor_since"</span><span class="token-punct">:</span> <span class="token-number">2022</span>
+      <span class="token-string">"governor_since"</span><span class="token-punct">:</span> <span class="token-number">2022</span><span class="token-punct">,</span>
+      <span class="token-string">"flag_url"</span><span class="token-punct">:</span> <span class="token-string">"https://upload.wikimedia.org/wikipedia/commons/6/6c/Flag_of_Baringo_County.svg"</span>
     <span class="token-brace">}</span>
   <span class="token-brace">]</span>
 <span class="token-brace">}</span></pre>
@@ -443,7 +451,7 @@
   <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
   <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">47</span><span class="token-punct">,</span>
   <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span>
-    <span class="token-brace">{</span> <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">47</span><span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Nairobi"</span><span class="token-punct">,</span> <span class="token-string">"governor"</span><span class="token-punct">:</span> <span class="token-string">"Johnson Sakaja"</span><span class="token-punct">,</span> <span class="token-string">"governor_party"</span><span class="token-punct">:</span> <span class="token-string">"UDA"</span><span class="token-punct">,</span> <span class="token-string">"governor_since"</span><span class="token-punct">:</span> <span class="token-number">2022</span> <span class="token-brace">}</span>
+    <span class="token-brace">{</span> <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">47</span><span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Nairobi"</span><span class="token-punct">,</span> <span class="token-string">"governor"</span><span class="token-punct">:</span> <span class="token-string">"Johnson Sakaja"</span><span class="token-punct">,</span> <span class="token-string">"flag_url"</span><span class="token-punct">:</span> <span class="token-string">"https://upload.wikimedia.org/..."</span> <span class="token-brace">}</span>
   <span class="token-brace">]</span>
 <span class="token-brace">}</span></pre></div>
             </div>

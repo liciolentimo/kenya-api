@@ -8,7 +8,8 @@
     "region": "Coast",
     "governor": "Abdullswamad Nassir",
     "governor_party": "ODM",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Flag_of_Mombasa_County.svg"
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "region": "Coast",
     "governor": "Fatuma Achani",
     "governor_party": "UDA",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Flag_of_Kwale_County.svg"
   },
   {
     "id": 3,
@@ -30,7 +32,8 @@
     "region": "Coast",
     "governor": "Gideon Mung'aro",
     "governor_party": "ODM",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Flag_of_Kilifi_County.svg"
   },
   {
     "id": 4,
@@ -41,7 +44,8 @@
     "region": "Coast",
     "governor": "Dhadho Godhana",
     "governor_party": "ODM",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Flag_of_Tana_River_County.svg"
   },
   {
     "id": 5,
@@ -52,7 +56,8 @@
     "region": "Coast",
     "governor": "Issa Timamy",
     "governor_party": "ANC",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Lamu_County.svg"
   },
   {
     "id": 6,
@@ -63,7 +68,8 @@
     "region": "Coast",
     "governor": "Andrew Mwadime",
     "governor_party": "Independent",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Taita_Taveta_County.svg"
   },
   {
     "id": 7,
@@ -74,7 +80,8 @@
     "region": "North Eastern",
     "governor": "Nathif Jama",
     "governor_party": "ODM",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Flag_of_Garissa_County.gif"
   },
   {
     "id": 8,
@@ -85,7 +92,8 @@
     "region": "North Eastern",
     "governor": "Ahmed Abdullahi",
     "governor_party": "ODM",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Flag_of_Wajir_County%2C_Kenya.svg"
   },
   {
     "id": 9,
@@ -96,7 +104,8 @@
     "region": "North Eastern",
     "governor": "Mohamed Adan Khalif",
     "governor_party": "UDM",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_Mandera_County%2C_Kenya.svg"
   },
   {
     "id": 10,
@@ -107,7 +116,8 @@
     "region": "Eastern",
     "governor": "Mohamud Ali",
     "governor_party": "ODM",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Flag_of_Marsabit_County.svg"
   },
   {
     "id": 11,
@@ -118,7 +128,8 @@
     "region": "Eastern",
     "governor": "Abdi Hassan Guyo",
     "governor_party": "Jubilee",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Flag_of_Isiolo_County.svg"
   },
   {
     "id": 12,
@@ -129,7 +140,8 @@
     "region": "Eastern",
     "governor": "Kawira Mwangaza",
     "governor_party": "Independent",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Flag_of_Meru_County.svg"
   },
   {
     "id": 13,
@@ -140,7 +152,8 @@
     "region": "Eastern",
     "governor": "Muthomi Njuki",
     "governor_party": "UDA",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Flag_of_Tharaka_Nithi_County.svg"
   },
   {
     "id": 14,
@@ -151,7 +164,8 @@
     "region": "Eastern",
     "governor": "Cecily Mbarire",
     "governor_party": "UDA",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Flag_of_Embu_County%2C_Kenya.png"
   },
   {
     "id": 15,
@@ -162,7 +176,8 @@
     "region": "Eastern",
     "governor": "Julius Malombe",
     "governor_party": "Wiper",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Kitui_County.svg"
   },
   {
     "id": 16,
@@ -173,7 +188,8 @@
     "region": "Eastern",
     "governor": "Wavinya Ndeti",
     "governor_party": "Wiper",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Machakos_County.svg"
   },
   {
     "id": 17,
@@ -184,7 +200,8 @@
     "region": "Eastern",
     "governor": "Mutula Kilonzo",
     "governor_party": "Wiper",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Flag_of_Makueni_County.svg"
   },
   {
     "id": 18,
@@ -195,7 +212,8 @@
     "region": "Central",
     "governor": "Moses Badilisha Kiarie",
     "governor_party": "UDA",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Flag_of_Nyandarua_County.svg"
   },
   {
     "id": 19,
@@ -206,7 +224,8 @@
     "region": "Central",
     "governor": "Mutahi Kahiga",
     "governor_party": "UDA",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Flag_of_Nyeri_County.svg"
   },
   {
     "id": 20,
@@ -217,7 +236,8 @@
     "region": "Central",
     "governor": "Anne Waiguru",
     "governor_party": "UDA",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Flag_of_Kirinyaga_County.svg"
   },
   {
     "id": 21,
@@ -228,7 +248,8 @@
     "region": "Central",
     "governor": "Irungu Kang'ata",
     "governor_party": "UDA",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Flag_of_Murang%27a_County.svg"
   },
   {
     "id": 22,
@@ -239,7 +260,8 @@
     "region": "Central",
     "governor": "Kimani Wamatangi",
     "governor_party": "UDA",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Flag_of_Kiambu_County.svg"
   },
   {
     "id": 23,
@@ -250,7 +272,8 @@
     "region": "Rift Valley",
     "governor": "Jeremiah Lomurkai",
     "governor_party": "ODM",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Flag_of_Turkana_County.svg"
   },
   {
     "id": 24,
@@ -261,7 +284,8 @@
     "region": "Rift Valley",
     "governor": "Simon Kachapin",
     "governor_party": "UDA",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Flag_of_West_Pokot_County.png"
   },
   {
     "id": 25,
@@ -272,7 +296,8 @@
     "region": "Rift Valley",
     "governor": "Jonathan Lati Leleliit",
     "governor_party": "UDA",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Flag_of_Samburu_County.svg"
   },
   {
     "id": 26,
@@ -283,7 +308,8 @@
     "region": "Rift Valley",
     "governor": "George Natembeya",
     "governor_party": "DAP-K",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Flag_of_Trans-Nzoia_County.svg"
   },
   {
     "id": 27,
@@ -294,7 +320,8 @@
     "region": "Rift Valley",
     "governor": "Jonathan Bii Chelilim",
     "governor_party": "UDA",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Flag_of_Uasin_Gishu_County.svg"
   },
   {
     "id": 28,
@@ -305,7 +332,8 @@
     "region": "Rift Valley",
     "governor": "Wisley Rotich",
     "governor_party": "UDA",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Elgeyo_Marakwet_Flag.png"
   },
   {
     "id": 29,
@@ -316,7 +344,8 @@
     "region": "Rift Valley",
     "governor": "Stephen Sang",
     "governor_party": "UDA",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Contea_di_Nandi_flag.gif"
   },
   {
     "id": 30,
@@ -327,7 +356,8 @@
     "region": "Rift Valley",
     "governor": "Benjamin Cheboi",
     "governor_party": "UDA",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Flag_of_Baringo_County.svg"
   },
   {
     "id": 31,
@@ -338,7 +368,8 @@
     "region": "Rift Valley",
     "governor": "Joshua Irungu",
     "governor_party": "UDA",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Laikipia_County.svg"
   },
   {
     "id": 32,
@@ -349,7 +380,8 @@
     "region": "Rift Valley",
     "governor": "Susan Kihika",
     "governor_party": "UDA",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Flag_of_Nakuru_County.svg"
   },
   {
     "id": 33,
@@ -360,7 +392,8 @@
     "region": "Rift Valley",
     "governor": "Patrick Ole Ntutu",
     "governor_party": "UDA",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Flag_of_Narok_County.svg"
   },
   {
     "id": 34,
@@ -371,7 +404,8 @@
     "region": "Rift Valley",
     "governor": "Joseph Ole Lenku",
     "governor_party": "ODM",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Flag_of_Kajiado_County.svg"
   },
   {
     "id": 35,
@@ -382,7 +416,8 @@
     "region": "Rift Valley",
     "governor": "Erick Kipkoech Mutai",
     "governor_party": "UDA",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Flag_of_Kericho_County.svg"
   },
   {
     "id": 36,
@@ -393,7 +428,8 @@
     "region": "Rift Valley",
     "governor": "Hillary Barchok",
     "governor_party": "UDA",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Bomet_County.png"
   },
   {
     "id": 37,
@@ -404,7 +440,8 @@
     "region": "Western",
     "governor": "Fernandes Barasa",
     "governor_party": "ODM",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_Kakamega_County.svg"
   },
   {
     "id": 38,
@@ -415,7 +452,8 @@
     "region": "Western",
     "governor": "Wilber K. Ottichilo",
     "governor_party": "ODM",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Flag_of_Vihiga_County.svg"
   },
   {
     "id": 39,
@@ -426,7 +464,8 @@
     "region": "Western",
     "governor": "Ken Lusaka",
     "governor_party": "Ford Kenya",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Flag_of_Bungoma_County.gif"
   },
   {
     "id": 40,
@@ -437,7 +476,8 @@
     "region": "Western",
     "governor": "Paul Otuoma",
     "governor_party": "ODM",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Flag_of_Busia_County.svg"
   },
   {
     "id": 41,
@@ -448,7 +488,8 @@
     "region": "Nyanza",
     "governor": "James Orengo",
     "governor_party": "ODM",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Flag_of_Siaya_County.svg"
   },
   {
     "id": 42,
@@ -459,7 +500,8 @@
     "region": "Nyanza",
     "governor": "Anyang' Nyong'o",
     "governor_party": "ODM",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Flag_of_Kisumu_County.svg"
   },
   {
     "id": 43,
@@ -470,7 +512,8 @@
     "region": "Nyanza",
     "governor": "Gladys Wanga",
     "governor_party": "ODM",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Homa_Bay_County.svg"
   },
   {
     "id": 44,
@@ -481,7 +524,8 @@
     "region": "Nyanza",
     "governor": "Ochillo Ayacko",
     "governor_party": "ODM",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Flag_of_Migori_County.svg"
   },
   {
     "id": 45,
@@ -492,7 +536,8 @@
     "region": "Nyanza",
     "governor": "Simba Arati",
     "governor_party": "ODM",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Flag_of_Kisii_County.svg"
   },
   {
     "id": 46,
@@ -503,7 +548,8 @@
     "region": "Nyanza",
     "governor": "Amos Nyaribo",
     "governor_party": "UPA",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nyamira_County.svg"
   },
   {
     "id": 47,
@@ -514,6 +560,7 @@
     "region": "Nairobi",
     "governor": "Johnson Sakaja",
     "governor_party": "UDA",
-    "governor_since": 2022
+    "governor_since": 2022,
+    "flag_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Flag_of_Nairobi_County.svg"
   }
 ]

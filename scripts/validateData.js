@@ -113,7 +113,27 @@ function run() {
     ok = false;
   }
 
-  // 11. Report unique parties
+  // 11. Confirm every county has a non-empty flag_url
+  const missingFlag = counties.filter((c) => !c.flag_url);
+  if (missingFlag.length === 0) {
+    logPass('All counties include flag_url');
+  } else {
+    logFail('Some counties are missing flag_url:');
+    missingFlag.forEach((c) => console.error(`  id=${c.id} name="${c.name}"`));
+    ok = false;
+  }
+
+  // 12. Confirm all flag_urls point to Wikimedia Commons
+  const badFlag = counties.filter((c) => c.flag_url && !c.flag_url.startsWith('https://upload.wikimedia.org'));
+  if (badFlag.length === 0) {
+    logPass('All flag_url values point to upload.wikimedia.org');
+  } else {
+    logFail('Some flag_url values do not point to upload.wikimedia.org:');
+    badFlag.forEach((c) => console.error(`  id=${c.id} name="${c.name}" flag_url="${c.flag_url}"`));
+    ok = false;
+  }
+
+  // 13. Report unique parties
   const parties = [...new Set(counties.map((c) => c.governor_party))].sort();
   logPass(`Unique parties (${parties.length}): ${parties.join(', ')}`);
 

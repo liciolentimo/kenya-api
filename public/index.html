@@ -245,6 +245,40 @@
 
     .stats-content.hidden { display: none; }
 
+    .county-flag-wrapper {
+      width: 100%;
+      margin-bottom: 16px;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid #30363D;
+      background: #0D1117;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .county-flag-img {
+      width: 100%;
+      height: 80px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .county-tooltip {
+      background: #161B22 !important;
+      border: 1px solid #00A550 !important;
+      color: #ffffff !important;
+      font-family: 'Inter', sans-serif !important;
+      font-size: 12px !important;
+      padding: 8px !important;
+      border-radius: 6px !important;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4) !important;
+      min-width: 140px !important;
+    }
+    .county-tooltip::before { display: none !important; }
+
     .stats-header {
       display: flex;
       align-items: center;
@@ -482,6 +516,9 @@
             <p>Hover over a county to explore its live data.</p>
           </div>
           <div class="stats-content hidden" id="stats-content">
+            <div class="county-flag-wrapper" id="panel-flag-wrapper" style="display:none">
+              <img id="panel-flag" src="" alt="County flag" class="county-flag-img" />
+            </div>
             <div class="stats-header">
               <h3 id="panel-name">—</h3>
               <span class="county-badge" id="panel-code">—</span>
@@ -650,6 +687,8 @@
       const panelHq = document.getElementById('panel-hq');
       const panelGovernor = document.getElementById('panel-governor');
       const panelGovernorParty = document.getElementById('panel-governor-party');
+      const panelFlag = document.getElementById('panel-flag');
+      const panelFlagWrapper = document.getElementById('panel-flag-wrapper');
       const panelPopulation = document.getElementById('panel-population');
       const panelConstituencies = document.getElementById('panel-constituencies');
       const panelInstitutions = document.getElementById('panel-institutions');
@@ -684,6 +723,8 @@
         panelHq.textContent = '—';
         panelGovernor.textContent = '—';
         panelGovernorParty.textContent = '—';
+        panelFlag.src = '';
+        panelFlagWrapper.style.display = 'none';
         panelPopulation.textContent = '—';
         panelConstituencies.textContent = '—';
         panelInstitutions.textContent = '—';
@@ -712,6 +753,14 @@
         panelHq.textContent = county.headquarters || '—';
         panelGovernor.textContent = county.governor || '—';
         panelGovernorParty.textContent = county.governor_party || '—';
+        if (county.flag_url) {
+          panelFlag.src = county.flag_url;
+          panelFlag.alt = `Flag of ${county.name} County`;
+          panelFlagWrapper.style.display = 'flex';
+          panelFlag.onerror = () => { panelFlagWrapper.style.display = 'none'; };
+        } else {
+          panelFlagWrapper.style.display = 'none';
+        }
         panelPopulation.textContent = population ? formatPopulation(population) : '—';
         panelConstituencies.textContent = constituencies.length || '—';
         panelInstitutions.textContent = institutions.length || '—';
@@ -813,14 +862,15 @@
         const countyName = feature.properties.COUNTY_NAM || feature.properties.COUNTY_NAME || 'Unknown';
         const county = countiesById[code];
         const tooltipContent = county
-          ? `<strong>${county.name}</strong><br><span style="font-size:11px;color:#8B949E">👤 ${county.governor}</span>`
+          ? `<div style="text-align:center;min-width:140px">
+              ${county.flag_url ? `<img src="${county.flag_url}" style="width:100%;height:36px;object-fit:cover;border-radius:3px;margin-bottom:6px;display:block" onerror="this.style.display='none'">` : ''}
+              <strong style="font-size:13px">${county.name}</strong><br>
+              <span style="font-size:11px;color:#8B949E">👤 ${county.governor}</span>
+            </div>`
           : `<strong>${countyName}</strong>`;
         layer.bindTooltip(tooltipContent, {
           permanent: false,
-          sticky: true,
-          offset: [0, -10],
           direction: 'top',
-          opacity: 0.9,
           className: 'county-tooltip',
         });
 
