@@ -1,10 +1,21 @@
 const constituencies = require('../data/constituencies.json');
 
 function getAllConstituencies(req, res) {
+  let result = [...constituencies];
+
+  if (req.query.q) {
+    const term = String(req.query.q).trim().toLowerCase();
+    result = result.filter(
+      (c) =>
+        c.name.toLowerCase().includes(term) ||
+        c.county_name.toLowerCase().includes(term)
+    );
+  }
+
   res.json({
     success: true,
-    count: constituencies.length,
-    data: constituencies,
+    count: result.length,
+    data: result,
   });
 }
 

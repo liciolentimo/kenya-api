@@ -8,6 +8,15 @@ function getHolidays(req, res) {
     results = results.filter((holiday) => holiday.date.startsWith(`${year}-`));
   }
 
+  if (req.query.q) {
+    const term = String(req.query.q).trim().toLowerCase();
+    results = results.filter(
+      (h) =>
+        h.name.toLowerCase().includes(term) ||
+        h.type.toLowerCase().includes(term)
+    );
+  }
+
   res.json({
     success: true,
     count: results.length,

@@ -7,6 +7,15 @@ function getAllMinistries(req, res) {
     result = result.filter((m) => m.appointed === req.query.appointed);
   }
 
+  if (req.query.q) {
+    const term = String(req.query.q).trim().toLowerCase();
+    result = result.filter(
+      (m) =>
+        m.ministry.toLowerCase().includes(term) ||
+        m.cabinet_secretary.toLowerCase().includes(term)
+    );
+  }
+
   res.status(200).json({
     success: true,
     count: result.length,

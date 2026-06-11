@@ -118,9 +118,23 @@ https://kenya-api.netlify.app/api/v1
 ### Ministries
 | Method | Path                                      | Description                                        |
 |--------|-------------------------------------------|----------------------------------------------------|
-| GET    | `/api/v1/ministries`                      | All ministries (?appointed= filter)                |
+| GET    | `/api/v1/ministries`                      | All ministries (?appointed= / ?q= filters)         |
 | GET    | `/api/v1/ministries/:id`                  | Single ministry by ID                              |
 | GET    | `/api/v1/ministries/search?q=`            | Search by ministry name or CS name                 |
+
+### Search
+| Method | Path                                      | Description                                        |
+|--------|-------------------------------------------|----------------------------------------------------|
+| GET    | `/api/v1/search?q=`                       | Global search across all resources                 |
+| GET    | `/api/v1/search?q=&type=`                 | Search within a specific resource type             |
+
+Search fields per resource:
+- counties: name, headquarters, region, governor, description
+- constituencies: name, county_name
+- holidays: name, type
+- institutions: name, type, category, county_name, constituency, address
+- ministries: ministry, cabinet_secretary
+- exchange_rates: currency, currency_name
 
 ---
 

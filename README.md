@@ -74,6 +74,29 @@ No API key or authentication required.
 | GET | `/api/v1/ministries/:id` | Single ministry by ID |
 | GET | `/api/v1/ministries/search?q=` | Search by ministry or CS name |
 
+### Search
+| Method | Path | Description |
+|--------|------|-------------|
+| GET | `/api/v1/search?q=` | Search across all resources |
+| GET | `/api/v1/search?q=&type=` | Search within a specific resource |
+
+---
+
+## Global Search
+
+KenyaAPI supports cross-resource search through a single endpoint. Query all six resources simultaneously or narrow by type:
+
+```bash
+# Search everything
+curl https://kenya-api.netlify.app/api/v1/search?q=nairobi
+
+# Search only ministries
+curl "https://kenya-api.netlify.app/api/v1/search?q=health&type=ministries"
+
+# Search exchange rates
+curl "https://kenya-api.netlify.app/api/v1/search?q=USD&type=exchange_rates"
+```
+
 ---
 
 ## Response format

@@ -1,14 +1,25 @@
 const rates = require('../data/exchange-rates.json');
 
 function getExchangeRates(req, res) {
+  let data = rates;
+
+  if (req.query.q) {
+    const term = String(req.query.q).trim().toLowerCase();
+    data = data.filter(
+      (r) =>
+        r.currency.toLowerCase().includes(term) ||
+        r.currency_name.toLowerCase().includes(term)
+    );
+  }
+
   const firstRate = rates[0] || {};
   res.json({
     success: true,
     base_currency: 'KES',
     last_updated: firstRate.last_updated || '2026-04-23',
     source: firstRate.source || 'Central Bank of Kenya',
-    count: rates.length,
-    data: rates,
+    count: data.length,
+    data,
   });
 }
 

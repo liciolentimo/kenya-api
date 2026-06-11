@@ -31,7 +31,9 @@ function getCounties(req, res) {
     const term = String(req.query.q).trim().toLowerCase();
     results = results.filter((c) =>
       c.name.toLowerCase().includes(term) ||
-      (c.description && c.description.toLowerCase().includes(term))
+      (c.description && c.description.toLowerCase().includes(term)) ||
+      (c.governor && c.governor.toLowerCase().includes(term)) ||
+      (c.headquarters && c.headquarters.toLowerCase().includes(term))
     );
   }
 
