@@ -103,6 +103,15 @@ http://localhost:3000/api/v1
 | GET    | `/api/v1/exchange-rates`          | KES rates against major currencies |
 | GET    | `/api/v1/exchange-rates/:currency`| KES rate for a specific currency (e.g. USD, EUR) |
 
+### Educational Institutions
+| Method | Path                                      | Description                                        |
+|--------|-------------------------------------------|----------------------------------------------------|
+| GET    | `/api/v1/institutions`                    | List institutions with optional pagination/filters |
+| GET    | `/api/v1/institutions/:id`                | Single institution by ID                           |
+| GET    | `/api/v1/institutions/county/:county_id`  | Institutions in a specific county                  |
+| GET    | `/api/v1/institutions/type/:type`         | Institutions by type (University, TVET, etc.)      |
+| GET    | `/api/v1/institutions/search?q=term`      | Search institutions by name, county, or address    |
+
 ---
 
 ## Response Format
@@ -186,6 +195,19 @@ Errors follow this shape:
   "buy": 129.50,
   "sell": 130.20,
   "last_updated": "2025-06-11"
+}
+```
+
+### Educational Institution
+```json
+{
+  "id": 1,
+  "name": "Technical University of Mombasa",
+  "type": "University",
+  "category": "Public",
+  "address": "Jomo Kenyatta Avenue, Mombasa",
+  "county_id": 1,
+  "county_name": "Mombasa"
 }
 ```
 

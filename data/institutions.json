@@ -1,0 +1,308 @@
+[
+  {
+    "id": 1,
+    "name": "Technical University of Mombasa",
+    "type": "University",
+    "category": "Public",
+    "address": "Jomo Kenyatta Avenue, Mombasa",
+    "county_id": 1,
+    "county_name": "Mombasa"
+  },
+  {
+    "id": 2,
+    "name": "Kenya Medical Training College Mombasa Campus",
+    "type": "TVET",
+    "category": "Public",
+    "address": "Mombasa-Malindi Road, Mombasa",
+    "county_id": 1,
+    "county_name": "Mombasa"
+  },
+  {
+    "id": 3,
+    "name": "Mombasa Academy",
+    "type": "Secondary School",
+    "category": "Private",
+    "address": "Likoni Road, Mombasa",
+    "county_id": 1,
+    "county_name": "Mombasa"
+  },
+  {
+    "id": 4,
+    "name": "Tudor Primary School",
+    "type": "Primary School",
+    "category": "Public",
+    "address": "Tudor, Mombasa",
+    "county_id": 1,
+    "county_name": "Mombasa"
+  },
+  {
+    "id": 5,
+    "name": "Kwale Technical Training Institute",
+    "type": "TVET",
+    "category": "Public",
+    "address": "Kwale Town, Kwale",
+    "county_id": 2,
+    "county_name": "Kwale"
+  },
+  {
+    "id": 6,
+    "name": "Diani High School",
+    "type": "Secondary School",
+    "category": "Private",
+    "address": "Diani Beach Road, Kwale",
+    "county_id": 2,
+    "county_name": "Kwale"
+  },
+  {
+    "id": 7,
+    "name": "Bomu Bay Primary School",
+    "type": "Primary School",
+    "category": "Public",
+    "address": "Bomu Bay, Kwale",
+    "county_id": 2,
+    "county_name": "Kwale"
+  },
+  {
+    "id": 8,
+    "name": "Kwale Teachers College",
+    "type": "College",
+    "category": "Public",
+    "address": "Kwale Town, Kwale",
+    "county_id": 2,
+    "county_name": "Kwale"
+  },
+  {
+    "id": 9,
+    "name": "Pwani University",
+    "type": "University",
+    "category": "Public",
+    "address": "Kilifi Campus, Kilifi",
+    "county_id": 3,
+    "county_name": "Kilifi"
+  },
+  {
+    "id": 10,
+    "name": "Kilifi Technical Training Institute",
+    "type": "TVET",
+    "category": "Public",
+    "address": "Mnarani Road, Kilifi",
+    "county_id": 3,
+    "county_name": "Kilifi"
+  },
+  {
+    "id": 11,
+    "name": "Malindi High School",
+    "type": "Secondary School",
+    "category": "Private",
+    "address": "Ganda Road, Kilifi",
+    "county_id": 3,
+    "county_name": "Kilifi"
+  },
+  {
+    "id": 12,
+    "name": "Bahari Primary School",
+    "type": "Primary School",
+    "category": "Public",
+    "address": "Kilifi County, Kilifi",
+    "county_id": 3,
+    "county_name": "Kilifi"
+  },
+  {
+    "id": 13,
+    "name": "Tana River Technical Training Institute",
+    "type": "TVET",
+    "category": "Public",
+    "address": "Aldina, Tana River",
+    "county_id": 4,
+    "county_name": "Tana River"
+  },
+  {
+    "id": 14,
+    "name": "Tana Delta Secondary School",
+    "type": "Secondary School",
+    "category": "Public",
+    "address": "Galole, Tana River",
+    "county_id": 4,
+    "county_name": "Tana River"
+  },
+  {
+    "id": 15,
+    "name": "Garsen Primary School",
+    "type": "Primary School",
+    "category": "Public",
+    "address": "Garsen Town, Tana River",
+    "county_id": 4,
+    "county_name": "Tana River"
+  },
+  {
+    "id": 16,
+    "name": "Lamu Teachers Training College",
+    "type": "College",
+    "category": "Public",
+    "address": "Lamu Island, Lamu",
+    "county_id": 5,
+    "county_name": "Lamu"
+  },
+  {
+    "id": 17,
+    "name": "Lamu High School",
+    "type": "Secondary School",
+    "category": "Public",
+    "address": "Shela Road, Lamu",
+    "county_id": 5,
+    "county_name": "Lamu"
+  },
+  {
+    "id": 18,
+    "name": "Kiunga Primary School",
+    "type": "Primary School",
+    "category": "Public",
+    "address": "Kiunga, Lamu",
+    "county_id": 5,
+    "county_name": "Lamu"
+  },
+  {
+    "id": 19,
+    "name": "Taita Taveta University",
+    "type": "University",
+    "category": "Public",
+    "address": "Voi-Mwatate Road, Voi",
+    "county_id": 6,
+    "county_name": "Taita-Taveta"
+  },
+  {
+    "id": 20,
+    "name": "Taita Taveta Technical Institute",
+    "type": "TVET",
+    "category": "Public",
+    "address": "Voi Town, Taita-Taveta",
+    "county_id": 6,
+    "county_name": "Taita-Taveta"
+  },
+  {
+    "id": 21,
+    "name": "Voi Secondary School",
+    "type": "Secondary School",
+    "category": "Public",
+    "address": "Voi, Taita-Taveta",
+    "county_id": 6,
+    "county_name": "Taita-Taveta"
+  },
+  {
+    "id": 22,
+    "name": "Garissa University",
+    "type": "University",
+    "category": "Public",
+    "address": "University Road, Garissa",
+    "county_id": 7,
+    "county_name": "Garissa"
+  },
+  {
+    "id": 23,
+    "name": "Garissa Teachers Training College",
+    "type": "College",
+    "category": "Public",
+    "address": "Lagdera Road, Garissa",
+    "county_id": 7,
+    "county_name": "Garissa"
+  },
+  {
+    "id": 24,
+    "name": "Garissa High School",
+    "type": "Secondary School",
+    "category": "Public",
+    "address": "Garissa Town, Garissa",
+    "county_id": 7,
+    "county_name": "Garissa"
+  },
+  {
+    "id": 25,
+    "name": "Wajir Technical Training Institute",
+    "type": "TVET",
+    "category": "Public",
+    "address": "Wajir Town, Wajir",
+    "county_id": 8,
+    "county_name": "Wajir"
+  },
+  {
+    "id": 26,
+    "name": "Wajir Primary School",
+    "type": "Primary School",
+    "category": "Public",
+    "address": "Wajir Town, Wajir",
+    "county_id": 8,
+    "county_name": "Wajir"
+  },
+  {
+    "id": 27,
+    "name": "Wajir Secondary School",
+    "type": "Secondary School",
+    "category": "Public",
+    "address": "Wajir Town, Wajir",
+    "county_id": 8,
+    "county_name": "Wajir"
+  },
+  {
+    "id": 28,
+    "name": "Mandera Technical College",
+    "type": "TVET",
+    "category": "Public",
+    "address": "Mandera Town, Mandera",
+    "county_id": 9,
+    "county_name": "Mandera"
+  },
+  {
+    "id": 29,
+    "name": "Mandera Girls Secondary School",
+    "type": "Secondary School",
+    "category": "Public",
+    "address": "Mandera Town, Mandera",
+    "county_id": 9,
+    "county_name": "Mandera"
+  },
+  {
+    "id": 30,
+    "name": "Mandera Primary School",
+    "type": "Primary School",
+    "category": "Public",
+    "address": "Mandera Town, Mandera",
+    "county_id": 9,
+    "county_name": "Mandera"
+  },
+  {
+    "id": 31,
+    "name": "Mount Kenya University Marsabit Campus",
+    "type": "University",
+    "category": "Private",
+    "address": "Saku Town, Marsabit",
+    "county_id": 10,
+    "county_name": "Marsabit"
+  },
+  {
+    "id": 32,
+    "name": "Marsabit Teachers Training College",
+    "type": "College",
+    "category": "Public",
+    "address": "Marsabit Town, Marsabit",
+    "county_id": 10,
+    "county_name": "Marsabit"
+  },
+  {
+    "id": 33,
+    "name": "Marsabit Secondary School",
+    "type": "Secondary School",
+    "category": "Public",
+    "address": "Marsabit Town, Marsabit",
+    "county_id": 10,
+    "county_name": "Marsabit"
+  },
+  {
+    "id": 34,
+    "name": "Eliye Springs Primary School",
+    "type": "Primary School",
+    "category": "Public",
+    "address": "Eliye Springs, Marsabit",
+    "county_id": 10,
+    "county_name": "Marsabit"
+  }
+]

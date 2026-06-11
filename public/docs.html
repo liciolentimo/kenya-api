@@ -182,6 +182,7 @@
             <li class="group-item"><a class="sidebar-link" href="#public-holidays">Public Holidays</a></li>
             <li class="group-item"><a class="sidebar-link" href="#population">Population</a></li>
             <li class="group-item"><a class="sidebar-link" href="#exchange-rates">Exchange Rates</a></li>
+            <li class="group-item"><a class="sidebar-link" href="#institutions">Educational Institutions</a></li>
           </ul>
         </div>
       </div>
@@ -723,6 +724,160 @@
     <span class="token-string">"buy"</span><span class="token-punct">:</span> <span class="token-number">148.50</span>
   <span class="token-brace">}</span>
 <span class="token-brace">}</span></pre></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="institutions" class="panel">
+        <h2 class="section-title">Educational Institutions</h2>
+        <p class="section-copy">Browse curated educational institution data for the first 10 Kenyan counties.</p>
+        <div class="endpoint-grid">
+          <div class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path">/institutions</p>
+            </div>
+            <p class="endpoint-desc">Returns institutions with optional pagination or filters.</p>
+            <div class="params-panel table-wrapper" style="margin-bottom: 18px;">
+              <table class="params-table">
+                <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr><td>page</td><td>integer</td><td>query</td><td>no</td><td>Page number for pagination</td></tr>
+                  <tr><td>limit</td><td>integer</td><td>query</td><td>no</td><td>Maximum items per page</td></tr>
+                  <tr><td>type</td><td>string</td><td>query</td><td>no</td><td>Institution type (University, TVET, Secondary School, Primary School, College)</td></tr>
+                  <tr><td>category</td><td>string</td><td>query</td><td>no</td><td>Institution category (Public, Private, Faith-Based, Technical)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="code-panel" style="margin-bottom: 18px;">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block">curl https://kenyaapi.dev/api/v1/institutions</pre>
+              </div>
+            </div>
+            <p class="response-label">Example response</p>
+            <div class="code-panel">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">10</span><span class="token-punct">,</span>
+  <span class="token-string">"page"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span> ... <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path">/institutions/:id</p>
+            </div>
+            <p class="endpoint-desc">Returns a single institution by ID.</p>
+            <div class="params-panel table-wrapper" style="margin-bottom: 18px;">
+              <table class="params-table">
+                <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr><td>id</td><td>integer</td><td>path</td><td>yes</td><td>Institution ID</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="code-panel" style="margin-bottom: 18px;">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block">curl https://kenyaapi.dev/api/v1/institutions/1</pre>
+              </div>
+            </div>
+            <p class="response-label">Example response</p>
+            <div class="code-panel">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">{</span>
+    <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span> <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Technical University of Mombasa"</span>
+  <span class="token-brace">}</span>
+<span class="token-brace">}</span></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path">/institutions/county/:county_id</p>
+            </div>
+            <p class="endpoint-desc">Returns institutions in a given county.</p>
+            <div class="params-panel table-wrapper" style="margin-bottom: 18px;">
+              <table class="params-table">
+                <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr><td>county_id</td><td>integer</td><td>path</td><td>yes</td><td>County ID from 1 to 47</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="code-panel" style="margin-bottom: 18px;">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block">curl https://kenyaapi.dev/api/v1/institutions/county/1</pre>
+              </div>
+            </div>
+            <p class="response-label">Example response</p>
+            <div class="code-panel">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">4</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span> ... <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path">/institutions/type/:type</p>
+            </div>
+            <p class="endpoint-desc">Returns all institutions matching the requested type.</p>
+            <div class="params-panel table-wrapper" style="margin-bottom: 18px;">
+              <table class="params-table">
+                <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr><td>type</td><td>string</td><td>path</td><td>yes</td><td>Valid institution type, e.g. University</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="code-panel" style="margin-bottom: 18px;">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block">curl https://kenyaapi.dev/api/v1/institutions/type/University</pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path">/institutions/search?q=...</p>
+            </div>
+            <p class="endpoint-desc">Search institutions by name, address, county, or constituency.</p>
+            <div class="params-panel table-wrapper" style="margin-bottom: 18px;">
+              <table class="params-table">
+                <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr><td>q</td><td>string</td><td>query</td><td>yes</td><td>Search term, at least 2 characters</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="code-panel" style="margin-bottom: 18px;">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block">curl https://kenyaapi.dev/api/v1/institutions/search?q=Mombasa</pre>
+              </div>
             </div>
           </div>
         </div>
