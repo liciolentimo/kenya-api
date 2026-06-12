@@ -78,18 +78,14 @@
     .copy-button:hover { background: rgba(255,255,255,0.12); }
     .info-box { display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; border-radius: 18px; background: #0D2137; border: 1px solid rgba(0,126,255,0.18); color: #A5D8FF; }
     .info-icon { width: 36px; height: 36px; border-radius: 50%; background: rgba(0,126,255,0.16); display: grid; place-items: center; color: #8EDBFF; font-weight: 700; }
-    /* ── Tables (desktop/tablet) ──────────────────────────── */
-    .table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    table { width: 100%; border-collapse: collapse; font-size: 13px; table-layout: fixed; }
-    thead tr { background: #161B22; }
-    th { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); color: #8B949E; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap; }
-    td { text-align: left; padding: 11px 12px; border-bottom: 1px solid rgba(255,255,255,0.06); color: #e6edf3; font-size: 13px; line-height: 1.5; word-wrap: break-word; overflow-wrap: break-word; white-space: normal; vertical-align: top; }
-    /* Column widths for 5-column params tables */
-    .params-table th:nth-child(1), .params-table td:nth-child(1) { width: 20%; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #79C0FF; }
-    .params-table th:nth-child(2), .params-table td:nth-child(2) { width: 13%; }
-    .params-table th:nth-child(3), .params-table td:nth-child(3) { width: 12%; }
-    .params-table th:nth-child(4), .params-table td:nth-child(4) { width: 13%; }
-    .params-table th:nth-child(5), .params-table td:nth-child(5) { width: auto; }
+    /* ── Tables ──────────────────────────────── */
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #30363D; vertical-align: top; white-space: nowrap; }
+    th { background: #161B22; color: #8B949E; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+    td { color: #e6edf3; }
+    td:first-child { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #79C0FF; }
+    .table-wrapper { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid #30363D; border-radius: 8px; margin: 16px 0; }
+    .table-wrapper table { margin: 0; border: none; border-radius: 0; min-width: 500px; }
 
     .endpoint-grid { display: grid; gap: 20px; }
     .endpoint-card { border: 1px solid var(--border); border-radius: 22px; padding: 22px; background: var(--surface); }
@@ -98,40 +94,6 @@
     .endpoint-path { margin: 0; font-size: 1rem; color: #FFFFFF; font-weight: 700; }
     .endpoint-desc { margin: 0 0 18px; color: #C9D1D9; line-height: 1.75; }
 
-    /* ── Mobile table card layout ─────────────────────────── */
-    @media (max-width: 768px) {
-      .table-wrapper { overflow-x: unset; }
-      table, thead, tbody, th, td, tr { display: block; }
-      thead { display: none; }
-      tr { background: #0D1117; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 8px; padding: 4px 0; }
-      td {
-        display: flex;
-        align-items: flex-start;
-        gap: 10px;
-        padding: 7px 12px;
-        border-bottom: 1px solid rgba(48,54,61,0.5);
-        font-size: 12px;
-        width: 100%;
-        box-sizing: border-box;
-        white-space: normal;
-        word-break: break-word;
-      }
-      td:last-child { border-bottom: none; }
-      td::before {
-        content: attr(data-label);
-        font-size: 10px;
-        font-weight: 700;
-        color: #8B949E;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        min-width: 68px;
-        flex-shrink: 0;
-        padding-top: 2px;
-      }
-      /* reset params-table column widths — not applicable in block layout */
-      .params-table th:nth-child(n), .params-table td:nth-child(n) { width: 100%; font-size: 12px; }
-      .params-table td:nth-child(1) { color: #79C0FF; }
-    }
     .try-button { border: 1px solid var(--accent); background: transparent; color: var(--accent); padding: 10px 16px; border-radius: 999px; cursor: pointer; font-weight: 700; transition: background .2s ease, color .2s ease; }
     .try-button:hover { background: rgba(0,165,80,0.12); }
     .try-panel { max-height: 0; opacity: 0; overflow: hidden; transform: translateY(-10px); transition: all .2s ease; margin-top: 16px; }
@@ -490,11 +452,11 @@
               </tr>
             </thead>
             <tbody>
-              <tr><td data-label="Code">200</td><td data-label="Meaning">OK</td><td data-label="Common Cause">Successful request</td><td data-label="Example">GET /counties</td></tr>
-              <tr><td data-label="Code">400</td><td data-label="Meaning">Bad Request</td><td data-label="Common Cause">Invalid query or missing path param</td><td data-label="Example">GET /holidays?year=abc</td></tr>
-              <tr><td data-label="Code">404</td><td data-label="Meaning">Not Found</td><td data-label="Common Cause">Resource ID does not exist</td><td data-label="Example">GET /counties/99</td></tr>
-              <tr><td data-label="Code">429</td><td data-label="Meaning">Too Many Requests</td><td data-label="Common Cause">Rate limit exceeded</td><td data-label="Example">100 requests per minute</td></tr>
-              <tr><td data-label="Code">500</td><td data-label="Meaning">Server Error</td><td data-label="Common Cause">Unexpected service failure</td><td data-label="Example">Internal API error</td></tr>
+              <tr><td>200</td><td>OK</td><td>Successful request</td><td>GET /counties</td></tr>
+              <tr><td>400</td><td>Bad Request</td><td>Invalid query or missing path param</td><td>GET /holidays?year=abc</td></tr>
+              <tr><td>404</td><td>Not Found</td><td>Resource ID does not exist</td><td>GET /counties/99</td></tr>
+              <tr><td>429</td><td>Too Many Requests</td><td>Rate limit exceeded</td><td>100 requests per minute</td></tr>
+              <tr><td>500</td><td>Server Error</td><td>Unexpected service failure</td><td>Internal API error</td></tr>
             </tbody>
           </table>
         </div>
@@ -514,8 +476,8 @@
               <table class="params-table">
                 <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
                 <tbody>
-                  <tr><td data-label="Name">q</td><td data-label="Type">string</td><td data-label="In">query</td><td data-label="Required">yes</td><td data-label="Description">Search term (min 2 chars)</td></tr>
-                  <tr><td data-label="Name">type</td><td data-label="Type">string</td><td data-label="In">query</td><td data-label="Required">no</td><td data-label="Description">Narrow to one resource: counties, constituencies, holidays, institutions, ministries, exchange_rates</td></tr>
+                  <tr><td>q</td><td>string</td><td>query</td><td>yes</td><td>Search term (min 2 chars)</td></tr>
+                  <tr><td>type</td><td>string</td><td>query</td><td>no</td><td>Narrow to one resource: counties, constituencies, holidays, institutions, ministries, exchange_rates</td></tr>
                 </tbody>
               </table>
             </div>
@@ -661,10 +623,10 @@ public class Main {
               <table class="params-table">
                 <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
                 <tbody>
-                  <tr><td data-label="Name">region</td><td data-label="Type">string</td><td data-label="In">query</td><td data-label="Required">no</td><td data-label="Description">Filter counties by region, e.g. Coast</td></tr>
-                  <tr><td data-label="Name">sort</td><td data-label="Type">string</td><td data-label="In">query</td><td data-label="Required">no</td><td data-label="Description">Sort by area or population: area_asc, area_desc, population_asc, population_desc</td></tr>
-                  <tr><td data-label="Name">governor_party</td><td data-label="Type">string</td><td data-label="In">query</td><td data-label="Required">no</td><td data-label="Description">Filter by governor's party, e.g. UDA, ODM, Wiper, Independent</td></tr>
-                  <tr><td data-label="Name">q</td><td data-label="Type">string</td><td data-label="In">query</td><td data-label="Required">no</td><td data-label="Description">Full-text search across county name and description, e.g. q=coast or q=lake</td></tr>
+                  <tr><td>region</td><td>string</td><td>query</td><td>no</td><td>Filter counties by region, e.g. Coast</td></tr>
+                  <tr><td>sort</td><td>string</td><td>query</td><td>no</td><td>Sort by area or population: area_asc, area_desc, population_asc, population_desc</td></tr>
+                  <tr><td>governor_party</td><td>string</td><td>query</td><td>no</td><td>Filter by governor's party, e.g. UDA, ODM, Wiper, Independent</td></tr>
+                  <tr><td>q</td><td>string</td><td>query</td><td>no</td><td>Full-text search across county name and description, e.g. q=coast or q=lake</td></tr>
                 </tbody>
               </table>
             </div>
@@ -818,7 +780,7 @@ public class Main {
               <table class="params-table">
                 <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
                 <tbody>
-                  <tr><td data-label="Name">id</td><td data-label="Type">integer</td><td data-label="In">path</td><td data-label="Required">yes</td><td data-label="Description">County ID from 1 to 47</td></tr>
+                  <tr><td>id</td><td>integer</td><td>path</td><td>yes</td><td>County ID from 1 to 47</td></tr>
                 </tbody>
               </table>
             </div>
@@ -1113,7 +1075,7 @@ public class Main {
               <table class="params-table">
                 <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
                 <tbody>
-                  <tr><td data-label="Name">id</td><td data-label="Type">integer</td><td data-label="In">path</td><td data-label="Required">yes</td><td data-label="Description">County ID from 1 to 47</td></tr>
+                  <tr><td>id</td><td>integer</td><td>path</td><td>yes</td><td>County ID from 1 to 47</td></tr>
                 </tbody>
               </table>
             </div>
@@ -1387,7 +1349,7 @@ public class Main {
               <table class="params-table">
                 <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
                 <tbody>
-                  <tr><td data-label="Name">id</td><td data-label="Type">integer</td><td data-label="In">path</td><td data-label="Required">yes</td><td data-label="Description">Constituency ID</td></tr>
+                  <tr><td>id</td><td>integer</td><td>path</td><td>yes</td><td>Constituency ID</td></tr>
                 </tbody>
               </table>
             </div>
@@ -1532,7 +1494,7 @@ public class Main {
               <table class="params-table">
                 <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
                 <tbody>
-                  <tr><td data-label="Name">year</td><td data-label="Type">integer</td><td data-label="In">query</td><td data-label="Required">no</td><td data-label="Description">Year to filter holidays by, e.g. 2025</td></tr>
+                  <tr><td>year</td><td>integer</td><td>query</td><td>no</td><td>Year to filter holidays by, e.g. 2025</td></tr>
                 </tbody>
               </table>
             </div>
@@ -1669,7 +1631,7 @@ public class Main {
               <table class="params-table">
                 <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
                 <tbody>
-                  <tr><td data-label="Name">id</td><td data-label="Type">integer</td><td data-label="In">path</td><td data-label="Required">yes</td><td data-label="Description">Holiday ID</td></tr>
+                  <tr><td>id</td><td>integer</td><td>path</td><td>yes</td><td>Holiday ID</td></tr>
                 </tbody>
               </table>
             </div>
@@ -2220,7 +2182,7 @@ public class Main {
               <table class="params-table">
                 <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
                 <tbody>
-                  <tr><td data-label="Name">currency</td><td data-label="Type">string</td><td data-label="In">path</td><td data-label="Required">yes</td><td data-label="Description">ISO 4217 code (e.g. USD, EUR, GBP). Case-insensitive. Available codes: USD, GBP, EUR, JPY, ZAR, AED, CAD, AUD, CHF, CNY, INR, SEK, NOK, DKK, SAR, QAR, HKD, SGD, UGX, TZS, RWF, ETB, NGN, ZMW, MUR</td></tr>
+                  <tr><td>currency</td><td>string</td><td>path</td><td>yes</td><td>ISO 4217 code (e.g. USD, EUR, GBP). Case-insensitive. Available codes: USD, GBP, EUR, JPY, ZAR, AED, CAD, AUD, CHF, CNY, INR, SEK, NOK, DKK, SAR, QAR, HKD, SGD, UGX, TZS, RWF, ETB, NGN, ZMW, MUR</td></tr>
                 </tbody>
               </table>
             </div>
@@ -2376,11 +2338,11 @@ public class Main {
               <table class="params-table">
                 <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
                 <tbody>
-                  <tr><td data-label="Name">page</td><td data-label="Type">integer</td><td data-label="In">query</td><td data-label="Required">no</td><td data-label="Description">Page number for pagination</td></tr>
-                  <tr><td data-label="Name">limit</td><td data-label="Type">integer</td><td data-label="In">query</td><td data-label="Required">no</td><td data-label="Description">Maximum items per page</td></tr>
-                  <tr><td data-label="Name">type</td><td data-label="Type">string</td><td data-label="In">query</td><td data-label="Required">no</td><td data-label="Description">Institution type (University, TVET, Secondary School, Primary School, College)</td></tr>
-                  <tr><td data-label="Name">category</td><td data-label="Type">string</td><td data-label="In">query</td><td data-label="Required">no</td><td data-label="Description">Institution category (Public, Private, Faith-Based, Technical)</td></tr>
-                  <tr><td data-label="Name">initials</td><td data-label="Type">string</td><td data-label="In">query</td><td data-label="Required">no</td><td data-label="Description">Filter by university initials e.g. UON, JKUAT, KU</td></tr>
+                  <tr><td>page</td><td>integer</td><td>query</td><td>no</td><td>Page number for pagination</td></tr>
+                  <tr><td>limit</td><td>integer</td><td>query</td><td>no</td><td>Maximum items per page</td></tr>
+                  <tr><td>type</td><td>string</td><td>query</td><td>no</td><td>Institution type (University, TVET, Secondary School, Primary School, College)</td></tr>
+                  <tr><td>category</td><td>string</td><td>query</td><td>no</td><td>Institution category (Public, Private, Faith-Based, Technical)</td></tr>
+                  <tr><td>initials</td><td>string</td><td>query</td><td>no</td><td>Filter by university initials e.g. UON, JKUAT, KU</td></tr>
                 </tbody>
               </table>
             </div>
@@ -2511,8 +2473,8 @@ public class Main {
               <table class="params-table">
                 <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
                 <tbody>
-                  <tr><td data-label="Name">category</td><td data-label="Type">string</td><td data-label="In">query</td><td data-label="Required">no</td><td data-label="Description">Public or Private</td></tr>
-                  <tr><td data-label="Name">county_id</td><td data-label="Type">integer</td><td data-label="In">query</td><td data-label="Required">no</td><td data-label="Description">Filter by county ID e.g. 47 for Nairobi</td></tr>
+                  <tr><td>category</td><td>string</td><td>query</td><td>no</td><td>Public or Private</td></tr>
+                  <tr><td>county_id</td><td>integer</td><td>query</td><td>no</td><td>Filter by county ID e.g. 47 for Nairobi</td></tr>
                 </tbody>
               </table>
             </div>
@@ -2644,9 +2606,9 @@ public class Main {
               <table class="params-table">
                 <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
                 <tbody>
-                  <tr><td data-label="Name">subtype</td><td data-label="Type">string</td><td data-label="In">query</td><td data-label="Required">no</td><td data-label="Description"><code>polytechnic</code> = National Polytechnics only · <code>tvc</code> = TVCs and TTIs only</td></tr>
-                  <tr><td data-label="Name">category</td><td data-label="Type">string</td><td data-label="In">query</td><td data-label="Required">no</td><td data-label="Description">Public or Private</td></tr>
-                  <tr><td data-label="Name">county_id</td><td data-label="Type">integer</td><td data-label="In">query</td><td data-label="Required">no</td><td data-label="Description">Filter by county ID e.g. 47 for Nairobi</td></tr>
+                  <tr><td>subtype</td><td>string</td><td>query</td><td>no</td><td><code>polytechnic</code> = National Polytechnics only · <code>tvc</code> = TVCs and TTIs only</td></tr>
+                  <tr><td>category</td><td>string</td><td>query</td><td>no</td><td>Public or Private</td></tr>
+                  <tr><td>county_id</td><td>integer</td><td>query</td><td>no</td><td>Filter by county ID e.g. 47 for Nairobi</td></tr>
                 </tbody>
               </table>
             </div>
@@ -2775,7 +2737,7 @@ public class Main {
               <table class="params-table">
                 <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
                 <tbody>
-                  <tr><td data-label="Name">id</td><td data-label="Type">integer</td><td data-label="In">path</td><td data-label="Required">yes</td><td data-label="Description">Institution ID</td></tr>
+                  <tr><td>id</td><td>integer</td><td>path</td><td>yes</td><td>Institution ID</td></tr>
                 </tbody>
               </table>
             </div>
@@ -2905,7 +2867,7 @@ public class Main {
               <table class="params-table">
                 <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
                 <tbody>
-                  <tr><td data-label="Name">county_id</td><td data-label="Type">integer</td><td data-label="In">path</td><td data-label="Required">yes</td><td data-label="Description">County ID from 1 to 47</td></tr>
+                  <tr><td>county_id</td><td>integer</td><td>path</td><td>yes</td><td>County ID from 1 to 47</td></tr>
                 </tbody>
               </table>
             </div>
@@ -3034,7 +2996,7 @@ public class Main {
               <table class="params-table">
                 <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
                 <tbody>
-                  <tr><td data-label="Name">type</td><td data-label="Type">string</td><td data-label="In">path</td><td data-label="Required">yes</td><td data-label="Description">Valid institution type, e.g. University</td></tr>
+                  <tr><td>type</td><td>string</td><td>path</td><td>yes</td><td>Valid institution type, e.g. University</td></tr>
                 </tbody>
               </table>
             </div>
@@ -3152,7 +3114,7 @@ public class Main {
               <table class="params-table">
                 <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
                 <tbody>
-                  <tr><td data-label="Name">q</td><td data-label="Type">string</td><td data-label="In">query</td><td data-label="Required">yes</td><td data-label="Description">Search term, at least 2 characters</td></tr>
+                  <tr><td>q</td><td>string</td><td>query</td><td>yes</td><td>Search term, at least 2 characters</td></tr>
                 </tbody>
               </table>
             </div>
@@ -3276,7 +3238,7 @@ public class Main {
               <table class="params-table">
                 <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
                 <tbody>
-                  <tr><td data-label="Name">appointed</td><td data-label="Type">string</td><td data-label="In">query</td><td data-label="Required">no</td><td data-label="Description">Filter by appointment year, e.g. 2022, 2024</td></tr>
+                  <tr><td>appointed</td><td>string</td><td>query</td><td>no</td><td>Filter by appointment year, e.g. 2022, 2024</td></tr>
                 </tbody>
               </table>
             </div>
@@ -3429,7 +3391,7 @@ public class Main {
               <table class="params-table">
                 <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
                 <tbody>
-                  <tr><td data-label="Name">id</td><td data-label="Type">integer</td><td data-label="In">path</td><td data-label="Required">yes</td><td data-label="Description">Ministry ID from 1 to 22</td></tr>
+                  <tr><td>id</td><td>integer</td><td>path</td><td>yes</td><td>Ministry ID from 1 to 22</td></tr>
                 </tbody>
               </table>
             </div>
@@ -3577,7 +3539,7 @@ public class Main {
               <table class="params-table">
                 <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
                 <tbody>
-                  <tr><td data-label="Name">q</td><td data-label="Type">string</td><td data-label="In">query</td><td data-label="Required">yes</td><td data-label="Description">Search term (min 2 chars) — searches ministry name and cabinet secretary name</td></tr>
+                  <tr><td>q</td><td>string</td><td>query</td><td>yes</td><td>Search term (min 2 chars) — searches ministry name and cabinet secretary name</td></tr>
                 </tbody>
               </table>
             </div>
@@ -3833,7 +3795,7 @@ public class Main {
             <table class="params-table">
               <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
               <tbody>
-                <tr><td data-label="Name">county_id</td><td data-label="Type">integer</td><td data-label="In">path</td><td data-label="Required">yes</td><td data-label="Description">County ID (1–47)</td></tr>
+                <tr><td>county_id</td><td>integer</td><td>path</td><td>yes</td><td>County ID (1–47)</td></tr>
               </tbody>
             </table>
           </div>
@@ -3929,7 +3891,7 @@ public class Main {
             <table class="params-table">
               <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
               <tbody>
-                <tr><td data-label="Name">name</td><td data-label="Type">string</td><td data-label="In">query</td><td data-label="Required">yes</td><td data-label="Description">Constituency name or partial name (e.g. <code>Westlands</code>)</td></tr>
+                <tr><td>name</td><td>string</td><td>query</td><td>yes</td><td>Constituency name or partial name (e.g. <code>Westlands</code>)</td></tr>
               </tbody>
             </table>
           </div>
@@ -4027,7 +3989,7 @@ public class Main {
             <table class="params-table">
               <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
               <tbody>
-                <tr><td data-label="Name">q</td><td data-label="Type">string</td><td data-label="In">query</td><td data-label="Required">yes</td><td data-label="Description">Search term — county name, constituency name, or code (min 2 chars)</td></tr>
+                <tr><td>q</td><td>string</td><td>query</td><td>yes</td><td>Search term — county name, constituency name, or code (min 2 chars)</td></tr>
               </tbody>
             </table>
           </div>
