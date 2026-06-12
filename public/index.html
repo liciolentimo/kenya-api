@@ -765,7 +765,7 @@
 
         const population = populationByCounty[code] && populationByCounty[code].population;
         const constituencies = constituenciesByCounty[code] || [];
-        const institutions = institutionsByCounty[code] || [];
+        const instCount = institutionsByCounty[code] || institutionsByCounty[String(code)] || 0;
 
         panelName.textContent = county.name;
         panelCode.textContent = county.code || String(code).padStart(3, '0');
@@ -783,7 +783,8 @@
         }
         panelPopulation.textContent = population ? formatPopulation(population) : '—';
         panelConstituencies.textContent = constituencies.length || '—';
-        panelInstitutions.textContent = institutions.length || '—';
+        panelInstitutions.textContent = instCount > 0 ? instCount.toLocaleString() : '0';
+        panelInstitutions.style.color = instCount > 0 ? '#00A550' : '#8B949E';
         panelApiLink.href = `${API_BASE}/counties/${county.id}`;
         panelTagList.innerHTML = '';
         constituencies.slice(0, 12).forEach((item) => {
@@ -809,7 +810,7 @@
           safe(fetch('/data/counties.json').then((res) => res.json())),
           safe(fetch('/data/constituencies.json').then((res) => res.json())),
           safe(fetch('/data/population.json').then((res) => res.json())),
-          safe(fetch(`${API_BASE}/institutions`).then((res) => res.json())),
+          safe(fetch(`${API_BASE}/institutions?limit=1000`).then((res) => res.json())),
         ])
         .then(([countiesRes, constituenciesRes, populationRes, institutionsRes]) => {
           const counties = (countiesRes.data || []);
@@ -829,11 +830,16 @@
             return acc;
           }, {});
 
-          institutionsByCounty = (institutionsRes.data || []).reduce((acc, item) => {
-            acc[item.county_id] = acc[item.county_id] || [];
-            acc[item.county_id].push(item);
-            return acc;
-          }, {});
+          const instList = institutionsRes.data || [];
+          institutionsByCounty = {};
+          instList.forEach((inst) => {
+            const cid = inst.county_id;
+            if (cid) institutionsByCounty[cid] = (institutionsByCounty[cid] || 0) + 1;
+          });
+          console.log(
+            'Institutions loaded:', instList.length,
+            '| Counties with data:', Object.keys(institutionsByCounty).length
+          );
         })
         .catch((err) => {
           console.error('Live API data load failed', err);
@@ -881,11 +887,13 @@
         const code = getFeatureCode(feature);
         const countyName = feature.properties.COUNTY_NAM || feature.properties.COUNTY_NAME || 'Unknown';
         const county = countiesById[code];
+        const countyInstCount = institutionsByCounty[code] || institutionsByCounty[String(code)] || 0;
         const tooltipContent = county
-          ? `<div style="text-align:center;min-width:140px">
+          ? `<div style="text-align:center;min-width:160px">
               ${county.flag_url ? `<img src="${county.flag_url}" style="width:100%;height:36px;object-fit:cover;border-radius:3px;margin-bottom:6px;display:block" onerror="this.style.display='none'">` : ''}
               <strong style="font-size:13px">${county.name}</strong><br>
-              <span style="font-size:11px;color:#8B949E">👤 ${county.governor}</span>
+              <span style="font-size:11px;color:#8B949E">👤 ${county.governor || '—'}</span><br>
+              <span style="font-size:11px;color:#00A550">🏫 ${countyInstCount.toLocaleString()} institution${countyInstCount !== 1 ? 's' : ''}</span>
             </div>`
           : `<strong>${countyName}</strong>`;
         layer.bindTooltip(tooltipContent, {
