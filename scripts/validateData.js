@@ -14,6 +14,7 @@ function run() {
   const population = loadJSON('data/population.json');
   const ministries = loadJSON('data/ministries.json');
   const institutions = loadJSON('data/institutions.json');
+  const postalCodes = loadJSON('data/postal-codes.json');
 
   let ok = true;
 
@@ -276,6 +277,35 @@ function run() {
   } else {
     logFail('Some TVET institutions reference invalid county_id values:');
     invalidTvetCounty.forEach((t) => console.error(`  id=${t.id} name="${t.name}" county_id=${t.county_id}`));
+    ok = false;
+  }
+
+  // 28–30: postal codes checks
+  // 28. postal-codes.json has exactly 47 entries
+  if (postalCodes.length === 47) {
+    logPass('postal-codes.json contains 47 entries');
+  } else {
+    logFail(`expected 47 postal code entries, found ${postalCodes.length}`);
+    ok = false;
+  }
+
+  // 29. Every entry has a non-empty primary_postal_code
+  const missingPostalCode = postalCodes.filter((p) => !p.primary_postal_code);
+  if (missingPostalCode.length === 0) {
+    logPass('All postal code entries have a non-empty primary_postal_code');
+  } else {
+    logFail('Some postal code entries are missing primary_postal_code:');
+    missingPostalCode.forEach((p) => console.error(`  id=${p.id} county="${p.county_name}"`));
+    ok = false;
+  }
+
+  // 30. Every county_id in postal-codes.json maps to a valid county
+  const invalidPostalCounty = postalCodes.filter((p) => !countyIds.has(p.county_id));
+  if (invalidPostalCounty.length === 0) {
+    logPass('All postal code county_id values match a county in counties.json');
+  } else {
+    logFail('Some postal code entries reference invalid county_id values:');
+    invalidPostalCounty.forEach((p) => console.error(`  id=${p.id} county_id=${p.county_id} name="${p.county_name}"`));
     ok = false;
   }
 

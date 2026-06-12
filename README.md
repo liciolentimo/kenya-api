@@ -82,6 +82,14 @@ No API key or authentication required.
 | GET | `/api/v1/ministries/:id` | Single ministry by ID |
 | GET | `/api/v1/ministries/search?q=` | Search by ministry or CS name |
 
+### Postal Codes
+| Method | Path | Description |
+|--------|------|-------------|
+| GET | `/api/v1/postal-codes` | All 47 county postal codes with constituency breakdowns |
+| GET | `/api/v1/postal-codes/county/:id` | County postal codes and all constituency codes |
+| GET | `/api/v1/postal-codes/constituency?name=` | Lookup by constituency name |
+| GET | `/api/v1/postal-codes/search?q=` | Search by county name, constituency name, or code number |
+
 ### Search
 | Method | Path | Description |
 |--------|------|-------------|

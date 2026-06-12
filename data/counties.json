@@ -10,7 +10,9 @@
     "governor_party": "ODM",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Flag_of_Mombasa_County.svg",
-    "description": "A coastal county along the Indian Ocean in southeastern Kenya, known for tourism, luxurious beach hotels, and the historic Mombasa Old Town."
+    "description": "A coastal county along the Indian Ocean in southeastern Kenya, known for tourism, luxurious beach hotels, and the historic Mombasa Old Town.",
+    "postal_code": "80100",
+    "postal_code_range": "80100-80118"
   },
   {
     "id": 2,
@@ -23,7 +25,9 @@
     "governor_party": "UDA",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Flag_of_Kwale_County.svg",
-    "description": "Located in the former Coast province with its capital in Kwale town and largest town Ukunda, the county is known for its coastal beaches including Diani and mineral resources."
+    "description": "Located in the former Coast province with its capital in Kwale town and largest town Ukunda, the county is known for its coastal beaches including Diani and mineral resources.",
+    "postal_code": "80400",
+    "postal_code_range": "80400-80405"
   },
   {
     "id": 3,
@@ -36,7 +40,9 @@
     "governor_party": "ODM",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Flag_of_Kilifi_County.svg",
-    "description": "A coastal county in the former Coast province covering 12,245.9 km², famous for breathtaking tourist sites including Diani Beach, Arabuko-Sokoke Forest, and the Kilifi Creek."
+    "description": "A coastal county in the former Coast province covering 12,245.9 km², famous for breathtaking tourist sites including Diani Beach, Arabuko-Sokoke Forest, and the Kilifi Creek.",
+    "postal_code": "80200",
+    "postal_code_range": "80200-80208"
   },
   {
     "id": 4,
@@ -49,7 +55,9 @@
     "governor_party": "ODM",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Flag_of_Tana_River_County.svg",
-    "description": "A vast county in the former Coast province named after the Tana River — Kenya's longest river — which flows through it connecting to the Indian Ocean near Kipini."
+    "description": "A vast county in the former Coast province named after the Tana River — Kenya's longest river — which flows through it connecting to the Indian Ocean near Kipini.",
+    "postal_code": "70100",
+    "postal_code_range": "70100-70300"
   },
   {
     "id": 5,
@@ -62,7 +70,9 @@
     "governor_party": "ANC",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Lamu_County.svg",
-    "description": "An island county in the former Coast province with a predominantly Muslim population, known for its well-preserved Swahili architecture, dhow culture, and UNESCO World Heritage status."
+    "description": "An island county in the former Coast province with a predominantly Muslim population, known for its well-preserved Swahili architecture, dhow culture, and UNESCO World Heritage status.",
+    "postal_code": "80500",
+    "postal_code_range": "80500-80502"
   },
   {
     "id": 6,
@@ -75,7 +85,9 @@
     "governor_party": "Independent",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Taita_Taveta_County.svg",
-    "description": "Located in the former Coast province and famous for its ranches, wildlife sanctuaries, and estates including the Tsavo National Parks, which boost tourism across the region."
+    "description": "Located in the former Coast province and famous for its ranches, wildlife sanctuaries, and estates including the Tsavo National Parks, which boost tourism across the region.",
+    "postal_code": "80300",
+    "postal_code_range": "80300-80308"
   },
   {
     "id": 7,
@@ -88,7 +100,9 @@
     "governor_party": "ODM",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Flag_of_Garissa_County.gif",
-    "description": "A large northeastern county covering 45,720 km² known for the Dadaab refugee complex — one of the world's largest — and a vibrant livestock economy along the Tana River."
+    "description": "A large northeastern county covering 45,720 km² known for the Dadaab refugee complex — one of the world's largest — and a vibrant livestock economy along the Tana River.",
+    "postal_code": "70200",
+    "postal_code_range": "70200-70204"
   },
   {
     "id": 8,
@@ -101,7 +115,9 @@
     "governor_party": "ODM",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Flag_of_Wajir_County%2C_Kenya.svg",
-    "description": "Situated near the Somali border in the former North Eastern province, Wajir is a largely arid county dominated by pastoralist communities and cross-border trade with Somalia and Ethiopia."
+    "description": "Situated near the Somali border in the former North Eastern province, Wajir is a largely arid county dominated by pastoralist communities and cross-border trade with Somalia and Ethiopia.",
+    "postal_code": "70300",
+    "postal_code_range": "70300-70304"
   },
   {
     "id": 9,
@@ -114,7 +130,9 @@
     "governor_party": "UDM",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_Mandera_County%2C_Kenya.svg",
-    "description": "The northeasternmost county in Kenya, located at the tri-border point with Somalia and Ethiopia, with an economy centred on pastoralism, camels, cattle, and cross-border trade."
+    "description": "The northeasternmost county in Kenya, located at the tri-border point with Somalia and Ethiopia, with an economy centred on pastoralism, camels, cattle, and cross-border trade.",
+    "postal_code": "70400",
+    "postal_code_range": "70400-70404"
   },
   {
     "id": 10,
@@ -127,7 +145,9 @@
     "governor_party": "ODM",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Flag_of_Marsabit_County.svg",
-    "description": "Kenya's second-largest county by area, bordering Ethiopia to the north and home to Marsabit National Park, the Chalbi Desert, and diverse communities including the Rendille, Borana, and Gabra."
+    "description": "Kenya's second-largest county by area, bordering Ethiopia to the north and home to Marsabit National Park, the Chalbi Desert, and diverse communities including the Rendille, Borana, and Gabra.",
+    "postal_code": "60500",
+    "postal_code_range": "60500-60503"
   },
   {
     "id": 11,
@@ -140,7 +160,9 @@
     "governor_party": "Jubilee",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Flag_of_Isiolo_County.svg",
-    "description": "Known as the gateway to Kenya's north, Isiolo is a dynamic county traversed by the Ewaso Nyiro River, home to Buffalo Springs and Shaba wildlife conservancies, and earmarked as a Vision 2030 resort city."
+    "description": "Known as the gateway to Kenya's north, Isiolo is a dynamic county traversed by the Ewaso Nyiro River, home to Buffalo Springs and Shaba wildlife conservancies, and earmarked as a Vision 2030 resort city.",
+    "postal_code": "60300",
+    "postal_code_range": "60300-60301"
   },
   {
     "id": 12,
@@ -153,7 +175,9 @@
     "governor_party": "Independent",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Flag_of_Meru_County.svg",
-    "description": "Located in the former Eastern province on the slopes of Mount Kenya, Meru is famous for khat (miraa) cultivation, fertile agricultural land, and Meru National Park."
+    "description": "Located in the former Eastern province on the slopes of Mount Kenya, Meru is famous for khat (miraa) cultivation, fertile agricultural land, and Meru National Park.",
+    "postal_code": "60200",
+    "postal_code_range": "60200-60209"
   },
   {
     "id": 13,
@@ -166,7 +190,9 @@
     "governor_party": "UDA",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Flag_of_Tharaka_Nithi_County.svg",
-    "description": "A county in the former Eastern province with its capital in Kathwana, characterised by diverse landscapes ranging from the highland forests of the Nyambene Hills to the semi-arid lowlands."
+    "description": "A county in the former Eastern province with its capital in Kathwana, characterised by diverse landscapes ranging from the highland forests of the Nyambene Hills to the semi-arid lowlands.",
+    "postal_code": "60400",
+    "postal_code_range": "60400-60403"
   },
   {
     "id": 14,
@@ -179,7 +205,9 @@
     "governor_party": "UDA",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Flag_of_Embu_County%2C_Kenya.png",
-    "description": "Sitting on the southeastern slopes of Mount Kenya, Embu is the largest producer of macadamia nuts in the African Great Lakes region, with fertile soils supporting tea, coffee, and horticulture."
+    "description": "Sitting on the southeastern slopes of Mount Kenya, Embu is the largest producer of macadamia nuts in the African Great Lakes region, with fertile soils supporting tea, coffee, and horticulture.",
+    "postal_code": "60100",
+    "postal_code_range": "60100-60104"
   },
   {
     "id": 15,
@@ -192,7 +220,9 @@
     "governor_party": "Wiper",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Kitui_County.svg",
-    "description": "A large county in the former Eastern province covering 24,385 km², known for the iconic Nzambani Rock, cotton farming, coal deposits, and the semi-arid landscapes inhabited mainly by the Kamba community."
+    "description": "A large county in the former Eastern province covering 24,385 km², known for the iconic Nzambani Rock, cotton farming, coal deposits, and the semi-arid landscapes inhabited mainly by the Kamba community.",
+    "postal_code": "90200",
+    "postal_code_range": "90200-90215"
   },
   {
     "id": 16,
@@ -205,7 +235,9 @@
     "governor_party": "Wiper",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Machakos_County.svg",
-    "description": "An administrative county in the former Eastern province comprising eight constituencies, known for its industrious Kamba people, Ol Donyo Sabuk National Park, and growing manufacturing sector."
+    "description": "An administrative county in the former Eastern province comprising eight constituencies, known for its industrious Kamba people, Ol Donyo Sabuk National Park, and growing manufacturing sector.",
+    "postal_code": "90100",
+    "postal_code_range": "90100-90138"
   },
   {
     "id": 17,
@@ -218,7 +250,9 @@
     "governor_party": "Wiper",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Flag_of_Makueni_County.svg",
-    "description": "Located in the former Eastern province with its capital in Wote, Makueni is known for mango and avocado farming, the Kibwezi Forest, and community-led development initiatives."
+    "description": "Located in the former Eastern province with its capital in Wote, Makueni is known for mango and avocado farming, the Kibwezi Forest, and community-led development initiatives.",
+    "postal_code": "90300",
+    "postal_code_range": "90300-90308"
   },
   {
     "id": 18,
@@ -231,20 +265,24 @@
     "governor_party": "UDA",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Flag_of_Nyandarua_County.svg",
-    "description": "A central highlands county covering 3,107 km² known for pyrethrum farming — used in making insecticides — as well as wheat, potatoes, and dairy farming around the Aberdare ranges."
+    "description": "A central highlands county covering 3,107 km² known for pyrethrum farming — used in making insecticides — as well as wheat, potatoes, and dairy farming around the Aberdare ranges.",
+    "postal_code": "20300",
+    "postal_code_range": "20300-20304"
   },
   {
     "id": 19,
     "code": "019",
     "name": "Nyeri",
     "headquarters": "Nyeri",
-    "area_km2": 2361.0,
+    "area_km2": 2361,
     "region": "Central",
     "governor": "Mutahi Kahiga",
     "governor_party": "UDA",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Flag_of_Nyeri_County.svg",
-    "description": "A county in the fertile central highlands that hosts the tomb of Robert Baden-Powell, founder of the Scout movement, and is known for coffee, tea, and tourism around Mount Kenya and the Aberdare National Park."
+    "description": "A county in the fertile central highlands that hosts the tomb of Robert Baden-Powell, founder of the Scout movement, and is known for coffee, tea, and tourism around Mount Kenya and the Aberdare National Park.",
+    "postal_code": "10100",
+    "postal_code_range": "10100-10106"
   },
   {
     "id": 20,
@@ -257,7 +295,9 @@
     "governor_party": "UDA",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Flag_of_Kirinyaga_County.svg",
-    "description": "Covering 1,205 km² in the former Central province with its capital in Kerugoya, Kirinyaga is a major rice and tea growing county sitting on the southern slopes of Mount Kenya."
+    "description": "Covering 1,205 km² in the former Central province with its capital in Kerugoya, Kirinyaga is a major rice and tea growing county sitting on the southern slopes of Mount Kenya.",
+    "postal_code": "10300",
+    "postal_code_range": "10300-10304"
   },
   {
     "id": 21,
@@ -270,7 +310,9 @@
     "governor_party": "UDA",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Flag_of_Murang%27a_County.svg",
-    "description": "A central province county covering 2,325 km², known as the heartland of the Kikuyu community and an important producer of tea, coffee, and horticultural products."
+    "description": "A central province county covering 2,325 km², known as the heartland of the Kikuyu community and an important producer of tea, coffee, and horticultural products.",
+    "postal_code": "10200",
+    "postal_code_range": "10200-10207"
   },
   {
     "id": 22,
@@ -283,7 +325,9 @@
     "governor_party": "UDA",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Flag_of_Kiambu_County.svg",
-    "description": "One of Kenya's most populous counties bordering Nairobi, Kiambu is a major economic hub known for tea and coffee production, a growing real estate sector, and several industrial zones."
+    "description": "One of Kenya's most populous counties bordering Nairobi, Kiambu is a major economic hub known for tea and coffee production, a growing real estate sector, and several industrial zones.",
+    "postal_code": "00900",
+    "postal_code_range": "00900-00902"
   },
   {
     "id": 23,
@@ -296,7 +340,9 @@
     "governor_party": "ODM",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Flag_of_Turkana_County.svg",
-    "description": "Kenya's largest county by area at 98,597 km², home to Lake Turkana — Africa's largest desert lake — and known for oil discoveries, rich fossil heritage including Turkana Boy, and a largely pastoralist population."
+    "description": "Kenya's largest county by area at 98,597 km², home to Lake Turkana — Africa's largest desert lake — and known for oil discoveries, rich fossil heritage including Turkana Boy, and a largely pastoralist population.",
+    "postal_code": "30500",
+    "postal_code_range": "30500-30504"
   },
   {
     "id": 24,
@@ -309,7 +355,9 @@
     "governor_party": "UDA",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Flag_of_West_Pokot_County.png",
-    "description": "Located in the former Rift Valley province with its headquarters in Kapenguria, West Pokot is home to the Pokot community and known for livestock keeping, subsistence farming, and the scenic Cherangani Hills."
+    "description": "Located in the former Rift Valley province with its headquarters in Kapenguria, West Pokot is home to the Pokot community and known for livestock keeping, subsistence farming, and the scenic Cherangani Hills.",
+    "postal_code": "30600",
+    "postal_code_range": "30600-30603"
   },
   {
     "id": 25,
@@ -322,7 +370,9 @@
     "governor_party": "UDA",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Flag_of_Samburu_County.svg",
-    "description": "A Rift Valley county covering 20,182 km² inhabited by the Samburu people, sharing close cultural ties with the Maasai and known for Samburu National Reserve and community-based conservation initiatives."
+    "description": "A Rift Valley county covering 20,182 km² inhabited by the Samburu people, sharing close cultural ties with the Maasai and known for Samburu National Reserve and community-based conservation initiatives.",
+    "postal_code": "20600",
+    "postal_code_range": "20600-20602"
   },
   {
     "id": 26,
@@ -335,7 +385,9 @@
     "governor_party": "DAP-K",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Flag_of_Trans-Nzoia_County.svg",
-    "description": "A fertile Rift Valley county with its capital in Kitale, Trans-Nzoia is Kenya's breadbasket known for large-scale maize and wheat farming and proximity to Mount Elgon National Park."
+    "description": "A fertile Rift Valley county with its capital in Kitale, Trans-Nzoia is Kenya's breadbasket known for large-scale maize and wheat farming and proximity to Mount Elgon National Park.",
+    "postal_code": "30200",
+    "postal_code_range": "30200-30204"
   },
   {
     "id": 27,
@@ -348,7 +400,9 @@
     "governor_party": "UDA",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Flag_of_Uasin_Gishu_County.svg",
-    "description": "Home to Eldoret — Kenya's fifth-largest city — Uasin Gishu is a Rift Valley county famous for its expansive maize plantations, world-class athletics talent, and the annual Eldoret City Marathon."
+    "description": "Home to Eldoret — Kenya's fifth-largest city — Uasin Gishu is a Rift Valley county famous for its expansive maize plantations, world-class athletics talent, and the annual Eldoret City Marathon.",
+    "postal_code": "30100",
+    "postal_code_range": "30100-30106"
   },
   {
     "id": 28,
@@ -361,7 +415,9 @@
     "governor_party": "UDA",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Elgeyo_Marakwet_Flag.png",
-    "description": "A Rift Valley county with its capital in Iten — known as the home of champions — famous for producing world-record long-distance runners and the dramatic Kerio Valley escarpment."
+    "description": "A Rift Valley county with its capital in Iten — known as the home of champions — famous for producing world-record long-distance runners and the dramatic Kerio Valley escarpment.",
+    "postal_code": "30700",
+    "postal_code_range": "30700-30703"
   },
   {
     "id": 29,
@@ -374,7 +430,9 @@
     "governor_party": "UDA",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Contea_di_Nandi_flag.gif",
-    "description": "A Rift Valley county covering 2,884 km² with its capital in Kapsabet, Nandi is one of Kenya's top tea-producing regions and home to celebrated long-distance athletes."
+    "description": "A Rift Valley county covering 2,884 km² with its capital in Kapsabet, Nandi is one of Kenya's top tea-producing regions and home to celebrated long-distance athletes.",
+    "postal_code": "30300",
+    "postal_code_range": "30300-30305"
   },
   {
     "id": 30,
@@ -387,7 +445,9 @@
     "governor_party": "UDA",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Flag_of_Baringo_County.svg",
-    "description": "A Rift Valley county covering 11,075 km² with its headquarters in Kabarnet, Baringo is known for Lake Baringo — a freshwater Rift Valley lake — geothermal energy resources, and diverse wildlife including hippos and crocodiles."
+    "description": "A Rift Valley county covering 11,075 km² with its headquarters in Kabarnet, Baringo is known for Lake Baringo — a freshwater Rift Valley lake — geothermal energy resources, and diverse wildlife including hippos and crocodiles.",
+    "postal_code": "20700",
+    "postal_code_range": "20700-20705"
   },
   {
     "id": 31,
@@ -400,7 +460,9 @@
     "governor_party": "UDA",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Laikipia_County.svg",
-    "description": "A Rift Valley county with its capital in Nanyuki, Laikipia is known for its expansive wildlife conservancies, cattle ranches, and proximity to Mount Kenya making it a key tourism and conservation hub."
+    "description": "A Rift Valley county with its capital in Nanyuki, Laikipia is known for its expansive wildlife conservancies, cattle ranches, and proximity to Mount Kenya making it a key tourism and conservation hub.",
+    "postal_code": "20300",
+    "postal_code_range": "20300-20302"
   },
   {
     "id": 32,
@@ -413,7 +475,9 @@
     "governor_party": "UDA",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Flag_of_Nakuru_County.svg",
-    "description": "A major Rift Valley county with its capital in Nakuru city, known for the flamingo-filled Lake Nakuru National Park, Hell's Gate National Park, and a thriving industrial and agricultural economy."
+    "description": "A major Rift Valley county with its capital in Nakuru city, known for the flamingo-filled Lake Nakuru National Park, Hell's Gate National Park, and a thriving industrial and agricultural economy.",
+    "postal_code": "20100",
+    "postal_code_range": "20100-20117"
   },
   {
     "id": 33,
@@ -426,7 +490,9 @@
     "governor_party": "UDA",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Flag_of_Narok_County.svg",
-    "description": "A Rift Valley county covering 17,921 km² and home to the Maasai Mara National Reserve — one of Africa's most celebrated wildlife destinations — renowned for the Great Wildebeest Migration."
+    "description": "A Rift Valley county covering 17,921 km² and home to the Maasai Mara National Reserve — one of Africa's most celebrated wildlife destinations — renowned for the Great Wildebeest Migration.",
+    "postal_code": "20500",
+    "postal_code_range": "20500-20505"
   },
   {
     "id": 34,
@@ -439,7 +505,9 @@
     "governor_party": "ODM",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Flag_of_Kajiado_County.svg",
-    "description": "Bordering Nairobi and Tanzania, Kajiado is a fast-growing Rift Valley county home to the Maasai community, Amboseli National Park, and an expanding real estate and industrial sector driven by proximity to the capital."
+    "description": "Bordering Nairobi and Tanzania, Kajiado is a fast-growing Rift Valley county home to the Maasai community, Amboseli National Park, and an expanding real estate and industrial sector driven by proximity to the capital.",
+    "postal_code": "01100",
+    "postal_code_range": "01100-01103"
   },
   {
     "id": 35,
@@ -452,7 +520,9 @@
     "governor_party": "UDA",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Flag_of_Kericho_County.svg",
-    "description": "One of Kenya's wealthiest counties, Kericho is the heart of the country's tea industry, with vast green tea estates covering the Rift Valley highlands and supplying some of the world's finest teas."
+    "description": "One of Kenya's wealthiest counties, Kericho is the heart of the country's tea industry, with vast green tea estates covering the Rift Valley highlands and supplying some of the world's finest teas.",
+    "postal_code": "20200",
+    "postal_code_range": "20200-20205"
   },
   {
     "id": 36,
@@ -465,7 +535,9 @@
     "governor_party": "UDA",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Bomet_County.png",
-    "description": "A Rift Valley county covering 1,997 km² known for tea and pyrethrum farming, the Chepalungu Forest, and close cultural ties with the neighbouring Kipsigis and Maasai communities."
+    "description": "A Rift Valley county covering 1,997 km² known for tea and pyrethrum farming, the Chepalungu Forest, and close cultural ties with the neighbouring Kipsigis and Maasai communities.",
+    "postal_code": "20400",
+    "postal_code_range": "20400-20404"
   },
   {
     "id": 37,
@@ -478,7 +550,9 @@
     "governor_party": "ODM",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_Kakamega_County.svg",
-    "description": "Located in the former Western province, Kakamega is home to Kakamega Forest — Kenya's only tropical rainforest — and is one of the most densely populated counties, with a strong sugarcane and gold mining economy."
+    "description": "Located in the former Western province, Kakamega is home to Kakamega Forest — Kenya's only tropical rainforest — and is one of the most densely populated counties, with a strong sugarcane and gold mining economy.",
+    "postal_code": "50100",
+    "postal_code_range": "50100-50108"
   },
   {
     "id": 38,
@@ -491,7 +565,9 @@
     "governor_party": "ODM",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Flag_of_Vihiga_County.svg",
-    "description": "Kenya's most densely populated county by area at 531 km², Vihiga lies in the former Western province with its headquarters in Mbale and an economy based on tea, sugarcane, and small-scale farming."
+    "description": "Kenya's most densely populated county by area at 531 km², Vihiga lies in the former Western province with its headquarters in Mbale and an economy based on tea, sugarcane, and small-scale farming.",
+    "postal_code": "50300",
+    "postal_code_range": "50300-50304"
   },
   {
     "id": 39,
@@ -504,7 +580,9 @@
     "governor_party": "Ford Kenya",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Flag_of_Bungoma_County.gif",
-    "description": "A western county bordering Uganda, Bungoma is known for sugarcane farming, Mount Elgon National Park, the Chetambe Hills, and a large population of the Bukusu sub-tribe of the Luhya community."
+    "description": "A western county bordering Uganda, Bungoma is known for sugarcane farming, Mount Elgon National Park, the Chetambe Hills, and a large population of the Bukusu sub-tribe of the Luhya community.",
+    "postal_code": "50200",
+    "postal_code_range": "50200-50208"
   },
   {
     "id": 40,
@@ -517,7 +595,9 @@
     "governor_party": "ODM",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Flag_of_Busia_County.svg",
-    "description": "A western county bordering Uganda along Lake Victoria, Busia is a key cross-border trade hub with a busy border town, fishing industry on the lake, and sugarcane farming as a major economic activity."
+    "description": "A western county bordering Uganda along Lake Victoria, Busia is a key cross-border trade hub with a busy border town, fishing industry on the lake, and sugarcane farming as a major economic activity.",
+    "postal_code": "50400",
+    "postal_code_range": "50400-50406"
   },
   {
     "id": 41,
@@ -530,7 +610,9 @@
     "governor_party": "ODM",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Flag_of_Siaya_County.svg",
-    "description": "A Nyanza county on the shores of Lake Victoria, Siaya is the ancestral home of the Luo community and known for fishing, subsistence farming, and its connection to the Obama family heritage."
+    "description": "A Nyanza county on the shores of Lake Victoria, Siaya is the ancestral home of the Luo community and known for fishing, subsistence farming, and its connection to the Obama family heritage.",
+    "postal_code": "40600",
+    "postal_code_range": "40600-40606"
   },
   {
     "id": 42,
@@ -543,7 +625,9 @@
     "governor_party": "ODM",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Flag_of_Kisumu_County.svg",
-    "description": "Kenya's third-largest city and the capital of the Nyanza region, Kisumu sits on the shores of Lake Victoria and serves as a major commercial, transport, and fishing hub for the broader East African region."
+    "description": "Kenya's third-largest city and the capital of the Nyanza region, Kisumu sits on the shores of Lake Victoria and serves as a major commercial, transport, and fishing hub for the broader East African region.",
+    "postal_code": "40100",
+    "postal_code_range": "40100-40115"
   },
   {
     "id": 43,
@@ -556,7 +640,9 @@
     "governor_party": "ODM",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Homa_Bay_County.svg",
-    "description": "A Nyanza county on the eastern shore of Lake Victoria, Homa Bay is known for fishing, Ruma National Park, Thimlich Ohinga — a UNESCO World Heritage Site — and significant public health initiatives."
+    "description": "A Nyanza county on the eastern shore of Lake Victoria, Homa Bay is known for fishing, Ruma National Park, Thimlich Ohinga — a UNESCO World Heritage Site — and significant public health initiatives.",
+    "postal_code": "40300",
+    "postal_code_range": "40300-40307"
   },
   {
     "id": 44,
@@ -569,7 +655,9 @@
     "governor_party": "ODM",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Flag_of_Migori_County.svg",
-    "description": "Bordering Tanzania and Lake Victoria in the Nyanza region, Migori is known for artisanal gold mining in Macalder, tobacco farming, fishing, and the diverse cultures of the Luo, Kuria, and Suba communities."
+    "description": "Bordering Tanzania and Lake Victoria in the Nyanza region, Migori is known for artisanal gold mining in Macalder, tobacco farming, fishing, and the diverse cultures of the Luo, Kuria, and Suba communities.",
+    "postal_code": "40400",
+    "postal_code_range": "40400-40407"
   },
   {
     "id": 45,
@@ -582,7 +670,9 @@
     "governor_party": "ODM",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Flag_of_Kisii_County.svg",
-    "description": "A densely populated Nyanza county known for soapstone carving — a globally recognised craft — tea and coffee farming, and one of the highest population densities in Kenya."
+    "description": "A densely populated Nyanza county known for soapstone carving — a globally recognised craft — tea and coffee farming, and one of the highest population densities in Kenya.",
+    "postal_code": "40200",
+    "postal_code_range": "40200-40208"
   },
   {
     "id": 46,
@@ -595,7 +685,9 @@
     "governor_party": "UPA",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nyamira_County.svg",
-    "description": "A Nyanza county covering 912 km² carved out of Kisii County in 2013, Nyamira is an important tea and coffee growing region known for its hilly terrain and the industrious Gusii community."
+    "description": "A Nyanza county covering 912 km² carved out of Kisii County in 2013, Nyamira is an important tea and coffee growing region known for its hilly terrain and the industrious Gusii community.",
+    "postal_code": "40500",
+    "postal_code_range": "40500-40503"
   },
   {
     "id": 47,
@@ -608,6 +700,8 @@
     "governor_party": "UDA",
     "governor_since": 2022,
     "flag_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Flag_of_Nairobi_County.svg",
-    "description": "Kenya's capital and largest city, Nairobi is a major global metropolis, the economic hub of East Africa, home to the United Nations Environment Programme (UNEP), Nairobi National Park, and a fast-growing tech startup ecosystem."
+    "description": "Kenya's capital and largest city, Nairobi is a major global metropolis, the economic hub of East Africa, home to the United Nations Environment Programme (UNEP), Nairobi National Park, and a fast-growing tech startup ecosystem.",
+    "postal_code": "00100",
+    "postal_code_range": "00100-00800"
   }
 ]

@@ -126,6 +126,14 @@ https://kenya-api.netlify.app/api/v1
 | GET    | `/api/v1/ministries/:id`                  | Single ministry by ID                              |
 | GET    | `/api/v1/ministries/search?q=`            | Search by ministry name or CS name                 |
 
+### Postal Codes
+| Method | Path                                          | Description                                        |
+|--------|-----------------------------------------------|----------------------------------------------------|
+| GET    | `/api/v1/postal-codes`                        | All 47 county postal codes with constituency codes |
+| GET    | `/api/v1/postal-codes/county/:county_id`      | Single county postal codes by county ID            |
+| GET    | `/api/v1/postal-codes/constituency?name=`     | Lookup by constituency name (partial match)        |
+| GET    | `/api/v1/postal-codes/search?q=`             | Search by county name, constituency name, or code  |
+
 ### Search
 | Method | Path                                      | Description                                        |
 |--------|-------------------------------------------|----------------------------------------------------|
@@ -139,6 +147,7 @@ Search fields per resource:
 - institutions: name, type, category, county_name, constituency, address
 - ministries: ministry, cabinet_secretary
 - exchange_rates: currency, currency_name
+- postal_codes: county_name, primary_postal_code
 
 ---
 
@@ -258,6 +267,22 @@ County descriptions: one-sentence factual summaries synthesised from official co
 }
 ```
 
+### Postal Code Entry
+```json
+{
+  "id": 47,
+  "county_id": 47,
+  "county_name": "Nairobi",
+  "postal_code_range": { "from": "00100", "to": "00800" },
+  "primary_postal_code": "00100",
+  "constituencies": [
+    { "name": "Westlands", "postal_code": "00600" },
+    { "name": "Starehe",   "postal_code": "00100" }
+  ],
+  "source": "https://postzipcode.com/kenya/nairobi/"
+}
+```
+
 ### Ministry
 ```json
 {
@@ -292,6 +317,7 @@ County descriptions: one-sentence factual summaries synthesised from official co
 - **Exchange Rates**: Central Bank of Kenya (CBK) indicative rates — last seeded April 2026
 - **Public Universities**: Commission for University Education (CUE) — 41 accredited institutions as of 2025
 - **TVET Institutions**: TVETA Kenya — 613 accredited institutions across all 47 counties (2025)
+- **Postal Codes**: Posta Kenya / PostZipCode.com — mapped to all 47 counties and 290 constituencies
 
 ---
 

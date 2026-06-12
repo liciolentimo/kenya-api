@@ -4,6 +4,7 @@ const holidays = require('../data/holidays.json');
 const institutions = require('../data/institutions.json');
 const ministries = require('../data/ministries.json');
 const exchangeRates = require('../data/exchange-rates.json');
+const postalCodes = require('../data/postal-codes.json');
 
 const searchConfigs = [
   {
@@ -41,6 +42,12 @@ const searchConfigs = [
     data: exchangeRates,
     fields: ['currency', 'currency_name'],
     endpoint: '/api/v1/exchange-rates',
+  },
+  {
+    name: 'postal_codes',
+    data: postalCodes,
+    fields: ['county_name', 'primary_postal_code'],
+    endpoint: '/api/v1/postal-codes',
   },
 ];
 

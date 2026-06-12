@@ -1,0 +1,668 @@
+[
+  {
+    "id": 1, "county_id": 1, "county_name": "Mombasa",
+    "postal_code_range": { "from": "80100", "to": "80118" },
+    "primary_postal_code": "80100",
+    "constituencies": [
+      { "name": "Changamwe", "postal_code": "80100" },
+      { "name": "Jomvu",     "postal_code": "80104" },
+      { "name": "Kisauni",   "postal_code": "80107" },
+      { "name": "Likoni",    "postal_code": "80110" },
+      { "name": "Mvita",     "postal_code": "80100" },
+      { "name": "Nyali",     "postal_code": "80118" }
+    ],
+    "source": "https://postzipcode.com/kenya/mombasa/"
+  },
+  {
+    "id": 2, "county_id": 2, "county_name": "Kwale",
+    "postal_code_range": { "from": "80400", "to": "80405" },
+    "primary_postal_code": "80400",
+    "constituencies": [
+      { "name": "Msambweni",   "postal_code": "80400" },
+      { "name": "Lunga Lunga", "postal_code": "80401" },
+      { "name": "Matuga",      "postal_code": "80403" },
+      { "name": "Kinango",     "postal_code": "80405" }
+    ],
+    "source": "https://postzipcode.com/kenya/kwale/"
+  },
+  {
+    "id": 3, "county_id": 3, "county_name": "Kilifi",
+    "postal_code_range": { "from": "80200", "to": "80208" },
+    "primary_postal_code": "80200",
+    "constituencies": [
+      { "name": "Kilifi North", "postal_code": "80200" },
+      { "name": "Kilifi South", "postal_code": "80200" },
+      { "name": "Kaloleni",     "postal_code": "80204" },
+      { "name": "Rabai",        "postal_code": "80205" },
+      { "name": "Ganze",        "postal_code": "80206" },
+      { "name": "Malindi",      "postal_code": "80200" },
+      { "name": "Magarini",     "postal_code": "80208" }
+    ],
+    "source": "https://postzipcode.com/kenya/kilifi/"
+  },
+  {
+    "id": 4, "county_id": 4, "county_name": "Tana River",
+    "postal_code_range": { "from": "70100", "to": "70300" },
+    "primary_postal_code": "70100",
+    "constituencies": [
+      { "name": "Garsen", "postal_code": "70100" },
+      { "name": "Galole", "postal_code": "70200" },
+      { "name": "Bura",   "postal_code": "70300" }
+    ],
+    "source": "https://postzipcode.com/kenya/tana-river/"
+  },
+  {
+    "id": 5, "county_id": 5, "county_name": "Lamu",
+    "postal_code_range": { "from": "80500", "to": "80502" },
+    "primary_postal_code": "80500",
+    "constituencies": [
+      { "name": "Lamu East", "postal_code": "80500" },
+      { "name": "Lamu West", "postal_code": "80502" }
+    ],
+    "source": "https://postzipcode.com/kenya/lamu/"
+  },
+  {
+    "id": 6, "county_id": 6, "county_name": "Taita Taveta",
+    "postal_code_range": { "from": "80300", "to": "80308" },
+    "primary_postal_code": "80300",
+    "constituencies": [
+      { "name": "Taveta",   "postal_code": "80302" },
+      { "name": "Wundanyi", "postal_code": "80300" },
+      { "name": "Mwatate",  "postal_code": "80304" },
+      { "name": "Voi",      "postal_code": "80300" }
+    ],
+    "source": "https://postzipcode.com/kenya/taita-taveta/"
+  },
+  {
+    "id": 7, "county_id": 7, "county_name": "Garissa",
+    "postal_code_range": { "from": "70200", "to": "70204" },
+    "primary_postal_code": "70200",
+    "constituencies": [
+      { "name": "Garissa Township", "postal_code": "70200" },
+      { "name": "Balambala",        "postal_code": "70201" },
+      { "name": "Lagdera",          "postal_code": "70202" },
+      { "name": "Dadaab",           "postal_code": "70203" },
+      { "name": "Fafi",             "postal_code": "70200" },
+      { "name": "Ijara",            "postal_code": "70204" }
+    ],
+    "source": "https://postzipcode.com/kenya/garissa/"
+  },
+  {
+    "id": 8, "county_id": 8, "county_name": "Wajir",
+    "postal_code_range": { "from": "70300", "to": "70304" },
+    "primary_postal_code": "70300",
+    "constituencies": [
+      { "name": "Wajir North", "postal_code": "70300" },
+      { "name": "Wajir East",  "postal_code": "70300" },
+      { "name": "Tarbaj",      "postal_code": "70301" },
+      { "name": "Wajir West",  "postal_code": "70302" },
+      { "name": "Eldas",       "postal_code": "70303" },
+      { "name": "Wajir South", "postal_code": "70304" }
+    ],
+    "source": "https://postzipcode.com/kenya/wajir/"
+  },
+  {
+    "id": 9, "county_id": 9, "county_name": "Mandera",
+    "postal_code_range": { "from": "70400", "to": "70404" },
+    "primary_postal_code": "70400",
+    "constituencies": [
+      { "name": "Mandera West",  "postal_code": "70400" },
+      { "name": "Banissa",       "postal_code": "70401" },
+      { "name": "Mandera North", "postal_code": "70402" },
+      { "name": "Mandera South", "postal_code": "70400" },
+      { "name": "Mandera East",  "postal_code": "70403" },
+      { "name": "Lafey",         "postal_code": "70404" }
+    ],
+    "source": "https://postzipcode.com/kenya/mandera/"
+  },
+  {
+    "id": 10, "county_id": 10, "county_name": "Marsabit",
+    "postal_code_range": { "from": "60500", "to": "60503" },
+    "primary_postal_code": "60500",
+    "constituencies": [
+      { "name": "Moyale",    "postal_code": "60500" },
+      { "name": "North Horr","postal_code": "60501" },
+      { "name": "Saku",      "postal_code": "60502" },
+      { "name": "Laisamis",  "postal_code": "60503" }
+    ],
+    "source": "https://postzipcode.com/kenya/marsabit/"
+  },
+  {
+    "id": 11, "county_id": 11, "county_name": "Isiolo",
+    "postal_code_range": { "from": "60300", "to": "60301" },
+    "primary_postal_code": "60300",
+    "constituencies": [
+      { "name": "Isiolo North", "postal_code": "60300" },
+      { "name": "Isiolo South", "postal_code": "60301" }
+    ],
+    "source": "https://postzipcode.com/kenya/isiolo/"
+  },
+  {
+    "id": 12, "county_id": 12, "county_name": "Meru",
+    "postal_code_range": { "from": "60200", "to": "60209" },
+    "primary_postal_code": "60200",
+    "constituencies": [
+      { "name": "Igembe South",   "postal_code": "60202" },
+      { "name": "Igembe Central", "postal_code": "60203" },
+      { "name": "Igembe North",   "postal_code": "60204" },
+      { "name": "Tigania West",   "postal_code": "60205" },
+      { "name": "Tigania East",   "postal_code": "60206" },
+      { "name": "North Imenti",   "postal_code": "60200" },
+      { "name": "Buuri",          "postal_code": "60207" },
+      { "name": "Central Imenti", "postal_code": "60200" },
+      { "name": "South Imenti",   "postal_code": "60209" }
+    ],
+    "source": "https://postzipcode.com/kenya/meru/"
+  },
+  {
+    "id": 13, "county_id": 13, "county_name": "Tharaka-Nithi",
+    "postal_code_range": { "from": "60400", "to": "60403" },
+    "primary_postal_code": "60400",
+    "constituencies": [
+      { "name": "Maara",   "postal_code": "60400" },
+      { "name": "Chuka",   "postal_code": "60400" },
+      { "name": "Tharaka", "postal_code": "60403" }
+    ],
+    "source": "https://postzipcode.com/kenya/tharaka-nithi/"
+  },
+  {
+    "id": 14, "county_id": 14, "county_name": "Embu",
+    "postal_code_range": { "from": "60100", "to": "60104" },
+    "primary_postal_code": "60100",
+    "constituencies": [
+      { "name": "Manyatta",     "postal_code": "60100" },
+      { "name": "Runyenjes",    "postal_code": "60101" },
+      { "name": "Mbeere South", "postal_code": "60102" },
+      { "name": "Mbeere North", "postal_code": "60104" }
+    ],
+    "source": "https://postzipcode.com/kenya/embu/"
+  },
+  {
+    "id": 15, "county_id": 15, "county_name": "Kitui",
+    "postal_code_range": { "from": "90200", "to": "90215" },
+    "primary_postal_code": "90200",
+    "constituencies": [
+      { "name": "Mwingi North",   "postal_code": "90300" },
+      { "name": "Mwingi West",    "postal_code": "90301" },
+      { "name": "Mwingi Central", "postal_code": "90300" },
+      { "name": "Kitui West",     "postal_code": "90200" },
+      { "name": "Kitui Rural",    "postal_code": "90200" },
+      { "name": "Kitui Central",  "postal_code": "90200" },
+      { "name": "Kitui East",     "postal_code": "90210" },
+      { "name": "Kitui South",    "postal_code": "90215" }
+    ],
+    "source": "https://postzipcode.com/kenya/kitui/"
+  },
+  {
+    "id": 16, "county_id": 16, "county_name": "Machakos",
+    "postal_code_range": { "from": "90100", "to": "90138" },
+    "primary_postal_code": "90100",
+    "constituencies": [
+      { "name": "Masinga",       "postal_code": "90100" },
+      { "name": "Yatta",         "postal_code": "90104" },
+      { "name": "Kangundo",      "postal_code": "90115" },
+      { "name": "Matungulu",     "postal_code": "90120" },
+      { "name": "Kathiani",      "postal_code": "90121" },
+      { "name": "Mavoko",        "postal_code": "90100" },
+      { "name": "Machakos Town", "postal_code": "90100" },
+      { "name": "Mwala",         "postal_code": "90138" }
+    ],
+    "source": "https://postzipcode.com/kenya/machakos/"
+  },
+  {
+    "id": 17, "county_id": 17, "county_name": "Makueni",
+    "postal_code_range": { "from": "90300", "to": "90308" },
+    "primary_postal_code": "90300",
+    "constituencies": [
+      { "name": "Mbooni",       "postal_code": "90300" },
+      { "name": "Kilome",       "postal_code": "90302" },
+      { "name": "Kaiti",        "postal_code": "90303" },
+      { "name": "Makueni",      "postal_code": "90300" },
+      { "name": "Kibwezi West", "postal_code": "90304" },
+      { "name": "Kibwezi East", "postal_code": "90308" }
+    ],
+    "source": "https://postzipcode.com/kenya/makueni/"
+  },
+  {
+    "id": 18, "county_id": 18, "county_name": "Nyandarua",
+    "postal_code_range": { "from": "20300", "to": "20304" },
+    "primary_postal_code": "20300",
+    "constituencies": [
+      { "name": "Kinangop", "postal_code": "20304" },
+      { "name": "Kipipiri", "postal_code": "20301" },
+      { "name": "Ol Kalou", "postal_code": "20300" },
+      { "name": "Ol Jorok", "postal_code": "20302" },
+      { "name": "Ndaragwa", "postal_code": "20303" }
+    ],
+    "source": "https://postzipcode.com/kenya/nyandarua/"
+  },
+  {
+    "id": 19, "county_id": 19, "county_name": "Nyeri",
+    "postal_code_range": { "from": "10100", "to": "10106" },
+    "primary_postal_code": "10100",
+    "constituencies": [
+      { "name": "Tetu",       "postal_code": "10100" },
+      { "name": "Kieni",      "postal_code": "10101" },
+      { "name": "Mathira",    "postal_code": "10102" },
+      { "name": "Othaya",     "postal_code": "10103" },
+      { "name": "Mukurweini", "postal_code": "10105" },
+      { "name": "Nyeri Town", "postal_code": "10100" }
+    ],
+    "source": "https://postzipcode.com/kenya/nyeri/"
+  },
+  {
+    "id": 20, "county_id": 20, "county_name": "Kirinyaga",
+    "postal_code_range": { "from": "10300", "to": "10304" },
+    "primary_postal_code": "10300",
+    "constituencies": [
+      { "name": "Mwea",              "postal_code": "10300" },
+      { "name": "Gichugu",           "postal_code": "10301" },
+      { "name": "Ndia",              "postal_code": "10302" },
+      { "name": "Kirinyaga Central", "postal_code": "10304" }
+    ],
+    "source": "https://postzipcode.com/kenya/kirinyaga/"
+  },
+  {
+    "id": 21, "county_id": 21, "county_name": "Murang'a",
+    "postal_code_range": { "from": "10200", "to": "10207" },
+    "primary_postal_code": "10200",
+    "constituencies": [
+      { "name": "Kangema",  "postal_code": "10200" },
+      { "name": "Mathioya", "postal_code": "10201" },
+      { "name": "Kiharu",   "postal_code": "10200" },
+      { "name": "Kigumo",   "postal_code": "10203" },
+      { "name": "Maragwa",  "postal_code": "10204" },
+      { "name": "Kandara",  "postal_code": "10205" },
+      { "name": "Gatanga",  "postal_code": "10207" }
+    ],
+    "source": "https://postzipcode.com/kenya/murang-a/"
+  },
+  {
+    "id": 22, "county_id": 22, "county_name": "Kiambu",
+    "postal_code_range": { "from": "00900", "to": "00902" },
+    "primary_postal_code": "00900",
+    "constituencies": [
+      { "name": "Gatundu South", "postal_code": "00900" },
+      { "name": "Gatundu North", "postal_code": "00900" },
+      { "name": "Juja",          "postal_code": "00900" },
+      { "name": "Thika Town",    "postal_code": "01000" },
+      { "name": "Ruiru",         "postal_code": "00232" },
+      { "name": "Githunguri",    "postal_code": "00900" },
+      { "name": "Kiambu",        "postal_code": "00900" },
+      { "name": "Kiambaa",       "postal_code": "00900" },
+      { "name": "Kabete",        "postal_code": "00900" },
+      { "name": "Kikuyu",        "postal_code": "00902" },
+      { "name": "Limuru",        "postal_code": "00217" },
+      { "name": "Lari",          "postal_code": "00900" }
+    ],
+    "source": "https://postzipcode.com/kenya/kiambu/"
+  },
+  {
+    "id": 23, "county_id": 23, "county_name": "Turkana",
+    "postal_code_range": { "from": "30500", "to": "30504" },
+    "primary_postal_code": "30500",
+    "constituencies": [
+      { "name": "Turkana North",   "postal_code": "30500" },
+      { "name": "Turkana West",    "postal_code": "30500" },
+      { "name": "Turkana Central", "postal_code": "30500" },
+      { "name": "Loima",           "postal_code": "30501" },
+      { "name": "Turkana South",   "postal_code": "30502" },
+      { "name": "Turkana East",    "postal_code": "30504" }
+    ],
+    "source": "https://postzipcode.com/kenya/turkana/"
+  },
+  {
+    "id": 24, "county_id": 24, "county_name": "West Pokot",
+    "postal_code_range": { "from": "30600", "to": "30603" },
+    "primary_postal_code": "30600",
+    "constituencies": [
+      { "name": "Kapenguria",  "postal_code": "30600" },
+      { "name": "Sigor",       "postal_code": "30601" },
+      { "name": "Kacheliba",   "postal_code": "30602" },
+      { "name": "Pokot South", "postal_code": "30603" }
+    ],
+    "source": "https://postzipcode.com/kenya/west-pokot/"
+  },
+  {
+    "id": 25, "county_id": 25, "county_name": "Samburu",
+    "postal_code_range": { "from": "20600", "to": "20602" },
+    "primary_postal_code": "20600",
+    "constituencies": [
+      { "name": "Samburu West",  "postal_code": "20600" },
+      { "name": "Samburu North", "postal_code": "20601" },
+      { "name": "Samburu East",  "postal_code": "20602" }
+    ],
+    "source": "https://postzipcode.com/kenya/samburu/"
+  },
+  {
+    "id": 26, "county_id": 26, "county_name": "Trans-Nzoia",
+    "postal_code_range": { "from": "30200", "to": "30204" },
+    "primary_postal_code": "30200",
+    "constituencies": [
+      { "name": "Kwanza",      "postal_code": "30200" },
+      { "name": "Endebess",    "postal_code": "30201" },
+      { "name": "Saboti",      "postal_code": "30202" },
+      { "name": "Kiminini",    "postal_code": "30203" },
+      { "name": "Cherang'any", "postal_code": "30204" }
+    ],
+    "source": "https://postzipcode.com/kenya/trans-nzoia/"
+  },
+  {
+    "id": 27, "county_id": 27, "county_name": "Uasin Gishu",
+    "postal_code_range": { "from": "30100", "to": "30106" },
+    "primary_postal_code": "30100",
+    "constituencies": [
+      { "name": "Soy",      "postal_code": "30100" },
+      { "name": "Turbo",    "postal_code": "30102" },
+      { "name": "Moiben",   "postal_code": "30103" },
+      { "name": "Ainabkoi", "postal_code": "30100" },
+      { "name": "Kapseret", "postal_code": "30100" },
+      { "name": "Kesses",   "postal_code": "30106" }
+    ],
+    "source": "https://postzipcode.com/kenya/uasin-gishu/"
+  },
+  {
+    "id": 28, "county_id": 28, "county_name": "Elgeyo Marakwet",
+    "postal_code_range": { "from": "30700", "to": "30703" },
+    "primary_postal_code": "30700",
+    "constituencies": [
+      { "name": "Marakwet East", "postal_code": "30700" },
+      { "name": "Marakwet West", "postal_code": "30701" },
+      { "name": "Keiyo North",   "postal_code": "30702" },
+      { "name": "Keiyo South",   "postal_code": "30703" }
+    ],
+    "source": "https://postzipcode.com/kenya/elgeyo-marakwet/"
+  },
+  {
+    "id": 29, "county_id": 29, "county_name": "Nandi",
+    "postal_code_range": { "from": "30300", "to": "30305" },
+    "primary_postal_code": "30300",
+    "constituencies": [
+      { "name": "Tinderet",    "postal_code": "30300" },
+      { "name": "Aldai",       "postal_code": "30301" },
+      { "name": "Nandi Hills", "postal_code": "30302" },
+      { "name": "Chesumei",    "postal_code": "30303" },
+      { "name": "Emgwen",      "postal_code": "30304" },
+      { "name": "Mosop",       "postal_code": "30305" }
+    ],
+    "source": "https://postzipcode.com/kenya/nandi/"
+  },
+  {
+    "id": 30, "county_id": 30, "county_name": "Baringo",
+    "postal_code_range": { "from": "20700", "to": "20705" },
+    "primary_postal_code": "20700",
+    "constituencies": [
+      { "name": "Tiaty",           "postal_code": "20700" },
+      { "name": "Baringo North",   "postal_code": "20701" },
+      { "name": "Baringo Central", "postal_code": "20700" },
+      { "name": "Baringo South",   "postal_code": "20702" },
+      { "name": "Eldama Ravine",   "postal_code": "20703" },
+      { "name": "Mogotio",         "postal_code": "20705" }
+    ],
+    "source": "https://postzipcode.com/kenya/baringo/"
+  },
+  {
+    "id": 31, "county_id": 31, "county_name": "Laikipia",
+    "postal_code_range": { "from": "20300", "to": "20302" },
+    "primary_postal_code": "20300",
+    "constituencies": [
+      { "name": "Laikipia West",  "postal_code": "20300" },
+      { "name": "Laikipia East",  "postal_code": "20301" },
+      { "name": "Laikipia North", "postal_code": "20302" }
+    ],
+    "source": "https://postzipcode.com/kenya/laikipia/"
+  },
+  {
+    "id": 32, "county_id": 32, "county_name": "Nakuru",
+    "postal_code_range": { "from": "20100", "to": "20117" },
+    "primary_postal_code": "20100",
+    "constituencies": [
+      { "name": "Molo",             "postal_code": "20100" },
+      { "name": "Njoro",            "postal_code": "20107" },
+      { "name": "Mau Narok",        "postal_code": "20100" },
+      { "name": "Kuresoi South",    "postal_code": "20100" },
+      { "name": "Kuresoi North",    "postal_code": "20100" },
+      { "name": "Subukia",          "postal_code": "20110" },
+      { "name": "Rongai",           "postal_code": "20108" },
+      { "name": "Bahati",           "postal_code": "20100" },
+      { "name": "Nakuru Town West", "postal_code": "20100" },
+      { "name": "Nakuru Town East", "postal_code": "20100" },
+      { "name": "Naivasha",         "postal_code": "20117" }
+    ],
+    "source": "https://postzipcode.com/kenya/nakuru/"
+  },
+  {
+    "id": 33, "county_id": 33, "county_name": "Narok",
+    "postal_code_range": { "from": "20500", "to": "20505" },
+    "primary_postal_code": "20500",
+    "constituencies": [
+      { "name": "Kilgoris",      "postal_code": "20500" },
+      { "name": "Emurua Dikirr", "postal_code": "20501" },
+      { "name": "Narok North",   "postal_code": "20500" },
+      { "name": "Narok East",    "postal_code": "20502" },
+      { "name": "Narok South",   "postal_code": "20503" },
+      { "name": "Narok West",    "postal_code": "20505" }
+    ],
+    "source": "https://postzipcode.com/kenya/narok/"
+  },
+  {
+    "id": 34, "county_id": 34, "county_name": "Kajiado",
+    "postal_code_range": { "from": "01100", "to": "01103" },
+    "primary_postal_code": "01100",
+    "constituencies": [
+      { "name": "Kajiado North",   "postal_code": "01100" },
+      { "name": "Kajiado Central", "postal_code": "01101" },
+      { "name": "Kajiado East",    "postal_code": "01100" },
+      { "name": "Kajiado West",    "postal_code": "01102" },
+      { "name": "Kajiado South",   "postal_code": "01103" }
+    ],
+    "source": "https://postzipcode.com/kenya/kajiado/"
+  },
+  {
+    "id": 35, "county_id": 35, "county_name": "Kericho",
+    "postal_code_range": { "from": "20200", "to": "20205" },
+    "primary_postal_code": "20200",
+    "constituencies": [
+      { "name": "Kipkelion East", "postal_code": "20200" },
+      { "name": "Kipkelion West", "postal_code": "20200" },
+      { "name": "Ainamoi",        "postal_code": "20200" },
+      { "name": "Bureti",         "postal_code": "20201" },
+      { "name": "Belgut",         "postal_code": "20202" },
+      { "name": "Sigowet/Soin",   "postal_code": "20205" }
+    ],
+    "source": "https://postzipcode.com/kenya/kericho/"
+  },
+  {
+    "id": 36, "county_id": 36, "county_name": "Bomet",
+    "postal_code_range": { "from": "20400", "to": "20404" },
+    "primary_postal_code": "20400",
+    "constituencies": [
+      { "name": "Sotik",         "postal_code": "20400" },
+      { "name": "Chepalungu",    "postal_code": "20401" },
+      { "name": "Bomet East",    "postal_code": "20400" },
+      { "name": "Bomet Central", "postal_code": "20400" },
+      { "name": "Konoin",        "postal_code": "20404" }
+    ],
+    "source": "https://postzipcode.com/kenya/bomet/"
+  },
+  {
+    "id": 37, "county_id": 37, "county_name": "Kakamega",
+    "postal_code_range": { "from": "50100", "to": "50108" },
+    "primary_postal_code": "50100",
+    "constituencies": [
+      { "name": "Lugari",      "postal_code": "50100" },
+      { "name": "Likuyani",    "postal_code": "50101" },
+      { "name": "Malava",      "postal_code": "50102" },
+      { "name": "Lurambi",     "postal_code": "50100" },
+      { "name": "Navakholo",   "postal_code": "50103" },
+      { "name": "Mumias West", "postal_code": "50104" },
+      { "name": "Mumias East", "postal_code": "50104" },
+      { "name": "Matungu",     "postal_code": "50105" },
+      { "name": "Butere",      "postal_code": "50106" },
+      { "name": "Khwisero",    "postal_code": "50107" },
+      { "name": "Shinyalu",    "postal_code": "50100" },
+      { "name": "Ikolomani",   "postal_code": "50108" }
+    ],
+    "source": "https://postzipcode.com/kenya/kakamega/"
+  },
+  {
+    "id": 38, "county_id": 38, "county_name": "Vihiga",
+    "postal_code_range": { "from": "50300", "to": "50304" },
+    "primary_postal_code": "50300",
+    "constituencies": [
+      { "name": "Vihiga",  "postal_code": "50300" },
+      { "name": "Sabatia", "postal_code": "50301" },
+      { "name": "Hamisi",  "postal_code": "50302" },
+      { "name": "Luanda",  "postal_code": "50303" },
+      { "name": "Emuhaya", "postal_code": "50304" }
+    ],
+    "source": "https://postzipcode.com/kenya/vihiga/"
+  },
+  {
+    "id": 39, "county_id": 39, "county_name": "Bungoma",
+    "postal_code_range": { "from": "50200", "to": "50208" },
+    "primary_postal_code": "50200",
+    "constituencies": [
+      { "name": "Mt. Elgon",   "postal_code": "50200" },
+      { "name": "Sirisia",     "postal_code": "50201" },
+      { "name": "Kabuchai",    "postal_code": "50202" },
+      { "name": "Bumula",      "postal_code": "50203" },
+      { "name": "Kanduyi",     "postal_code": "50200" },
+      { "name": "Webuye East", "postal_code": "50205" },
+      { "name": "Webuye West", "postal_code": "50205" },
+      { "name": "Kimilili",    "postal_code": "50207" },
+      { "name": "Tongaren",    "postal_code": "50208" }
+    ],
+    "source": "https://postzipcode.com/kenya/bungoma/"
+  },
+  {
+    "id": 40, "county_id": 40, "county_name": "Busia",
+    "postal_code_range": { "from": "50400", "to": "50406" },
+    "primary_postal_code": "50400",
+    "constituencies": [
+      { "name": "Teso North", "postal_code": "50400" },
+      { "name": "Teso South", "postal_code": "50401" },
+      { "name": "Nambale",    "postal_code": "50402" },
+      { "name": "Matayos",    "postal_code": "50403" },
+      { "name": "Butula",     "postal_code": "50404" },
+      { "name": "Funyula",    "postal_code": "50405" },
+      { "name": "Budalangi",  "postal_code": "50406" }
+    ],
+    "source": "https://postzipcode.com/kenya/busia/"
+  },
+  {
+    "id": 41, "county_id": 41, "county_name": "Siaya",
+    "postal_code_range": { "from": "40600", "to": "40606" },
+    "primary_postal_code": "40600",
+    "constituencies": [
+      { "name": "Ugenya",       "postal_code": "40600" },
+      { "name": "Ugunja",       "postal_code": "40601" },
+      { "name": "Alego Usonga", "postal_code": "40600" },
+      { "name": "Gem",          "postal_code": "40603" },
+      { "name": "Bondo",        "postal_code": "40601" },
+      { "name": "Rarieda",      "postal_code": "40606" }
+    ],
+    "source": "https://postzipcode.com/kenya/siaya/"
+  },
+  {
+    "id": 42, "county_id": 42, "county_name": "Kisumu",
+    "postal_code_range": { "from": "40100", "to": "40115" },
+    "primary_postal_code": "40100",
+    "constituencies": [
+      { "name": "Kisumu East",    "postal_code": "40100" },
+      { "name": "Kisumu West",    "postal_code": "40100" },
+      { "name": "Kisumu Central", "postal_code": "40100" },
+      { "name": "Seme",           "postal_code": "40100" },
+      { "name": "Nyando",         "postal_code": "40100" },
+      { "name": "Muhoroni",       "postal_code": "40105" },
+      { "name": "Nyakach",        "postal_code": "40115" }
+    ],
+    "source": "https://postzipcode.com/kenya/kisumu/"
+  },
+  {
+    "id": 43, "county_id": 43, "county_name": "Homa Bay",
+    "postal_code_range": { "from": "40300", "to": "40307" },
+    "primary_postal_code": "40300",
+    "constituencies": [
+      { "name": "Kasipul",         "postal_code": "40300" },
+      { "name": "Kabondo Kasipul", "postal_code": "40301" },
+      { "name": "Karachuonyo",     "postal_code": "40302" },
+      { "name": "Rangwe",          "postal_code": "40303" },
+      { "name": "Homa Bay Town",   "postal_code": "40300" },
+      { "name": "Ndhiwa",          "postal_code": "40304" },
+      { "name": "Mbita",           "postal_code": "40305" },
+      { "name": "Suba",            "postal_code": "40307" }
+    ],
+    "source": "https://postzipcode.com/kenya/homa-bay/"
+  },
+  {
+    "id": 44, "county_id": 44, "county_name": "Migori",
+    "postal_code_range": { "from": "40400", "to": "40407" },
+    "primary_postal_code": "40400",
+    "constituencies": [
+      { "name": "Rongo",      "postal_code": "40400" },
+      { "name": "Awendo",     "postal_code": "40401" },
+      { "name": "Suna East",  "postal_code": "40400" },
+      { "name": "Suna West",  "postal_code": "40400" },
+      { "name": "Uriri",      "postal_code": "40402" },
+      { "name": "Nyatike",    "postal_code": "40403" },
+      { "name": "Kuria West", "postal_code": "40404" },
+      { "name": "Kuria East", "postal_code": "40407" }
+    ],
+    "source": "https://postzipcode.com/kenya/migori/"
+  },
+  {
+    "id": 45, "county_id": 45, "county_name": "Kisii",
+    "postal_code_range": { "from": "40200", "to": "40208" },
+    "primary_postal_code": "40200",
+    "constituencies": [
+      { "name": "Bonchari",            "postal_code": "40200" },
+      { "name": "South Mugirango",     "postal_code": "40200" },
+      { "name": "Bomachoge Borabu",    "postal_code": "40201" },
+      { "name": "Bobasi",              "postal_code": "40202" },
+      { "name": "Bomachoge Chache",    "postal_code": "40200" },
+      { "name": "Nyaribari Masaba",    "postal_code": "40200" },
+      { "name": "Nyaribari Chache",    "postal_code": "40200" },
+      { "name": "Kitutu Chache North", "postal_code": "40200" },
+      { "name": "Kitutu Chache South", "postal_code": "40208" }
+    ],
+    "source": "https://postzipcode.com/kenya/kisii/"
+  },
+  {
+    "id": 46, "county_id": 46, "county_name": "Nyamira",
+    "postal_code_range": { "from": "40500", "to": "40503" },
+    "primary_postal_code": "40500",
+    "constituencies": [
+      { "name": "Kitutu Masaba",   "postal_code": "40500" },
+      { "name": "West Mugirango",  "postal_code": "40501" },
+      { "name": "North Mugirango", "postal_code": "40502" },
+      { "name": "Borabu",          "postal_code": "40503" }
+    ],
+    "source": "https://postzipcode.com/kenya/nyamira/"
+  },
+  {
+    "id": 47, "county_id": 47, "county_name": "Nairobi",
+    "postal_code_range": { "from": "00100", "to": "00800" },
+    "primary_postal_code": "00100",
+    "constituencies": [
+      { "name": "Westlands",        "postal_code": "00600" },
+      { "name": "Dagoretti North",  "postal_code": "00100" },
+      { "name": "Dagoretti South",  "postal_code": "00100" },
+      { "name": "Langata",          "postal_code": "00509" },
+      { "name": "Kibra",            "postal_code": "00100" },
+      { "name": "Roysambu",         "postal_code": "00800" },
+      { "name": "Kasarani",         "postal_code": "00800" },
+      { "name": "Ruaraka",          "postal_code": "00800" },
+      { "name": "Embakasi South",   "postal_code": "00100" },
+      { "name": "Embakasi North",   "postal_code": "00100" },
+      { "name": "Embakasi Central", "postal_code": "00100" },
+      { "name": "Embakasi East",    "postal_code": "00100" },
+      { "name": "Embakasi West",    "postal_code": "00100" },
+      { "name": "Makadara",         "postal_code": "00100" },
+      { "name": "Kamukunji",        "postal_code": "00200" },
+      { "name": "Starehe",          "postal_code": "00100" },
+      { "name": "Mathare",          "postal_code": "00100" }
+    ],
+    "source": "https://postzipcode.com/kenya/nairobi/"
+  }
+]
