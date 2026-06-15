@@ -90,6 +90,18 @@ No API key or authentication required.
 | GET | `/api/v1/postal-codes/constituency?name=` | Lookup by constituency name |
 | GET | `/api/v1/postal-codes/search?q=` | Search by county name, constituency name, or code number |
 
+### Wards
+| Method | Path | Description |
+|--------|------|-------------|
+| GET | `/api/v1/wards` | All 1,263 wards (paginated, default 50/page) |
+| GET | `/api/v1/wards/county/:id` | Wards grouped by sub-county |
+| GET | `/api/v1/wards/sub-county?name=` | Wards in a specific sub-county |
+| GET | `/api/v1/wards/sub-counties/:id` | Sub-counties list for a county |
+| GET | `/api/v1/wards/search?q=` | Search wards by name, sub-county, or county |
+| GET | `/api/v1/counties/:id?include=wards` | County with sub-counties and wards attached |
+
+> Ward data covers 45 of 47 counties sourced from the IEBC via an open CC0 dataset. Nairobi, Kericho, and Bomet are absent from the upstream source.
+
 ### Search
 | Method | Path | Description |
 |--------|------|-------------|

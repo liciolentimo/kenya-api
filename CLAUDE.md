@@ -134,6 +134,15 @@ https://kenya-api.netlify.app/api/v1
 | GET    | `/api/v1/postal-codes/constituency?name=`     | Lookup by constituency name (partial match)        |
 | GET    | `/api/v1/postal-codes/search?q=`             | Search by county name, constituency name, or code  |
 
+### Wards
+| Method | Path                                          | Description                                        |
+|--------|-----------------------------------------------|----------------------------------------------------|
+| GET    | `/api/v1/wards`                               | All wards (?county_id, ?sub_county, ?page, ?limit) |
+| GET    | `/api/v1/wards/county/:county_id`             | Grouped wards by sub-county                        |
+| GET    | `/api/v1/wards/sub-county?name=`              | Wards in a specific sub-county                     |
+| GET    | `/api/v1/wards/sub-counties/:county_id`       | Sub-counties list for a county                     |
+| GET    | `/api/v1/wards/search?q=`                     | Search wards by name, sub-county, or county        |
+
 ### Search
 | Method | Path                                      | Description                                        |
 |--------|-------------------------------------------|----------------------------------------------------|
@@ -148,6 +157,7 @@ Search fields per resource:
 - ministries: ministry, cabinet_secretary
 - exchange_rates: currency, currency_name
 - postal_codes: county_name, primary_postal_code
+- wards: ward, sub_county_name, county_name
 
 ---
 
@@ -297,6 +307,18 @@ County descriptions: one-sentence factual summaries synthesised from official co
 }
 ```
 
+### Ward
+```json
+{
+  "id": 1,
+  "sub_county_id": 1,
+  "sub_county_name": "Changamwe",
+  "county_id": 1,
+  "county_name": "Mombasa",
+  "ward": "Port Reitz"
+}
+```
+
 ---
 
 ## Coding Conventions
@@ -318,6 +340,7 @@ County descriptions: one-sentence factual summaries synthesised from official co
 - **Public Universities**: Commission for University Education (CUE) — 41 accredited institutions as of 2025
 - **TVET Institutions**: TVETA Kenya — 613 accredited institutions across all 47 counties (2025)
 - **Postal Codes**: Posta Kenya / PostZipCode.com — mapped to all 47 counties and 290 constituencies
+- **Wards**: IEBC via open CC0 dataset — 1,263 electoral wards across 45 counties (Nairobi, Kericho, Bomet absent from upstream source)
 
 ---
 

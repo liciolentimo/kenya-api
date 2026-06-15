@@ -1,5 +1,6 @@
 const counties = require('../data/counties.json');
 const populationData = require('../data/population.json');
+const wardsData = require('../data/wards.json');
 
 function buildPopulationLookup() {
   return populationData.reduce((acc, item) => {
@@ -71,6 +72,16 @@ function getCountyById(req, res, next) {
     ...county,
     population: populationLookup[county.id] ?? null,
   };
+
+  if (req.query.include === 'wards') {
+    const countyWards = wardsData.filter((w) => w.county_id === id);
+    const grouped = {};
+    countyWards.forEach((w) => {
+      if (!grouped[w.sub_county_name]) grouped[w.sub_county_name] = [];
+      grouped[w.sub_county_name].push(w.ward);
+    });
+    data.sub_counties = Object.entries(grouped).map(([name, wards]) => ({ name, wards }));
+  }
 
   res.json({
     success: true,

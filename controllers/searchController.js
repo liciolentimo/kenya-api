@@ -5,6 +5,7 @@ const institutions = require('../data/institutions.json');
 const ministries = require('../data/ministries.json');
 const exchangeRates = require('../data/exchange-rates.json');
 const postalCodes = require('../data/postal-codes.json');
+const wardsData = require('../data/wards.json');
 
 const searchConfigs = [
   {
@@ -48,6 +49,12 @@ const searchConfigs = [
     data: postalCodes,
     fields: ['county_name', 'primary_postal_code'],
     endpoint: '/api/v1/postal-codes',
+  },
+  {
+    name: 'wards',
+    data: wardsData,
+    fields: ['ward', 'sub_county_name', 'county_name'],
+    endpoint: '/api/v1/wards',
   },
 ];
 

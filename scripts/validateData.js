@@ -15,6 +15,7 @@ function run() {
   const ministries = loadJSON('data/ministries.json');
   const institutions = loadJSON('data/institutions.json');
   const postalCodes = loadJSON('data/postal-codes.json');
+  const wardsArr = loadJSON('data/wards.json');
 
   let ok = true;
 
@@ -306,6 +307,44 @@ function run() {
   } else {
     logFail('Some postal code entries reference invalid county_id values:');
     invalidPostalCounty.forEach((p) => console.error(`  id=${p.id} county_id=${p.county_id} name="${p.county_name}"`));
+    ok = false;
+  }
+
+  // 31. wards.json has at least 1200 entries (source covers 45/47 counties)
+  if (wardsArr.length >= 1200) {
+    logPass(`wards.json contains ${wardsArr.length} entries (≥ 1200)`);
+  } else {
+    logFail(`expected at least 1200 ward entries, found ${wardsArr.length}`);
+    ok = false;
+  }
+
+  // 32. Every ward has a non-null county_id
+  const wardsNullCounty = wardsArr.filter((w) => w.county_id === null);
+  if (wardsNullCounty.length === 0) {
+    logPass('All wards have a non-null county_id');
+  } else {
+    logFail(`${wardsNullCounty.length} wards have null county_id`);
+    wardsNullCounty.slice(0, 5).forEach((w) => console.error(`  id=${w.id} ward="${w.ward}" county_name="${w.county_name}"`));
+    ok = false;
+  }
+
+  // 33. Every ward has a non-empty ward name
+  const wardsNoName = wardsArr.filter((w) => !w.ward || !w.ward.trim());
+  if (wardsNoName.length === 0) {
+    logPass('All wards have a non-empty ward name');
+  } else {
+    logFail(`${wardsNoName.length} wards are missing a ward name`);
+    wardsNoName.forEach((w) => console.error(`  id=${w.id}`));
+    ok = false;
+  }
+
+  // 34. Every ward has a non-empty sub_county_name
+  const wardsNoSubCounty = wardsArr.filter((w) => !w.sub_county_name || !w.sub_county_name.trim());
+  if (wardsNoSubCounty.length === 0) {
+    logPass('All wards have a non-empty sub_county_name');
+  } else {
+    logFail(`${wardsNoSubCounty.length} wards are missing sub_county_name`);
+    wardsNoSubCounty.forEach((w) => console.error(`  id=${w.id}`));
     ok = false;
   }
 

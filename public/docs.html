@@ -346,6 +346,7 @@
             <li class="group-item"><a class="sidebar-link" href="#institutions-tvets">TVETs &amp; Polytechnics</a></li>
             <li class="group-item"><a class="sidebar-link" href="#ministries">Ministries</a></li>
             <li class="group-item"><a class="sidebar-link" href="#postal-codes">Postal Codes</a></li>
+            <li class="group-item"><a class="sidebar-link" href="#wards">Wards</a></li>
           </ul>
         </div>
       </div>
@@ -4074,6 +4075,469 @@ public class Main {
     <span class="token-string">"..."</span>
   <span class="token-brace">]</span>
 <span class="token-brace">}</span></pre>
+            </div>
+          </div>
+          <button class="try-button" type="button">Try It</button>
+          <div class="try-panel">
+            <div class="try-panel-content"><pre class="code-block"><span class="token-comment">// Click "Try It" to fetch live data from the API</span></pre></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════ WARDS ═══════════════════════════ -->
+      <section id="wards" class="panel">
+        <h2 class="section-title">Wards</h2>
+        <p class="section-copy">Kenya's 1,263 electoral wards organised by county and sub-county. Data sourced from the IEBC via an open CC0 dataset on GitHub. Covers 45 of 47 counties (Nairobi, Kericho, and Bomet are not in the upstream source).</p>
+
+        <!-- GET /wards -->
+        <div class="endpoint-card">
+          <div class="endpoint-head">
+            <span class="method-badge">GET</span>
+            <p class="endpoint-path" id="wards-all">/wards</p>
+          </div>
+          <p class="endpoint-desc">All wards with optional filters. Paginated — default 50 per page.</p>
+          <div class="params-panel table-wrapper" style="margin-bottom: 18px;">
+            <table class="params-table">
+              <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
+              <tbody>
+                <tr><td>county_id</td><td>integer</td><td>query</td><td>no</td><td>Filter by county ID (1–47)</td></tr>
+                <tr><td>sub_county</td><td>string</td><td>query</td><td>no</td><td>Filter by sub-county name (partial match)</td></tr>
+                <tr><td>page</td><td>integer</td><td>query</td><td>no</td><td>Page number (default: 1)</td></tr>
+                <tr><td>limit</td><td>integer</td><td>query</td><td>no</td><td>Results per page (default: 50)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="code-panel tabbed" style="margin-bottom: 18px;">
+            <div class="code-tabs" role="tablist">
+              <button class="code-tab active" data-lang="curl" role="tab">cURL</button>
+              <button class="code-tab" data-lang="js" role="tab">JavaScript</button>
+              <button class="code-tab" data-lang="python" role="tab">Python</button>
+              <button class="code-tab" data-lang="php" role="tab">PHP</button>
+              <button class="code-tab" data-lang="go" role="tab">Go</button>
+              <button class="code-tab" data-lang="ruby" role="tab">Ruby</button>
+              <button class="code-tab" data-lang="java" role="tab">Java</button>
+            </div>
+            <div class="code-block-wrapper">
+              <button class="copy-btn" title="Copy to clipboard">Copy</button>
+              <pre class="code-block lang-curl active"><code>curl -X GET "https://kenya-api.netlify.app/api/v1/wards?county_id=1&limit=50" \
+  -H "Accept: application/json"</code></pre>
+              <pre class="code-block lang-js"><code>const response = await fetch("https://kenya-api.netlify.app/api/v1/wards?county_id=1&limit=50");
+const data = await response.json();
+console.log(data);</code></pre>
+              <pre class="code-block lang-python"><code>import requests
+response = requests.get("https://kenya-api.netlify.app/api/v1/wards", params={"county_id": 1, "limit": 50})
+print(response.json())</code></pre>
+              <pre class="code-block lang-php"><code>&lt;?php
+$response = file_get_contents("https://kenya-api.netlify.app/api/v1/wards?county_id=1&limit=50");
+print_r(json_decode($response, true));
+?&gt;</code></pre>
+              <pre class="code-block lang-go"><code>package main
+
+import (
+  "fmt"
+  "io"
+  "net/http"
+)
+
+func main() {
+  resp, _ := http.Get("https://kenya-api.netlify.app/api/v1/wards?county_id=1&limit=50")
+  defer resp.Body.Close()
+  body, _ := io.ReadAll(resp.Body)
+  fmt.Println(string(body))
+}</code></pre>
+              <pre class="code-block lang-ruby"><code>require "net/http"
+require "json"
+
+url = URI("https://kenya-api.netlify.app/api/v1/wards?county_id=1&limit=50")
+puts JSON.parse(Net::HTTP.get(url))</code></pre>
+              <pre class="code-block lang-java"><code>import java.net.URI;
+import java.net.http.*;
+
+public class Main {
+  public static void main(String[] args) throws Exception {
+    HttpClient client = HttpClient.newHttpClient();
+    HttpRequest request = HttpRequest.newBuilder()
+      .uri(URI.create("https://kenya-api.netlify.app/api/v1/wards?county_id=1&limit=50"))
+      .header("Accept", "application/json")
+      .GET().build();
+    System.out.println(client.send(request, HttpResponse.BodyHandlers.ofString()).body());
+  }
+}</code></pre>
+            </div>
+          </div>
+          <p class="response-label">Example response</p>
+          <div class="code-panel">
+            <div class="code-wrapper">
+              <button class="copy-button" type="button">Copy</button>
+              <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"total"</span><span class="token-punct">:</span> <span class="token-number">30</span><span class="token-punct">,</span>
+  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">30</span><span class="token-punct">,</span>
+  <span class="token-string">"page"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span>
+  <span class="token-string">"totalPages"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span>
+    <span class="token-brace">{</span>
+      <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span>
+      <span class="token-string">"sub_county_id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span>
+      <span class="token-string">"sub_county_name"</span><span class="token-punct">:</span> <span class="token-string">"Changamwe"</span><span class="token-punct">,</span>
+      <span class="token-string">"county_id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span>
+      <span class="token-string">"county_name"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa"</span><span class="token-punct">,</span>
+      <span class="token-string">"ward"</span><span class="token-punct">:</span> <span class="token-string">"Port Reitz"</span>
+    <span class="token-brace">}</span>
+  <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre>
+            </div>
+          </div>
+          <button class="try-button" type="button">Try It</button>
+          <div class="try-panel">
+            <div class="try-panel-content"><pre class="code-block"><span class="token-comment">// Click "Try It" to fetch live data from the API</span></pre></div>
+          </div>
+        </div>
+
+        <!-- GET /wards/county/:county_id -->
+        <div class="endpoint-card">
+          <div class="endpoint-head">
+            <span class="method-badge">GET</span>
+            <p class="endpoint-path" id="wards-county">/wards/county/:county_id</p>
+          </div>
+          <p class="endpoint-desc">All wards in a county grouped by sub-county. Ideal for building cascading dropdowns (county → sub-county → ward).</p>
+          <div class="params-panel table-wrapper" style="margin-bottom: 18px;">
+            <table class="params-table">
+              <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
+              <tbody>
+                <tr><td>county_id</td><td>integer</td><td>path</td><td>yes</td><td>County ID (1–47)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="code-panel tabbed" style="margin-bottom: 18px;">
+            <div class="code-tabs" role="tablist">
+              <button class="code-tab active" data-lang="curl" role="tab">cURL</button>
+              <button class="code-tab" data-lang="js" role="tab">JavaScript</button>
+              <button class="code-tab" data-lang="python" role="tab">Python</button>
+              <button class="code-tab" data-lang="php" role="tab">PHP</button>
+              <button class="code-tab" data-lang="go" role="tab">Go</button>
+              <button class="code-tab" data-lang="ruby" role="tab">Ruby</button>
+              <button class="code-tab" data-lang="java" role="tab">Java</button>
+            </div>
+            <div class="code-block-wrapper">
+              <button class="copy-btn" title="Copy to clipboard">Copy</button>
+              <pre class="code-block lang-curl active"><code>curl -X GET "https://kenya-api.netlify.app/api/v1/wards/county/1" \
+  -H "Accept: application/json"</code></pre>
+              <pre class="code-block lang-js"><code>const response = await fetch("https://kenya-api.netlify.app/api/v1/wards/county/1");
+const data = await response.json();
+console.log(data);</code></pre>
+              <pre class="code-block lang-python"><code>import requests
+response = requests.get("https://kenya-api.netlify.app/api/v1/wards/county/1")
+print(response.json())</code></pre>
+              <pre class="code-block lang-php"><code>&lt;?php
+$response = file_get_contents("https://kenya-api.netlify.app/api/v1/wards/county/1");
+print_r(json_decode($response, true));
+?&gt;</code></pre>
+              <pre class="code-block lang-go"><code>package main
+
+import (
+  "fmt"
+  "io"
+  "net/http"
+)
+
+func main() {
+  resp, _ := http.Get("https://kenya-api.netlify.app/api/v1/wards/county/1")
+  defer resp.Body.Close()
+  body, _ := io.ReadAll(resp.Body)
+  fmt.Println(string(body))
+}</code></pre>
+              <pre class="code-block lang-ruby"><code>require "net/http"
+require "json"
+
+url = URI("https://kenya-api.netlify.app/api/v1/wards/county/1")
+puts JSON.parse(Net::HTTP.get(url))</code></pre>
+              <pre class="code-block lang-java"><code>import java.net.URI;
+import java.net.http.*;
+
+public class Main {
+  public static void main(String[] args) throws Exception {
+    HttpClient client = HttpClient.newHttpClient();
+    HttpRequest request = HttpRequest.newBuilder()
+      .uri(URI.create("https://kenya-api.netlify.app/api/v1/wards/county/1"))
+      .header("Accept", "application/json")
+      .GET().build();
+    System.out.println(client.send(request, HttpResponse.BodyHandlers.ofString()).body());
+  }
+}</code></pre>
+            </div>
+          </div>
+          <p class="response-label">Example response</p>
+          <div class="code-panel">
+            <div class="code-wrapper">
+              <button class="copy-button" type="button">Copy</button>
+              <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"county_id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span>
+  <span class="token-string">"county_name"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa"</span><span class="token-punct">,</span>
+  <span class="token-string">"sub_counties"</span><span class="token-punct">:</span> <span class="token-number">6</span><span class="token-punct">,</span>
+  <span class="token-string">"ward_count"</span><span class="token-punct">:</span> <span class="token-number">30</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span>
+    <span class="token-brace">{</span>
+      <span class="token-string">"sub_county_id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span>
+      <span class="token-string">"sub_county_name"</span><span class="token-punct">:</span> <span class="token-string">"Changamwe"</span><span class="token-punct">,</span>
+      <span class="token-string">"wards"</span><span class="token-punct">:</span> <span class="token-brace">[</span> <span class="token-string">"Port Reitz"</span><span class="token-punct">,</span> <span class="token-string">"Kipevu"</span><span class="token-punct">,</span> <span class="token-string">"Airport"</span><span class="token-punct">,</span> <span class="token-string">"Changamwe"</span><span class="token-punct">,</span> <span class="token-string">"Chaani"</span> <span class="token-brace">]</span>
+    <span class="token-brace">}</span>
+  <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre>
+            </div>
+          </div>
+          <button class="try-button" type="button">Try It</button>
+          <div class="try-panel">
+            <div class="try-panel-content"><pre class="code-block"><span class="token-comment">// Click "Try It" to fetch live data from the API</span></pre></div>
+          </div>
+        </div>
+
+        <!-- GET /wards/sub-county?name= -->
+        <div class="endpoint-card">
+          <div class="endpoint-head">
+            <span class="method-badge">GET</span>
+            <p class="endpoint-path" id="wards-sub-county">/wards/sub-county?name=</p>
+          </div>
+          <p class="endpoint-desc">Returns all wards for a specific sub-county by name. Partial name matches are supported.</p>
+          <div class="params-panel table-wrapper" style="margin-bottom: 18px;">
+            <table class="params-table">
+              <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
+              <tbody>
+                <tr><td>name</td><td>string</td><td>query</td><td>yes</td><td>Sub-county name or partial name (e.g. <code>Changamwe</code>)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="code-panel tabbed" style="margin-bottom: 18px;">
+            <div class="code-tabs" role="tablist">
+              <button class="code-tab active" data-lang="curl" role="tab">cURL</button>
+              <button class="code-tab" data-lang="js" role="tab">JavaScript</button>
+              <button class="code-tab" data-lang="python" role="tab">Python</button>
+              <button class="code-tab" data-lang="php" role="tab">PHP</button>
+              <button class="code-tab" data-lang="go" role="tab">Go</button>
+              <button class="code-tab" data-lang="ruby" role="tab">Ruby</button>
+              <button class="code-tab" data-lang="java" role="tab">Java</button>
+            </div>
+            <div class="code-block-wrapper">
+              <button class="copy-btn" title="Copy to clipboard">Copy</button>
+              <pre class="code-block lang-curl active"><code>curl -X GET "https://kenya-api.netlify.app/api/v1/wards/sub-county?name=Changamwe" \
+  -H "Accept: application/json"</code></pre>
+              <pre class="code-block lang-js"><code>const response = await fetch("https://kenya-api.netlify.app/api/v1/wards/sub-county?name=Changamwe");
+const data = await response.json();
+console.log(data);</code></pre>
+              <pre class="code-block lang-python"><code>import requests
+response = requests.get("https://kenya-api.netlify.app/api/v1/wards/sub-county", params={"name": "Changamwe"})
+print(response.json())</code></pre>
+              <pre class="code-block lang-php"><code>&lt;?php
+$response = file_get_contents("https://kenya-api.netlify.app/api/v1/wards/sub-county?name=Changamwe");
+print_r(json_decode($response, true));
+?&gt;</code></pre>
+              <pre class="code-block lang-go"><code>package main
+
+import (
+  "fmt"
+  "io"
+  "net/http"
+)
+
+func main() {
+  resp, _ := http.Get("https://kenya-api.netlify.app/api/v1/wards/sub-county?name=Changamwe")
+  defer resp.Body.Close()
+  body, _ := io.ReadAll(resp.Body)
+  fmt.Println(string(body))
+}</code></pre>
+              <pre class="code-block lang-ruby"><code>require "net/http"
+require "json"
+
+url = URI("https://kenya-api.netlify.app/api/v1/wards/sub-county?name=Changamwe")
+puts JSON.parse(Net::HTTP.get(url))</code></pre>
+              <pre class="code-block lang-java"><code>import java.net.URI;
+import java.net.http.*;
+
+public class Main {
+  public static void main(String[] args) throws Exception {
+    HttpClient client = HttpClient.newHttpClient();
+    HttpRequest request = HttpRequest.newBuilder()
+      .uri(URI.create("https://kenya-api.netlify.app/api/v1/wards/sub-county?name=Changamwe"))
+      .header("Accept", "application/json")
+      .GET().build();
+    System.out.println(client.send(request, HttpResponse.BodyHandlers.ofString()).body());
+  }
+}</code></pre>
+            </div>
+          </div>
+          <button class="try-button" type="button">Try It</button>
+          <div class="try-panel">
+            <div class="try-panel-content"><pre class="code-block"><span class="token-comment">// Click "Try It" to fetch live data from the API</span></pre></div>
+          </div>
+        </div>
+
+        <!-- GET /wards/sub-counties/:county_id -->
+        <div class="endpoint-card">
+          <div class="endpoint-head">
+            <span class="method-badge">GET</span>
+            <p class="endpoint-path" id="wards-sub-counties">/wards/sub-counties/:county_id</p>
+          </div>
+          <p class="endpoint-desc">Returns only the list of sub-counties in a county — no ward details. Lightweight endpoint for populating dropdowns.</p>
+          <div class="params-panel table-wrapper" style="margin-bottom: 18px;">
+            <table class="params-table">
+              <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
+              <tbody>
+                <tr><td>county_id</td><td>integer</td><td>path</td><td>yes</td><td>County ID (1–47)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="code-panel tabbed" style="margin-bottom: 18px;">
+            <div class="code-tabs" role="tablist">
+              <button class="code-tab active" data-lang="curl" role="tab">cURL</button>
+              <button class="code-tab" data-lang="js" role="tab">JavaScript</button>
+              <button class="code-tab" data-lang="python" role="tab">Python</button>
+              <button class="code-tab" data-lang="php" role="tab">PHP</button>
+              <button class="code-tab" data-lang="go" role="tab">Go</button>
+              <button class="code-tab" data-lang="ruby" role="tab">Ruby</button>
+              <button class="code-tab" data-lang="java" role="tab">Java</button>
+            </div>
+            <div class="code-block-wrapper">
+              <button class="copy-btn" title="Copy to clipboard">Copy</button>
+              <pre class="code-block lang-curl active"><code>curl -X GET "https://kenya-api.netlify.app/api/v1/wards/sub-counties/1" \
+  -H "Accept: application/json"</code></pre>
+              <pre class="code-block lang-js"><code>const response = await fetch("https://kenya-api.netlify.app/api/v1/wards/sub-counties/1");
+const data = await response.json();
+console.log(data);</code></pre>
+              <pre class="code-block lang-python"><code>import requests
+response = requests.get("https://kenya-api.netlify.app/api/v1/wards/sub-counties/1")
+print(response.json())</code></pre>
+              <pre class="code-block lang-php"><code>&lt;?php
+$response = file_get_contents("https://kenya-api.netlify.app/api/v1/wards/sub-counties/1");
+print_r(json_decode($response, true));
+?&gt;</code></pre>
+              <pre class="code-block lang-go"><code>package main
+
+import (
+  "fmt"
+  "io"
+  "net/http"
+)
+
+func main() {
+  resp, _ := http.Get("https://kenya-api.netlify.app/api/v1/wards/sub-counties/1")
+  defer resp.Body.Close()
+  body, _ := io.ReadAll(resp.Body)
+  fmt.Println(string(body))
+}</code></pre>
+              <pre class="code-block lang-ruby"><code>require "net/http"
+require "json"
+
+url = URI("https://kenya-api.netlify.app/api/v1/wards/sub-counties/1")
+puts JSON.parse(Net::HTTP.get(url))</code></pre>
+              <pre class="code-block lang-java"><code>import java.net.URI;
+import java.net.http.*;
+
+public class Main {
+  public static void main(String[] args) throws Exception {
+    HttpClient client = HttpClient.newHttpClient();
+    HttpRequest request = HttpRequest.newBuilder()
+      .uri(URI.create("https://kenya-api.netlify.app/api/v1/wards/sub-counties/1"))
+      .header("Accept", "application/json")
+      .GET().build();
+    System.out.println(client.send(request, HttpResponse.BodyHandlers.ofString()).body());
+  }
+}</code></pre>
+            </div>
+          </div>
+          <p class="response-label">Example response</p>
+          <div class="code-panel">
+            <div class="code-wrapper">
+              <button class="copy-button" type="button">Copy</button>
+              <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"county_id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span>
+  <span class="token-string">"county_name"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa"</span><span class="token-punct">,</span>
+  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">6</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span>
+    <span class="token-brace">{</span> <span class="token-string">"sub_county_id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span> <span class="token-string">"sub_county_name"</span><span class="token-punct">:</span> <span class="token-string">"Changamwe"</span><span class="token-punct">,</span> <span class="token-string">"county_id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span> <span class="token-string">"county_name"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa"</span> <span class="token-brace">}</span><span class="token-punct">,</span>
+    <span class="token-brace">{</span> <span class="token-string">"sub_county_id"</span><span class="token-punct">:</span> <span class="token-number">2</span><span class="token-punct">,</span> <span class="token-string">"sub_county_name"</span><span class="token-punct">:</span> <span class="token-string">"Jomvu"</span><span class="token-punct">,</span> <span class="token-string">"county_id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span> <span class="token-string">"county_name"</span><span class="token-punct">:</span> <span class="token-string">"Mombasa"</span> <span class="token-brace">}</span>
+  <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre>
+            </div>
+          </div>
+          <button class="try-button" type="button">Try It</button>
+          <div class="try-panel">
+            <div class="try-panel-content"><pre class="code-block"><span class="token-comment">// Click "Try It" to fetch live data from the API</span></pre></div>
+          </div>
+        </div>
+
+        <!-- GET /wards/search?q= -->
+        <div class="endpoint-card">
+          <div class="endpoint-head">
+            <span class="method-badge">GET</span>
+            <p class="endpoint-path" id="wards-search">/wards/search?q=</p>
+          </div>
+          <p class="endpoint-desc">Search ward names, sub-county names, or county names. Returns all matching ward records. Minimum 2 characters.</p>
+          <div class="params-panel table-wrapper" style="margin-bottom: 18px;">
+            <table class="params-table">
+              <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
+              <tbody>
+                <tr><td>q</td><td>string</td><td>query</td><td>yes</td><td>Search term (min 2 chars) — matches ward, sub-county, or county name</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="code-panel tabbed" style="margin-bottom: 18px;">
+            <div class="code-tabs" role="tablist">
+              <button class="code-tab active" data-lang="curl" role="tab">cURL</button>
+              <button class="code-tab" data-lang="js" role="tab">JavaScript</button>
+              <button class="code-tab" data-lang="python" role="tab">Python</button>
+              <button class="code-tab" data-lang="php" role="tab">PHP</button>
+              <button class="code-tab" data-lang="go" role="tab">Go</button>
+              <button class="code-tab" data-lang="ruby" role="tab">Ruby</button>
+              <button class="code-tab" data-lang="java" role="tab">Java</button>
+            </div>
+            <div class="code-block-wrapper">
+              <button class="copy-btn" title="Copy to clipboard">Copy</button>
+              <pre class="code-block lang-curl active"><code>curl -X GET "https://kenya-api.netlify.app/api/v1/wards/search?q=karen" \
+  -H "Accept: application/json"</code></pre>
+              <pre class="code-block lang-js"><code>const response = await fetch("https://kenya-api.netlify.app/api/v1/wards/search?q=karen");
+const data = await response.json();
+console.log(data);</code></pre>
+              <pre class="code-block lang-python"><code>import requests
+response = requests.get("https://kenya-api.netlify.app/api/v1/wards/search", params={"q": "karen"})
+print(response.json())</code></pre>
+              <pre class="code-block lang-php"><code>&lt;?php
+$response = file_get_contents("https://kenya-api.netlify.app/api/v1/wards/search?q=karen");
+print_r(json_decode($response, true));
+?&gt;</code></pre>
+              <pre class="code-block lang-go"><code>package main
+
+import (
+  "fmt"
+  "io"
+  "net/http"
+)
+
+func main() {
+  resp, _ := http.Get("https://kenya-api.netlify.app/api/v1/wards/search?q=karen")
+  defer resp.Body.Close()
+  body, _ := io.ReadAll(resp.Body)
+  fmt.Println(string(body))
+}</code></pre>
+              <pre class="code-block lang-ruby"><code>require "net/http"
+require "json"
+
+url = URI("https://kenya-api.netlify.app/api/v1/wards/search?q=karen")
+puts JSON.parse(Net::HTTP.get(url))</code></pre>
+              <pre class="code-block lang-java"><code>import java.net.URI;
+import java.net.http.*;
+
+public class Main {
+  public static void main(String[] args) throws Exception {
+    HttpClient client = HttpClient.newHttpClient();
+    HttpRequest request = HttpRequest.newBuilder()
+      .uri(URI.create("https://kenya-api.netlify.app/api/v1/wards/search?q=karen"))
+      .header("Accept", "application/json")
+      .GET().build();
+    System.out.println(client.send(request, HttpResponse.BodyHandlers.ofString()).body());
+  }
+}</code></pre>
             </div>
           </div>
           <button class="try-button" type="button">Try It</button>

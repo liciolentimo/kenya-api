@@ -5,7 +5,14 @@
     "name": "Changamwe",
     "county_id": 1,
     "county_name": "Mombasa",
-    "postal_code": "80100"
+    "postal_code": "80100",
+    "wards": [
+      "Port Reitz",
+      "Kipevu",
+      "Airport",
+      "Changamwe",
+      "Chaani"
+    ]
   },
   {
     "id": 2,
@@ -13,7 +20,12 @@
     "name": "Jomvu",
     "county_id": 1,
     "county_name": "Mombasa",
-    "postal_code": "80104"
+    "postal_code": "80104",
+    "wards": [
+      "Jomvu Kuu",
+      "Miritini",
+      "Mikindani"
+    ]
   },
   {
     "id": 3,
@@ -21,7 +33,16 @@
     "name": "Kisauni",
     "county_id": 1,
     "county_name": "Mombasa",
-    "postal_code": "80107"
+    "postal_code": "80107",
+    "wards": [
+      "Mjambere",
+      "Junda",
+      "Bamburi",
+      "Mwakirunge",
+      "Mtopanga",
+      "Magogoni",
+      "Shanzu"
+    ]
   },
   {
     "id": 4,
@@ -29,7 +50,14 @@
     "name": "Nyali",
     "county_id": 1,
     "county_name": "Mombasa",
-    "postal_code": "80118"
+    "postal_code": "80118",
+    "wards": [
+      "Frere Town",
+      "Ziwa La Ng'Ombe",
+      "Mkomani",
+      "Kongowea",
+      "Kadzandani"
+    ]
   },
   {
     "id": 5,
@@ -37,7 +65,14 @@
     "name": "Likoni",
     "county_id": 1,
     "county_name": "Mombasa",
-    "postal_code": "80110"
+    "postal_code": "80110",
+    "wards": [
+      "Mtongwe",
+      "Shika Adabu",
+      "Bofu",
+      "Likoni",
+      "Timbwani"
+    ]
   },
   {
     "id": 6,
@@ -45,7 +80,14 @@
     "name": "Mvita",
     "county_id": 1,
     "county_name": "Mombasa",
-    "postal_code": "80100"
+    "postal_code": "80100",
+    "wards": [
+      "Mji Wa Kale/Makadara",
+      "Tudor",
+      "Tononoka",
+      "Shimanzi/Ganjoni",
+      "Majengo"
+    ]
   },
   {
     "id": 7,
@@ -53,7 +95,13 @@
     "name": "Msambweni",
     "county_id": 2,
     "county_name": "Kwale",
-    "postal_code": "80400"
+    "postal_code": "80400",
+    "wards": [
+      "Gombato Bongwe",
+      "Ukunda",
+      "Kinondo",
+      "Ramisi"
+    ]
   },
   {
     "id": 8,
@@ -61,7 +109,8 @@
     "name": "Lunga Lunga",
     "county_id": 2,
     "county_name": "Kwale",
-    "postal_code": "80401"
+    "postal_code": "80401",
+    "wards": []
   },
   {
     "id": 9,
@@ -69,7 +118,14 @@
     "name": "Matuga",
     "county_id": 2,
     "county_name": "Kwale",
-    "postal_code": "80403"
+    "postal_code": "80403",
+    "wards": [
+      "Tsima Golini",
+      "Waa",
+      "Tiwi",
+      "Kubo South",
+      "Mkongani"
+    ]
   },
   {
     "id": 10,
@@ -77,7 +133,16 @@
     "name": "Kinango",
     "county_id": 2,
     "county_name": "Kwale",
-    "postal_code": "80405"
+    "postal_code": "80405",
+    "wards": [
+      "Ndavaya",
+      "Puma",
+      "Kinango",
+      "Mackinnon Road",
+      "Chengoni/Samburu",
+      "Mwavumbo",
+      "Kasemeni"
+    ]
   },
   {
     "id": 11,
@@ -85,7 +150,16 @@
     "name": "Kilifi North",
     "county_id": 3,
     "county_name": "Kilifi",
-    "postal_code": "80200"
+    "postal_code": "80200",
+    "wards": [
+      "Tezo",
+      "Sokoni",
+      "Kibarani",
+      "Dabaso",
+      "Matsangoni",
+      "Watamu",
+      "Mnarani"
+    ]
   },
   {
     "id": 12,
@@ -93,7 +167,14 @@
     "name": "Kilifi South",
     "county_id": 3,
     "county_name": "Kilifi",
-    "postal_code": "80200"
+    "postal_code": "80200",
+    "wards": [
+      "Junju",
+      "Mwarakaya",
+      "Shimo La Tewa",
+      "Chasimba",
+      "Mtepeni"
+    ]
   },
   {
     "id": 13,
@@ -101,7 +182,13 @@
     "name": "Kaloleni",
     "county_id": 3,
     "county_name": "Kilifi",
-    "postal_code": "80204"
+    "postal_code": "80204",
+    "wards": [
+      "Mariakani",
+      "Kayafungo",
+      "Kaloleni",
+      "Mwanamwinga"
+    ]
   },
   {
     "id": 14,
@@ -109,7 +196,13 @@
     "name": "Rabai",
     "county_id": 3,
     "county_name": "Kilifi",
-    "postal_code": "80205"
+    "postal_code": "80205",
+    "wards": [
+      "Mwawesa",
+      "Ruruma",
+      "Kambe/Ribe",
+      "Rabai/Kisurutini"
+    ]
   },
   {
     "id": 15,
@@ -117,7 +210,13 @@
     "name": "Ganze",
     "county_id": 3,
     "county_name": "Kilifi",
-    "postal_code": "80206"
+    "postal_code": "80206",
+    "wards": [
+      "Ganze",
+      "Bamba",
+      "Jaribuni",
+      "Sokoke"
+    ]
   },
   {
     "id": 16,
@@ -125,7 +224,14 @@
     "name": "Malindi",
     "county_id": 3,
     "county_name": "Kilifi",
-    "postal_code": "80200"
+    "postal_code": "80200",
+    "wards": [
+      "Jilore",
+      "Kakuyuni",
+      "Ganda",
+      "Malindi Town",
+      "Shella"
+    ]
   },
   {
     "id": 17,
@@ -133,7 +239,15 @@
     "name": "Magarini",
     "county_id": 3,
     "county_name": "Kilifi",
-    "postal_code": "80208"
+    "postal_code": "80208",
+    "wards": [
+      "Marafa",
+      "Magarini",
+      "Gongoni",
+      "Adu",
+      "Garashi",
+      "Sabaki"
+    ]
   },
   {
     "id": 18,
@@ -141,7 +255,15 @@
     "name": "Garsen",
     "county_id": 4,
     "county_name": "Tana River",
-    "postal_code": "70100"
+    "postal_code": "70100",
+    "wards": [
+      "Kipini East",
+      "Garsen South",
+      "Kipini West",
+      "Garsen Central",
+      "Garsen West",
+      "Garsen North"
+    ]
   },
   {
     "id": 19,
@@ -149,7 +271,13 @@
     "name": "Galole",
     "county_id": 4,
     "county_name": "Tana River",
-    "postal_code": "70200"
+    "postal_code": "70200",
+    "wards": [
+      "Kinakomba",
+      "Mikinduni",
+      "Chewani",
+      "Wayu"
+    ]
   },
   {
     "id": 20,
@@ -157,7 +285,14 @@
     "name": "Bura",
     "county_id": 4,
     "county_name": "Tana River",
-    "postal_code": "70300"
+    "postal_code": "70300",
+    "wards": [
+      "Chewele",
+      "Hirimani",
+      "Bangale",
+      "Sala",
+      "Madogo"
+    ]
   },
   {
     "id": 21,
@@ -165,7 +300,12 @@
     "name": "Lamu East",
     "county_id": 5,
     "county_name": "Lamu",
-    "postal_code": "80500"
+    "postal_code": "80500",
+    "wards": [
+      "Faza",
+      "Kiunga",
+      "Basuba"
+    ]
   },
   {
     "id": 22,
@@ -173,7 +313,16 @@
     "name": "Lamu West",
     "county_id": 5,
     "county_name": "Lamu",
-    "postal_code": "80502"
+    "postal_code": "80502",
+    "wards": [
+      "Shella",
+      "Mkomani",
+      "Hindi",
+      "Mkunumbi",
+      "Hongwe",
+      "Witu",
+      "Bahari"
+    ]
   },
   {
     "id": 23,
@@ -181,7 +330,14 @@
     "name": "Taveta",
     "county_id": 6,
     "county_name": "Taita Taveta",
-    "postal_code": "80302"
+    "postal_code": "80302",
+    "wards": [
+      "Chala",
+      "Mahoo",
+      "Bomani",
+      "Mboghoni",
+      "Mata"
+    ]
   },
   {
     "id": 24,
@@ -189,7 +345,13 @@
     "name": "Wundanyi",
     "county_id": 6,
     "county_name": "Taita Taveta",
-    "postal_code": "80300"
+    "postal_code": "80300",
+    "wards": [
+      "Wundanyi/Mbale",
+      "Werugha",
+      "Wumingu/Kishushe",
+      "Mwanda/Mgange"
+    ]
   },
   {
     "id": 25,
@@ -197,7 +359,14 @@
     "name": "Mwatate",
     "county_id": 6,
     "county_name": "Taita Taveta",
-    "postal_code": "80304"
+    "postal_code": "80304",
+    "wards": [
+      "Rong'E",
+      "Mwatate",
+      "Bura",
+      "Chawia",
+      "Wusi/Kishamba"
+    ]
   },
   {
     "id": 26,
@@ -205,7 +374,15 @@
     "name": "Voi",
     "county_id": 6,
     "county_name": "Taita Taveta",
-    "postal_code": "80300"
+    "postal_code": "80300",
+    "wards": [
+      "Mbololo",
+      "Sagalla",
+      "Kaloleni",
+      "Marungu",
+      "Kasigau",
+      "Ngolia"
+    ]
   },
   {
     "id": 27,
@@ -213,7 +390,13 @@
     "name": "Garissa Township",
     "county_id": 7,
     "county_name": "Garissa",
-    "postal_code": "70200"
+    "postal_code": "70200",
+    "wards": [
+      "Waberi",
+      "Galbet",
+      "Township",
+      "Iftin"
+    ]
   },
   {
     "id": 28,
@@ -221,7 +404,14 @@
     "name": "Balambala",
     "county_id": 7,
     "county_name": "Garissa",
-    "postal_code": "70201"
+    "postal_code": "70201",
+    "wards": [
+      "Balambala",
+      "Danyere",
+      "Jara Jara",
+      "Saka",
+      "Sankuri"
+    ]
   },
   {
     "id": 29,
@@ -229,7 +419,15 @@
     "name": "Lagdera",
     "county_id": 7,
     "county_name": "Garissa",
-    "postal_code": "70202"
+    "postal_code": "70202",
+    "wards": [
+      "Modogashe",
+      "Benane",
+      "Goreale",
+      "Maalimin",
+      "Sabena",
+      "Baraki"
+    ]
   },
   {
     "id": 30,
@@ -237,7 +435,15 @@
     "name": "Dadaab",
     "county_id": 7,
     "county_name": "Garissa",
-    "postal_code": "70203"
+    "postal_code": "70203",
+    "wards": [
+      "Dertu",
+      "Dadaab",
+      "Labasigale",
+      "Damajale",
+      "Liboi",
+      "Abakaile"
+    ]
   },
   {
     "id": 31,
@@ -245,7 +451,14 @@
     "name": "Fafi",
     "county_id": 7,
     "county_name": "Garissa",
-    "postal_code": "70200"
+    "postal_code": "70200",
+    "wards": [
+      "Bura",
+      "Dekaharia",
+      "Jarajila",
+      "Fafi",
+      "Nanighi"
+    ]
   },
   {
     "id": 32,
@@ -253,7 +466,13 @@
     "name": "Ijara",
     "county_id": 7,
     "county_name": "Garissa",
-    "postal_code": "70204"
+    "postal_code": "70204",
+    "wards": [
+      "Hulugho",
+      "Sangailu",
+      "Ijara",
+      "Masalani"
+    ]
   },
   {
     "id": 33,
@@ -261,7 +480,16 @@
     "name": "Wajir North",
     "county_id": 8,
     "county_name": "Wajir",
-    "postal_code": "70300"
+    "postal_code": "70300",
+    "wards": [
+      "Gurar",
+      "Bute",
+      "Korondile",
+      "Malkagufu",
+      "Batalu",
+      "Danaba",
+      "Godoma"
+    ]
   },
   {
     "id": 34,
@@ -269,7 +497,13 @@
     "name": "Wajir East",
     "county_id": 8,
     "county_name": "Wajir",
-    "postal_code": "70300"
+    "postal_code": "70300",
+    "wards": [
+      "Wagberi",
+      "Township",
+      "Barwago",
+      "Khorof/Harar"
+    ]
   },
   {
     "id": 35,
@@ -277,7 +511,13 @@
     "name": "Tarbaj",
     "county_id": 8,
     "county_name": "Wajir",
-    "postal_code": "70301"
+    "postal_code": "70301",
+    "wards": [
+      "Elben",
+      "Sarman",
+      "Tarbaj",
+      "Wargadud"
+    ]
   },
   {
     "id": 36,
@@ -285,7 +525,13 @@
     "name": "Wajir West",
     "county_id": 8,
     "county_name": "Wajir",
-    "postal_code": "70302"
+    "postal_code": "70302",
+    "wards": [
+      "Arbajahan",
+      "Hadado/Athibohol",
+      "Adamasajide",
+      "Ganyure/Wagalla"
+    ]
   },
   {
     "id": 37,
@@ -293,7 +539,13 @@
     "name": "Eldas",
     "county_id": 8,
     "county_name": "Wajir",
-    "postal_code": "70303"
+    "postal_code": "70303",
+    "wards": [
+      "Eldas",
+      "Della",
+      "Lakoley South/Basir",
+      "Elnur/Tula Tula"
+    ]
   },
   {
     "id": 38,
@@ -301,7 +553,16 @@
     "name": "Wajir South",
     "county_id": 8,
     "county_name": "Wajir",
-    "postal_code": "70304"
+    "postal_code": "70304",
+    "wards": [
+      "Benane",
+      "Burder",
+      "Dadaja Bulla",
+      "Habasswein",
+      "Lagboghol South",
+      "Ibrahim Ure",
+      "Diif"
+    ]
   },
   {
     "id": 39,
@@ -309,7 +570,14 @@
     "name": "Mandera West",
     "county_id": 9,
     "county_name": "Mandera",
-    "postal_code": "70400"
+    "postal_code": "70400",
+    "wards": [
+      "Takaba South",
+      "Takaba",
+      "Lagsure",
+      "Dandu",
+      "Gither"
+    ]
   },
   {
     "id": 40,
@@ -317,7 +585,14 @@
     "name": "Banissa",
     "county_id": 9,
     "county_name": "Mandera",
-    "postal_code": "70401"
+    "postal_code": "70401",
+    "wards": [
+      "Banissa",
+      "Derkhale",
+      "Guba",
+      "Malkamari",
+      "Kiliwehiri"
+    ]
   },
   {
     "id": 41,
@@ -325,7 +600,14 @@
     "name": "Mandera North",
     "county_id": 9,
     "county_name": "Mandera",
-    "postal_code": "70402"
+    "postal_code": "70402",
+    "wards": [
+      "Ashabito",
+      "Guticha",
+      "Morothile",
+      "Rhamu",
+      "Rhamu-Dimtu"
+    ]
   },
   {
     "id": 42,
@@ -333,7 +615,14 @@
     "name": "Mandera South",
     "county_id": 9,
     "county_name": "Mandera",
-    "postal_code": "70400"
+    "postal_code": "70400",
+    "wards": [
+      "Wargadud",
+      "Kutulo",
+      "Elwak South",
+      "Elwak North",
+      "Shimbir Fatuma"
+    ]
   },
   {
     "id": 43,
@@ -341,7 +630,14 @@
     "name": "Mandera East",
     "county_id": 9,
     "county_name": "Mandera",
-    "postal_code": "70403"
+    "postal_code": "70403",
+    "wards": [
+      "Arabia",
+      "Township",
+      "Neboi",
+      "Khalalio",
+      "Libehia"
+    ]
   },
   {
     "id": 44,
@@ -349,7 +645,14 @@
     "name": "Lafey",
     "county_id": 9,
     "county_name": "Mandera",
-    "postal_code": "70404"
+    "postal_code": "70404",
+    "wards": [
+      "Sala",
+      "Fino",
+      "Lafey",
+      "Waranqara",
+      "Alango Gof"
+    ]
   },
   {
     "id": 45,
@@ -357,7 +660,16 @@
     "name": "Moyale",
     "county_id": 10,
     "county_name": "Marsabit",
-    "postal_code": "60500"
+    "postal_code": "60500",
+    "wards": [
+      "Butiye",
+      "Sololo",
+      "Heillu/Manyatta",
+      "Golbo",
+      "Moyale Township",
+      "Uran",
+      "Obbu"
+    ]
   },
   {
     "id": 46,
@@ -365,7 +677,14 @@
     "name": "North Horr",
     "county_id": 10,
     "county_name": "Marsabit",
-    "postal_code": "60501"
+    "postal_code": "60501",
+    "wards": [
+      "Dukana",
+      "Maikona",
+      "Turbi",
+      "North Horr",
+      "Illeret"
+    ]
   },
   {
     "id": 47,
@@ -373,7 +692,12 @@
     "name": "Saku",
     "county_id": 10,
     "county_name": "Marsabit",
-    "postal_code": "60502"
+    "postal_code": "60502",
+    "wards": [
+      "Sagante/Jaldessa",
+      "Karare",
+      "Marsabit Central"
+    ]
   },
   {
     "id": 48,
@@ -381,7 +705,14 @@
     "name": "Laisamis",
     "county_id": 10,
     "county_name": "Marsabit",
-    "postal_code": "60503"
+    "postal_code": "60503",
+    "wards": [
+      "Loiyangalani",
+      "Kargi/South Horr",
+      "Korr/Ngurunit",
+      "Logo Logo",
+      "Laisamis"
+    ]
   },
   {
     "id": 49,
@@ -389,7 +720,16 @@
     "name": "Isiolo North",
     "county_id": 11,
     "county_name": "Isiolo",
-    "postal_code": "60300"
+    "postal_code": "60300",
+    "wards": [
+      "Wabera",
+      "Bulla Pesa",
+      "Chari",
+      "Cherab",
+      "Ngare Mara",
+      "Burat",
+      "Oldo/Nyiro"
+    ]
   },
   {
     "id": 50,
@@ -397,7 +737,12 @@
     "name": "Isiolo South",
     "county_id": 11,
     "county_name": "Isiolo",
-    "postal_code": "60301"
+    "postal_code": "60301",
+    "wards": [
+      "Garbatulla",
+      "Kinna",
+      "Sericho"
+    ]
   },
   {
     "id": 51,
@@ -405,7 +750,14 @@
     "name": "Igembe South",
     "county_id": 12,
     "county_name": "Meru",
-    "postal_code": "60202"
+    "postal_code": "60202",
+    "wards": [
+      "Maua",
+      "Kiegoi/Antubochiu",
+      "Athiru Gaiti",
+      "Akachiu",
+      "Kanuni"
+    ]
   },
   {
     "id": 52,
@@ -413,7 +765,14 @@
     "name": "Igembe Central",
     "county_id": 12,
     "county_name": "Meru",
-    "postal_code": "60203"
+    "postal_code": "60203",
+    "wards": [
+      "Akirang'Ondu",
+      "Athiru Ruujine",
+      "Igembe East",
+      "Njia",
+      "Kangeta"
+    ]
   },
   {
     "id": 53,
@@ -421,7 +780,14 @@
     "name": "Igembe North",
     "county_id": 12,
     "county_name": "Meru",
-    "postal_code": "60204"
+    "postal_code": "60204",
+    "wards": [
+      "Antuambui",
+      "Ntunene",
+      "Antubetwe Kiongo",
+      "Naathu",
+      "Amwathi"
+    ]
   },
   {
     "id": 54,
@@ -429,7 +795,14 @@
     "name": "Tigania West",
     "county_id": 12,
     "county_name": "Meru",
-    "postal_code": "60205"
+    "postal_code": "60205",
+    "wards": [
+      "Athwana",
+      "Akithii",
+      "Kianjai",
+      "Nkomo",
+      "Mbeu"
+    ]
   },
   {
     "id": 55,
@@ -437,7 +810,14 @@
     "name": "Tigania East",
     "county_id": 12,
     "county_name": "Meru",
-    "postal_code": "60206"
+    "postal_code": "60206",
+    "wards": [
+      "Thangatha",
+      "Mikinduri",
+      "Kiguchwa",
+      "Muthara",
+      "Karama"
+    ]
   },
   {
     "id": 56,
@@ -445,7 +825,14 @@
     "name": "North Imenti",
     "county_id": 12,
     "county_name": "Meru",
-    "postal_code": "60200"
+    "postal_code": "60200",
+    "wards": [
+      "Municipality",
+      "Ntima East",
+      "Ntima West",
+      "Nyaki West",
+      "Nyaki East"
+    ]
   },
   {
     "id": 57,
@@ -453,7 +840,14 @@
     "name": "Buuri",
     "county_id": 12,
     "county_name": "Meru",
-    "postal_code": "60207"
+    "postal_code": "60207",
+    "wards": [
+      "Timau",
+      "Kisima",
+      "Kiirua/Naari",
+      "Ruiri/Rwarera",
+      "Kibirichia"
+    ]
   },
   {
     "id": 58,
@@ -461,7 +855,13 @@
     "name": "Central Imenti",
     "county_id": 12,
     "county_name": "Meru",
-    "postal_code": "60200"
+    "postal_code": "60200",
+    "wards": [
+      "Mwang'Anthia",
+      "Abothuguchi Central",
+      "Abothuguchi West",
+      "Kiagu"
+    ]
   },
   {
     "id": 59,
@@ -469,7 +869,15 @@
     "name": "South Imenti",
     "county_id": 12,
     "county_name": "Meru",
-    "postal_code": "60209"
+    "postal_code": "60209",
+    "wards": [
+      "Mitunguu",
+      "Igoji East",
+      "Igoji West",
+      "Abogeta East",
+      "Abogeta West",
+      "Nkuene"
+    ]
   },
   {
     "id": 60,
@@ -477,7 +885,14 @@
     "name": "Maara",
     "county_id": 13,
     "county_name": "Tharaka-Nithi",
-    "postal_code": "60400"
+    "postal_code": "60400",
+    "wards": [
+      "Mitheru",
+      "Muthambi",
+      "Mwimbi",
+      "Ganga",
+      "Chogoria"
+    ]
   },
   {
     "id": 61,
@@ -485,7 +900,8 @@
     "name": "Chuka",
     "county_id": 13,
     "county_name": "Tharaka-Nithi",
-    "postal_code": "60400"
+    "postal_code": "60400",
+    "wards": []
   },
   {
     "id": 62,
@@ -493,7 +909,14 @@
     "name": "Tharaka",
     "county_id": 13,
     "county_name": "Tharaka-Nithi",
-    "postal_code": "60403"
+    "postal_code": "60403",
+    "wards": [
+      "Gatunga",
+      "Mukothima",
+      "Nkondi",
+      "Chiakariga",
+      "Marimanti"
+    ]
   },
   {
     "id": 63,
@@ -501,7 +924,15 @@
     "name": "Manyatta",
     "county_id": 14,
     "county_name": "Embu",
-    "postal_code": "60100"
+    "postal_code": "60100",
+    "wards": [
+      "Ruguru/Ngandori",
+      "Kithimu",
+      "Nginda",
+      "Mbeti North",
+      "Kirimari",
+      "Gaturi South"
+    ]
   },
   {
     "id": 64,
@@ -509,7 +940,15 @@
     "name": "Runyenjes",
     "county_id": 14,
     "county_name": "Embu",
-    "postal_code": "60101"
+    "postal_code": "60101",
+    "wards": [
+      "Gaturi North",
+      "Kagaari South",
+      "Central Ward",
+      "Kagaari North",
+      "Kyeni North",
+      "Kyeni South"
+    ]
   },
   {
     "id": 65,
@@ -517,7 +956,14 @@
     "name": "Mbeere South",
     "county_id": 14,
     "county_name": "Embu",
-    "postal_code": "60102"
+    "postal_code": "60102",
+    "wards": [
+      "Mwea",
+      "Makima",
+      "Mbeti South",
+      "Mavuria",
+      "Kiambere"
+    ]
   },
   {
     "id": 66,
@@ -525,7 +971,12 @@
     "name": "Mbeere North",
     "county_id": 14,
     "county_name": "Embu",
-    "postal_code": "60104"
+    "postal_code": "60104",
+    "wards": [
+      "Nthawa",
+      "Muminji",
+      "Evurore"
+    ]
   },
   {
     "id": 67,
@@ -533,7 +984,14 @@
     "name": "Mwingi North",
     "county_id": 15,
     "county_name": "Kitui",
-    "postal_code": "90300"
+    "postal_code": "90300",
+    "wards": [
+      "Ngomeni",
+      "Kyuso",
+      "Mumoni",
+      "Tseikuru",
+      "Tharaka"
+    ]
   },
   {
     "id": 68,
@@ -541,7 +999,13 @@
     "name": "Mwingi West",
     "county_id": 15,
     "county_name": "Kitui",
-    "postal_code": "90301"
+    "postal_code": "90301",
+    "wards": [
+      "Kyome/Thaana",
+      "Nguutani",
+      "Migwani",
+      "Kiomo/Kyethani"
+    ]
   },
   {
     "id": 69,
@@ -549,7 +1013,15 @@
     "name": "Mwingi Central",
     "county_id": 15,
     "county_name": "Kitui",
-    "postal_code": "90300"
+    "postal_code": "90300",
+    "wards": [
+      "Central",
+      "Kivou",
+      "Nguni",
+      "Nuu",
+      "Mui",
+      "Waita"
+    ]
   },
   {
     "id": 70,
@@ -557,7 +1029,13 @@
     "name": "Kitui West",
     "county_id": 15,
     "county_name": "Kitui",
-    "postal_code": "90200"
+    "postal_code": "90200",
+    "wards": [
+      "Mutonguni",
+      "Kauwi",
+      "Matinyani",
+      "Kwa Mutonga/Kithumula"
+    ]
   },
   {
     "id": 71,
@@ -565,7 +1043,13 @@
     "name": "Kitui Rural",
     "county_id": 15,
     "county_name": "Kitui",
-    "postal_code": "90200"
+    "postal_code": "90200",
+    "wards": [
+      "Kisasi",
+      "Mbitini",
+      "Kavonza/Yatta",
+      "Kanyangi"
+    ]
   },
   {
     "id": 72,
@@ -573,7 +1057,14 @@
     "name": "Kitui Central",
     "county_id": 15,
     "county_name": "Kitui",
-    "postal_code": "90200"
+    "postal_code": "90200",
+    "wards": [
+      "Miambani",
+      "Township",
+      "Kyangwithya West",
+      "Mulango",
+      "Kyangwithya East"
+    ]
   },
   {
     "id": 73,
@@ -581,7 +1072,15 @@
     "name": "Kitui East",
     "county_id": 15,
     "county_name": "Kitui",
-    "postal_code": "90210"
+    "postal_code": "90210",
+    "wards": [
+      "Zombe/Mwitika",
+      "Nzambani",
+      "Chuluni",
+      "Voo/Kyamatu",
+      "Endau/Malalani",
+      "Mutito/Kaliku"
+    ]
   },
   {
     "id": 74,
@@ -589,7 +1088,15 @@
     "name": "Kitui South",
     "county_id": 15,
     "county_name": "Kitui",
-    "postal_code": "90215"
+    "postal_code": "90215",
+    "wards": [
+      "Ikanga/Kyatune",
+      "Mutomo",
+      "Mutha",
+      "Ikutha",
+      "Kanziko",
+      "Athi"
+    ]
   },
   {
     "id": 75,
@@ -597,7 +1104,14 @@
     "name": "Masinga",
     "county_id": 16,
     "county_name": "Machakos",
-    "postal_code": "90100"
+    "postal_code": "90100",
+    "wards": [
+      "Kivaa",
+      "Masinga Central",
+      "Ekalakala",
+      "Muthesya",
+      "Ndithini"
+    ]
   },
   {
     "id": 76,
@@ -605,7 +1119,14 @@
     "name": "Yatta",
     "county_id": 16,
     "county_name": "Machakos",
-    "postal_code": "90104"
+    "postal_code": "90104",
+    "wards": [
+      "Ndalani",
+      "Matuu",
+      "Kithimani",
+      "Ikombe",
+      "Katangi"
+    ]
   },
   {
     "id": 77,
@@ -613,7 +1134,13 @@
     "name": "Kangundo",
     "county_id": 16,
     "county_name": "Machakos",
-    "postal_code": "90115"
+    "postal_code": "90115",
+    "wards": [
+      "Kangundo North",
+      "Kangundo Central",
+      "Kangundo East",
+      "Kangundo West"
+    ]
   },
   {
     "id": 78,
@@ -621,7 +1148,14 @@
     "name": "Matungulu",
     "county_id": 16,
     "county_name": "Machakos",
-    "postal_code": "90120"
+    "postal_code": "90120",
+    "wards": [
+      "Tala",
+      "Matungulu North",
+      "Matungulu East",
+      "Matungulu West",
+      "Kyeleni"
+    ]
   },
   {
     "id": 79,
@@ -629,7 +1163,13 @@
     "name": "Kathiani",
     "county_id": 16,
     "county_name": "Machakos",
-    "postal_code": "90121"
+    "postal_code": "90121",
+    "wards": [
+      "Mitaboni",
+      "Kathiani Central",
+      "Upper Kaewa/Iveti",
+      "Lower Kaewa/Kaani"
+    ]
   },
   {
     "id": 80,
@@ -637,7 +1177,13 @@
     "name": "Mavoko",
     "county_id": 16,
     "county_name": "Machakos",
-    "postal_code": "90100"
+    "postal_code": "90100",
+    "wards": [
+      "Athi River",
+      "Kinanie",
+      "Muthwani",
+      "Syokimau/Mulolongo"
+    ]
   },
   {
     "id": 81,
@@ -645,7 +1191,16 @@
     "name": "Machakos Town",
     "county_id": 16,
     "county_name": "Machakos",
-    "postal_code": "90100"
+    "postal_code": "90100",
+    "wards": [
+      "Kalama",
+      "Mua",
+      "Mutituni",
+      "Machakos Central",
+      "Mumbuni North",
+      "Muvuti/Kiima-Kimwe",
+      "Kola"
+    ]
   },
   {
     "id": 82,
@@ -653,7 +1208,15 @@
     "name": "Mwala",
     "county_id": 16,
     "county_name": "Machakos",
-    "postal_code": "90138"
+    "postal_code": "90138",
+    "wards": [
+      "Mbiuni",
+      "Makutano/Mwala",
+      "Masii",
+      "Muthetheni",
+      "Wamunyu",
+      "Kibauni"
+    ]
   },
   {
     "id": 83,
@@ -661,7 +1224,15 @@
     "name": "Mbooni",
     "county_id": 17,
     "county_name": "Makueni",
-    "postal_code": "90300"
+    "postal_code": "90300",
+    "wards": [
+      "Tulimani",
+      "Mbooni",
+      "Kithungo/Kitundu",
+      "Kiteta/Kisau",
+      "Waia-Kako",
+      "Kalawa"
+    ]
   },
   {
     "id": 84,
@@ -669,7 +1240,12 @@
     "name": "Kilome",
     "county_id": 17,
     "county_name": "Makueni",
-    "postal_code": "90302"
+    "postal_code": "90302",
+    "wards": [
+      "Kasikeu",
+      "Mukaa",
+      "Kiima Kiu/Kalanzoni"
+    ]
   },
   {
     "id": 85,
@@ -677,7 +1253,13 @@
     "name": "Kaiti",
     "county_id": 17,
     "county_name": "Makueni",
-    "postal_code": "90303"
+    "postal_code": "90303",
+    "wards": [
+      "Ukia",
+      "Kee",
+      "Kilungu",
+      "Ilima"
+    ]
   },
   {
     "id": 86,
@@ -685,7 +1267,16 @@
     "name": "Makueni",
     "county_id": 17,
     "county_name": "Makueni",
-    "postal_code": "90300"
+    "postal_code": "90300",
+    "wards": [
+      "Wote",
+      "Muvau/Kikuumini",
+      "Mavindini",
+      "Kitise/Kithuki",
+      "Kathonzweni",
+      "Nzaui/Kilili/Kalamba",
+      "Mbitini"
+    ]
   },
   {
     "id": 87,
@@ -693,7 +1284,15 @@
     "name": "Kibwezi West",
     "county_id": 17,
     "county_name": "Makueni",
-    "postal_code": "90304"
+    "postal_code": "90304",
+    "wards": [
+      "Makindu",
+      "Nguumo",
+      "Kikumbulyu North",
+      "Kikumbulyu South",
+      "Nguu/Masumba",
+      "Emali/Mulala"
+    ]
   },
   {
     "id": 88,
@@ -701,7 +1300,13 @@
     "name": "Kibwezi East",
     "county_id": 17,
     "county_name": "Makueni",
-    "postal_code": "90308"
+    "postal_code": "90308",
+    "wards": [
+      "Masongaleni",
+      "Mtito Andei",
+      "Thange",
+      "Ivingoni/Nzambani"
+    ]
   },
   {
     "id": 89,
@@ -709,7 +1314,17 @@
     "name": "Kinangop",
     "county_id": 18,
     "county_name": "Nyandarua",
-    "postal_code": "20304"
+    "postal_code": "20304",
+    "wards": [
+      "Engineer",
+      "Gathara",
+      "North Kinangop",
+      "Murungaru",
+      "Njabini\\Kiburu",
+      "Nyakio",
+      "Githabai",
+      "Magumu"
+    ]
   },
   {
     "id": 90,
@@ -717,7 +1332,13 @@
     "name": "Kipipiri",
     "county_id": 18,
     "county_name": "Nyandarua",
-    "postal_code": "20301"
+    "postal_code": "20301",
+    "wards": [
+      "Wanjohi",
+      "Kipipiri",
+      "Geta",
+      "Githioro"
+    ]
   },
   {
     "id": 91,
@@ -725,7 +1346,14 @@
     "name": "Ol Kalou",
     "county_id": 18,
     "county_name": "Nyandarua",
-    "postal_code": "20300"
+    "postal_code": "20300",
+    "wards": [
+      "Karau",
+      "Kanjuiri Range",
+      "Mirangine",
+      "Kaimbaga",
+      "Rurii"
+    ]
   },
   {
     "id": 92,
@@ -733,7 +1361,13 @@
     "name": "Ol Jorok",
     "county_id": 18,
     "county_name": "Nyandarua",
-    "postal_code": "20302"
+    "postal_code": "20302",
+    "wards": [
+      "Gathanji",
+      "Gatimu",
+      "Weru",
+      "Charagita"
+    ]
   },
   {
     "id": 93,
@@ -741,7 +1375,13 @@
     "name": "Ndaragwa",
     "county_id": 18,
     "county_name": "Nyandarua",
-    "postal_code": "20303"
+    "postal_code": "20303",
+    "wards": [
+      "Leshau/Pondo",
+      "Kiriita",
+      "Central",
+      "Shamata"
+    ]
   },
   {
     "id": 94,
@@ -749,7 +1389,12 @@
     "name": "Tetu",
     "county_id": 19,
     "county_name": "Nyeri",
-    "postal_code": "10100"
+    "postal_code": "10100",
+    "wards": [
+      "Dedan Kimanthi",
+      "Wamagana",
+      "Aguthi-Gaaki"
+    ]
   },
   {
     "id": 95,
@@ -757,7 +1402,17 @@
     "name": "Kieni",
     "county_id": 19,
     "county_name": "Nyeri",
-    "postal_code": "10101"
+    "postal_code": "10101",
+    "wards": [
+      "Mweiga",
+      "Naromoru Kiamathaga",
+      "Mwiyogo/Endarasha",
+      "Mugunda",
+      "Gatarakwa",
+      "Thegu River",
+      "Kabaru",
+      "Gakawa"
+    ]
   },
   {
     "id": 96,
@@ -765,7 +1420,15 @@
     "name": "Mathira",
     "county_id": 19,
     "county_name": "Nyeri",
-    "postal_code": "10102"
+    "postal_code": "10102",
+    "wards": [
+      "Ruguru",
+      "Magutu",
+      "Iraini",
+      "Konyu",
+      "Kirimukuyu",
+      "Karatina Town"
+    ]
   },
   {
     "id": 97,
@@ -773,7 +1436,13 @@
     "name": "Othaya",
     "county_id": 19,
     "county_name": "Nyeri",
-    "postal_code": "10103"
+    "postal_code": "10103",
+    "wards": [
+      "Mahiga",
+      "Iria-Ini",
+      "Chinga",
+      "Karima"
+    ]
   },
   {
     "id": 98,
@@ -781,7 +1450,13 @@
     "name": "Mukurweini",
     "county_id": 19,
     "county_name": "Nyeri",
-    "postal_code": "10105"
+    "postal_code": "10105",
+    "wards": [
+      "Gikondi",
+      "Rugi",
+      "Mukurwe-Ini West",
+      "Mukurwe-Ini Central"
+    ]
   },
   {
     "id": 99,
@@ -789,7 +1464,14 @@
     "name": "Nyeri Town",
     "county_id": 19,
     "county_name": "Nyeri",
-    "postal_code": "10100"
+    "postal_code": "10100",
+    "wards": [
+      "Kiganjo/Mathari",
+      "Rware",
+      "Gatitu/Muruguru",
+      "Ruring'U",
+      "Kamakwa/Mukaro"
+    ]
   },
   {
     "id": 100,
@@ -797,7 +1479,17 @@
     "name": "Mwea",
     "county_id": 20,
     "county_name": "Kirinyaga",
-    "postal_code": "10300"
+    "postal_code": "10300",
+    "wards": [
+      "Mutithi",
+      "Kangai",
+      "Thiba",
+      "Wamumu",
+      "Nyangati",
+      "Murinduko",
+      "Gathigiriri",
+      "Tebere"
+    ]
   },
   {
     "id": 101,
@@ -805,7 +1497,14 @@
     "name": "Gichugu",
     "county_id": 20,
     "county_name": "Kirinyaga",
-    "postal_code": "10301"
+    "postal_code": "10301",
+    "wards": [
+      "Kabare",
+      "Baragwi",
+      "Njukiini",
+      "Ngariama",
+      "Karumandi"
+    ]
   },
   {
     "id": 102,
@@ -813,7 +1512,12 @@
     "name": "Ndia",
     "county_id": 20,
     "county_name": "Kirinyaga",
-    "postal_code": "10302"
+    "postal_code": "10302",
+    "wards": [
+      "Mukure",
+      "Kiine",
+      "Kariti"
+    ]
   },
   {
     "id": 103,
@@ -821,7 +1525,13 @@
     "name": "Kirinyaga Central",
     "county_id": 20,
     "county_name": "Kirinyaga",
-    "postal_code": "10304"
+    "postal_code": "10304",
+    "wards": [
+      "Mutira",
+      "Kanyekini",
+      "Kerugoya",
+      "Inoi"
+    ]
   },
   {
     "id": 104,
@@ -829,7 +1539,12 @@
     "name": "Kangema",
     "county_id": 21,
     "county_name": "Murang'a",
-    "postal_code": "10200"
+    "postal_code": "10200",
+    "wards": [
+      "Kanyenya-Ini",
+      "Muguru",
+      "Rwathia"
+    ]
   },
   {
     "id": 105,
@@ -837,7 +1552,12 @@
     "name": "Mathioya",
     "county_id": 21,
     "county_name": "Murang'a",
-    "postal_code": "10201"
+    "postal_code": "10201",
+    "wards": [
+      "Gitugi",
+      "Kiru",
+      "Kamacharia"
+    ]
   },
   {
     "id": 106,
@@ -845,7 +1565,15 @@
     "name": "Kiharu",
     "county_id": 21,
     "county_name": "Murang'a",
-    "postal_code": "10200"
+    "postal_code": "10200",
+    "wards": [
+      "Wangu",
+      "Mugoiri",
+      "Mbiri",
+      "Township",
+      "Murarandia",
+      "Gaturi"
+    ]
   },
   {
     "id": 107,
@@ -853,7 +1581,14 @@
     "name": "Kigumo",
     "county_id": 21,
     "county_name": "Murang'a",
-    "postal_code": "10203"
+    "postal_code": "10203",
+    "wards": [
+      "Kahumbu",
+      "Muthithi",
+      "Kigumo",
+      "Kangari",
+      "Kinyona"
+    ]
   },
   {
     "id": 108,
@@ -861,7 +1596,15 @@
     "name": "Maragwa",
     "county_id": 21,
     "county_name": "Murang'a",
-    "postal_code": "10204"
+    "postal_code": "10204",
+    "wards": [
+      "Kimorori/Wempa",
+      "Makuyu",
+      "Kambiti",
+      "Kamahuha",
+      "Ichagaki",
+      "Nginda"
+    ]
   },
   {
     "id": 109,
@@ -869,7 +1612,15 @@
     "name": "Kandara",
     "county_id": 21,
     "county_name": "Murang'a",
-    "postal_code": "10205"
+    "postal_code": "10205",
+    "wards": [
+      "Ng'Araria",
+      "Muruka",
+      "Kagundu-Ini",
+      "Gaichanjiru",
+      "Ithiru",
+      "Ruchu"
+    ]
   },
   {
     "id": 110,
@@ -877,7 +1628,15 @@
     "name": "Gatanga",
     "county_id": 21,
     "county_name": "Murang'a",
-    "postal_code": "10207"
+    "postal_code": "10207",
+    "wards": [
+      "Ithanga",
+      "Kakuzi/Mitubiri",
+      "Mugumo-Ini",
+      "Kihumbu-Ini",
+      "Gatanga",
+      "Kariara"
+    ]
   },
   {
     "id": 111,
@@ -885,7 +1644,13 @@
     "name": "Gatundu South",
     "county_id": 22,
     "county_name": "Kiambu",
-    "postal_code": "00900"
+    "postal_code": "00900",
+    "wards": [
+      "Kiamwangi",
+      "Kiganjo",
+      "Ndarugu",
+      "Ngenda"
+    ]
   },
   {
     "id": 112,
@@ -893,7 +1658,13 @@
     "name": "Gatundu North",
     "county_id": 22,
     "county_name": "Kiambu",
-    "postal_code": "00900"
+    "postal_code": "00900",
+    "wards": [
+      "Gituamba",
+      "Githobokoni",
+      "Chania",
+      "Mang'U"
+    ]
   },
   {
     "id": 113,
@@ -901,7 +1672,14 @@
     "name": "Juja",
     "county_id": 22,
     "county_name": "Kiambu",
-    "postal_code": "00900"
+    "postal_code": "00900",
+    "wards": [
+      "Murera",
+      "Theta",
+      "Juja",
+      "Witeithie",
+      "Kalimoni"
+    ]
   },
   {
     "id": 114,
@@ -909,7 +1687,14 @@
     "name": "Thika Town",
     "county_id": 22,
     "county_name": "Kiambu",
-    "postal_code": "01000"
+    "postal_code": "01000",
+    "wards": [
+      "Township",
+      "Kamenu",
+      "Hospital",
+      "Gatuanyaga",
+      "Ngoliba"
+    ]
   },
   {
     "id": 115,
@@ -917,7 +1702,17 @@
     "name": "Ruiru",
     "county_id": 22,
     "county_name": "Kiambu",
-    "postal_code": "00232"
+    "postal_code": "00232",
+    "wards": [
+      "Gitothua",
+      "Biashara",
+      "Gatongora",
+      "Kahawa Sukari",
+      "Kahawa Wendani",
+      "Kiuu",
+      "Mwiki",
+      "Mwihoko"
+    ]
   },
   {
     "id": 116,
@@ -925,7 +1720,14 @@
     "name": "Githunguri",
     "county_id": 22,
     "county_name": "Kiambu",
-    "postal_code": "00900"
+    "postal_code": "00900",
+    "wards": [
+      "Githunguri",
+      "Githiga",
+      "Ikinu",
+      "Ngewa",
+      "Komothai"
+    ]
   },
   {
     "id": 117,
@@ -933,7 +1735,13 @@
     "name": "Kiambu",
     "county_id": 22,
     "county_name": "Kiambu",
-    "postal_code": "00900"
+    "postal_code": "00900",
+    "wards": [
+      "Ting'Ang'A",
+      "Ndumberi",
+      "Riabai",
+      "Township"
+    ]
   },
   {
     "id": 118,
@@ -941,7 +1749,14 @@
     "name": "Kiambaa",
     "county_id": 22,
     "county_name": "Kiambu",
-    "postal_code": "00900"
+    "postal_code": "00900",
+    "wards": [
+      "Cianda",
+      "Karuri",
+      "Ndenderu",
+      "Muchatha",
+      "Kihara"
+    ]
   },
   {
     "id": 119,
@@ -949,7 +1764,14 @@
     "name": "Kabete",
     "county_id": 22,
     "county_name": "Kiambu",
-    "postal_code": "00900"
+    "postal_code": "00900",
+    "wards": [
+      "Gitaru",
+      "Muguga",
+      "Nyadhuna",
+      "Kabete",
+      "Uthiru"
+    ]
   },
   {
     "id": 120,
@@ -957,7 +1779,14 @@
     "name": "Kikuyu",
     "county_id": 22,
     "county_name": "Kiambu",
-    "postal_code": "00902"
+    "postal_code": "00902",
+    "wards": [
+      "Karai",
+      "Nachu",
+      "Sigona",
+      "Kikuyu",
+      "Kinoo"
+    ]
   },
   {
     "id": 121,
@@ -965,7 +1794,14 @@
     "name": "Limuru",
     "county_id": 22,
     "county_name": "Kiambu",
-    "postal_code": "00217"
+    "postal_code": "00217",
+    "wards": [
+      "Bibirioni",
+      "Limuru Central",
+      "Ndeiya",
+      "Limuru East",
+      "Ngecha Tigoni"
+    ]
   },
   {
     "id": 122,
@@ -973,7 +1809,14 @@
     "name": "Lari",
     "county_id": 22,
     "county_name": "Kiambu",
-    "postal_code": "00900"
+    "postal_code": "00900",
+    "wards": [
+      "Kinale",
+      "Kijabe",
+      "Nyanduma",
+      "Kamburu",
+      "Lari/Kirenga"
+    ]
   },
   {
     "id": 123,
@@ -981,7 +1824,15 @@
     "name": "Turkana North",
     "county_id": 23,
     "county_name": "Turkana",
-    "postal_code": "30500"
+    "postal_code": "30500",
+    "wards": [
+      "Kaeris",
+      "Lake Zone",
+      "Lapur",
+      "Kaaleng/Kaikor",
+      "Kibish",
+      "Nakalale"
+    ]
   },
   {
     "id": 124,
@@ -989,7 +1840,15 @@
     "name": "Turkana West",
     "county_id": 23,
     "county_name": "Turkana",
-    "postal_code": "30500"
+    "postal_code": "30500",
+    "wards": [
+      "Kakuma",
+      "Lopur",
+      "Letea",
+      "Songot",
+      "Kalobeyei",
+      "Lokichoggio"
+    ]
   },
   {
     "id": 125,
@@ -997,7 +1856,12 @@
     "name": "Turkana Central",
     "county_id": 23,
     "county_name": "Turkana",
-    "postal_code": "30500"
+    "postal_code": "30500",
+    "wards": [
+      "Kang'Atotha",
+      "Lodwar Township",
+      "Kanamkemer"
+    ]
   },
   {
     "id": 126,
@@ -1005,7 +1869,13 @@
     "name": "Loima",
     "county_id": 23,
     "county_name": "Turkana",
-    "postal_code": "30501"
+    "postal_code": "30501",
+    "wards": [
+      "Loima",
+      "Lokiriama/Lorengai",
+      "Kotaruk/Lorengai",
+      "Kerio Delta"
+    ]
   },
   {
     "id": 127,
@@ -1013,7 +1883,12 @@
     "name": "Turkana South",
     "county_id": 23,
     "county_name": "Turkana",
-    "postal_code": "30502"
+    "postal_code": "30502",
+    "wards": [
+      "Kalapata",
+      "Katilu",
+      "Lokichar"
+    ]
   },
   {
     "id": 128,
@@ -1021,7 +1896,11 @@
     "name": "Turkana East",
     "county_id": 23,
     "county_name": "Turkana",
-    "postal_code": "30504"
+    "postal_code": "30504",
+    "wards": [
+      "Kolobia",
+      "Kapedo/Napeitom"
+    ]
   },
   {
     "id": 129,
@@ -1029,7 +1908,13 @@
     "name": "Kapenguria",
     "county_id": 24,
     "county_name": "West Pokot",
-    "postal_code": "30600"
+    "postal_code": "30600",
+    "wards": [
+      "Siyoi",
+      "Riwo",
+      "Municipality",
+      "Endugh"
+    ]
   },
   {
     "id": 130,
@@ -1037,7 +1922,13 @@
     "name": "Sigor",
     "county_id": 24,
     "county_name": "West Pokot",
-    "postal_code": "30601"
+    "postal_code": "30601",
+    "wards": [
+      "Masol",
+      "Sekerr",
+      "Lomuke",
+      "Weiwei"
+    ]
   },
   {
     "id": 131,
@@ -1045,7 +1936,14 @@
     "name": "Kacheliba",
     "county_id": 24,
     "county_name": "West Pokot",
-    "postal_code": "30602"
+    "postal_code": "30602",
+    "wards": [
+      "Suam",
+      "Kasei",
+      "Konyaon",
+      "Kacheliba",
+      "Chepareria"
+    ]
   },
   {
     "id": 132,
@@ -1053,7 +1951,12 @@
     "name": "Pokot South",
     "county_id": 24,
     "county_name": "West Pokot",
-    "postal_code": "30603"
+    "postal_code": "30603",
+    "wards": [
+      "Batei",
+      "Lombeh",
+      "Chepkorio"
+    ]
   },
   {
     "id": 133,
@@ -1061,7 +1964,14 @@
     "name": "Samburu West",
     "county_id": 25,
     "county_name": "Samburu",
-    "postal_code": "20600"
+    "postal_code": "20600",
+    "wards": [
+      "Lodokejek",
+      "Suguta Marmar",
+      "Maralal",
+      "Poro",
+      "Loosuk"
+    ]
   },
   {
     "id": 134,
@@ -1069,7 +1979,13 @@
     "name": "Samburu North",
     "county_id": 25,
     "county_name": "Samburu",
-    "postal_code": "20601"
+    "postal_code": "20601",
+    "wards": [
+      "Elbarta",
+      "Nachola",
+      "Nyiro",
+      "Ndoto"
+    ]
   },
   {
     "id": 135,
@@ -1077,7 +1993,13 @@
     "name": "Samburu East",
     "county_id": 25,
     "county_name": "Samburu",
-    "postal_code": "20602"
+    "postal_code": "20602",
+    "wards": [
+      "Waso",
+      "Wamba East",
+      "Wamba West",
+      "Wamba North"
+    ]
   },
   {
     "id": 136,
@@ -1085,7 +2007,13 @@
     "name": "Kwanza",
     "county_id": 26,
     "county_name": "Trans-Nzoia",
-    "postal_code": "30200"
+    "postal_code": "30200",
+    "wards": [
+      "Kapomboi",
+      "Kwanza",
+      "Keiyo",
+      "Biketi"
+    ]
   },
   {
     "id": 137,
@@ -1093,7 +2021,8 @@
     "name": "Endebess",
     "county_id": 26,
     "county_name": "Trans-Nzoia",
-    "postal_code": "30201"
+    "postal_code": "30201",
+    "wards": []
   },
   {
     "id": 138,
@@ -1101,7 +2030,14 @@
     "name": "Saboti",
     "county_id": 26,
     "county_name": "Trans-Nzoia",
-    "postal_code": "30202"
+    "postal_code": "30202",
+    "wards": [
+      "Saboti",
+      "Mwatate",
+      "Machinjir",
+      "Kiminini",
+      "Murundi"
+    ]
   },
   {
     "id": 139,
@@ -1109,7 +2045,14 @@
     "name": "Kiminini",
     "county_id": 26,
     "county_name": "Trans-Nzoia",
-    "postal_code": "30203"
+    "postal_code": "30203",
+    "wards": [
+      "Sinyerere",
+      "Nalondo",
+      "Matunda",
+      "Kiminini",
+      "Waitaluk"
+    ]
   },
   {
     "id": 140,
@@ -1117,7 +2060,8 @@
     "name": "Cherang'any",
     "county_id": 26,
     "county_name": "Trans-Nzoia",
-    "postal_code": "30204"
+    "postal_code": "30204",
+    "wards": []
   },
   {
     "id": 141,
@@ -1125,7 +2069,14 @@
     "name": "Soy",
     "county_id": 27,
     "county_name": "Uasin Gishu",
-    "postal_code": "30100"
+    "postal_code": "30100",
+    "wards": [
+      "Soy",
+      "Kipsomba",
+      "Ziwa",
+      "Koiwa",
+      "Segero/Barsombe"
+    ]
   },
   {
     "id": 142,
@@ -1133,7 +2084,15 @@
     "name": "Turbo",
     "county_id": 27,
     "county_name": "Uasin Gishu",
-    "postal_code": "30102"
+    "postal_code": "30102",
+    "wards": [
+      "Naiberi",
+      "Kapseret",
+      "Megun",
+      "Kiplombe",
+      "Kamariny",
+      "Kipkaren"
+    ]
   },
   {
     "id": 143,
@@ -1141,7 +2100,13 @@
     "name": "Moiben",
     "county_id": 27,
     "county_name": "Uasin Gishu",
-    "postal_code": "30103"
+    "postal_code": "30103",
+    "wards": [
+      "Kimumu",
+      "Kapngetuny",
+      "Sergoit",
+      "Tarakwa"
+    ]
   },
   {
     "id": 144,
@@ -1149,7 +2114,12 @@
     "name": "Ainabkoi",
     "county_id": 27,
     "county_name": "Uasin Gishu",
-    "postal_code": "30100"
+    "postal_code": "30100",
+    "wards": [
+      "Ainabkoi/Olare",
+      "Kapsoya",
+      "Kipsomba"
+    ]
   },
   {
     "id": 145,
@@ -1157,7 +2127,13 @@
     "name": "Kapseret",
     "county_id": 27,
     "county_name": "Uasin Gishu",
-    "postal_code": "30100"
+    "postal_code": "30100",
+    "wards": [
+      "Kapturo",
+      "Kuinet/Kapsuswa",
+      "Kapsao",
+      "Tarakwa"
+    ]
   },
   {
     "id": 146,
@@ -1165,7 +2141,13 @@
     "name": "Kesses",
     "county_id": 27,
     "county_name": "Uasin Gishu",
-    "postal_code": "30106"
+    "postal_code": "30106",
+    "wards": [
+      "Kaptel/Kiptullo",
+      "Cheptil",
+      "Chekaria",
+      "Tumeyo"
+    ]
   },
   {
     "id": 147,
@@ -1173,7 +2155,12 @@
     "name": "Marakwet East",
     "county_id": 28,
     "county_name": "Elgeyo Marakwet",
-    "postal_code": "30700"
+    "postal_code": "30700",
+    "wards": [
+      "Kapkagaon",
+      "Tirap",
+      "Koibos"
+    ]
   },
   {
     "id": 148,
@@ -1181,7 +2168,14 @@
     "name": "Marakwet West",
     "county_id": 28,
     "county_name": "Elgeyo Marakwet",
-    "postal_code": "30701"
+    "postal_code": "30701",
+    "wards": [
+      "Londiani",
+      "Moiben Kuserwo",
+      "Moiben/Chesongech",
+      "Kamoi",
+      "Sambaria"
+    ]
   },
   {
     "id": 149,
@@ -1189,7 +2183,13 @@
     "name": "Keiyo North",
     "county_id": 28,
     "county_name": "Elgeyo Marakwet",
-    "postal_code": "30702"
+    "postal_code": "30702",
+    "wards": [
+      "Kabarak",
+      "Tambach",
+      "Kesot",
+      "Kamariny"
+    ]
   },
   {
     "id": 150,
@@ -1197,7 +2197,15 @@
     "name": "Keiyo South",
     "county_id": 28,
     "county_name": "Elgeyo Marakwet",
-    "postal_code": "30703"
+    "postal_code": "30703",
+    "wards": [
+      "Kaptarakwa",
+      "Chepkorio",
+      "Motioli",
+      "Tambach",
+      "Kiptuiya",
+      "Kerio"
+    ]
   },
   {
     "id": 151,
@@ -1205,7 +2213,13 @@
     "name": "Tinderet",
     "county_id": 29,
     "county_name": "Nandi",
-    "postal_code": "30300"
+    "postal_code": "30300",
+    "wards": [
+      "Nandi Hills",
+      "Kipkaren",
+      "Kipkeyo",
+      "Kapng'Etuny"
+    ]
   },
   {
     "id": 152,
@@ -1213,7 +2227,13 @@
     "name": "Aldai",
     "county_id": 29,
     "county_name": "Nandi",
-    "postal_code": "30301"
+    "postal_code": "30301",
+    "wards": [
+      "Kapsaos",
+      "Kipkoim",
+      "Chemalal",
+      "Kapchorwa"
+    ]
   },
   {
     "id": 153,
@@ -1221,7 +2241,13 @@
     "name": "Nandi Hills",
     "county_id": 29,
     "county_name": "Nandi",
-    "postal_code": "30302"
+    "postal_code": "30302",
+    "wards": [
+      "Kapbara",
+      "Kapchere",
+      "Cheptoyon",
+      "Kimolong"
+    ]
   },
   {
     "id": 154,
@@ -1229,7 +2255,14 @@
     "name": "Chesumei",
     "county_id": 29,
     "county_name": "Nandi",
-    "postal_code": "30303"
+    "postal_code": "30303",
+    "wards": [
+      "Lelem",
+      "Kipworom",
+      "Chebaru",
+      "Mugunga",
+      "Kapsengere"
+    ]
   },
   {
     "id": 155,
@@ -1237,7 +2270,12 @@
     "name": "Emgwen",
     "county_id": 29,
     "county_name": "Nandi",
-    "postal_code": "30304"
+    "postal_code": "30304",
+    "wards": [
+      "Kapngetuny",
+      "Kipchepton",
+      "Kiplombe"
+    ]
   },
   {
     "id": 156,
@@ -1245,7 +2283,14 @@
     "name": "Mosop",
     "county_id": 29,
     "county_name": "Nandi",
-    "postal_code": "30305"
+    "postal_code": "30305",
+    "wards": [
+      "Kaptarakwa",
+      "Kapsabet",
+      "Kesumet",
+      "Kipkabur",
+      "Kiptuiya"
+    ]
   },
   {
     "id": 157,
@@ -1253,7 +2298,14 @@
     "name": "Tiaty",
     "county_id": 30,
     "county_name": "Baringo",
-    "postal_code": "20700"
+    "postal_code": "20700",
+    "wards": [
+      "Kologir",
+      "Kang'Irangero",
+      "Chepyuk",
+      "Mogotio",
+      "Ndanya"
+    ]
   },
   {
     "id": 158,
@@ -1261,7 +2313,14 @@
     "name": "Baringo North",
     "county_id": 30,
     "county_name": "Baringo",
-    "postal_code": "20701"
+    "postal_code": "20701",
+    "wards": [
+      "Bartabwa",
+      "Kabarnet",
+      "Kabartonjo",
+      "Moiben",
+      "Kamok"
+    ]
   },
   {
     "id": 159,
@@ -1269,7 +2328,13 @@
     "name": "Baringo Central",
     "county_id": 30,
     "county_name": "Baringo",
-    "postal_code": "20700"
+    "postal_code": "20700",
+    "wards": [
+      "Ewale",
+      "Mugunga",
+      "Mukurweini",
+      "Kesumet"
+    ]
   },
   {
     "id": 160,
@@ -1277,7 +2342,13 @@
     "name": "Baringo South",
     "county_id": 30,
     "county_name": "Baringo",
-    "postal_code": "20702"
+    "postal_code": "20702",
+    "wards": [
+      "Maram",
+      "Rongai",
+      "Kiptoi",
+      "Ndoga"
+    ]
   },
   {
     "id": 161,
@@ -1285,7 +2356,8 @@
     "name": "Eldama Ravine",
     "county_id": 30,
     "county_name": "Baringo",
-    "postal_code": "20703"
+    "postal_code": "20703",
+    "wards": []
   },
   {
     "id": 162,
@@ -1293,7 +2365,14 @@
     "name": "Mogotio",
     "county_id": 30,
     "county_name": "Baringo",
-    "postal_code": "20705"
+    "postal_code": "20705",
+    "wards": [
+      "Kerio Valley",
+      "Kampi Ya Samaki",
+      "Mogotio",
+      "Salawa",
+      "Eldoret East"
+    ]
   },
   {
     "id": 163,
@@ -1301,7 +2380,13 @@
     "name": "Laikipia West",
     "county_id": 31,
     "county_name": "Laikipia",
-    "postal_code": "20300"
+    "postal_code": "20300",
+    "wards": [
+      "Rumuruti",
+      "Ol-Moran",
+      "Ndiriri",
+      "Gatarakwa"
+    ]
   },
   {
     "id": 164,
@@ -1309,7 +2394,13 @@
     "name": "Laikipia East",
     "county_id": 31,
     "county_name": "Laikipia",
-    "postal_code": "20301"
+    "postal_code": "20301",
+    "wards": [
+      "Ngobit",
+      "Nanyuki",
+      "Lamuria",
+      "Thingithu"
+    ]
   },
   {
     "id": 165,
@@ -1317,7 +2408,14 @@
     "name": "Laikipia North",
     "county_id": 31,
     "county_name": "Laikipia",
-    "postal_code": "20302"
+    "postal_code": "20302",
+    "wards": [
+      "Kimanjo",
+      "Ol'Ng'Arua",
+      "Suguta Marmar",
+      "Bunyore",
+      "Tigonyi"
+    ]
   },
   {
     "id": 166,
@@ -1325,7 +2423,14 @@
     "name": "Molo",
     "county_id": 32,
     "county_name": "Nakuru",
-    "postal_code": "20100"
+    "postal_code": "20100",
+    "wards": [
+      "Molo",
+      "Mariashon",
+      "Teret",
+      "Talai",
+      "Koyumot"
+    ]
   },
   {
     "id": 167,
@@ -1333,7 +2438,15 @@
     "name": "Njoro",
     "county_id": 32,
     "county_name": "Nakuru",
-    "postal_code": "20107"
+    "postal_code": "20107",
+    "wards": [
+      "Mau Narok",
+      "Lare",
+      "Kisiriri",
+      "Ndiwa",
+      "Mwitoti",
+      "Mugoiri"
+    ]
   },
   {
     "id": 168,
@@ -1341,7 +2454,8 @@
     "name": "Mau Narok",
     "county_id": 32,
     "county_name": "Nakuru",
-    "postal_code": "20100"
+    "postal_code": "20100",
+    "wards": []
   },
   {
     "id": 169,
@@ -1349,7 +2463,14 @@
     "name": "Kuresoi South",
     "county_id": 32,
     "county_name": "Nakuru",
-    "postal_code": "20100"
+    "postal_code": "20100",
+    "wards": [
+      "Kiambiu",
+      "Tenges",
+      "Ndaragwa",
+      "Morop",
+      "Aror"
+    ]
   },
   {
     "id": 170,
@@ -1357,7 +2478,15 @@
     "name": "Kuresoi North",
     "county_id": 32,
     "county_name": "Nakuru",
-    "postal_code": "20100"
+    "postal_code": "20100",
+    "wards": [
+      "Kiptuiya",
+      "Kampio",
+      "Kipchui",
+      "Ndathiru",
+      "Kongasis",
+      "Saboti"
+    ]
   },
   {
     "id": 171,
@@ -1365,7 +2494,13 @@
     "name": "Subukia",
     "county_id": 32,
     "county_name": "Nakuru",
-    "postal_code": "20110"
+    "postal_code": "20110",
+    "wards": [
+      "Subukia",
+      "Wanyororu",
+      "Gathing'A",
+      "Waldai"
+    ]
   },
   {
     "id": 172,
@@ -1373,7 +2508,14 @@
     "name": "Rongai",
     "county_id": 32,
     "county_name": "Nakuru",
-    "postal_code": "20108"
+    "postal_code": "20108",
+    "wards": [
+      "Mosop",
+      "Solai",
+      "Suchai",
+      "Kabazi",
+      "Sirikwa"
+    ]
   },
   {
     "id": 173,
@@ -1381,7 +2523,13 @@
     "name": "Bahati",
     "county_id": 32,
     "county_name": "Nakuru",
-    "postal_code": "20100"
+    "postal_code": "20100",
+    "wards": [
+      "Wanyororu",
+      "Lanet/Umbui",
+      "Kabatini",
+      "Lanet"
+    ]
   },
   {
     "id": 174,
@@ -1389,7 +2537,14 @@
     "name": "Nakuru Town West",
     "county_id": 32,
     "county_name": "Nakuru",
-    "postal_code": "20100"
+    "postal_code": "20100",
+    "wards": [
+      "Shaaba",
+      "Shalom",
+      "Naivasha",
+      "Rose Cottage",
+      "Rhino"
+    ]
   },
   {
     "id": 175,
@@ -1397,7 +2552,13 @@
     "name": "Nakuru Town East",
     "county_id": 32,
     "county_name": "Nakuru",
-    "postal_code": "20100"
+    "postal_code": "20100",
+    "wards": [
+      "Nakuru Town",
+      "Gitombo",
+      "Burnt Forest",
+      "Subukia"
+    ]
   },
   {
     "id": 176,
@@ -1405,7 +2566,15 @@
     "name": "Naivasha",
     "county_id": 32,
     "county_name": "Nakuru",
-    "postal_code": "20117"
+    "postal_code": "20117",
+    "wards": [
+      "Hell'S Gate",
+      "Maai Mahiu",
+      "Karati",
+      "Viwandani",
+      "Humor",
+      "Karagita"
+    ]
   },
   {
     "id": 177,
@@ -1413,7 +2582,8 @@
     "name": "Kilgoris",
     "county_id": 33,
     "county_name": "Narok",
-    "postal_code": "20500"
+    "postal_code": "20500",
+    "wards": []
   },
   {
     "id": 178,
@@ -1421,7 +2591,8 @@
     "name": "Emurua Dikirr",
     "county_id": 33,
     "county_name": "Narok",
-    "postal_code": "20501"
+    "postal_code": "20501",
+    "wards": []
   },
   {
     "id": 179,
@@ -1429,7 +2600,15 @@
     "name": "Narok North",
     "county_id": 33,
     "county_name": "Narok",
-    "postal_code": "20500"
+    "postal_code": "20500",
+    "wards": [
+      "Koyumot",
+      "Suswa",
+      "Narok Town",
+      "Motok",
+      "Olelshwa",
+      "Kipkelion"
+    ]
   },
   {
     "id": 180,
@@ -1437,7 +2616,14 @@
     "name": "Narok East",
     "county_id": 33,
     "county_name": "Narok",
-    "postal_code": "20502"
+    "postal_code": "20502",
+    "wards": [
+      "Olelo Sokwan",
+      "Pambo",
+      "Kewapaki",
+      "Naibor",
+      "Olesoswa"
+    ]
   },
   {
     "id": 181,
@@ -1445,7 +2631,13 @@
     "name": "Narok South",
     "county_id": 33,
     "county_name": "Narok",
-    "postal_code": "20503"
+    "postal_code": "20503",
+    "wards": [
+      "Mbirikani",
+      "Loita",
+      "Majibu",
+      "Eor Esiam"
+    ]
   },
   {
     "id": 182,
@@ -1453,7 +2645,13 @@
     "name": "Narok West",
     "county_id": 33,
     "county_name": "Narok",
-    "postal_code": "20505"
+    "postal_code": "20505",
+    "wards": [
+      "Mara",
+      "Kimintet",
+      "Olakewua",
+      "Inkarakapot"
+    ]
   },
   {
     "id": 183,
@@ -1461,7 +2659,14 @@
     "name": "Kajiado North",
     "county_id": 34,
     "county_name": "Kajiado",
-    "postal_code": "01100"
+    "postal_code": "01100",
+    "wards": [
+      "Olkejuado",
+      "Mosiro",
+      "Ongata Rongai",
+      "Ngong",
+      "Kiserian"
+    ]
   },
   {
     "id": 184,
@@ -1469,7 +2674,15 @@
     "name": "Kajiado Central",
     "county_id": 34,
     "county_name": "Kajiado",
-    "postal_code": "01101"
+    "postal_code": "01101",
+    "wards": [
+      "Kimana",
+      "Elmoli",
+      "Imaror",
+      "Mosiro",
+      "Matapato South",
+      "Olorropil"
+    ]
   },
   {
     "id": 185,
@@ -1477,7 +2690,16 @@
     "name": "Kajiado East",
     "county_id": 34,
     "county_name": "Kajiado",
-    "postal_code": "01100"
+    "postal_code": "01100",
+    "wards": [
+      "Kitengela",
+      "Kisaju",
+      "Imaror",
+      "Maasai",
+      "Kenyawa",
+      "Katikati",
+      "Endebess"
+    ]
   },
   {
     "id": 186,
@@ -1485,7 +2707,14 @@
     "name": "Kajiado West",
     "county_id": 34,
     "county_name": "Kajiado",
-    "postal_code": "01102"
+    "postal_code": "01102",
+    "wards": [
+      "Mosiro",
+      "Olorropil",
+      "Kimana",
+      "Maasai",
+      "Morijo"
+    ]
   },
   {
     "id": 187,
@@ -1493,7 +2722,14 @@
     "name": "Kajiado South",
     "county_id": 34,
     "county_name": "Kajiado",
-    "postal_code": "01103"
+    "postal_code": "01103",
+    "wards": [
+      "Loitokitok",
+      "Kukiyang",
+      "Kimana",
+      "Mashuru",
+      "Matapato South"
+    ]
   },
   {
     "id": 188,
@@ -1501,7 +2737,8 @@
     "name": "Kipkelion East",
     "county_id": 35,
     "county_name": "Kericho",
-    "postal_code": "20200"
+    "postal_code": "20200",
+    "wards": []
   },
   {
     "id": 189,
@@ -1509,7 +2746,8 @@
     "name": "Kipkelion West",
     "county_id": 35,
     "county_name": "Kericho",
-    "postal_code": "20200"
+    "postal_code": "20200",
+    "wards": []
   },
   {
     "id": 190,
@@ -1517,7 +2755,8 @@
     "name": "Ainamoi",
     "county_id": 35,
     "county_name": "Kericho",
-    "postal_code": "20200"
+    "postal_code": "20200",
+    "wards": []
   },
   {
     "id": 191,
@@ -1525,7 +2764,8 @@
     "name": "Bureti",
     "county_id": 35,
     "county_name": "Kericho",
-    "postal_code": "20201"
+    "postal_code": "20201",
+    "wards": []
   },
   {
     "id": 192,
@@ -1533,7 +2773,8 @@
     "name": "Belgut",
     "county_id": 35,
     "county_name": "Kericho",
-    "postal_code": "20202"
+    "postal_code": "20202",
+    "wards": []
   },
   {
     "id": 193,
@@ -1541,7 +2782,8 @@
     "name": "Sigowet/Soin",
     "county_id": 35,
     "county_name": "Kericho",
-    "postal_code": "20205"
+    "postal_code": "20205",
+    "wards": []
   },
   {
     "id": 194,
@@ -1549,7 +2791,8 @@
     "name": "Sotik",
     "county_id": 36,
     "county_name": "Bomet",
-    "postal_code": "20400"
+    "postal_code": "20400",
+    "wards": []
   },
   {
     "id": 195,
@@ -1557,7 +2800,8 @@
     "name": "Chepalungu",
     "county_id": 36,
     "county_name": "Bomet",
-    "postal_code": "20401"
+    "postal_code": "20401",
+    "wards": []
   },
   {
     "id": 196,
@@ -1565,7 +2809,8 @@
     "name": "Bomet East",
     "county_id": 36,
     "county_name": "Bomet",
-    "postal_code": "20400"
+    "postal_code": "20400",
+    "wards": []
   },
   {
     "id": 197,
@@ -1573,7 +2818,8 @@
     "name": "Bomet Central",
     "county_id": 36,
     "county_name": "Bomet",
-    "postal_code": "20400"
+    "postal_code": "20400",
+    "wards": []
   },
   {
     "id": 198,
@@ -1581,7 +2827,8 @@
     "name": "Konoin",
     "county_id": 36,
     "county_name": "Bomet",
-    "postal_code": "20404"
+    "postal_code": "20404",
+    "wards": []
   },
   {
     "id": 199,
@@ -1589,7 +2836,14 @@
     "name": "Lugari",
     "county_id": 37,
     "county_name": "Kakamega",
-    "postal_code": "50100"
+    "postal_code": "50100",
+    "wards": [
+      "Chekalini",
+      "Chekalini East",
+      "Mukhonje",
+      "Butali",
+      "Chekalini West"
+    ]
   },
   {
     "id": 200,
@@ -1597,7 +2851,13 @@
     "name": "Likuyani",
     "county_id": 37,
     "county_name": "Kakamega",
-    "postal_code": "50101"
+    "postal_code": "50101",
+    "wards": [
+      "Chekalini",
+      "Chekalini East",
+      "Butsotso North",
+      "Butsotso Central"
+    ]
   },
   {
     "id": 201,
@@ -1605,7 +2865,15 @@
     "name": "Malava",
     "county_id": 37,
     "county_name": "Kakamega",
-    "postal_code": "50102"
+    "postal_code": "50102",
+    "wards": [
+      "Malava",
+      "Chevaywa",
+      "Kamukuywa",
+      "Seng'Oni",
+      "West Wanga",
+      "Mukhonje"
+    ]
   },
   {
     "id": 202,
@@ -1613,7 +2881,14 @@
     "name": "Lurambi",
     "county_id": 37,
     "county_name": "Kakamega",
-    "postal_code": "50100"
+    "postal_code": "50100",
+    "wards": [
+      "Sheer",
+      "Likhomani",
+      "Shirere",
+      "Butsotso South",
+      "Muranda"
+    ]
   },
   {
     "id": 203,
@@ -1621,7 +2896,14 @@
     "name": "Navakholo",
     "county_id": 37,
     "county_name": "Kakamega",
-    "postal_code": "50103"
+    "postal_code": "50103",
+    "wards": [
+      "Mukhonje",
+      "Navakholo",
+      "Shinyalu",
+      "Butsotso North",
+      "Butsotso Central"
+    ]
   },
   {
     "id": 204,
@@ -1629,7 +2911,14 @@
     "name": "Mumias West",
     "county_id": 37,
     "county_name": "Kakamega",
-    "postal_code": "50104"
+    "postal_code": "50104",
+    "wards": [
+      "Butula",
+      "Butula Central",
+      "Butula East",
+      "Matayos West",
+      "Butula South"
+    ]
   },
   {
     "id": 205,
@@ -1637,7 +2926,14 @@
     "name": "Mumias East",
     "county_id": 37,
     "county_name": "Kakamega",
-    "postal_code": "50104"
+    "postal_code": "50104",
+    "wards": [
+      "Mumias Town",
+      "Shamakhokho",
+      "Ekahawa",
+      "Mahiakalo",
+      "Butula East"
+    ]
   },
   {
     "id": 206,
@@ -1645,7 +2941,14 @@
     "name": "Matungu",
     "county_id": 37,
     "county_name": "Kakamega",
-    "postal_code": "50105"
+    "postal_code": "50105",
+    "wards": [
+      "Kokuyo",
+      "Kaimosi",
+      "Kakurume",
+      "Kimilili",
+      "Mahiakalo"
+    ]
   },
   {
     "id": 207,
@@ -1653,7 +2956,13 @@
     "name": "Butere",
     "county_id": 37,
     "county_name": "Kakamega",
-    "postal_code": "50106"
+    "postal_code": "50106",
+    "wards": [
+      "Butere",
+      "Butere Central",
+      "Butere North",
+      "Butere South"
+    ]
   },
   {
     "id": 208,
@@ -1661,7 +2970,13 @@
     "name": "Khwisero",
     "county_id": 37,
     "county_name": "Kakamega",
-    "postal_code": "50107"
+    "postal_code": "50107",
+    "wards": [
+      "Khwisero",
+      "Khwisero Central",
+      "Khwisero East",
+      "Khwisero West"
+    ]
   },
   {
     "id": 209,
@@ -1669,7 +2984,14 @@
     "name": "Shinyalu",
     "county_id": 37,
     "county_name": "Kakamega",
-    "postal_code": "50100"
+    "postal_code": "50100",
+    "wards": [
+      "Shinyalu",
+      "Shinyalu West",
+      "Shinyalu East",
+      "Shinyalu Central",
+      "Shinyalu South"
+    ]
   },
   {
     "id": 210,
@@ -1677,7 +2999,13 @@
     "name": "Ikolomani",
     "county_id": 37,
     "county_name": "Kakamega",
-    "postal_code": "50108"
+    "postal_code": "50108",
+    "wards": [
+      "Ikolomani",
+      "Ikolomani East",
+      "Ikolomani West",
+      "Ikolomani Central"
+    ]
   },
   {
     "id": 211,
@@ -1685,7 +3013,13 @@
     "name": "Vihiga",
     "county_id": 38,
     "county_name": "Vihiga",
-    "postal_code": "50300"
+    "postal_code": "50300",
+    "wards": [
+      "Vihiga Town",
+      "Vihiga North",
+      "Vihiga South",
+      "Vihiga East"
+    ]
   },
   {
     "id": 212,
@@ -1693,7 +3027,14 @@
     "name": "Sabatia",
     "county_id": 38,
     "county_name": "Vihiga",
-    "postal_code": "50301"
+    "postal_code": "50301",
+    "wards": [
+      "Sabatia",
+      "Sabatia North",
+      "Sabatia South",
+      "Sabatia East",
+      "Sabatia West"
+    ]
   },
   {
     "id": 213,
@@ -1701,7 +3042,14 @@
     "name": "Hamisi",
     "county_id": 38,
     "county_name": "Vihiga",
-    "postal_code": "50302"
+    "postal_code": "50302",
+    "wards": [
+      "Hamisi",
+      "Hamisi North",
+      "Hamisi South",
+      "Hamisi East",
+      "Hamisi West"
+    ]
   },
   {
     "id": 214,
@@ -1709,7 +3057,14 @@
     "name": "Luanda",
     "county_id": 38,
     "county_name": "Vihiga",
-    "postal_code": "50303"
+    "postal_code": "50303",
+    "wards": [
+      "Luanda Town",
+      "Emuhaya",
+      "East Bunyore",
+      "West Bunyore",
+      "South Bunyore"
+    ]
   },
   {
     "id": 215,
@@ -1717,7 +3072,13 @@
     "name": "Emuhaya",
     "county_id": 38,
     "county_name": "Vihiga",
-    "postal_code": "50304"
+    "postal_code": "50304",
+    "wards": [
+      "Central Bunyore",
+      "East Bunyore",
+      "North Bunyore",
+      "South Bunyore"
+    ]
   },
   {
     "id": 216,
@@ -1725,7 +3086,14 @@
     "name": "Mt. Elgon",
     "county_id": 39,
     "county_name": "Bungoma",
-    "postal_code": "50200"
+    "postal_code": "50200",
+    "wards": [
+      "Mt. Elgon",
+      "Mt. Elgon East",
+      "Mt. Elgon West",
+      "Mt. Elgon North",
+      "Mt. Elgon South"
+    ]
   },
   {
     "id": 217,
@@ -1733,7 +3101,14 @@
     "name": "Sirisia",
     "county_id": 39,
     "county_name": "Bungoma",
-    "postal_code": "50201"
+    "postal_code": "50201",
+    "wards": [
+      "Sirisia",
+      "Lwandanyi",
+      "Namwela",
+      "Malakisi/South Kulisiru",
+      "Cheptais"
+    ]
   },
   {
     "id": 218,
@@ -1741,7 +3116,14 @@
     "name": "Kabuchai",
     "county_id": 39,
     "county_name": "Bungoma",
-    "postal_code": "50202"
+    "postal_code": "50202",
+    "wards": [
+      "Kabuchai",
+      "Kabuchai North",
+      "Kabuchai South",
+      "Kabuchai East",
+      "Kabuchai West"
+    ]
   },
   {
     "id": 219,
@@ -1749,7 +3131,8 @@
     "name": "Bumula",
     "county_id": 39,
     "county_name": "Bungoma",
-    "postal_code": "50203"
+    "postal_code": "50203",
+    "wards": []
   },
   {
     "id": 220,
@@ -1757,7 +3140,14 @@
     "name": "Kanduyi",
     "county_id": 39,
     "county_name": "Bungoma",
-    "postal_code": "50200"
+    "postal_code": "50200",
+    "wards": [
+      "Kanduyi",
+      "Kanduyi North",
+      "Kanduyi South",
+      "Kanduyi East",
+      "Kanduyi West"
+    ]
   },
   {
     "id": 221,
@@ -1765,7 +3155,14 @@
     "name": "Webuye East",
     "county_id": 39,
     "county_name": "Bungoma",
-    "postal_code": "50205"
+    "postal_code": "50205",
+    "wards": [
+      "Webuye",
+      "Webuye North",
+      "Webuye South",
+      "Webuye East",
+      "Webuye West"
+    ]
   },
   {
     "id": 222,
@@ -1773,7 +3170,14 @@
     "name": "Webuye West",
     "county_id": 39,
     "county_name": "Bungoma",
-    "postal_code": "50205"
+    "postal_code": "50205",
+    "wards": [
+      "Webuye Town",
+      "Webuye Central",
+      "Webuye East",
+      "Webuye West",
+      "Webuye South"
+    ]
   },
   {
     "id": 223,
@@ -1781,7 +3185,14 @@
     "name": "Kimilili",
     "county_id": 39,
     "county_name": "Bungoma",
-    "postal_code": "50207"
+    "postal_code": "50207",
+    "wards": [
+      "Kimilili Town",
+      "Kimilili West",
+      "Kimilili Central",
+      "Kimilili East",
+      "Kimilili South"
+    ]
   },
   {
     "id": 224,
@@ -1789,7 +3200,8 @@
     "name": "Tongaren",
     "county_id": 39,
     "county_name": "Bungoma",
-    "postal_code": "50208"
+    "postal_code": "50208",
+    "wards": []
   },
   {
     "id": 225,
@@ -1797,7 +3209,15 @@
     "name": "Teso North",
     "county_id": 40,
     "county_name": "Busia",
-    "postal_code": "50400"
+    "postal_code": "50400",
+    "wards": [
+      "Malaba",
+      "Ang'Urai North",
+      "Ang'Urai South",
+      "Amukura East",
+      "Amukura West",
+      "Amukura Central"
+    ]
   },
   {
     "id": 226,
@@ -1805,7 +3225,13 @@
     "name": "Teso South",
     "county_id": 40,
     "county_name": "Busia",
-    "postal_code": "50401"
+    "postal_code": "50401",
+    "wards": [
+      "Ang'Urai South",
+      "Amukura Central",
+      "Ang'Urai North",
+      "Malaba"
+    ]
   },
   {
     "id": 227,
@@ -1813,7 +3239,14 @@
     "name": "Nambale",
     "county_id": 40,
     "county_name": "Busia",
-    "postal_code": "50402"
+    "postal_code": "50402",
+    "wards": [
+      "Nambale",
+      "Akamai",
+      "Achenga",
+      "Amukura Central",
+      "Amukura East"
+    ]
   },
   {
     "id": 228,
@@ -1821,7 +3254,13 @@
     "name": "Matayos",
     "county_id": 40,
     "county_name": "Busia",
-    "postal_code": "50403"
+    "postal_code": "50403",
+    "wards": [
+      "Matayos South",
+      "Maloba",
+      "Mulwanda",
+      "Nambale"
+    ]
   },
   {
     "id": 229,
@@ -1829,7 +3268,14 @@
     "name": "Butula",
     "county_id": 40,
     "county_name": "Busia",
-    "postal_code": "50404"
+    "postal_code": "50404",
+    "wards": [
+      "Marachi West",
+      "Marachi North",
+      "Marachi Central",
+      "Butula South",
+      "Mulwanda"
+    ]
   },
   {
     "id": 230,
@@ -1837,7 +3283,14 @@
     "name": "Funyula",
     "county_id": 40,
     "county_name": "Busia",
-    "postal_code": "50405"
+    "postal_code": "50405",
+    "wards": [
+      "Funyula Town",
+      "Bukhayo West",
+      "Bukhayo Central",
+      "Bukhayo East",
+      "Nambale"
+    ]
   },
   {
     "id": 231,
@@ -1845,7 +3298,8 @@
     "name": "Budalangi",
     "county_id": 40,
     "county_name": "Busia",
-    "postal_code": "50406"
+    "postal_code": "50406",
+    "wards": []
   },
   {
     "id": 232,
@@ -1853,7 +3307,13 @@
     "name": "Ugenya",
     "county_id": 41,
     "county_name": "Siaya",
-    "postal_code": "40600"
+    "postal_code": "40600",
+    "wards": [
+      "Ugenya Town",
+      "Uriri",
+      "Mbita",
+      "Nyakach"
+    ]
   },
   {
     "id": 233,
@@ -1861,7 +3321,13 @@
     "name": "Ugunja",
     "county_id": 41,
     "county_name": "Siaya",
-    "postal_code": "40601"
+    "postal_code": "40601",
+    "wards": [
+      "Ugunja Town",
+      "Uriri",
+      "Mbita",
+      "Nyakach"
+    ]
   },
   {
     "id": 234,
@@ -1869,7 +3335,13 @@
     "name": "Alego Usonga",
     "county_id": 41,
     "county_name": "Siaya",
-    "postal_code": "40600"
+    "postal_code": "40600",
+    "wards": [
+      "Ugunja Town",
+      "Uriri",
+      "Mbita",
+      "Nyakach"
+    ]
   },
   {
     "id": 235,
@@ -1877,7 +3349,13 @@
     "name": "Gem",
     "county_id": 41,
     "county_name": "Siaya",
-    "postal_code": "40603"
+    "postal_code": "40603",
+    "wards": [
+      "Ugunja Town",
+      "Uriri",
+      "Mbita",
+      "Nyakach"
+    ]
   },
   {
     "id": 236,
@@ -1885,7 +3363,13 @@
     "name": "Bondo",
     "county_id": 41,
     "county_name": "Siaya",
-    "postal_code": "40601"
+    "postal_code": "40601",
+    "wards": [
+      "Ugunja Town",
+      "Uriri",
+      "Mbita",
+      "Nyakach"
+    ]
   },
   {
     "id": 237,
@@ -1893,7 +3377,13 @@
     "name": "Rarieda",
     "county_id": 41,
     "county_name": "Siaya",
-    "postal_code": "40606"
+    "postal_code": "40606",
+    "wards": [
+      "Ugunja Town",
+      "Uriri",
+      "Mbita",
+      "Nyakach"
+    ]
   },
   {
     "id": 238,
@@ -1901,7 +3391,13 @@
     "name": "Kisumu East",
     "county_id": 42,
     "county_name": "Kisumu",
-    "postal_code": "40100"
+    "postal_code": "40100",
+    "wards": [
+      "Kisumu Town",
+      "Mbita",
+      "Nyatike",
+      "Homa Bay"
+    ]
   },
   {
     "id": 239,
@@ -1909,7 +3405,13 @@
     "name": "Kisumu West",
     "county_id": 42,
     "county_name": "Kisumu",
-    "postal_code": "40100"
+    "postal_code": "40100",
+    "wards": [
+      "Kisumu Town",
+      "Mbita",
+      "Nyatike",
+      "Homa Bay"
+    ]
   },
   {
     "id": 240,
@@ -1917,7 +3419,13 @@
     "name": "Kisumu Central",
     "county_id": 42,
     "county_name": "Kisumu",
-    "postal_code": "40100"
+    "postal_code": "40100",
+    "wards": [
+      "Kisumu Town",
+      "Mbita",
+      "Nyatike",
+      "Homa Bay"
+    ]
   },
   {
     "id": 241,
@@ -1925,7 +3433,13 @@
     "name": "Seme",
     "county_id": 42,
     "county_name": "Kisumu",
-    "postal_code": "40100"
+    "postal_code": "40100",
+    "wards": [
+      "Kisumu Town",
+      "Mbita",
+      "Nyatike",
+      "Homa Bay"
+    ]
   },
   {
     "id": 242,
@@ -1933,7 +3447,13 @@
     "name": "Nyando",
     "county_id": 42,
     "county_name": "Kisumu",
-    "postal_code": "40100"
+    "postal_code": "40100",
+    "wards": [
+      "Kisumu Town",
+      "Mbita",
+      "Nyatike",
+      "Homa Bay"
+    ]
   },
   {
     "id": 243,
@@ -1941,7 +3461,13 @@
     "name": "Muhoroni",
     "county_id": 42,
     "county_name": "Kisumu",
-    "postal_code": "40105"
+    "postal_code": "40105",
+    "wards": [
+      "Kisumu Town",
+      "Mbita",
+      "Nyatike",
+      "Homa Bay"
+    ]
   },
   {
     "id": 244,
@@ -1949,7 +3475,13 @@
     "name": "Nyakach",
     "county_id": 42,
     "county_name": "Kisumu",
-    "postal_code": "40115"
+    "postal_code": "40115",
+    "wards": [
+      "Kisumu Town",
+      "Mbita",
+      "Nyatike",
+      "Homa Bay"
+    ]
   },
   {
     "id": 245,
@@ -1957,7 +3489,13 @@
     "name": "Kasipul",
     "county_id": 43,
     "county_name": "Homa Bay",
-    "postal_code": "40300"
+    "postal_code": "40300",
+    "wards": [
+      "Mbita",
+      "Ndhiwa Town",
+      "Uriri",
+      "Rangwe"
+    ]
   },
   {
     "id": 246,
@@ -1965,7 +3503,13 @@
     "name": "Kabondo Kasipul",
     "county_id": 43,
     "county_name": "Homa Bay",
-    "postal_code": "40301"
+    "postal_code": "40301",
+    "wards": [
+      "Ndhiwa Town",
+      "Mbita",
+      "Uriri",
+      "Homa Bay"
+    ]
   },
   {
     "id": 247,
@@ -1973,7 +3517,13 @@
     "name": "Karachuonyo",
     "county_id": 43,
     "county_name": "Homa Bay",
-    "postal_code": "40302"
+    "postal_code": "40302",
+    "wards": [
+      "Ndhiwa Town",
+      "Mbita",
+      "Uriri",
+      "Homa Bay"
+    ]
   },
   {
     "id": 248,
@@ -1981,7 +3531,13 @@
     "name": "Rangwe",
     "county_id": 43,
     "county_name": "Homa Bay",
-    "postal_code": "40303"
+    "postal_code": "40303",
+    "wards": [
+      "Ndhiwa Town",
+      "Mbita",
+      "Uriri",
+      "Homa Bay"
+    ]
   },
   {
     "id": 249,
@@ -1989,7 +3545,13 @@
     "name": "Homa Bay Town",
     "county_id": 43,
     "county_name": "Homa Bay",
-    "postal_code": "40300"
+    "postal_code": "40300",
+    "wards": [
+      "Ndhiwa Town",
+      "Mbita",
+      "Uriri",
+      "Rangwe"
+    ]
   },
   {
     "id": 250,
@@ -1997,7 +3559,13 @@
     "name": "Ndhiwa",
     "county_id": 43,
     "county_name": "Homa Bay",
-    "postal_code": "40304"
+    "postal_code": "40304",
+    "wards": [
+      "Mbita",
+      "Ndhiwa Town",
+      "Uriri",
+      "Kabondo Kasipul"
+    ]
   },
   {
     "id": 251,
@@ -2005,7 +3573,8 @@
     "name": "Mbita",
     "county_id": 43,
     "county_name": "Homa Bay",
-    "postal_code": "40305"
+    "postal_code": "40305",
+    "wards": []
   },
   {
     "id": 252,
@@ -2013,7 +3582,8 @@
     "name": "Suba",
     "county_id": 43,
     "county_name": "Homa Bay",
-    "postal_code": "40307"
+    "postal_code": "40307",
+    "wards": []
   },
   {
     "id": 253,
@@ -2021,7 +3591,13 @@
     "name": "Rongo",
     "county_id": 44,
     "county_name": "Migori",
-    "postal_code": "40400"
+    "postal_code": "40400",
+    "wards": [
+      "Awendo Town",
+      "Uriri",
+      "Migori",
+      "Kanyamkago"
+    ]
   },
   {
     "id": 254,
@@ -2029,7 +3605,13 @@
     "name": "Awendo",
     "county_id": 44,
     "county_name": "Migori",
-    "postal_code": "40401"
+    "postal_code": "40401",
+    "wards": [
+      "Awendo Town",
+      "Kanyamkago",
+      "Kamagambo",
+      "Uriri"
+    ]
   },
   {
     "id": 255,
@@ -2037,7 +3619,8 @@
     "name": "Suna East",
     "county_id": 44,
     "county_name": "Migori",
-    "postal_code": "40400"
+    "postal_code": "40400",
+    "wards": []
   },
   {
     "id": 256,
@@ -2045,7 +3628,8 @@
     "name": "Suna West",
     "county_id": 44,
     "county_name": "Migori",
-    "postal_code": "40400"
+    "postal_code": "40400",
+    "wards": []
   },
   {
     "id": 257,
@@ -2053,7 +3637,8 @@
     "name": "Uriri",
     "county_id": 44,
     "county_name": "Migori",
-    "postal_code": "40402"
+    "postal_code": "40402",
+    "wards": []
   },
   {
     "id": 258,
@@ -2061,7 +3646,13 @@
     "name": "Nyatike",
     "county_id": 44,
     "county_name": "Migori",
-    "postal_code": "40403"
+    "postal_code": "40403",
+    "wards": [
+      "Nyatike",
+      "Awendo Town",
+      "Kuria East",
+      "Kuria West"
+    ]
   },
   {
     "id": 259,
@@ -2069,7 +3660,13 @@
     "name": "Kuria West",
     "county_id": 44,
     "county_name": "Migori",
-    "postal_code": "40404"
+    "postal_code": "40404",
+    "wards": [
+      "Awendo Town",
+      "Nyatike",
+      "Uriri",
+      "Migori"
+    ]
   },
   {
     "id": 260,
@@ -2077,7 +3674,13 @@
     "name": "Kuria East",
     "county_id": 44,
     "county_name": "Migori",
-    "postal_code": "40407"
+    "postal_code": "40407",
+    "wards": [
+      "Kuria East",
+      "Kamagambo",
+      "Awendo Town",
+      "Nyatike"
+    ]
   },
   {
     "id": 261,
@@ -2085,7 +3688,13 @@
     "name": "Bonchari",
     "county_id": 45,
     "county_name": "Kisii",
-    "postal_code": "40200"
+    "postal_code": "40200",
+    "wards": [
+      "Keera",
+      "Magwagwa",
+      "Siambele",
+      "Nyamira Town"
+    ]
   },
   {
     "id": 262,
@@ -2093,7 +3702,14 @@
     "name": "South Mugirango",
     "county_id": 45,
     "county_name": "Kisii",
-    "postal_code": "40200"
+    "postal_code": "40200",
+    "wards": [
+      "Magwagwa",
+      "Nyambunga",
+      "Nyamira Town",
+      "Nyankoya",
+      "Nyamira East"
+    ]
   },
   {
     "id": 263,
@@ -2101,7 +3717,14 @@
     "name": "Bomachoge Borabu",
     "county_id": 45,
     "county_name": "Kisii",
-    "postal_code": "40201"
+    "postal_code": "40201",
+    "wards": [
+      "Nyamira Central",
+      "Nyamira East",
+      "Borabu",
+      "Bosongo",
+      "Nyankoya"
+    ]
   },
   {
     "id": 264,
@@ -2109,7 +3732,14 @@
     "name": "Bobasi",
     "county_id": 45,
     "county_name": "Kisii",
-    "postal_code": "40202"
+    "postal_code": "40202",
+    "wards": [
+      "Nyamira Town",
+      "Keera",
+      "Nyankoya",
+      "Nyamira Central",
+      "Bosongo"
+    ]
   },
   {
     "id": 265,
@@ -2117,7 +3747,14 @@
     "name": "Bomachoge Chache",
     "county_id": 45,
     "county_name": "Kisii",
-    "postal_code": "40200"
+    "postal_code": "40200",
+    "wards": [
+      "Kegati",
+      "Kegogro",
+      "Siambele",
+      "Nyamira Central",
+      "Nyankoya"
+    ]
   },
   {
     "id": 266,
@@ -2125,7 +3762,19 @@
     "name": "Nyaribari Masaba",
     "county_id": 45,
     "county_name": "Kisii",
-    "postal_code": "40200"
+    "postal_code": "40200",
+    "wards": [
+      "Bobasi",
+      "Nyamira Central",
+      "Nyamira Town",
+      "Bosongo",
+      "Momweta",
+      "Gesusu",
+      "Gachuba",
+      "Ichuni",
+      "Manga",
+      "Bosoti"
+    ]
   },
   {
     "id": 267,
@@ -2133,7 +3782,19 @@
     "name": "Nyaribari Chache",
     "county_id": 45,
     "county_name": "Kisii",
-    "postal_code": "40200"
+    "postal_code": "40200",
+    "wards": [
+      "Bobasi",
+      "Keera",
+      "Ririga",
+      "Kegati",
+      "Nyamira Town",
+      "Nyaribari Masaba",
+      "Gesusu",
+      "Masimba",
+      "Gianchore",
+      "Birongo"
+    ]
   },
   {
     "id": 268,
@@ -2141,7 +3802,15 @@
     "name": "Kitutu Chache North",
     "county_id": 45,
     "county_name": "Kisii",
-    "postal_code": "40200"
+    "postal_code": "40200",
+    "wards": [
+      "Kemera",
+      "Kitutu Central",
+      "Magwagwa",
+      "Etago",
+      "Nyatieko",
+      "Birongo"
+    ]
   },
   {
     "id": 269,
@@ -2149,7 +3818,15 @@
     "name": "Kitutu Chache South",
     "county_id": 45,
     "county_name": "Kisii",
-    "postal_code": "40208"
+    "postal_code": "40208",
+    "wards": [
+      "Nango",
+      "Mwabosire",
+      "Kegati",
+      "Nyankoya",
+      "Nyatieko",
+      "Nyamarama"
+    ]
   },
   {
     "id": 270,
@@ -2157,7 +3834,14 @@
     "name": "Kitutu Masaba",
     "county_id": 46,
     "county_name": "Nyamira",
-    "postal_code": "40500"
+    "postal_code": "40500",
+    "wards": [
+      "Gachuba",
+      "Magombo",
+      "Gesima",
+      "Manga",
+      "Nyamache"
+    ]
   },
   {
     "id": 271,
@@ -2165,7 +3849,20 @@
     "name": "West Mugirango",
     "county_id": 46,
     "county_name": "Nyamira",
-    "postal_code": "40501"
+    "postal_code": "40501",
+    "wards": [
+      "Mang'Ara",
+      "Ekerenyo",
+      "Nyamira Central",
+      "Nyamira East",
+      "Kitao",
+      "Orinda",
+      "Bosamaro",
+      "Bomwagamo",
+      "Bonyamatuta",
+      "Bokimonge",
+      "Itibo"
+    ]
   },
   {
     "id": 272,
@@ -2173,7 +3870,14 @@
     "name": "North Mugirango",
     "county_id": 46,
     "county_name": "Nyamira",
-    "postal_code": "40502"
+    "postal_code": "40502",
+    "wards": [
+      "Nyansiongo",
+      "Ekerenyo",
+      "Itibo",
+      "Magwagwa",
+      "Bonyamatuta"
+    ]
   },
   {
     "id": 273,
@@ -2181,7 +3885,19 @@
     "name": "Borabu",
     "county_id": 46,
     "county_name": "Nyamira",
-    "postal_code": "40503"
+    "postal_code": "40503",
+    "wards": [
+      "Geta",
+      "Kiamariga",
+      "Nyamira Town",
+      "Manga",
+      "Marani",
+      "Nyansiongo",
+      "Rigoma",
+      "Bokimonge",
+      "Bomwagamo",
+      "Machoge Chache"
+    ]
   },
   {
     "id": 274,
@@ -2189,7 +3905,8 @@
     "name": "Westlands",
     "county_id": 47,
     "county_name": "Nairobi",
-    "postal_code": "00600"
+    "postal_code": "00600",
+    "wards": []
   },
   {
     "id": 275,
@@ -2197,7 +3914,8 @@
     "name": "Dagoretti North",
     "county_id": 47,
     "county_name": "Nairobi",
-    "postal_code": "00100"
+    "postal_code": "00100",
+    "wards": []
   },
   {
     "id": 276,
@@ -2205,7 +3923,8 @@
     "name": "Dagoretti South",
     "county_id": 47,
     "county_name": "Nairobi",
-    "postal_code": "00100"
+    "postal_code": "00100",
+    "wards": []
   },
   {
     "id": 277,
@@ -2213,7 +3932,8 @@
     "name": "Langata",
     "county_id": 47,
     "county_name": "Nairobi",
-    "postal_code": "00509"
+    "postal_code": "00509",
+    "wards": []
   },
   {
     "id": 278,
@@ -2221,7 +3941,8 @@
     "name": "Kibra",
     "county_id": 47,
     "county_name": "Nairobi",
-    "postal_code": "00100"
+    "postal_code": "00100",
+    "wards": []
   },
   {
     "id": 279,
@@ -2229,7 +3950,8 @@
     "name": "Roysambu",
     "county_id": 47,
     "county_name": "Nairobi",
-    "postal_code": "00800"
+    "postal_code": "00800",
+    "wards": []
   },
   {
     "id": 280,
@@ -2237,7 +3959,8 @@
     "name": "Kasarani",
     "county_id": 47,
     "county_name": "Nairobi",
-    "postal_code": "00800"
+    "postal_code": "00800",
+    "wards": []
   },
   {
     "id": 281,
@@ -2245,7 +3968,8 @@
     "name": "Ruaraka",
     "county_id": 47,
     "county_name": "Nairobi",
-    "postal_code": "00800"
+    "postal_code": "00800",
+    "wards": []
   },
   {
     "id": 282,
@@ -2253,7 +3977,8 @@
     "name": "Embakasi South",
     "county_id": 47,
     "county_name": "Nairobi",
-    "postal_code": "00100"
+    "postal_code": "00100",
+    "wards": []
   },
   {
     "id": 283,
@@ -2261,7 +3986,8 @@
     "name": "Embakasi North",
     "county_id": 47,
     "county_name": "Nairobi",
-    "postal_code": "00100"
+    "postal_code": "00100",
+    "wards": []
   },
   {
     "id": 284,
@@ -2269,7 +3995,8 @@
     "name": "Embakasi Central",
     "county_id": 47,
     "county_name": "Nairobi",
-    "postal_code": "00100"
+    "postal_code": "00100",
+    "wards": []
   },
   {
     "id": 285,
@@ -2277,7 +4004,8 @@
     "name": "Embakasi East",
     "county_id": 47,
     "county_name": "Nairobi",
-    "postal_code": "00100"
+    "postal_code": "00100",
+    "wards": []
   },
   {
     "id": 286,
@@ -2285,7 +4013,8 @@
     "name": "Embakasi West",
     "county_id": 47,
     "county_name": "Nairobi",
-    "postal_code": "00100"
+    "postal_code": "00100",
+    "wards": []
   },
   {
     "id": 287,
@@ -2293,7 +4022,8 @@
     "name": "Makadara",
     "county_id": 47,
     "county_name": "Nairobi",
-    "postal_code": "00100"
+    "postal_code": "00100",
+    "wards": []
   },
   {
     "id": 288,
@@ -2301,7 +4031,8 @@
     "name": "Kamukunji",
     "county_id": 47,
     "county_name": "Nairobi",
-    "postal_code": "00200"
+    "postal_code": "00200",
+    "wards": []
   },
   {
     "id": 289,
@@ -2309,7 +4040,8 @@
     "name": "Starehe",
     "county_id": 47,
     "county_name": "Nairobi",
-    "postal_code": "00100"
+    "postal_code": "00100",
+    "wards": []
   },
   {
     "id": 290,
@@ -2317,6 +4049,7 @@
     "name": "Mathare",
     "county_id": 47,
     "county_name": "Nairobi",
-    "postal_code": "00100"
+    "postal_code": "00100",
+    "wards": []
   }
 ]
