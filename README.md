@@ -1,5 +1,7 @@
 # KenyaAPI
 
+[![Code of Conduct](https://img.shields.io/badge/code%20of%20conduct-contributor%20covenant-green.svg)](CODE_OF_CONDUCT.md)
+
 A free, open REST API providing structured public data about Kenya — counties, constituencies, public holidays, population statistics, exchange rates, and educational institutions. Built with Node.js and Express.
 
 **Live site:** https://kenya-api.netlify.app  
@@ -237,6 +239,21 @@ kenya-api/
 - **Data:** JSON flat files
 - **Hosting:** Netlify (static frontend + serverless functions)
 - **Testing:** Jest + Supertest
+
+---
+
+## Contributing
+
+Contributions are welcome! Before contributing, please read our [Code of Conduct](CODE_OF_CONDUCT.md).
+
+To contribute:
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feat/your-feature`
+3. Commit your changes: `git commit -m "feat: add your feature"`
+4. Push to the branch: `git push origin feat/your-feature`
+5. Open a Pull Request
+
+Please ensure any data you contribute comes from official or openly licensed sources and is accurately attributed.
 
 ---
 
