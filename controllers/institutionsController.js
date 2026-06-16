@@ -178,9 +178,14 @@ async function getUniversities(req, res) {
 
   result.sort((a, b) => a.name.localeCompare(b.name));
 
+  const publicCount = result.filter((i) => i.category === 'Public').length;
+  const privateCount = result.filter((i) => i.category === 'Private').length;
+
   res.status(200).json({
     success: true,
     count: result.length,
+    public_count: publicCount,
+    private_count: privateCount,
     accreditor: 'Commission for University Education (CUE)',
     data: result,
   });

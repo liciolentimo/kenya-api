@@ -1,0 +1,216 @@
+const fs = require('fs');
+const path = require('path');
+
+const filePath = path.join(__dirname, '..', 'data', 'institutions.json');
+const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+
+const FALLBACK_DESC = 'A public university accredited by the Commission for University Education (CUE), offering undergraduate and postgraduate programs across various disciplines.';
+
+// Step 1: Add fallback description to public universities missing one
+data.forEach((item) => {
+  if (item.type === 'University' && !item.description) {
+    item.description = FALLBACK_DESC;
+  }
+});
+
+// Step 2: Append 12 private universities
+const maxId = Math.max(...data.map((d) => d.id));
+
+const privateUniversities = [
+  {
+    name: 'Strathmore University',
+    initials: 'SU',
+    county_id: 47,
+    county_name: 'Nairobi',
+    constituency: '',
+    address: 'Ole Sangale Road, Madaraka Estate, Nairobi',
+    postal_code: 'P.O. Box 59857-00200',
+    phone: '+254 703 034 000',
+    email: 'admissions@strathmore.edu',
+    website: 'https://www.strathmore.edu',
+    year_established: 2002,
+    description: 'A Nairobi-based institution emphasising high standards of teaching, research, and student welfare, offering undergraduate and postgraduate programs in business, information technology, and humanities.',
+  },
+  {
+    name: 'United States International University Africa',
+    initials: 'USIU-A',
+    county_id: 47,
+    county_name: 'Nairobi',
+    constituency: 'Kasarani',
+    address: 'Thika Road, Kasani, Nairobi',
+    postal_code: 'P.O. Box 14634-00800',
+    phone: '+254 730 116 000',
+    email: 'admissions@usiu.ac.ke',
+    website: 'https://www.usiu.ac.ke',
+    year_established: null,
+    description: 'A comprehensive university offering American-style liberal arts education with programs across business, arts and sciences, and pharmacy.',
+  },
+  {
+    name: 'Africa International University',
+    initials: 'AIU',
+    county_id: 47,
+    county_name: 'Nairobi',
+    constituency: 'Langata',
+    address: 'Karen, Nairobi',
+    postal_code: 'P.O. Box 24686-00502',
+    phone: '+254 20 2014960',
+    email: 'info@aiu.ac.ke',
+    website: 'https://www.aiu.ac.ke',
+    year_established: null,
+    description: 'A Christian university committed to providing quality education with a biblical worldview, offering programs in theology, education, business, and community development studies.',
+  },
+  {
+    name: 'Africa Nazarene University',
+    initials: 'ANU',
+    county_id: 34,
+    county_name: 'Kajiado',
+    constituency: 'Kajiado North',
+    address: 'Ongata Rongai, Kajiado County',
+    postal_code: 'P.O. Box 53067-00200',
+    phone: '+254 20 2063905',
+    email: 'info@anu.ac.ke',
+    website: 'https://www.anu.ac.ke',
+    year_established: null,
+    description: 'A Christian liberal arts university emphasising holistic education combining academic excellence with spiritual formation, offering programs in humanities, sciences, and professional courses.',
+  },
+  {
+    name: 'Adventist University of Africa',
+    initials: 'AUA',
+    county_id: 34,
+    county_name: 'Kajiado',
+    constituency: 'Kajiado North',
+    address: 'Ongata Rongai, along Magadi Road',
+    postal_code: 'Private Bag, Magadi Road, Ongata Rongai',
+    phone: '+254 20 2063991',
+    email: 'info@aua.ac.ke',
+    website: 'https://www.aua.ac.ke',
+    year_established: null,
+    description: 'A Seventh-day Adventist institution of higher learning providing quality education with Christian values, offering programs in theology, education, public health, and business administration.',
+  },
+  {
+    name: 'Catholic University of Eastern Africa',
+    initials: 'CUEA',
+    county_id: 47,
+    county_name: 'Nairobi',
+    constituency: 'Langata',
+    address: 'Bogani East Road, Karen, Nairobi',
+    postal_code: 'P.O. Box 62157-00200',
+    phone: '+254 20 891601',
+    email: 'info@cuea.edu',
+    website: 'https://www.cuea.edu',
+    year_established: null,
+    description: 'A Catholic institution providing higher education rooted in Christian values and academic excellence, offering programs in theology, philosophy, education, law, and social sciences.',
+  },
+  {
+    name: 'Daystar University',
+    initials: 'DU',
+    county_id: 16,
+    county_name: 'Machakos',
+    constituency: 'Mavoko',
+    address: 'Athi River Campus, Machakos County',
+    postal_code: 'P.O. Box 44400-00100',
+    phone: '+254 45 2223181',
+    email: 'info@daystar.ac.ke',
+    website: 'https://www.daystar.ac.ke',
+    year_established: null,
+    description: 'A Christian liberal arts university emphasising academic excellence and character development, offering programs in communication, business, education, and human and social sciences.',
+  },
+  {
+    name: 'Pan Africa Christian University',
+    initials: 'PAC',
+    county_id: 47,
+    county_name: 'Nairobi',
+    constituency: 'Langata',
+    address: 'Karen, Nairobi',
+    postal_code: 'P.O. Box 56875-00200',
+    phone: '+254 20 3874986',
+    email: 'info@pacuniversity.ac.ke',
+    website: 'https://www.pacuniversity.ac.ke',
+    year_established: null,
+    description: 'A university committed to providing transformative Christian higher education, offering programs in theology, education, business, and development studies with a focus on African development.',
+  },
+  {
+    name: 'Kenya Methodist University',
+    initials: 'KeMU',
+    county_id: 12,
+    county_name: 'Meru',
+    constituency: 'North Imenti',
+    address: 'Meru Main Campus, Meru County',
+    postal_code: 'P.O. Box 267-60200',
+    phone: '+254 64 31307',
+    email: 'info@kemu.ac.ke',
+    website: 'https://www.kemu.ac.ke',
+    year_established: null,
+    description: 'A Methodist-founded university providing quality education with Christian values, offering programs in health sciences, business, education, and technology across multiple campuses.',
+  },
+  {
+    name: 'Mount Kenya University',
+    initials: 'MKU',
+    county_id: 22,
+    county_name: 'Kiambu',
+    constituency: 'Thika Town',
+    address: 'Thika Road, Thika',
+    postal_code: 'P.O. Box 342-01000',
+    phone: '+254 67 44102',
+    email: 'info@mku.ac.ke',
+    website: 'https://www.mku.ac.ke',
+    year_established: null,
+    description: 'One of the largest private universities in Kenya, offering diverse programs across multiple campuses in business, health sciences, engineering, education, and social sciences.',
+  },
+  {
+    name: 'Kabarak University',
+    initials: 'KBU',
+    county_id: 32,
+    county_name: 'Nakuru',
+    constituency: 'Nakuru Town West',
+    address: 'Kabarak, Nakuru County',
+    postal_code: 'Private Bag 20157, Kabarak',
+    phone: '+254 51 343351',
+    email: 'info@kabarak.ac.ke',
+    website: 'https://www.kabarak.ac.ke',
+    year_established: null,
+    description: 'A Christian institution emphasising academic excellence, moral integrity, and service to society, offering programs in education, business, law, and science and technology.',
+  },
+  {
+    name: 'Riara University',
+    initials: 'RU',
+    county_id: 47,
+    county_name: 'Nairobi',
+    constituency: 'Langata',
+    address: 'Mbagathi Way, Nairobi',
+    postal_code: 'P.O. Box 49940-00100',
+    phone: '+254 20 2020346',
+    email: 'info@riarauniversity.ac.ke',
+    website: 'https://www.riarauniversity.ac.ke',
+    year_established: null,
+    description: 'A private institution focused on providing practical and industry-relevant education, offering programs in business, social sciences, and information technology.',
+  },
+];
+
+privateUniversities.forEach((uni, idx) => {
+  data.push({
+    id: maxId + 1 + idx,
+    name: uni.name,
+    type: 'University',
+    category: 'Private',
+    county_id: uni.county_id,
+    county_name: uni.county_name,
+    constituency: uni.constituency,
+    address: uni.address,
+    postal_code: uni.postal_code,
+    phone: uni.phone,
+    email: uni.email,
+    website: uni.website,
+    accredited_by: 'Commission for University Education (CUE)',
+    source: 'https://nairobionline.com/directory/full-list-of-private-universities-in-kenya/',
+    initials: uni.initials,
+    year_established: uni.year_established,
+    description: uni.description,
+    coordinates: { lat: null, lng: null },
+  });
+});
+
+fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+console.log(`Done. Total entries: ${data.length}`);
+console.log(`Private universities added: ${privateUniversities.length}`);
+console.log('IDs assigned:', maxId + 1, '–', maxId + privateUniversities.length);

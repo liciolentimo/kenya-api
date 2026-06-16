@@ -64,7 +64,9 @@ No API key or authentication required.
 | Method | Path | Description |
 |--------|------|-------------|
 | GET | `/api/v1/institutions` | All institutions (supports pagination and filters) |
-| GET | `/api/v1/institutions/universities` | All universities (filter by `?category`, `?county_id`) |
+| GET | `/api/v1/institutions/universities` | All 53 universities (filter by `?category`, `?county_id`) |
+| GET | `/api/v1/institutions/universities?category=Public` | Public universities only (41) |
+| GET | `/api/v1/institutions/universities?category=Private` | Private universities only (12) |
 | GET | `/api/v1/institutions/tvets` | All TVET institutions (filter by `?subtype`, `?county_id`) |
 | GET | `/api/v1/institutions/tvets?subtype=polytechnic` | National Polytechnics only |
 | GET | `/api/v1/institutions?initials=UON` | Lookup institution by initials |
@@ -73,7 +75,7 @@ No API key or authentication required.
 | GET | `/api/v1/institutions/type/:type` | Institutions by type |
 | GET | `/api/v1/institutions/search?q=term` | Search by name, county, or address |
 
-> University data covers all 41 public universities accredited by the Commission for University Education (CUE) as of 2025. Each entry includes the official initials, county location, and website.
+> University data covers 53 universities — 41 public universities accredited by CUE and 12 private chartered universities. Private university contact details including phone, email, and address are included where available.
 
 > TVET data covers 613 public institutions including National Polytechnics, Technical Training Institutes, and Vocational Training Centers accredited by TVETA as of 2025.
 

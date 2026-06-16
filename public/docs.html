@@ -2327,7 +2327,7 @@ public class Main {
 
       <section id="institutions" class="panel">
         <h2 class="section-title">Educational Institutions</h2>
-        <p class="section-copy">Kenya's educational institutions covering 41 public universities accredited by CUE and 613 TVET institutions accredited by TVETA, including National Polytechnics, Technical Training Institutes, and Vocational Training Centers across all 47 counties.</p>
+        <p class="section-copy">Kenya's educational institutions covering 53 universities (41 public + 12 private chartered) accredited by CUE and 613 TVET institutions accredited by TVETA, including National Polytechnics, Technical Training Institutes, and Vocational Training Centers across all 47 counties.</p>
         <div class="endpoint-grid">
           <div class="endpoint-card">
             <div class="endpoint-head">
@@ -2469,7 +2469,7 @@ public class Main {
               <span class="method-badge">GET</span>
               <p class="endpoint-path" id="institutions-universities">/institutions/universities</p>
             </div>
-            <p class="endpoint-desc">Returns all public universities in Kenya, sorted alphabetically. Accredited by the Commission for University Education (CUE). Supports filtering by <code>?category=</code> and <code>?county_id=</code>.</p>
+            <p class="endpoint-desc">Returns all universities in Kenya — both public (41) and private (12) — accredited by the Commission for University Education (CUE). Sorted alphabetically. Filter by <code>?category=Public</code> or <code>?category=Private</code>.</p>
             <div class="params-panel table-wrapper" style="margin-bottom: 18px;">
               <table class="params-table">
                 <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
@@ -2492,7 +2492,13 @@ public class Main {
               <div class="code-block-wrapper">
                 <button class="copy-btn" title="Copy to clipboard">Copy</button>
                 <pre class="code-block lang-curl active"><code>curl -X GET "https://kenya-api.netlify.app/api/v1/institutions/universities" \
-  -H "Accept: application/json"</code></pre>
+  -H "Accept: application/json"
+
+# Public universities only
+curl "https://kenya-api.netlify.app/api/v1/institutions/universities?category=Public"
+
+# Private universities only
+curl "https://kenya-api.netlify.app/api/v1/institutions/universities?category=Private"</code></pre>
                 <pre class="code-block lang-js"><code>const response = await fetch("https://kenya-api.netlify.app/api/v1/institutions/universities", {
   method: "GET",
   headers: { "Accept": "application/json" }
@@ -2571,18 +2577,24 @@ public class Main {
                 <button class="copy-button" type="button">Copy</button>
                 <pre class="code-block"><span class="token-brace">{</span>
   <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
-  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">41</span><span class="token-punct">,</span>
+  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">53</span><span class="token-punct">,</span>
+  <span class="token-string">"public_count"</span><span class="token-punct">:</span> <span class="token-number">41</span><span class="token-punct">,</span>
+  <span class="token-string">"private_count"</span><span class="token-punct">:</span> <span class="token-number">12</span><span class="token-punct">,</span>
   <span class="token-string">"accreditor"</span><span class="token-punct">:</span> <span class="token-string">"Commission for University Education (CUE)"</span><span class="token-punct">,</span>
   <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span>
     <span class="token-brace">{</span>
-      <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">35</span><span class="token-punct">,</span>
-      <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Alupe University"</span><span class="token-punct">,</span>
-      <span class="token-string">"initials"</span><span class="token-punct">:</span> <span class="token-string">"AU"</span><span class="token-punct">,</span>
+      <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">689</span><span class="token-punct">,</span>
+      <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Strathmore University"</span><span class="token-punct">,</span>
+      <span class="token-string">"initials"</span><span class="token-punct">:</span> <span class="token-string">"SU"</span><span class="token-punct">,</span>
       <span class="token-string">"type"</span><span class="token-punct">:</span> <span class="token-string">"University"</span><span class="token-punct">,</span>
-      <span class="token-string">"category"</span><span class="token-punct">:</span> <span class="token-string">"Public"</span><span class="token-punct">,</span>
-      <span class="token-string">"county_id"</span><span class="token-punct">:</span> <span class="token-number">40</span><span class="token-punct">,</span>
-      <span class="token-string">"county_name"</span><span class="token-punct">:</span> <span class="token-string">"Busia"</span><span class="token-punct">,</span>
-      <span class="token-string">"website"</span><span class="token-punct">:</span> <span class="token-string">"https://www.alupe.ac.ke"</span><span class="token-punct">,</span>
+      <span class="token-string">"category"</span><span class="token-punct">:</span> <span class="token-string">"Private"</span><span class="token-punct">,</span>
+      <span class="token-string">"county_id"</span><span class="token-punct">:</span> <span class="token-number">47</span><span class="token-punct">,</span>
+      <span class="token-string">"county_name"</span><span class="token-punct">:</span> <span class="token-string">"Nairobi"</span><span class="token-punct">,</span>
+      <span class="token-string">"address"</span><span class="token-punct">:</span> <span class="token-string">"Ole Sangale Road, Madaraka Estate, Nairobi"</span><span class="token-punct">,</span>
+      <span class="token-string">"phone"</span><span class="token-punct">:</span> <span class="token-string">"+254 703 034 000"</span><span class="token-punct">,</span>
+      <span class="token-string">"email"</span><span class="token-punct">:</span> <span class="token-string">"admissions@strathmore.edu"</span><span class="token-punct">,</span>
+      <span class="token-string">"website"</span><span class="token-punct">:</span> <span class="token-string">"https://www.strathmore.edu"</span><span class="token-punct">,</span>
+      <span class="token-string">"description"</span><span class="token-punct">:</span> <span class="token-string">"A Nairobi-based institution emphasising high standards of teaching, research, and student welfare..."</span><span class="token-punct">,</span>
       <span class="token-string">"accredited_by"</span><span class="token-punct">:</span> <span class="token-string">"Commission for University Education (CUE)"</span>
     <span class="token-brace">}</span><span class="token-punct">,</span>
     <span class="token-string">"..."</span>

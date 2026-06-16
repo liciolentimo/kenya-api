@@ -337,7 +337,7 @@ County descriptions: one-sentence factual summaries synthesised from official co
 - **Counties & Constituencies**: IEBC (2022 constituency boundaries) + KNBS Census 2019 population data
 - **Population**: Kenya National Bureau of Statistics (2019 Census) — sourced April 2026
 - **Exchange Rates**: Central Bank of Kenya (CBK) indicative rates — last seeded April 2026
-- **Public Universities**: Commission for University Education (CUE) — 41 accredited institutions as of 2025
+- **Universities**: 41 public (CUE, 2025) + 12 private chartered (CUE, 2022/23) = 53 total
 - **TVET Institutions**: TVETA Kenya — 613 accredited institutions across all 47 counties (2025)
 - **Postal Codes**: Posta Kenya / PostZipCode.com — mapped to all 47 counties and 290 constituencies
 - **Wards**: IEBC via open CC0 dataset — 1,263 electoral wards across 45 counties (Nairobi, Kericho, Bomet absent from upstream source)

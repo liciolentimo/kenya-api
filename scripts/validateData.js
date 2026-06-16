@@ -249,6 +249,54 @@ function run() {
     ok = false;
   }
 
+  // 35. Exactly 12 private universities
+  const privateUniversities = universities.filter((u) => u.category === 'Private');
+  if (privateUniversities.length === 12) {
+    logPass('institutions.json contains exactly 12 private universities');
+  } else {
+    logFail(`expected 12 private universities, found ${privateUniversities.length}`);
+    ok = false;
+  }
+
+  // 36. At least 41 public universities
+  const publicUniversities = universities.filter((u) => u.category === 'Public');
+  if (publicUniversities.length >= 41) {
+    logPass(`institutions.json contains ${publicUniversities.length} public universities (≥ 41)`);
+  } else {
+    logFail(`expected at least 41 public universities, found ${publicUniversities.length}`);
+    ok = false;
+  }
+
+  // 37. Every private university has a non-empty email
+  const missingPrivEmail = privateUniversities.filter((u) => !u.email);
+  if (missingPrivEmail.length === 0) {
+    logPass('All private universities have a non-empty email');
+  } else {
+    logFail('Some private universities are missing email:');
+    missingPrivEmail.forEach((u) => console.error(`  id=${u.id} name="${u.name}"`));
+    ok = false;
+  }
+
+  // 38. Every private university has a non-empty phone
+  const missingPrivPhone = privateUniversities.filter((u) => !u.phone);
+  if (missingPrivPhone.length === 0) {
+    logPass('All private universities have a non-empty phone');
+  } else {
+    logFail('Some private universities are missing phone:');
+    missingPrivPhone.forEach((u) => console.error(`  id=${u.id} name="${u.name}"`));
+    ok = false;
+  }
+
+  // 39. Every private university has a non-empty address
+  const missingPrivAddress = privateUniversities.filter((u) => !u.address);
+  if (missingPrivAddress.length === 0) {
+    logPass('All private universities have a non-empty address');
+  } else {
+    logFail('Some private universities are missing address:');
+    missingPrivAddress.forEach((u) => console.error(`  id=${u.id} name="${u.name}"`));
+    ok = false;
+  }
+
   // 25–27: TVET checks
   const tvetTypes = ['Technical and Vocational College (TVET)', 'National Polytechnic'];
   const tvets = institutions.filter((i) => tvetTypes.includes(i.type));
