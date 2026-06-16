@@ -143,6 +143,15 @@ https://kenya-api.netlify.app/api/v1
 | GET    | `/api/v1/wards/sub-counties/:county_id`       | Sub-counties list for a county                     |
 | GET    | `/api/v1/wards/search?q=`                     | Search wards by name, sub-county, or county        |
 
+### Parks
+| Method | Path                                          | Description                                        |
+|--------|-----------------------------------------------|----------------------------------------------------|
+| GET    | `/api/v1/parks`                               | All parks (?type, ?county_id, ?big_cats, ?marine, ?most_visited) |
+| GET    | `/api/v1/parks/:id`                           | Single park by ID                                  |
+| GET    | `/api/v1/parks/county/:county_id`             | Parks in a county                                  |
+| GET    | `/api/v1/parks/type/:type`                    | Parks by type                                      |
+| GET    | `/api/v1/parks/search?q=`                     | Search parks by name, description, or region       |
+
 ### Search
 | Method | Path                                      | Description                                        |
 |--------|-------------------------------------------|----------------------------------------------------|
@@ -158,6 +167,7 @@ Search fields per resource:
 - exchange_rates: currency, currency_name
 - postal_codes: county_name, primary_postal_code
 - wards: ward, sub_county_name, county_name
+- parks: name, famous_for, region, description
 
 ---
 
@@ -319,6 +329,27 @@ County descriptions: one-sentence factual summaries synthesised from official co
 }
 ```
 
+### Park
+```json
+{
+  "id": 2,
+  "name": "Amboseli National Park",
+  "type": "National Park",
+  "county_ids": [34],
+  "counties": ["Kajiado"],
+  "region": "Southern Kenya",
+  "famous_for": "Elephants & Mount Kilimanjaro views",
+  "description": "One of Kenya's most iconic parks...",
+  "size_km2": 392,
+  "managed_by": "Kenya Wildlife Service (KWS)",
+  "big_cats": true,
+  "marine": false,
+  "most_visited": true,
+  "coordinates": { "lat": -2.6527, "lng": 37.2606 },
+  "source": "https://www.beyondforest.org/..."
+}
+```
+
 ---
 
 ## Coding Conventions
@@ -341,6 +372,7 @@ County descriptions: one-sentence factual summaries synthesised from official co
 - **TVET Institutions**: TVETA Kenya — 613 accredited institutions across all 47 counties (2025)
 - **Postal Codes**: Posta Kenya / PostZipCode.com — mapped to all 47 counties and 290 constituencies
 - **Wards**: IEBC via open CC0 dataset — 1,263 electoral wards across 45 counties (Nairobi, Kericho, Bomet absent from upstream source)
+- **Parks**: Kenya Wildlife Service / beyondforest.org — 35 protected areas (2026)
 
 ---
 

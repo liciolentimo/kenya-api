@@ -106,6 +106,17 @@ No API key or authentication required.
 
 > Ward data covers 45 of 47 counties sourced from the IEBC via an open CC0 dataset. Nairobi, Kericho, and Bomet are absent from the upstream source.
 
+### Parks & Reserves
+| Method | Path | Description |
+|--------|------|-------------|
+| GET | `/api/v1/parks` | All 35 parks (`?type`, `?county_id`, `?big_cats`, `?marine`, `?most_visited`) |
+| GET | `/api/v1/parks/:id` | Single park by ID |
+| GET | `/api/v1/parks/county/:id` | Parks in a county |
+| GET | `/api/v1/parks/type/:type` | Parks by type |
+| GET | `/api/v1/parks/search?q=` | Search parks by name, description, or region |
+
+> Parks data covers 35 national parks, reserves, marine parks, and sanctuaries managed by Kenya Wildlife Service (KWS). Sourced from KWS and beyondforest.org (2026).
+
 ### Search
 | Method | Path | Description |
 |--------|------|-------------|

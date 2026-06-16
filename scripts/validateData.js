@@ -16,6 +16,7 @@ function run() {
   const institutions = loadJSON('data/institutions.json');
   const postalCodes = loadJSON('data/postal-codes.json');
   const wardsArr = loadJSON('data/wards.json');
+  const parksArr = loadJSON('data/parks.json');
 
   let ok = true;
 
@@ -393,6 +394,54 @@ function run() {
   } else {
     logFail(`${wardsNoSubCounty.length} wards are missing sub_county_name`);
     wardsNoSubCounty.forEach((w) => console.error(`  id=${w.id}`));
+    ok = false;
+  }
+
+  // 40. parks.json has exactly 35 entries
+  if (parksArr.length === 35) {
+    logPass('parks.json contains exactly 35 entries');
+  } else {
+    logFail(`expected 35 parks, found ${parksArr.length}`);
+    ok = false;
+  }
+
+  // 41. Every park has a non-empty county_ids array
+  const parksNoCounty = parksArr.filter((p) => !Array.isArray(p.county_ids) || p.county_ids.length === 0);
+  if (parksNoCounty.length === 0) {
+    logPass('All parks have a non-empty county_ids array');
+  } else {
+    logFail(`${parksNoCounty.length} parks are missing county_ids`);
+    parksNoCounty.forEach((p) => console.error(`  id=${p.id} name="${p.name}"`));
+    ok = false;
+  }
+
+  // 42. Every park has coordinates with lat and lng
+  const parksNoCoords = parksArr.filter(
+    (p) => !p.coordinates || p.coordinates.lat == null || p.coordinates.lng == null
+  );
+  if (parksNoCoords.length === 0) {
+    logPass('All parks have valid coordinates');
+  } else {
+    logFail(`${parksNoCoords.length} parks are missing coordinates`);
+    parksNoCoords.forEach((p) => console.error(`  id=${p.id} name="${p.name}"`));
+    ok = false;
+  }
+
+  // 43. Every park has a valid type
+  const VALID_PARK_TYPES = [
+    'National Park',
+    'National Reserve',
+    'Marine Park',
+    'Marine Reserve',
+    'Wildlife Sanctuary',
+    'Marine Park & Reserve',
+  ];
+  const parksInvalidType = parksArr.filter((p) => !VALID_PARK_TYPES.includes(p.type));
+  if (parksInvalidType.length === 0) {
+    logPass('All parks have a valid type');
+  } else {
+    logFail(`${parksInvalidType.length} parks have an invalid type`);
+    parksInvalidType.forEach((p) => console.error(`  id=${p.id} name="${p.name}" type="${p.type}"`));
     ok = false;
   }
 
