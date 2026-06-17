@@ -3,12 +3,12 @@ const constituencies = require('../data/constituencies.json');
 const holidays = require('../data/holidays.json');
 const institutions = require('../data/institutions.json');
 const ministries = require('../data/ministries.json');
-const exchangeRates = require('../data/exchange-rates.json');
 const postalCodes = require('../data/postal-codes.json');
 const wardsData = require('../data/wards.json');
 const parksData = require('../data/parks.json');
+const { fetchLiveRates } = require('../services/exchangeRateService');
 
-const searchConfigs = [
+const STATIC_CONFIGS = [
   {
     name: 'counties',
     data: counties,
@@ -40,12 +40,6 @@ const searchConfigs = [
     endpoint: '/api/v1/ministries',
   },
   {
-    name: 'exchange_rates',
-    data: exchangeRates,
-    fields: ['currency', 'currency_name'],
-    endpoint: '/api/v1/exchange-rates',
-  },
-  {
     name: 'postal_codes',
     data: postalCodes,
     fields: ['county_name', 'primary_postal_code'],
@@ -65,7 +59,7 @@ const searchConfigs = [
   },
 ];
 
-function globalSearch(req, res) {
+async function globalSearch(req, res) {
   const { q, type } = req.query;
 
   if (!q || q.trim().length < 2) {
@@ -75,6 +69,24 @@ function globalSearch(req, res) {
       statusCode: 400,
     });
   }
+
+  let exchangeRatesData = [];
+  try {
+    const ratesPayload = await fetchLiveRates();
+    exchangeRatesData = ratesPayload.data;
+  } catch (e) {
+    // fail gracefully — exclude exchange_rates from results
+  }
+
+  const searchConfigs = [
+    ...STATIC_CONFIGS,
+    {
+      name: 'exchange_rates',
+      data: exchangeRatesData,
+      fields: ['currency', 'currency_name'],
+      endpoint: '/api/v1/exchange-rates',
+    },
+  ];
 
   const term = q.toLowerCase().trim();
 
@@ -87,9 +99,7 @@ function globalSearch(req, res) {
 
   configs.forEach((config) => {
     const matches = config.data.filter((item) =>
-      config.fields.some(
-        (field) => item[field] && item[field].toLowerCase().includes(term)
-      )
+      config.fields.some((field) => item[field] && item[field].toLowerCase().includes(term))
     );
     results[config.name] = {
       count: matches.length,

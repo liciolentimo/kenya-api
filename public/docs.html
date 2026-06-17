@@ -2037,14 +2037,17 @@ public class Main {
 
       <section id="exchange-rates" class="panel">
         <h2 class="section-title">Exchange Rates</h2>
-        <p class="section-copy">Returns KES exchange rates for 25 currencies, sourced from the Central Bank of Kenya. Includes buy, mean, and sell rates.</p>
+        <p class="section-copy">Returns live KES exchange rates for 25 currencies, sourced from open.er-api.com mid-market rates. Rates are refreshed hourly and cached server-side to ensure fast response times. Includes buy, mean, and sell rates with a small illustrative spread.</p>
+        <div class="info-box" style="background:#0d1117;border:1px solid #1f6feb;border-radius:8px;padding:14px 18px;margin-bottom:20px;font-size:13px;color:#79C0FF;line-height:1.6;">
+          <strong>Live data notice:</strong> Exchange rates are fetched live from a public exchange rate provider, not the Central Bank of Kenya. Rates reflect open market mid-rates and may differ slightly from bank or forex bureau rates. Data is cached for 1 hour to ensure fast responses.
+        </div>
         <div class="endpoint-grid">
           <div class="endpoint-card">
             <div class="endpoint-head">
               <span class="method-badge">GET</span>
               <p class="endpoint-path">/exchange-rates</p>
             </div>
-            <p class="endpoint-desc">Returns KES exchange rates for 25 currencies with buy, mean, and sell rates sourced from CBK.</p>
+            <p class="endpoint-desc">Returns live KES exchange rates for 25 currencies. Rates are fetched from open.er-api.com and cached server-side for 1 hour. Supports <code>?q=</code> to filter by currency code or name.</p>
                         <div class="code-panel tabbed" style="margin-bottom: 18px;">
               <div class="code-tabs" role="tablist">
                 <button class="code-tab active" data-lang="curl" role="tab">cURL</button>
@@ -2154,23 +2157,27 @@ public class Main {
                 <pre class="code-block"><span class="token-brace">{</span>
   <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
   <span class="token-string">"base_currency"</span><span class="token-punct">:</span> <span class="token-string">"KES"</span><span class="token-punct">,</span>
-  <span class="token-string">"last_updated"</span><span class="token-punct">:</span> <span class="token-string">"2026-04-23"</span><span class="token-punct">,</span>
-  <span class="token-string">"source"</span><span class="token-punct">:</span> <span class="token-string">"Central Bank of Kenya"</span><span class="token-punct">,</span>
+  <span class="token-string">"last_updated"</span><span class="token-punct">:</span> <span class="token-string">"Wed, 17 Jun 2026 00:02:31 +0000"</span><span class="token-punct">,</span>
+  <span class="token-string">"next_update"</span><span class="token-punct">:</span> <span class="token-string">"Thu, 18 Jun 2026 00:17:01 +0000"</span><span class="token-punct">,</span>
+  <span class="token-string">"source"</span><span class="token-punct">:</span> <span class="token-string">"open.er-api.com (live mid-market rates)"</span><span class="token-punct">,</span>
   <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">25</span><span class="token-punct">,</span>
-  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span> ... <span class="token-brace">]</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span>
+    <span class="token-brace">{</span>
+      <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span>
+      <span class="token-string">"currency"</span><span class="token-punct">:</span> <span class="token-string">"USD"</span><span class="token-punct">,</span>
+      <span class="token-string">"currency_name"</span><span class="token-punct">:</span> <span class="token-string">"US Dollar"</span><span class="token-punct">,</span>
+      <span class="token-string">"buy"</span><span class="token-punct">:</span> <span class="token-number">129.04</span><span class="token-punct">,</span>
+      <span class="token-string">"mean"</span><span class="token-punct">:</span> <span class="token-number">129.43</span><span class="token-punct">,</span>
+      <span class="token-string">"sell"</span><span class="token-punct">:</span> <span class="token-number">129.82</span>
+    <span class="token-brace">}</span><span class="token-punct">,</span>
+    <span class="token-string">"..."</span>
+  <span class="token-brace">]</span>
 <span class="token-brace">}</span></pre>
               </div>
             </div>
             <button class="try-button" type="button">Try It</button>
             <div class="try-panel">
-              <div class="try-panel-content"><pre class="code-block"><span class="token-brace">{</span>
-  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
-  <span class="token-string">"base_currency"</span><span class="token-punct">:</span> <span class="token-string">"KES"</span><span class="token-punct">,</span>
-  <span class="token-string">"last_updated"</span><span class="token-punct">:</span> <span class="token-string">"2026-04-23"</span><span class="token-punct">,</span>
-  <span class="token-string">"source"</span><span class="token-punct">:</span> <span class="token-string">"Central Bank of Kenya"</span><span class="token-punct">,</span>
-  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">25</span><span class="token-punct">,</span>
-  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span> ... <span class="token-brace">]</span>
-<span class="token-brace">}</span></pre></div>
+              <div class="try-panel-content"><pre class="code-block"><span class="token-comment">// Click "Try It" to fetch live data from the API</span></pre></div>
             </div>
           </div>
 
@@ -2179,7 +2186,7 @@ public class Main {
               <span class="method-badge">GET</span>
               <p class="endpoint-path">/exchange-rates/:currency</p>
             </div>
-            <p class="endpoint-desc">Returns the KES rate for a specific currency from CBK data.</p>
+            <p class="endpoint-desc">Returns the live KES rate for a specific currency. Case-insensitive.</p>
             <div class="params-panel table-wrapper" style="margin-bottom: 18px;">
               <table class="params-table">
                 <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
@@ -2296,31 +2303,23 @@ public class Main {
                 <button class="copy-button" type="button">Copy</button>
                 <pre class="code-block"><span class="token-brace">{</span>
   <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"base_currency"</span><span class="token-punct">:</span> <span class="token-string">"KES"</span><span class="token-punct">,</span>
+  <span class="token-string">"last_updated"</span><span class="token-punct">:</span> <span class="token-string">"Wed, 17 Jun 2026 00:02:31 +0000"</span><span class="token-punct">,</span>
+  <span class="token-string">"source"</span><span class="token-punct">:</span> <span class="token-string">"open.er-api.com (live mid-market rates)"</span><span class="token-punct">,</span>
   <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">{</span>
     <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span>
     <span class="token-string">"currency"</span><span class="token-punct">:</span> <span class="token-string">"USD"</span><span class="token-punct">,</span>
     <span class="token-string">"currency_name"</span><span class="token-punct">:</span> <span class="token-string">"US Dollar"</span><span class="token-punct">,</span>
-    <span class="token-string">"buy"</span><span class="token-punct">:</span> <span class="token-number">128.50</span><span class="token-punct">,</span>
-    <span class="token-string">"mean"</span><span class="token-punct">:</span> <span class="token-number">129.21</span><span class="token-punct">,</span>
-    <span class="token-string">"sell"</span><span class="token-punct">:</span> <span class="token-number">129.92</span><span class="token-punct">,</span>
-    <span class="token-string">"last_updated"</span><span class="token-punct">:</span> <span class="token-string">"2026-04-23"</span><span class="token-punct">,</span>
-    <span class="token-string">"source"</span><span class="token-punct">:</span> <span class="token-string">"Central Bank of Kenya"</span>
+    <span class="token-string">"buy"</span><span class="token-punct">:</span> <span class="token-number">129.04</span><span class="token-punct">,</span>
+    <span class="token-string">"mean"</span><span class="token-punct">:</span> <span class="token-number">129.43</span><span class="token-punct">,</span>
+    <span class="token-string">"sell"</span><span class="token-punct">:</span> <span class="token-number">129.82</span>
   <span class="token-brace">}</span>
 <span class="token-brace">}</span></pre>
               </div>
             </div>
             <button class="try-button" type="button">Try It</button>
             <div class="try-panel">
-              <div class="try-panel-content"><pre class="code-block"><span class="token-brace">{</span>
-  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
-  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">{</span>
-    <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span>
-    <span class="token-string">"currency"</span><span class="token-punct">:</span> <span class="token-string">"USD"</span><span class="token-punct">,</span>
-    <span class="token-string">"buy"</span><span class="token-punct">:</span> <span class="token-number">128.50</span><span class="token-punct">,</span>
-    <span class="token-string">"mean"</span><span class="token-punct">:</span> <span class="token-number">129.21</span><span class="token-punct">,</span>
-    <span class="token-string">"sell"</span><span class="token-punct">:</span> <span class="token-number">129.92</span>
-  <span class="token-brace">}</span>
-<span class="token-brace">}</span></pre></div>
+              <div class="try-panel-content"><pre class="code-block"><span class="token-comment">// Click "Try It" to fetch live data from the API</span></pre></div>
             </div>
           </div>
         </div>

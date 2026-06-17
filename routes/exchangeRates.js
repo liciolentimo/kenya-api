@@ -1,9 +1,9 @@
 const express = require('express');
-const { getExchangeRates, getExchangeRateByCurrency } = require('../controllers/exchangeRatesController');
+const { getAllRates, getRateByCurrency } = require('../controllers/exchangeRatesController');
 
 const router = express.Router();
 
-router.get('/', getExchangeRates);
-router.get('/:currency', getExchangeRateByCurrency);
+router.get('/', getAllRates);
+router.get('/:currency', getRateByCurrency);
 
 module.exports = router;

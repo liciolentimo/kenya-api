@@ -367,7 +367,7 @@ County descriptions: one-sentence factual summaries synthesised from official co
 
 - **Counties & Constituencies**: IEBC (2022 constituency boundaries) + KNBS Census 2019 population data
 - **Population**: Kenya National Bureau of Statistics (2019 Census) — sourced April 2026
-- **Exchange Rates**: Central Bank of Kenya (CBK) indicative rates — last seeded April 2026
+- **Exchange Rates**: Live from open.er-api.com (free, no API key, updated daily) — NOT Google Finance (no public API exists) and NOT static CBK data. Handled by `services/exchangeRateService.js` with 1-hour in-memory cache + graceful fallback to last-known-good rates on provider failure. Cache resets on server restart; first request after deploy fetches live.
 - **Universities**: 41 public (CUE, 2025) + 12 private chartered (CUE, 2022/23) = 53 total
 - **TVET Institutions**: TVETA Kenya — 613 accredited institutions across all 47 counties (2025)
 - **Postal Codes**: Posta Kenya / PostZipCode.com — mapped to all 47 counties and 290 constituencies

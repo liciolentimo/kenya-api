@@ -18,7 +18,7 @@ No API key or authentication required.
 - 290 constituencies mapped to their counties
 - National public holidays with optional year filtering
 - National and per-county population figures (KNBS 2019 Census)
-- KES exchange rates for 25 currencies sourced from the Central Bank of Kenya
+- Live KES exchange rates for 25 currencies, fetched from open.er-api.com and cached hourly
 - Educational institutions across the first 10 counties, searchable and filterable
 - Interactive map explorer on the homepage — hover over any county to see live stats
 - Consistent JSON responses with predictable error shapes
@@ -57,8 +57,10 @@ No API key or authentication required.
 ### Exchange Rates
 | Method | Path | Description |
 |--------|------|-------------|
-| GET | `/api/v1/exchange-rates` | KES rates for 25 currencies |
-| GET | `/api/v1/exchange-rates/:currency` | Rate for a specific currency (e.g. `USD`) |
+| GET | `/api/v1/exchange-rates` | Live KES rates for 25 currencies |
+| GET | `/api/v1/exchange-rates/:currency` | Live rate for a specific currency (e.g. `USD`) |
+
+> Exchange rates are fetched live from a free public provider (open.er-api.com) and cached server-side for 1 hour. Rates reflect real-time mid-market pricing rather than static historical data.
 
 ### Educational Institutions
 | Method | Path | Description |
@@ -237,7 +239,7 @@ kenya-api/
 |---------|--------|
 | Counties & constituencies | IEBC (2022 constituency boundaries) |
 | Population | Kenya National Bureau of Statistics — 2019 Census |
-| Exchange rates | Central Bank of Kenya — indicative rates, seeded April 2026 |
+| Exchange rates | open.er-api.com — live mid-market rates, cached hourly (no API key required) |
 | Institutions | Curated from public records, first 10 counties |
 | Kenya Cabinet | Office of the President (president.go.ke) — 2024 |
 
