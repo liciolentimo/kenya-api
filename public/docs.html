@@ -290,6 +290,23 @@
     .search-loading { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 32px; color: #8B949E; font-size: 14px; }
     .search-spinner { width: 18px; height: 18px; border: 2px solid #30363D; border-top-color: #00A550; border-radius: 50%; animation: spin 0.7s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Try It live response ────────────────── */
+    .try-response { margin-top: 12px; border: 1px solid #30363D; border-radius: 8px; overflow: hidden; display: none; }
+    .try-response.visible { display: block; }
+    .try-response-header { display: flex; align-items: center; justify-content: space-between; background: #161B22; padding: 8px 12px; border-bottom: 1px solid #30363D; }
+    .try-response-status { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; }
+    .try-response-status.status-ok  { color: #00A550; }
+    .try-response-status.status-err { color: #FF7B72; }
+    .try-response-body { background: #0D1117; padding: 16px; margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 1.6; max-height: 320px; overflow-y: auto; white-space: pre-wrap; word-break: break-word; }
+    .try-copy-btn { background: none; border: 1px solid #30363D; color: #8B949E; font-size: 11px; padding: 3px 10px; border-radius: 4px; cursor: pointer; font-family: 'Inter', sans-serif; }
+    .try-copy-btn:hover { color: #fff; border-color: #8B949E; }
+    /* JSON syntax tokens in Try It panel */
+    .tok-string   { color: #A5D6FF; }
+    .tok-number   { color: #FFA657; }
+    .tok-keyword  { color: #FF7B72; }
+    .tok-comment  { color: #8B949E; }
+    .tok-variable { color: #79C0FF; }
   </style>
 
   <script type="application/ld+json">
@@ -5751,10 +5768,110 @@ public class Main {
       });
     });
 
+    // ── Try It live fetch ──────────────────────────────────────
+    function escH(s) {
+      return String(s)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function highlightJSON(el) {
+      const raw = el.textContent;
+      el.innerHTML = escH(raw).replace(
+        /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)/g,
+        (m) => {
+          let cls = 'tok-number';
+          if (/^"/.test(m))         cls = /:$/.test(m) ? 'tok-variable' : 'tok-string';
+          else if (/true|false/.test(m)) cls = 'tok-keyword';
+          else if (/null/.test(m))  cls = 'tok-comment';
+          return `<span class="${cls}">${m}</span>`;
+        }
+      );
+    }
+
+    function extractUrlFromCard(card) {
+      const curlEl = card.querySelector('.code-block.lang-curl code');
+      if (!curlEl) return null;
+      const text = curlEl.textContent;
+      const m = text.match(/https?:\/\/kenya-api\.netlify\.app\/api\/v1([^\s"'\\]*)/);
+      return m ? API_BASE + m[1] : null;
+    }
+
+    function renderTryItResponse(tryPanel, statusCode, statusText, elapsed, jsonText, langLabel) {
+      const note = langLabel && langLabel !== 'JavaScript'
+        ? `// Live response — equivalent ${langLabel} request shown above\n\n`
+        : '';
+      const isOk = statusCode >= 200 && statusCode < 300;
+
+      tryPanel.dataset.rawJson = jsonText;
+      tryPanel.dataset.lastLang = langLabel || 'cURL';
+
+      tryPanel.innerHTML = `
+        <div class="try-response-header">
+          <span class="try-response-status ${isOk ? 'status-ok' : 'status-err'}">${statusCode} ${escH(statusText)} · ${elapsed}ms</span>
+          <button class="try-copy-btn" type="button">Copy</button>
+        </div>
+        <pre class="try-response-body"><code></code></pre>
+      `;
+
+      const codeEl = tryPanel.querySelector('.try-response-body code');
+      codeEl.textContent = note + jsonText;
+      highlightJSON(codeEl);
+
+      tryPanel.querySelector('.try-copy-btn').addEventListener('click', () => {
+        navigator.clipboard.writeText(jsonText).then(() => {
+          const btn = tryPanel.querySelector('.try-copy-btn');
+          btn.textContent = 'Copied ✓';
+          setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
+        });
+      });
+    }
+
     tryButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const panel = button.nextElementSibling;
-        panel.classList.toggle('open');
+      button.addEventListener('click', async () => {
+        const card = button.closest('.endpoint-card');
+        const outerPanel = button.nextElementSibling; // .try-panel
+        const innerContent = outerPanel.querySelector('.try-panel-content');
+
+        const url = card ? extractUrlFromCard(card) : null;
+        if (!url) {
+          outerPanel.classList.add('open');
+          innerContent.innerHTML = '<pre class="code-block"><span class="tok-comment">// Could not determine endpoint URL from this card.</span></pre>';
+          return;
+        }
+
+        const activeTab   = card.querySelector('.code-tab.active');
+        const langLabel   = activeTab ? activeTab.textContent.trim() : 'cURL';
+
+        button.disabled = true;
+        button.textContent = '⏳ Loading…';
+        outerPanel.classList.add('open');
+
+        let existingResponse = innerContent.querySelector('.try-response');
+        if (!existingResponse) {
+          existingResponse = document.createElement('div');
+          existingResponse.className = 'try-response';
+          innerContent.innerHTML = '';
+          innerContent.appendChild(existingResponse);
+        }
+        existingResponse.classList.add('visible');
+        existingResponse.innerHTML = `<div class="try-response-header"><span class="try-response-status">Fetching…</span></div><pre class="try-response-body"><code class="tok-comment">${escH(url)}</code></pre>`;
+
+        const t0 = performance.now();
+        try {
+          const res = await fetch(url, { headers: { Accept: 'application/json' } });
+          const elapsed = Math.round(performance.now() - t0);
+          const data = await res.json();
+          renderTryItResponse(existingResponse, res.status, res.statusText, elapsed, JSON.stringify(data, null, 2), langLabel);
+        } catch (err) {
+          existingResponse.classList.add('visible');
+          existingResponse.innerHTML = `<div class="try-response-header"><span class="try-response-status status-err">Request failed</span></div><pre class="try-response-body"><code class="tok-comment">// ${escH(err.message)}\n// ${escH(url)}</code></pre>`;
+        } finally {
+          button.disabled = false;
+          button.textContent = 'Try It';
+        }
       });
     });
   </script>
@@ -5774,9 +5891,25 @@ public class Main {
       panel.querySelectorAll('.code-tab').forEach(tab => {
         tab.addEventListener('click', () => {
           const lang = tab.dataset.lang;
+          const langLabel = tab.textContent.trim();
           // Sync all panels to this language
           document.querySelectorAll('.code-panel.tabbed').forEach(p => activateLang(p, lang));
           localStorage.setItem('kenyaapi-codelang', lang);
+
+          // Update language note in any already-visible Try It response in this card
+          const card = panel.closest('.endpoint-card');
+          if (!card) return;
+          const tryResponse = card.querySelector('.try-response.visible');
+          if (!tryResponse || !tryResponse.dataset.rawJson) return;
+          const rawJson = tryResponse.dataset.rawJson;
+          const note = langLabel !== 'JavaScript'
+            ? `// Live response — equivalent ${langLabel} request shown above\n\n`
+            : '';
+          const codeEl = tryResponse.querySelector('.try-response-body code');
+          if (codeEl) {
+            codeEl.textContent = note + rawJson;
+            highlightJSON(codeEl);
+          }
         });
       });
     });
