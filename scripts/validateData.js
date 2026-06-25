@@ -17,6 +17,8 @@ function run() {
   const postalCodes = loadJSON('data/postal-codes.json');
   const wardsArr = loadJSON('data/wards.json');
   const parksArr = loadJSON('data/parks.json');
+  const presidentsFile = loadJSON('data/presidents.json');
+  const presidentsArr = presidentsFile.presidents;
 
   let ok = true;
 
@@ -442,6 +444,43 @@ function run() {
   } else {
     logFail(`${parksInvalidType.length} parks have an invalid type`);
     parksInvalidType.forEach((p) => console.error(`  id=${p.id} name="${p.name}" type="${p.type}"`));
+    ok = false;
+  }
+
+  // 44. presidents array has exactly 5 entries
+  if (presidentsArr.length === 5) {
+    logPass('presidents.json contains exactly 5 presidents');
+  } else {
+    logFail(`expected 5 presidents, found ${presidentsArr.length}`);
+    ok = false;
+  }
+
+  // 45. Exactly one incumbent president
+  const incumbents = presidentsArr.filter((p) => p.is_incumbent === true);
+  if (incumbents.length === 1) {
+    logPass(`Exactly one incumbent president: ${incumbents[0].name}`);
+  } else {
+    logFail(`expected exactly 1 incumbent, found ${incumbents.length}`);
+    ok = false;
+  }
+
+  // 46. Every president has a non-empty deputies array
+  const missingDeputies = presidentsArr.filter((p) => !Array.isArray(p.deputies) || p.deputies.length === 0);
+  if (missingDeputies.length === 0) {
+    logPass('All presidents have a non-empty deputies array');
+  } else {
+    logFail(`${missingDeputies.length} presidents are missing deputies`);
+    missingDeputies.forEach((p) => console.error(`  id=${p.id} name="${p.name}"`));
+    ok = false;
+  }
+
+  // 47. order values are sequential 1 through 5
+  const orders = presidentsArr.map((p) => p.order).sort((a, b) => a - b);
+  const expectedOrders = [1, 2, 3, 4, 5];
+  if (JSON.stringify(orders) === JSON.stringify(expectedOrders)) {
+    logPass('Presidents have sequential order values 1–5');
+  } else {
+    logFail(`order values are not sequential 1–5: ${orders.join(', ')}`);
     ok = false;
   }
 

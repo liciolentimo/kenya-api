@@ -152,6 +152,14 @@ https://kenya-api.netlify.app/api/v1
 | GET    | `/api/v1/parks/type/:type`                    | Parks by type                                      |
 | GET    | `/api/v1/parks/search?q=`                     | Search parks by name, description, or region       |
 
+### Presidents
+| Method | Path                                          | Description                                        |
+|--------|-----------------------------------------------|----------------------------------------------------|
+| GET    | `/api/v1/presidents`                          | All 5 presidents (?party, ?include_pre_republic)   |
+| GET    | `/api/v1/presidents/incumbent`                | Current sitting president                          |
+| GET    | `/api/v1/presidents/:id`                      | Single president by ID (1–5)                       |
+| GET    | `/api/v1/presidents/search?q=`               | Search by name, party, deputies, or description    |
+
 ### Search
 | Method | Path                                      | Description                                        |
 |--------|-------------------------------------------|----------------------------------------------------|
@@ -168,6 +176,7 @@ Search fields per resource:
 - postal_codes: county_name, primary_postal_code
 - wards: ward, sub_county_name, county_name
 - parks: name, famous_for, region, description
+- presidents: name, political_party, description
 
 ---
 
@@ -350,6 +359,30 @@ County descriptions: one-sentence factual summaries synthesised from official co
 }
 ```
 
+### President
+```json
+{
+  "id": 5,
+  "order": 5,
+  "name": "William Ruto",
+  "full_title": "President of the Republic of Kenya",
+  "birth_year": 1966,
+  "death_year": null,
+  "took_office": "2022-09-13",
+  "left_office": null,
+  "time_in_office": "Incumbent",
+  "political_party": "UDA",
+  "deputies": ["Rigathi Gachagua", "Kithure Kindiki"],
+  "died_in_office": false,
+  "is_incumbent": true,
+  "image_url": "https://upload.wikimedia.org/...",
+  "description": "...",
+  "source": "https://en.wikipedia.org/wiki/William_Ruto"
+}
+```
+
+Note: `data/presidents.json` uses an object root (not a plain array) with two keys — `presidents` (array of 5) and `pre_republic_heads_of_state` (array of 1). The controller reads `fileData.presidents`; the pre-republic section is only returned when `?include_pre_republic=true` is passed.
+
 ---
 
 ## Coding Conventions
@@ -373,6 +406,7 @@ County descriptions: one-sentence factual summaries synthesised from official co
 - **Postal Codes**: Posta Kenya / PostZipCode.com — mapped to all 47 counties and 290 constituencies
 - **Wards**: IEBC via open CC0 dataset — 1,263 electoral wards across 45 counties (Nairobi, Kericho, Bomet absent from upstream source)
 - **Parks**: Kenya Wildlife Service / beyondforest.org — 35 protected areas (2026)
+- **Presidents**: Wikipedia / Kenyan constitutional records — all 5 Heads of State since the republic was established on 12 December 1964; includes 1 pre-republic entry (Queen Elizabeth II, 1963–64 constitutional monarchy period)
 
 ---
 

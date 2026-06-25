@@ -10,6 +10,7 @@ const ministriesRouter = require('./routes/ministries');
 const postalCodesRouter = require('./routes/postal-codes');
 const wardsRouter = require('./routes/wards');
 const parksRouter = require('./routes/parks');
+const presidentsRouter = require('./routes/presidents');
 const searchRouter = require('./routes/search');
 const notFound = require('./middleware/notFound');
 const errorHandler = require('./middleware/errorHandler');
@@ -29,6 +30,7 @@ app.use('/api/v1/ministries', ministriesRouter);
 app.use('/api/v1/postal-codes', postalCodesRouter);
 app.use('/api/v1/wards', wardsRouter);
 app.use('/api/v1/parks', parksRouter);
+app.use('/api/v1/presidents', presidentsRouter);
 app.use('/api/v1/search', searchRouter);
 
 app.get('/', (req, res) => {

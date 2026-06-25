@@ -1,0 +1,124 @@
+{
+  "presidents": [
+    {
+      "id": 1,
+      "order": 1,
+      "name": "Jomo Kenyatta",
+      "full_title": "President of Kenya",
+      "birth_year": 1897,
+      "death_year": 1978,
+      "took_office": "1964-12-12",
+      "left_office": "1978-08-22",
+      "time_in_office": "13 years, 253 days",
+      "political_party": "KANU",
+      "deputies": [
+        "Jaramogi Oginga Odinga",
+        "Joseph Murumbi",
+        "Daniel arap Moi"
+      ],
+      "died_in_office": true,
+      "is_incumbent": false,
+      "image_url": "",
+      "description": "Kenya's founding president and independence leader, Kenyatta led the country from the transition to a republic in 1964 until his death in office in 1978. He is widely regarded as the father of the Kenyan nation.",
+      "source": "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Kenya"
+    },
+    {
+      "id": 2,
+      "order": 2,
+      "name": "Daniel arap Moi",
+      "full_title": "President of Kenya",
+      "birth_year": 1924,
+      "death_year": 2020,
+      "took_office": "1978-08-22",
+      "left_office": "2002-12-30",
+      "time_in_office": "24 years, 130 days",
+      "political_party": "KANU",
+      "deputies": [
+        "Mwai Kibaki",
+        "Josephat Karanja",
+        "George Saitoti",
+        "Musalia Mudavadi"
+      ],
+      "died_in_office": false,
+      "is_incumbent": false,
+      "image_url": "",
+      "description": "Kenya's second and longest-serving president, Moi governed for over 24 years through a single-party era and the transition to multiparty democracy in 1992, before voluntarily stepping down in 2002 under constitutional term limits.",
+      "source": "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Kenya"
+    },
+    {
+      "id": 3,
+      "order": 3,
+      "name": "Mwai Kibaki",
+      "full_title": "President of Kenya",
+      "birth_year": 1931,
+      "death_year": 2022,
+      "took_office": "2002-12-30",
+      "left_office": "2013-04-09",
+      "time_in_office": "10 years, 100 days",
+      "political_party": "NARC (until 2007), PNU (from 2007)",
+      "deputies": [
+        "Michael Kijana Wamalwa",
+        "Moody Awori",
+        "Kalonzo Musyoka"
+      ],
+      "died_in_office": false,
+      "is_incumbent": false,
+      "image_url": "",
+      "description": "Kenya's third president, Kibaki came to power on a reform platform ending decades of KANU rule. His tenure was marked by economic growth, free primary education, and the controversial 2007–08 post-election violence, followed by the 2010 constitutional referendum.",
+      "source": "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Kenya"
+    },
+    {
+      "id": 4,
+      "order": 4,
+      "name": "Uhuru Kenyatta",
+      "full_title": "President of Kenya",
+      "birth_year": 1961,
+      "death_year": null,
+      "took_office": "2013-04-09",
+      "left_office": "2022-09-13",
+      "time_in_office": "9 years, 157 days",
+      "political_party": "TNA (until 2016), Jubilee (from 2017)",
+      "deputies": ["William Ruto"],
+      "died_in_office": false,
+      "is_incumbent": false,
+      "image_url": "",
+      "description": "Son of founding president Jomo Kenyatta, Uhuru Kenyatta became Kenya's fourth president in 2013. His tenure included major infrastructure projects like the SGR railway and the 2018 'Handshake' political truce with opposition leader Raila Odinga.",
+      "source": "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Kenya"
+    },
+    {
+      "id": 5,
+      "order": 5,
+      "name": "William Ruto",
+      "full_title": "President of Kenya",
+      "birth_year": 1966,
+      "death_year": null,
+      "took_office": "2022-09-13",
+      "left_office": null,
+      "time_in_office": "Incumbent",
+      "political_party": "UDA",
+      "deputies": ["Rigathi Gachagua", "Kithure Kindiki"],
+      "died_in_office": false,
+      "is_incumbent": true,
+      "image_url": "",
+      "description": "Kenya's fifth and current president, Ruto took office in September 2022 after serving as deputy president under Uhuru Kenyatta. His administration has focused on economic policy reform under the 'Bottom-Up Economic Transformation Agenda'.",
+      "source": "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Kenya"
+    }
+  ],
+  "pre_republic_heads_of_state": [
+    {
+      "id": 0,
+      "title": "Queen of Kenya",
+      "name": "Queen Elizabeth II",
+      "birth_year": 1926,
+      "death_year": 2022,
+      "took_office": "1963-12-12",
+      "left_office": "1964-12-12",
+      "time_in_office": "1 year",
+      "royal_house": "Windsor",
+      "represented_by": "Governor-General Malcolm MacDonald",
+      "prime_minister": "Jomo Kenyatta",
+      "description": "Kenya's head of state for one year following independence in 1963, before the country became a republic in December 1964. Represented locally by Governor-General Malcolm MacDonald.",
+      "source": "https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Kenya"
+    }
+  ]
+}

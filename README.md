@@ -119,6 +119,18 @@ No API key or authentication required.
 
 > Parks data covers 35 national parks, reserves, marine parks, and sanctuaries managed by Kenya Wildlife Service (KWS). Sourced from KWS and beyondforest.org (2026).
 
+### Presidents
+| Method | Path | Description |
+|--------|------|-------------|
+| GET | `/api/v1/presidents` | All 5 presidents since the republic (1964–present) |
+| GET | `/api/v1/presidents?party=KANU` | Filter by political party |
+| GET | `/api/v1/presidents?include_pre_republic=true` | Include 1963–64 constitutional monarchy period |
+| GET | `/api/v1/presidents/incumbent` | Current sitting president |
+| GET | `/api/v1/presidents/:id` | Single president by ID (1–5) |
+| GET | `/api/v1/presidents/search?q=` | Search by name, party, deputies, or description |
+
+> President data covers all 5 Heads of State since Kenya became a republic on 12 December 1964, plus an optional pre-republic section for the 1963–64 constitutional monarchy period under Queen Elizabeth II. Sourced from Wikipedia and Kenyan constitutional records.
+
 ### Search
 | Method | Path | Description |
 |--------|------|-------------|
