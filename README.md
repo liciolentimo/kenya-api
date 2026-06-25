@@ -4,9 +4,9 @@
 
 A free, open REST API providing structured public data about Kenya — counties, constituencies, public holidays, population statistics, exchange rates, and educational institutions. Built with Node.js and Express.
 
-**Live site:** https://kenya-api.netlify.app  
-**API base URL:** https://kenya-api.netlify.app/api/v1  
-**Docs:** https://kenya-api.netlify.app/docs
+🔍 **Live site:** https://kenya-api.netlify.app  
+📖 **Docs:** https://kenya-api.netlify.app/docs  
+**API base URL:** https://kenya-api.netlify.app/api/v1
 
 No API key or authentication required.
 

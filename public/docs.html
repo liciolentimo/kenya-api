@@ -3,9 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KenyaAPI Docs</title>
+  <title>API Documentation — KenyaAPI Developer Reference</title>
+  <meta name="description" content="Complete API reference for KenyaAPI. Endpoints, parameters, and live code examples in cURL, JavaScript, Python, PHP, Go, Ruby, and Java for Kenya's counties, constituencies, wards, population, exchange rates, and more." />
+  <meta name="keywords" content="Kenya API documentation, Kenya API reference, Kenya REST API docs, Kenya API endpoints, free API documentation Kenya" />
+  <meta name="author" content="Licio Lentimo" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+  <meta name="revisit-after" content="7 days" />
+  <meta name="theme-color" content="#0D1117" />
+  <link rel="canonical" href="https://kenya-api.netlify.app/docs.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kenya-api.netlify.app/docs.html" />
+  <meta property="og:title" content="API Documentation — KenyaAPI Developer Reference" />
+  <meta property="og:description" content="Complete API reference with live code examples for KenyaAPI — free open data on Kenya's counties, wards, population, exchange rates, and more." />
+  <meta property="og:image" content="https://kenya-api.netlify.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="KenyaAPI" />
+  <meta property="og:locale" content="en_KE" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="API Documentation — KenyaAPI Developer Reference" />
+  <meta name="twitter:description" content="Free, open REST API reference for Kenya's counties, constituencies, wards, holidays, population, and more. No API key required." />
+  <meta name="twitter:image" content="https://kenya-api.netlify.app/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://kenya-api.netlify.app" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <style>
@@ -269,6 +291,39 @@
     .search-spinner { width: 18px; height: 18px; border: 2px solid #30363D; border-top-color: #00A550; border-radius: 50%; animation: spin 0.7s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is KenyaAPI free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. KenyaAPI is completely free and open with no authentication or API key required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does KenyaAPI require an API key?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. All endpoints are publicly accessible without authentication. Rate limiting applies at 100 requests per minute per IP."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What data does KenyaAPI provide?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "KenyaAPI provides data on Kenya's 47 counties, 290 constituencies, 1,263 wards, public holidays, population statistics, exchange rates, educational institutions, government ministries, national parks, and presidents."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <div class="sidebar-overlay" id="sidebar-overlay"></div>
@@ -355,6 +410,17 @@
     </aside>
 
     <main class="content">
+      <section id="introduction" class="panel">
+        <div class="doc-header">
+          <div>
+            <h1>KenyaAPI Documentation</h1>
+            <p class="section-copy">Free, open REST API for Kenyan public data. No API key required.</p>
+          </div>
+          <div class="badge-pill">Free Forever</div>
+          <div class="badge-pill">No Auth Required</div>
+        </div>
+      </section>
+
       <section id="global-search" class="panel">
         <h2 class="section-title">Global Search</h2>
         <p class="section-copy">Search across all KenyaAPI resources in a single request. Returns grouped results from counties, constituencies, holidays, institutions, ministries, and exchange rates.</p>
@@ -380,17 +446,6 @@
               <p>Type at least 2 characters to search</p>
             </div>
           </div>
-        </div>
-      </section>
-
-            <section id="introduction" class="panel">
-        <div class="doc-header">
-          <div>
-            <h1>KenyaAPI Documentation</h1>
-            <p class="section-copy">Free, open REST API for Kenyan public data. No API key required.</p>
-          </div>
-          <div class="badge-pill">Free Forever</div>
-          <div class="badge-pill">No Auth Required</div>
         </div>
       </section>
 
