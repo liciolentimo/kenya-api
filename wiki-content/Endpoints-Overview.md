@@ -15,6 +15,7 @@ All endpoints are under the base URL: `https://kenya-api.netlify.app/api/v1`
 | Parks & Reserves | [Parks and Reserves](Parks-and-Reserves) | `/parks` | 35 |
 | Presidents | [Presidents](Presidents) | `/presidents` | 5 |
 | Postal Codes | [Postal Codes](Postal-Codes) | `/postal-codes` | 47 counties |
+| Parastatals | [Parastatals](Parastatals) | `/parastatals` | 246 |
 | Global Search | [Global Search](Global-Search) | `/search` | All resources |
 
 For live, interactive examples in 7 languages (cURL, JavaScript, Python, PHP, Go, Ruby, Java), visit the [interactive docs](https://kenya-api.netlify.app/docs.html).

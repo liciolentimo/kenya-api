@@ -21,6 +21,7 @@
 - [Parks & Reserves](Parks-and-Reserves)
 - [Presidents](Presidents)
 - [Postal Codes](Postal-Codes)
+- [Parastatals](Parastatals)
 - [Global Search](Global-Search)
 
 ### Reference

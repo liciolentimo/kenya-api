@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026 — Parastatals Endpoint
+
+- **Parastatals endpoint** — 246 Kenya state corporations across 16 sectors (State Corporations Act, Cap 446)
+- Sector filter, `is_university` flag, free-text search, and `/sectors` breakdown
+- Universities cross-referenced between `/parastatals` and `/institutions`
+- Global search updated to include parastatals
+
 ## 2026 — Major Expansion
 
 - **Wards endpoint** — 1,263 wards across 45 counties (IEBC/HDX CC0 dataset)

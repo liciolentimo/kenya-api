@@ -17,6 +17,7 @@
 | Presidents | Wikipedia / Kenyan constitutional records | 1963–present |
 | Postal codes | Posta Kenya / postzipcode.com | — |
 | Exchange rates | open.er-api.com (live mid-market) | Hourly |
+| State corporations | State Corporations Act, Cap 446 / majira.co.ke | 2025 |
 
 ## Notes
 

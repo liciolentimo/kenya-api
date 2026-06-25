@@ -1,6 +1,6 @@
 # KenyaAPI Wiki
 
-**KenyaAPI** is a free, open REST API providing structured public data about Kenya — counties, constituencies, wards, holidays, population, exchange rates, educational institutions, government ministries, national parks, postal codes, and presidents.
+**KenyaAPI** is a free, open REST API providing structured public data about Kenya — counties, constituencies, wards, holidays, population, exchange rates, educational institutions, government ministries, national parks, postal codes, presidents, and state corporations.
 
 No API key or sign-up required.
 
@@ -39,6 +39,7 @@ No API key or sign-up required.
 | [Parks & Reserves](Parks-and-Reserves) | `/api/v1/parks` | 35 KWS-managed protected areas |
 | [Presidents](Presidents) | `/api/v1/presidents` | All 5 Kenyan heads of state since 1964 |
 | [Postal Codes](Postal-Codes) | `/api/v1/postal-codes` | County and constituency postal codes |
+| [Parastatals](Parastatals) | `/api/v1/parastatals` | 246 state corporations across 16 sectors |
 | [Global Search](Global-Search) | `/api/v1/search` | Cross-resource search across all datasets |
 
 ## Reference

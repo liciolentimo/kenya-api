@@ -30,6 +30,7 @@ KenyaAPI supports cross-resource search through a single endpoint. Query all res
 | `parks` | Parks — searches name, famous_for, region, description |
 | `presidents` | Presidents — searches name, political_party, deputies, description |
 | `postal_codes` | Postal Codes — searches county_name, primary_postal_code |
+| `parastatals` | Parastatals — searches name, sector, abbreviation |
 
 ## Example Requests
 
