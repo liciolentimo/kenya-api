@@ -6,6 +6,7 @@ A free, open REST API providing structured public data about Kenya — counties,
 
 🔍 **Live site:** https://kenya-api.netlify.app  
 📖 **Docs:** https://kenya-api.netlify.app/docs  
+📚 **Full documentation:** [Interactive Docs](https://kenya-api.netlify.app/docs.html) | [GitHub Wiki](../../wiki)  
 **API base URL:** https://kenya-api.netlify.app/api/v1
 
 No API key or authentication required.
