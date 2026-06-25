@@ -120,6 +120,17 @@ No API key or authentication required.
 
 > Parks data covers 35 national parks, reserves, marine parks, and sanctuaries managed by Kenya Wildlife Service (KWS). Sourced from KWS and beyondforest.org (2026).
 
+### Parastatals & State Corporations
+| Method | Path | Description |
+|--------|------|-------------|
+| GET | `/api/v1/parastatals` | All 246 state corporations (`?sector`, `?is_university`, `?q`, paginated) |
+| GET | `/api/v1/parastatals/:id` | Single entry by ID (1–246) |
+| GET | `/api/v1/parastatals/sector/:sector` | All parastatals in a sector |
+| GET | `/api/v1/parastatals/sectors` | Sector breakdown with entity counts |
+| GET | `/api/v1/parastatals/search?q=` | Search by name or abbreviation |
+
+> Parastatals data covers 246 state corporations established under the State Corporations Act, Cap 446. Sourced from majira.co.ke (2025). Entries flagged with `is_university: true` are also documented in `/api/v1/institutions/universities`.
+
 ### Presidents
 | Method | Path | Description |
 |--------|------|-------------|

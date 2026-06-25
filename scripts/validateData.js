@@ -19,6 +19,7 @@ function run() {
   const parksArr = loadJSON('data/parks.json');
   const presidentsFile = loadJSON('data/presidents.json');
   const presidentsArr = presidentsFile.presidents;
+  const parastatalsArr = loadJSON('data/parastatals.json');
 
   let ok = true;
 
@@ -481,6 +482,51 @@ function run() {
     logPass('Presidents have sequential order values 1–5');
   } else {
     logFail(`order values are not sequential 1–5: ${orders.join(', ')}`);
+    ok = false;
+  }
+
+  // 48. parastatals.json has exactly 246 entries
+  if (parastatalsArr.length === 246) {
+    logPass('parastatals.json contains exactly 246 entries');
+  } else {
+    logFail(`expected 246 parastatals, found ${parastatalsArr.length}`);
+    ok = false;
+  }
+
+  // 49. Every parastatal has a valid sector
+  const VALID_SECTORS = [
+    'Agriculture', 'Education & Research', 'Energy', 'Finance & Regulation',
+    'Health', 'ICT & Innovation', 'Infrastructure & Transport', 'Justice & Governance',
+    'Labour & Social Welfare', 'Land & Water', 'Media & Culture',
+    'Security & Public Safety', 'Tourism & Wildlife', 'Trade & Industry',
+    'Youth & Sports', 'Other',
+  ];
+  const invalidSector = parastatalsArr.filter((p) => !VALID_SECTORS.includes(p.sector));
+  if (invalidSector.length === 0) {
+    logPass('All parastatals have a valid sector');
+  } else {
+    logFail(`${invalidSector.length} parastatals have an invalid sector:`);
+    invalidSector.forEach((p) => console.error(`  id=${p.id} name="${p.name}" sector="${p.sector}"`));
+    ok = false;
+  }
+
+  // 50. No duplicate parastatal names
+  const paraNames = parastatalsArr.map((p) => p.name);
+  const dupParaNames = paraNames.filter((n, i) => paraNames.indexOf(n) !== i);
+  if (dupParaNames.length === 0) {
+    logPass('No duplicate parastatal names found');
+  } else {
+    logFail('Duplicate parastatal names: ' + Array.from(new Set(dupParaNames)).join(', '));
+    ok = false;
+  }
+
+  // 51. Parastatal IDs are sequential 1–246
+  const paraIds = parastatalsArr.map((p) => p.id);
+  const expectedParaIds = Array.from({ length: 246 }, (_, i) => i + 1);
+  if (JSON.stringify(paraIds) === JSON.stringify(expectedParaIds)) {
+    logPass('Parastatal IDs are sequential 1–246');
+  } else {
+    logFail('Parastatal IDs are not sequential 1–246');
     ok = false;
   }
 

@@ -152,6 +152,15 @@ https://kenya-api.netlify.app/api/v1
 | GET    | `/api/v1/parks/type/:type`                    | Parks by type                                      |
 | GET    | `/api/v1/parks/search?q=`                     | Search parks by name, description, or region       |
 
+### Parastatals
+| Method | Path                                          | Description                                        |
+|--------|-----------------------------------------------|----------------------------------------------------|
+| GET    | `/api/v1/parastatals`                         | All 246 state corporations (?sector, ?is_university, ?q, paginated) |
+| GET    | `/api/v1/parastatals/:id`                     | Single entry by ID (1–246)                         |
+| GET    | `/api/v1/parastatals/sector/:sector`          | All parastatals in a sector                        |
+| GET    | `/api/v1/parastatals/sectors`                 | Sector breakdown with entity counts                |
+| GET    | `/api/v1/parastatals/search?q=`              | Search by name or abbreviation                     |
+
 ### Presidents
 | Method | Path                                          | Description                                        |
 |--------|-----------------------------------------------|----------------------------------------------------|
@@ -177,6 +186,7 @@ Search fields per resource:
 - wards: ward, sub_county_name, county_name
 - parks: name, famous_for, region, description
 - presidents: name, political_party, description
+- parastatals: name, sector, abbreviation
 
 ---
 
@@ -383,6 +393,25 @@ County descriptions: one-sentence factual summaries synthesised from official co
 
 Note: `data/presidents.json` uses an object root (not a plain array) with two keys — `presidents` (array of 5) and `pre_republic_heads_of_state` (array of 1). The controller reads `fileData.presidents`; the pre-republic section is only returned when `?include_pre_republic=true` is passed.
 
+### Parastatal
+```json
+{
+  "id": 107,
+  "name": "Kenya Power and Lighting Company Ltd",
+  "abbreviation": "KPLC",
+  "sector": "Energy",
+  "category": "State Corporation",
+  "established_by": "State Corporations Act, Cap 446",
+  "is_university": false,
+  "website": "",
+  "source": "https://majira.co.ke/list-of-all-parastatals-state-corporations-in-kenya/"
+}
+```
+
+Valid sector values: `Agriculture`, `Education & Research`, `Energy`, `Finance & Regulation`, `Health`, `ICT & Innovation`, `Infrastructure & Transport`, `Justice & Governance`, `Labour & Social Welfare`, `Land & Water`, `Media & Culture`, `Security & Public Safety`, `Tourism & Wildlife`, `Trade & Industry`, `Youth & Sports`, `Other`.
+
+Entries with `is_university: true` (36 total) are also documented in `/api/v1/institutions/universities`.
+
 ---
 
 ## Coding Conventions
@@ -407,6 +436,7 @@ Note: `data/presidents.json` uses an object root (not a plain array) with two ke
 - **Wards**: IEBC via open CC0 dataset — 1,263 electoral wards across 45 counties (Nairobi, Kericho, Bomet absent from upstream source)
 - **Parks**: Kenya Wildlife Service / beyondforest.org — 35 protected areas (2026)
 - **Presidents**: Wikipedia / Kenyan constitutional records — all 5 Heads of State since the republic was established on 12 December 1964; includes 1 pre-republic entry (Queen Elizabeth II, 1963–64 constitutional monarchy period)
+- **Parastatals**: State Corporations Act, Cap 446 / majira.co.ke — 246 state corporations across 16 sectors (2025)
 
 ---
 

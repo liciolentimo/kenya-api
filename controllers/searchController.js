@@ -8,6 +8,7 @@ const wardsData = require('../data/wards.json');
 const parksData = require('../data/parks.json');
 const presidentsFile = require('../data/presidents.json');
 const presidentsData = presidentsFile.presidents;
+const parastatalsData = require('../data/parastatals.json');
 const { fetchLiveRates } = require('../services/exchangeRateService');
 
 const STATIC_CONFIGS = [
@@ -64,6 +65,12 @@ const STATIC_CONFIGS = [
     data: presidentsData,
     fields: ['name', 'political_party', 'description'],
     endpoint: '/api/v1/presidents',
+  },
+  {
+    name: 'parastatals',
+    data: parastatalsData,
+    fields: ['name', 'sector', 'abbreviation'],
+    endpoint: '/api/v1/parastatals',
   },
 ];
 
