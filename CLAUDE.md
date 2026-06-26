@@ -152,6 +152,14 @@ https://kenya-api.netlify.app/api/v1
 | GET    | `/api/v1/parks/type/:type`                    | Parks by type                                      |
 | GET    | `/api/v1/parks/search?q=`                     | Search parks by name, description, or region       |
 
+### Lakes
+| Method | Path                                          | Description                                        |
+|--------|-----------------------------------------------|----------------------------------------------------|
+| GET    | `/api/v1/lakes`                               | All 18 lakes (?type, ?rift_valley, ?transboundary, ?sort) |
+| GET    | `/api/v1/lakes/:id`                           | Single lake by ID (1–18)                           |
+| GET    | `/api/v1/lakes/county/:county_id`             | Lakes in a county                                  |
+| GET    | `/api/v1/lakes/search?q=`                     | Search by name, key feature, or description        |
+
 ### Parastatals
 | Method | Path                                          | Description                                        |
 |--------|-----------------------------------------------|----------------------------------------------------|
@@ -187,6 +195,7 @@ Search fields per resource:
 - parks: name, famous_for, region, description
 - presidents: name, political_party, description
 - parastatals: name, sector, abbreviation
+- lakes: name, key_feature, description
 
 ---
 
@@ -412,6 +421,27 @@ Valid sector values: `Agriculture`, `Education & Research`, `Energy`, `Finance &
 
 Entries with `is_university: true` (36 total) are also documented in `/api/v1/institutions/universities`.
 
+### Lake
+```json
+{
+  "id": 1,
+  "name": "Lake Victoria",
+  "county_ids": [42],
+  "counties": ["Kisumu"],
+  "region": "Nyanza",
+  "surface_area_km2": 68800,
+  "lake_type": "Freshwater",
+  "key_feature": "Africa's largest lake; Nile source",
+  "description": "...",
+  "is_rift_valley": false,
+  "transboundary": true,
+  "shared_with": ["Uganda", "Tanzania"],
+  "source": "https://33travels.com/lakes-in-kenya/"
+}
+```
+
+Valid `lake_type` values: `Freshwater`, `Saline/Alkaline`, `Crater Lake`.
+
 ---
 
 ## Coding Conventions
@@ -437,6 +467,7 @@ Entries with `is_university: true` (36 total) are also documented in `/api/v1/in
 - **Parks**: Kenya Wildlife Service / beyondforest.org — 35 protected areas (2026)
 - **Presidents**: Wikipedia / Kenyan constitutional records — all 5 Heads of State since the republic was established on 12 December 1964; includes 1 pre-republic entry (Queen Elizabeth II, 1963–64 constitutional monarchy period)
 - **Parastatals**: State Corporations Act, Cap 446 / majira.co.ke — 246 state corporations across 16 sectors (2025)
+- **Lakes**: 33travels.com — 18 named lakes (2026)
 
 ---
 

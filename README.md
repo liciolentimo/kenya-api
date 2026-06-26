@@ -120,6 +120,16 @@ No API key or authentication required.
 
 > Parks data covers 35 national parks, reserves, marine parks, and sanctuaries managed by Kenya Wildlife Service (KWS). Sourced from KWS and beyondforest.org (2026).
 
+### Lakes
+| Method | Path | Description |
+|--------|------|-------------|
+| GET | `/api/v1/lakes` | All 18 lakes (`?type`, `?rift_valley`, `?transboundary`, `?sort`) |
+| GET | `/api/v1/lakes/:id` | Single lake by ID |
+| GET | `/api/v1/lakes/county/:id` | Lakes in a county |
+| GET | `/api/v1/lakes/search?q=` | Search lakes by name, feature, or description |
+
+> Lakes data covers 18 named lakes in Kenya, including the Rift Valley soda lakes and freshwater lakes. Sourced from 33travels.com (2026).
+
 ### Parastatals & State Corporations
 | Method | Path | Description |
 |--------|------|-------------|

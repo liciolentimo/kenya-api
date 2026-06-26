@@ -20,6 +20,7 @@ function run() {
   const presidentsFile = loadJSON('data/presidents.json');
   const presidentsArr = presidentsFile.presidents;
   const parastatalsArr = loadJSON('data/parastatals.json');
+  const lakesArr = loadJSON('data/lakes.json');
 
   let ok = true;
 
@@ -527,6 +528,40 @@ function run() {
     logPass('Parastatal IDs are sequential 1–246');
   } else {
     logFail('Parastatal IDs are not sequential 1–246');
+    ok = false;
+  }
+
+  // 52. lakes.json has exactly 18 entries
+  if (lakesArr.length === 18) {
+    logPass('lakes.json contains exactly 18 entries');
+  } else {
+    logFail(`expected 18 lakes, found ${lakesArr.length}`);
+    ok = false;
+  }
+
+  // 53. Every lake has a non-empty county_ids array
+  const lakesNoCounty = lakesArr.filter(
+    (l) => !Array.isArray(l.county_ids) || l.county_ids.length === 0
+  );
+  if (lakesNoCounty.length === 0) {
+    logPass('All lakes have a non-empty county_ids array');
+  } else {
+    logFail(`${lakesNoCounty.length} lakes are missing county_ids`);
+    lakesNoCounty.forEach((l) => console.error(`  id=${l.id} name="${l.name}"`));
+    ok = false;
+  }
+
+  // 54. Every lake county_id maps to a valid county
+  const invalidLakeCounty = lakesArr.filter(
+    (l) => !l.county_ids.every((cid) => countyIds.has(cid))
+  );
+  if (invalidLakeCounty.length === 0) {
+    logPass('All lake county_ids match a county in counties.json');
+  } else {
+    logFail(`${invalidLakeCounty.length} lakes reference invalid county_ids`);
+    invalidLakeCounty.forEach((l) =>
+      console.error(`  id=${l.id} name="${l.name}" county_ids=${JSON.stringify(l.county_ids)}`)
+    );
     ok = false;
   }
 
