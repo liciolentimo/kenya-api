@@ -31,6 +31,7 @@ KenyaAPI supports cross-resource search through a single endpoint. Query all res
 | `presidents` | Presidents — searches name, political_party, deputies, description |
 | `postal_codes` | Postal Codes — searches county_name, primary_postal_code |
 | `parastatals` | Parastatals — searches name, sector, abbreviation |
+| `lakes` | Lakes — searches name, key_feature, description |
 
 ## Example Requests
 

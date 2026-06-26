@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026 — Lakes Endpoint
+
+- **Lakes endpoint** — 18 named lakes across Kenya (Rift Valley, Nyanza, Coast, Central Highlands)
+- Filters: `?type=`, `?rift_valley=true`, `?transboundary=true`, `?sort=size_desc|size_asc`
+- County lookup (`/county/:county_id`) and full-text search
+- Global search updated to include lakes
+
 ## 2026 — Parastatals Endpoint
 
 - **Parastatals endpoint** — 246 Kenya state corporations across 16 sectors (State Corporations Act, Cap 446)
