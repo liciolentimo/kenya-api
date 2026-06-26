@@ -160,6 +160,15 @@ https://kenya-api.netlify.app/api/v1
 | GET    | `/api/v1/lakes/county/:county_id`             | Lakes in a county                                  |
 | GET    | `/api/v1/lakes/search?q=`                     | Search by name, key feature, or description        |
 
+### Rivers
+| Method | Path                                          | Description                                        |
+|--------|-----------------------------------------------|----------------------------------------------------|
+| GET    | `/api/v1/rivers`                              | All 12 rivers (?drainage_system, ?sort)            |
+| GET    | `/api/v1/rivers/:id`                          | Single river by ID (1–12)                          |
+| GET    | `/api/v1/rivers/county/:county_id`            | Rivers flowing through a county                    |
+| GET    | `/api/v1/rivers/drainage/:system`             | Rivers by drainage system                          |
+| GET    | `/api/v1/rivers/search?q=`                    | Search by name, source, mouth, description, county |
+
 ### Parastatals
 | Method | Path                                          | Description                                        |
 |--------|-----------------------------------------------|----------------------------------------------------|
@@ -196,6 +205,7 @@ Search fields per resource:
 - presidents: name, political_party, description
 - parastatals: name, sector, abbreviation
 - lakes: name, key_feature, description
+- rivers: name, source, mouth, description
 
 ---
 
@@ -442,6 +452,26 @@ Entries with `is_university: true` (36 total) are also documented in `/api/v1/in
 
 Valid `lake_type` values: `Freshwater`, `Saline/Alkaline`, `Crater Lake`.
 
+### River
+```json
+{
+  "id": 1,
+  "name": "Tana River",
+  "length_km": 1000,
+  "source": "Aberdare Ranges and Mount Kenya",
+  "mouth": "Indian Ocean",
+  "county_ids": [19, 18, 16, 15, 4],
+  "counties": ["Nyeri", "Nyandarua", "Machakos", "Kitui", "Tana River"],
+  "drainage_system": "Indian Ocean Drainage",
+  "is_longest": true,
+  "tributary_of": null,
+  "description": "...",
+  "source_url": "https://abiri.home.blog/rivers-in-kenya/"
+}
+```
+
+Valid `drainage_system` values: `Indian Ocean Drainage`, `Lake Victoria Drainage`, `Lake Turkana Drainage`, `Lake Natron Drainage`.
+
 ---
 
 ## Coding Conventions
@@ -468,6 +498,7 @@ Valid `lake_type` values: `Freshwater`, `Saline/Alkaline`, `Crater Lake`.
 - **Presidents**: Wikipedia / Kenyan constitutional records — all 5 Heads of State since the republic was established on 12 December 1964; includes 1 pre-republic entry (Queen Elizabeth II, 1963–64 constitutional monarchy period)
 - **Parastatals**: State Corporations Act, Cap 446 / majira.co.ke — 246 state corporations across 16 sectors (2025)
 - **Lakes**: 33travels.com — 18 named lakes (2026)
+- **Rivers**: abiri.home.blog — 12 major rivers (2024)
 
 ---
 

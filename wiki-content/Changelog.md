@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026 — Rivers Endpoint
+
+- **Rivers endpoint** — 12 major rivers with length, source, mouth, and drainage system
+- Filters: `?drainage_system=`, `?sort=length_desc|length_asc`
+- County lookup (`/county/:county_id`), drainage system route (`/drainage/:system`), and full-text search
+- Global search updated to include rivers
+
 ## 2026 — Lakes Endpoint
 
 - **Lakes endpoint** — 18 named lakes across Kenya (Rift Valley, Nyanza, Coast, Central Highlands)

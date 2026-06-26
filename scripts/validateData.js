@@ -21,6 +21,7 @@ function run() {
   const presidentsArr = presidentsFile.presidents;
   const parastatalsArr = loadJSON('data/parastatals.json');
   const lakesArr = loadJSON('data/lakes.json');
+  const riversArr = loadJSON('data/rivers.json');
 
   let ok = true;
 
@@ -562,6 +563,35 @@ function run() {
     invalidLakeCounty.forEach((l) =>
       console.error(`  id=${l.id} name="${l.name}" county_ids=${JSON.stringify(l.county_ids)}`)
     );
+    ok = false;
+  }
+
+  // 55. rivers.json has exactly 12 entries
+  if (riversArr.length === 12) {
+    logPass('rivers.json contains exactly 12 entries');
+  } else {
+    logFail(`expected 12 rivers, found ${riversArr.length}`);
+    ok = false;
+  }
+
+  // 56. Every river has a non-empty county_ids array
+  const riversNoCounty = riversArr.filter(
+    (r) => !Array.isArray(r.county_ids) || r.county_ids.length === 0
+  );
+  if (riversNoCounty.length === 0) {
+    logPass('All rivers have a non-empty county_ids array');
+  } else {
+    logFail(`${riversNoCounty.length} rivers are missing county_ids`);
+    riversNoCounty.forEach((r) => console.error(`  id=${r.id} name="${r.name}"`));
+    ok = false;
+  }
+
+  // 57. Exactly one river has is_longest === true
+  const longestRivers = riversArr.filter((r) => r.is_longest === true);
+  if (longestRivers.length === 1) {
+    logPass(`Exactly one river has is_longest === true: ${longestRivers[0].name}`);
+  } else {
+    logFail(`expected exactly 1 river with is_longest true, found ${longestRivers.length}`);
     ok = false;
   }
 

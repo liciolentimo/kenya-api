@@ -32,6 +32,7 @@ KenyaAPI supports cross-resource search through a single endpoint. Query all res
 | `postal_codes` | Postal Codes — searches county_name, primary_postal_code |
 | `parastatals` | Parastatals — searches name, sector, abbreviation |
 | `lakes` | Lakes — searches name, key_feature, description |
+| `rivers` | Rivers — searches name, source, mouth, description |
 
 ## Example Requests
 

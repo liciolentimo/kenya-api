@@ -22,6 +22,7 @@
 - [Presidents](Presidents)
 - [Postal Codes](Postal-Codes)
 - [Lakes](Lakes)
+- [Rivers](Rivers)
 - [Parastatals](Parastatals)
 - [Global Search](Global-Search)
 

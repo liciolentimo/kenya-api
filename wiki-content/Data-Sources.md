@@ -19,6 +19,7 @@
 | Exchange rates | open.er-api.com (live mid-market) | Hourly |
 | State corporations | State Corporations Act, Cap 446 / majira.co.ke | 2025 |
 | Lakes | 33travels.com | 2026 |
+| Rivers | abiri.home.blog | 2024 |
 
 ## Notes
 

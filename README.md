@@ -1,187 +1,58 @@
+<!--
+  README LENGTH POLICY:
+  Keep this file under ~150 lines. Detailed endpoint
+  docs, parameter tables, and examples belong on the
+  GitHub Wiki (wiki-content/ folder), not here.
+  When adding a new endpoint, update:
+    1. wiki-content/<Resource>.md (full docs)
+    2. wiki-content/_Sidebar.md (nav link)
+    3. wiki-content/Endpoints-Overview.md (table row)
+    4. README.md resource count table ONLY
+       (one line, not a full section)
+-->
+
 # KenyaAPI
+
+Free, open REST API for Kenya's public data — no API key required.
+
+🔗 **Live API:** https://kenya-api.netlify.app/  
+📖 **Interactive Docs:** https://kenya-api.netlify.app/docs.html  
+📚 **Full Documentation:** [GitHub Wiki](../../wiki)
 
 [![Code of Conduct](https://img.shields.io/badge/code%20of%20conduct-contributor%20covenant-green.svg)](CODE_OF_CONDUCT.md)
 
-A free, open REST API providing structured public data about Kenya — counties, constituencies, public holidays, population statistics, exchange rates, and educational institutions. Built with Node.js and Express.
+---
 
-🔍 **Live site:** https://kenya-api.netlify.app  
-📖 **Docs:** https://kenya-api.netlify.app/docs  
-📚 **Full documentation:** [Interactive Docs](https://kenya-api.netlify.app/docs.html) | [GitHub Wiki](../../wiki)  
-**API base URL:** https://kenya-api.netlify.app/api/v1
+## What is KenyaAPI?
 
-No API key or authentication required.
+KenyaAPI consolidates Kenya's public data into one consistent, developer-friendly REST API — no authentication required.
+
+| Resource | Count |
+|----------|-------|
+| Counties | 47 |
+| Constituencies | 290 |
+| Wards | 1,263 |
+| Lakes | 18 |
+| Rivers | 12 |
+| Parks & Reserves | 35 |
+| Institutions | 700+ |
+| Parastatals | 246 |
+| Ministries | 22 |
+| Presidents | 5 |
+| Exchange Rates | 25 (live) |
+| Postal Codes | 47 counties |
+
+**👉 For the complete endpoint reference, parameters, and example responses for every resource, see the [GitHub Wiki](../../wiki).**
 
 ---
 
-## Features
-
-- 47 counties with headquarters, region, area, and population data
-- 290 constituencies mapped to their counties
-- National public holidays with optional year filtering
-- National and per-county population figures (KNBS 2019 Census)
-- Live KES exchange rates for 25 currencies, fetched from open.er-api.com and cached hourly
-- Educational institutions across the first 10 counties, searchable and filterable
-- Interactive map explorer on the homepage — hover over any county to see live stats
-- Consistent JSON responses with predictable error shapes
-- Deployed as a Netlify serverless function — no server to manage
-
----
-
-## Endpoints
-
-### Counties
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/api/v1/counties` | All 47 counties |
-| GET | `/api/v1/counties/:id` | Single county by ID |
-| GET | `/api/v1/counties/:id/constituencies` | All constituencies in a county |
-
-### Constituencies
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/api/v1/constituencies` | All 290 constituencies |
-| GET | `/api/v1/constituencies/:id` | Single constituency by ID |
-
-### Public Holidays
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/api/v1/holidays` | All public holidays |
-| GET | `/api/v1/holidays?year=2025` | Holidays filtered by year |
-| GET | `/api/v1/holidays/:id` | Single holiday by ID |
-
-### Population
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/api/v1/population` | National population summary |
-| GET | `/api/v1/population/counties` | Population breakdown by county |
-
-### Exchange Rates
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/api/v1/exchange-rates` | Live KES rates for 25 currencies |
-| GET | `/api/v1/exchange-rates/:currency` | Live rate for a specific currency (e.g. `USD`) |
-
-> Exchange rates are fetched live from a free public provider (open.er-api.com) and cached server-side for 1 hour. Rates reflect real-time mid-market pricing rather than static historical data.
-
-### Educational Institutions
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/api/v1/institutions` | All institutions (supports pagination and filters) |
-| GET | `/api/v1/institutions/universities` | All 53 universities (filter by `?category`, `?county_id`) |
-| GET | `/api/v1/institutions/universities?category=Public` | Public universities only (41) |
-| GET | `/api/v1/institutions/universities?category=Private` | Private universities only (12) |
-| GET | `/api/v1/institutions/tvets` | All TVET institutions (filter by `?subtype`, `?county_id`) |
-| GET | `/api/v1/institutions/tvets?subtype=polytechnic` | National Polytechnics only |
-| GET | `/api/v1/institutions?initials=UON` | Lookup institution by initials |
-| GET | `/api/v1/institutions/:id` | Single institution by ID |
-| GET | `/api/v1/institutions/county/:county_id` | Institutions in a specific county |
-| GET | `/api/v1/institutions/type/:type` | Institutions by type |
-| GET | `/api/v1/institutions/search?q=term` | Search by name, county, or address |
-
-> University data covers 53 universities — 41 public universities accredited by CUE and 12 private chartered universities. Private university contact details including phone, email, and address are included where available.
-
-> TVET data covers 613 public institutions including National Polytechnics, Technical Training Institutes, and Vocational Training Centers accredited by TVETA as of 2025.
-
-### Ministries
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/api/v1/ministries` | All 22 ministries and Cabinet Secretaries |
-| GET | `/api/v1/ministries/:id` | Single ministry by ID |
-| GET | `/api/v1/ministries/search?q=` | Search by ministry or CS name |
-
-### Postal Codes
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/api/v1/postal-codes` | All 47 county postal codes with constituency breakdowns |
-| GET | `/api/v1/postal-codes/county/:id` | County postal codes and all constituency codes |
-| GET | `/api/v1/postal-codes/constituency?name=` | Lookup by constituency name |
-| GET | `/api/v1/postal-codes/search?q=` | Search by county name, constituency name, or code number |
-
-### Wards
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/api/v1/wards` | All 1,263 wards (paginated, default 50/page) |
-| GET | `/api/v1/wards/county/:id` | Wards grouped by sub-county |
-| GET | `/api/v1/wards/sub-county?name=` | Wards in a specific sub-county |
-| GET | `/api/v1/wards/sub-counties/:id` | Sub-counties list for a county |
-| GET | `/api/v1/wards/search?q=` | Search wards by name, sub-county, or county |
-| GET | `/api/v1/counties/:id?include=wards` | County with sub-counties and wards attached |
-
-> Ward data covers 45 of 47 counties sourced from the IEBC via an open CC0 dataset. Nairobi, Kericho, and Bomet are absent from the upstream source.
-
-### Parks & Reserves
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/api/v1/parks` | All 35 parks (`?type`, `?county_id`, `?big_cats`, `?marine`, `?most_visited`) |
-| GET | `/api/v1/parks/:id` | Single park by ID |
-| GET | `/api/v1/parks/county/:id` | Parks in a county |
-| GET | `/api/v1/parks/type/:type` | Parks by type |
-| GET | `/api/v1/parks/search?q=` | Search parks by name, description, or region |
-
-> Parks data covers 35 national parks, reserves, marine parks, and sanctuaries managed by Kenya Wildlife Service (KWS). Sourced from KWS and beyondforest.org (2026).
-
-### Lakes
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/api/v1/lakes` | All 18 lakes (`?type`, `?rift_valley`, `?transboundary`, `?sort`) |
-| GET | `/api/v1/lakes/:id` | Single lake by ID |
-| GET | `/api/v1/lakes/county/:id` | Lakes in a county |
-| GET | `/api/v1/lakes/search?q=` | Search lakes by name, feature, or description |
-
-> Lakes data covers 18 named lakes in Kenya, including the Rift Valley soda lakes and freshwater lakes. Sourced from 33travels.com (2026).
-
-### Parastatals & State Corporations
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/api/v1/parastatals` | All 246 state corporations (`?sector`, `?is_university`, `?q`, paginated) |
-| GET | `/api/v1/parastatals/:id` | Single entry by ID (1–246) |
-| GET | `/api/v1/parastatals/sector/:sector` | All parastatals in a sector |
-| GET | `/api/v1/parastatals/sectors` | Sector breakdown with entity counts |
-| GET | `/api/v1/parastatals/search?q=` | Search by name or abbreviation |
-
-> Parastatals data covers 246 state corporations established under the State Corporations Act, Cap 446. Sourced from majira.co.ke (2025). Entries flagged with `is_university: true` are also documented in `/api/v1/institutions/universities`.
-
-### Presidents
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/api/v1/presidents` | All 5 presidents since the republic (1964–present) |
-| GET | `/api/v1/presidents?party=KANU` | Filter by political party |
-| GET | `/api/v1/presidents?include_pre_republic=true` | Include 1963–64 constitutional monarchy period |
-| GET | `/api/v1/presidents/incumbent` | Current sitting president |
-| GET | `/api/v1/presidents/:id` | Single president by ID (1–5) |
-| GET | `/api/v1/presidents/search?q=` | Search by name, party, deputies, or description |
-
-> President data covers all 5 Heads of State since Kenya became a republic on 12 December 1964, plus an optional pre-republic section for the 1963–64 constitutional monarchy period under Queen Elizabeth II. Sourced from Wikipedia and Kenyan constitutional records.
-
-### Search
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/api/v1/search?q=` | Search across all resources |
-| GET | `/api/v1/search?q=&type=` | Search within a specific resource |
-
----
-
-## Global Search
-
-KenyaAPI supports cross-resource search through a single endpoint. Query all six resources simultaneously or narrow by type:
+## Quick Start
 
 ```bash
-# Search everything
-curl https://kenya-api.netlify.app/api/v1/search?q=nairobi
-
-# Search only ministries
-curl "https://kenya-api.netlify.app/api/v1/search?q=health&type=ministries"
-
-# Search exchange rates
-curl "https://kenya-api.netlify.app/api/v1/search?q=USD&type=exchange_rates"
+curl https://kenya-api.netlify.app/api/v1/counties
 ```
 
----
-
-## Response format
-
-All endpoints return a consistent JSON shape:
-
+Response:
 ```json
 {
   "success": true,
@@ -190,122 +61,57 @@ All endpoints return a consistent JSON shape:
 }
 ```
 
-Errors follow this shape:
-
-```json
-{
-  "success": false,
-  "error": "County with ID 99 not found",
-  "statusCode": 404
-}
-```
+No API key. No authentication. Rate limited to 100 requests/minute per IP. See [Rate Limiting](../../wiki/Rate-Limiting) for details.
 
 ---
 
-## Quick start
+## Tech Stack
 
-```bash
-# Fetch all counties
-curl https://kenya-api.netlify.app/api/v1/counties
-
-# Fetch a single county
-curl https://kenya-api.netlify.app/api/v1/counties/1
-
-# Fetch constituencies in Mombasa
-curl https://kenya-api.netlify.app/api/v1/counties/1/constituencies
-
-# Filter Coast region counties, sorted by population
-curl "https://kenya-api.netlify.app/api/v1/counties?region=Coast&sort=population_desc"
-
-# Get the KES/USD exchange rate
-curl https://kenya-api.netlify.app/api/v1/exchange-rates/USD
-
-# Get holidays for 2025
-curl "https://kenya-api.netlify.app/api/v1/holidays?year=2025"
-```
+- Node.js + Express
+- JSON data files (no database)
+- Hosted on Netlify (static frontend + serverless functions)
 
 ---
 
-## Running locally
+## Local Development
 
 ```bash
 git clone https://github.com/liciolentimo/kenya-api.git
 cd kenya-api
 npm install
-npm start
+node server.js
 ```
 
-The server starts on `http://localhost:3000`. All endpoints are available at `http://localhost:3000/api/v1`.
-
-For development with auto-restart:
-
-```bash
-npm run dev
-```
+Server runs on `http://localhost:3000`. See [CLAUDE.md](CLAUDE.md) for project structure and coding conventions.
 
 ---
 
-## Project structure
+## Documentation
 
-```
-kenya-api/
-├── app.js                  # Express app
-├── server.js               # Entry point
-├── netlify.toml            # Netlify build and redirect config
-├── netlify/functions/
-│   └── api.js              # Serverless function wrapper
-├── routes/                 # Route definitions
-├── controllers/            # Business logic
-├── data/                   # JSON data files
-├── middleware/             # Error handler, 404 handler
-├── public/                 # Static frontend (served by Netlify)
-│   ├── index.html
-│   ├── docs.html
-│   └── data/               # Bundled map data for the county explorer
-└── tests/
-```
-
----
-
-## Data sources
-
-| Dataset | Source |
-|---------|--------|
-| Counties & constituencies | IEBC (2022 constituency boundaries) |
-| Population | Kenya National Bureau of Statistics — 2019 Census |
-| Exchange rates | open.er-api.com — live mid-market rates, cached hourly (no API key required) |
-| Institutions | Curated from public records, first 10 counties |
-| Kenya Cabinet | Office of the President (president.go.ke) — 2024 |
-
-> Cabinet data reflects appointments as of 2024 following the broad-based government formation by President William Ruto. Images are sourced from the official presidential website.
-
----
-
-## Tech stack
-
-- **Runtime:** Node.js 18+
-- **Framework:** Express 4
-- **Data:** JSON flat files
-- **Hosting:** Netlify (static frontend + serverless functions)
-- **Testing:** Jest + Supertest
+| Where | What |
+|-------|------|
+| [Interactive Docs](https://kenya-api.netlify.app/docs.html) | Live, runnable code examples in 7 languages |
+| [GitHub Wiki](../../wiki) | Full endpoint reference, parameters, data models |
+| [CLAUDE.md](CLAUDE.md) | Project structure and conventions for contributors |
 
 ---
 
 ## Contributing
 
-Contributions are welcome! Before contributing, please read our [Code of Conduct](CODE_OF_CONDUCT.md).
+Contributions are welcome! Please read the [Code of Conduct](CODE_OF_CONDUCT.md) first.
 
-To contribute:
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feat/your-feature`
-3. Commit your changes: `git commit -m "feat: add your feature"`
-4. Push to the branch: `git push origin feat/your-feature`
-5. Open a Pull Request
-
-Please ensure any data you contribute comes from official or openly licensed sources and is accurately attributed.
+See [Contributing Guide](../../wiki/Contributing) on the wiki for the full workflow and data standards.
 
 ---
 
-## License
+## Data Sources
 
-MIT
+KenyaAPI aggregates verified public data from IEBC, KNBS, Central Bank of Kenya, Office of the President, CUE, TVETA, Kenya Wildlife Service, and other official and openly licensed sources. Full breakdown: [Data Sources](../../wiki/Data-Sources) on the wiki.
+
+---
+
+## Support
+
+Built and maintained by **Licio Lentimo**  
+🌐 [liciolentimo.com](https://liciolentimo.com)  
+☕ [Support this project](https://buymeacoffee.com/liciolentimo)

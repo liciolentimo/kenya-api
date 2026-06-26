@@ -16,6 +16,7 @@ All endpoints are under the base URL: `https://kenya-api.netlify.app/api/v1`
 | Presidents | [Presidents](Presidents) | `/presidents` | 5 |
 | Postal Codes | [Postal Codes](Postal-Codes) | `/postal-codes` | 47 counties |
 | Lakes | [Lakes](Lakes) | `/lakes` | 18 |
+| Rivers | [Rivers](Rivers) | `/rivers` | 12 |
 | Parastatals | [Parastatals](Parastatals) | `/parastatals` | 246 |
 | Global Search | [Global Search](Global-Search) | `/search` | All resources |
 

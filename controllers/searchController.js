@@ -10,6 +10,7 @@ const presidentsFile = require('../data/presidents.json');
 const presidentsData = presidentsFile.presidents;
 const parastatalsData = require('../data/parastatals.json');
 const lakesData = require('../data/lakes.json');
+const riversData = require('../data/rivers.json');
 const { fetchLiveRates } = require('../services/exchangeRateService');
 
 const STATIC_CONFIGS = [
@@ -78,6 +79,12 @@ const STATIC_CONFIGS = [
     data: lakesData,
     fields: ['name', 'key_feature', 'description'],
     endpoint: '/api/v1/lakes',
+  },
+  {
+    name: 'rivers',
+    data: riversData,
+    fields: ['name', 'source', 'mouth', 'description'],
+    endpoint: '/api/v1/rivers',
   },
 ];
 

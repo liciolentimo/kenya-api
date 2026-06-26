@@ -423,6 +423,7 @@
             <li class="group-item"><a class="sidebar-link" href="#presidents">Presidents</a></li>
             <li class="group-item"><a class="sidebar-link" href="#parastatals">Parastatals</a></li>
             <li class="group-item"><a class="sidebar-link" href="#lakes">Lakes</a></li>
+            <li class="group-item"><a class="sidebar-link" href="#rivers">Rivers</a></li>
           </ul>
         </div>
       </div>
@@ -6569,6 +6570,500 @@ public class Main {
   <span class="token-string">"query"</span><span class="token-punct">:</span> <span class="token-string">"flamingo"</span><span class="token-punct">,</span>
   <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">6</span><span class="token-punct">,</span>
   <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span> <span class="token-string">"..."</span> <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre>
+              </div>
+            </div>
+            <button class="try-button" type="button">Try It</button>
+            <div class="try-panel">
+              <div class="try-panel-content"><pre class="code-block"><span class="token-comment">// Click "Try It" to fetch live data from the API</span></pre></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="rivers" class="panel">
+        <h2 class="section-title">Rivers</h2>
+        <p class="section-copy">Kenya's 12 major rivers including the Tana, Ewaso Nyiro, and Mara, with length, source, mouth, and drainage system. Sourced from abiri.home.blog.</p>
+        <div class="endpoint-grid">
+
+          <!-- GET /rivers -->
+          <div class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path" id="rivers">/rivers</p>
+            </div>
+            <p class="endpoint-desc">Returns all 12 rivers. Supports <code>?sort=length_desc</code> or <code>?sort=length_asc</code> and filtering by <code>?drainage_system=</code> (Indian Ocean Drainage, Lake Victoria Drainage, Lake Turkana Drainage, Lake Natron Drainage).</p>
+            <div class="params-panel table-wrapper" style="margin-bottom: 18px;">
+              <table class="params-table">
+                <thead><tr><th>Name</th><th>Type</th><th>In</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr><td>sort</td><td>string</td><td>query</td><td>no</td><td>Sort by length: <code>length_desc</code> (longest first) or <code>length_asc</code></td></tr>
+                  <tr><td>drainage_system</td><td>string</td><td>query</td><td>no</td><td>Filter by drainage system, e.g. <code>Indian Ocean Drainage</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="code-panel tabbed" style="margin-bottom: 18px;">
+              <div class="code-tabs" role="tablist">
+                <button class="code-tab active" data-lang="curl" role="tab">cURL</button>
+                <button class="code-tab" data-lang="js" role="tab">JavaScript</button>
+                <button class="code-tab" data-lang="python" role="tab">Python</button>
+                <button class="code-tab" data-lang="php" role="tab">PHP</button>
+                <button class="code-tab" data-lang="go" role="tab">Go</button>
+                <button class="code-tab" data-lang="ruby" role="tab">Ruby</button>
+                <button class="code-tab" data-lang="java" role="tab">Java</button>
+              </div>
+              <div class="code-block-wrapper">
+                <button class="copy-btn" title="Copy to clipboard">Copy</button>
+                <pre class="code-block lang-curl active"><code>curl "https://kenya-api.netlify.app/api/v1/rivers"
+
+# Longest first
+curl "https://kenya-api.netlify.app/api/v1/rivers?sort=length_desc"
+
+# Lake Victoria drainage rivers
+curl "https://kenya-api.netlify.app/api/v1/rivers?drainage_system=Lake%20Victoria%20Drainage"</code></pre>
+                <pre class="code-block lang-js"><code>const response = await fetch("https://kenya-api.netlify.app/api/v1/rivers");
+const data = await response.json();
+console.log(data);</code></pre>
+                <pre class="code-block lang-python"><code>import requests
+
+response = requests.get("https://kenya-api.netlify.app/api/v1/rivers")
+print(response.json())</code></pre>
+                <pre class="code-block lang-php"><code>&lt;?php
+$response = file_get_contents("https://kenya-api.netlify.app/api/v1/rivers");
+print_r(json_decode($response, true));
+?&gt;</code></pre>
+                <pre class="code-block lang-go"><code>package main
+
+import (
+  "fmt"
+  "io"
+  "net/http"
+)
+
+func main() {
+  resp, _ := http.Get("https://kenya-api.netlify.app/api/v1/rivers")
+  defer resp.Body.Close()
+  body, _ := io.ReadAll(resp.Body)
+  fmt.Println(string(body))
+}</code></pre>
+                <pre class="code-block lang-ruby"><code>require "net/http"
+require "json"
+
+url = URI("https://kenya-api.netlify.app/api/v1/rivers")
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+response = http.request(Net::HTTP::Get.new(url))
+puts JSON.parse(response.body)</code></pre>
+                <pre class="code-block lang-java"><code>import java.net.URI;
+import java.net.http.*;
+
+public class Main {
+  public static void main(String[] args) throws Exception {
+    HttpClient client = HttpClient.newHttpClient();
+    HttpRequest request = HttpRequest.newBuilder()
+      .uri(URI.create("https://kenya-api.netlify.app/api/v1/rivers"))
+      .GET().build();
+    HttpResponse&lt;String&gt; response = client.send(
+      request, HttpResponse.BodyHandlers.ofString()
+    );
+    System.out.println(response.body());
+  }
+}</code></pre>
+              </div>
+            </div>
+            <p class="response-label">Example response</p>
+            <div class="code-panel">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">12</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span> <span class="token-string">"..."</span> <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre>
+              </div>
+            </div>
+            <button class="try-button" type="button">Try It</button>
+            <div class="try-panel">
+              <div class="try-panel-content"><pre class="code-block"><span class="token-comment">// Click "Try It" to fetch live data from the API</span></pre></div>
+            </div>
+          </div>
+
+          <!-- GET /rivers/:id -->
+          <div class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path" id="rivers-id">/rivers/:id</p>
+            </div>
+            <p class="endpoint-desc">Returns a single river by numeric ID (1–12). Example: <code>/rivers/1</code> returns the Tana River.</p>
+            <div class="code-panel tabbed" style="margin-bottom: 18px;">
+              <div class="code-tabs" role="tablist">
+                <button class="code-tab active" data-lang="curl" role="tab">cURL</button>
+                <button class="code-tab" data-lang="js" role="tab">JavaScript</button>
+                <button class="code-tab" data-lang="python" role="tab">Python</button>
+                <button class="code-tab" data-lang="php" role="tab">PHP</button>
+                <button class="code-tab" data-lang="go" role="tab">Go</button>
+                <button class="code-tab" data-lang="ruby" role="tab">Ruby</button>
+                <button class="code-tab" data-lang="java" role="tab">Java</button>
+              </div>
+              <div class="code-block-wrapper">
+                <button class="copy-btn" title="Copy to clipboard">Copy</button>
+                <pre class="code-block lang-curl active"><code>curl "https://kenya-api.netlify.app/api/v1/rivers/1"</code></pre>
+                <pre class="code-block lang-js"><code>const response = await fetch("https://kenya-api.netlify.app/api/v1/rivers/1");
+const data = await response.json();
+console.log(data);</code></pre>
+                <pre class="code-block lang-python"><code>import requests
+
+response = requests.get("https://kenya-api.netlify.app/api/v1/rivers/1")
+print(response.json())</code></pre>
+                <pre class="code-block lang-php"><code>&lt;?php
+$response = file_get_contents("https://kenya-api.netlify.app/api/v1/rivers/1");
+print_r(json_decode($response, true));
+?&gt;</code></pre>
+                <pre class="code-block lang-go"><code>package main
+
+import (
+  "fmt"
+  "io"
+  "net/http"
+)
+
+func main() {
+  resp, _ := http.Get("https://kenya-api.netlify.app/api/v1/rivers/1")
+  defer resp.Body.Close()
+  body, _ := io.ReadAll(resp.Body)
+  fmt.Println(string(body))
+}</code></pre>
+                <pre class="code-block lang-ruby"><code>require "net/http"
+require "json"
+
+url = URI("https://kenya-api.netlify.app/api/v1/rivers/1")
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+response = http.request(Net::HTTP::Get.new(url))
+puts JSON.parse(response.body)</code></pre>
+                <pre class="code-block lang-java"><code>import java.net.URI;
+import java.net.http.*;
+
+public class Main {
+  public static void main(String[] args) throws Exception {
+    HttpClient client = HttpClient.newHttpClient();
+    HttpRequest request = HttpRequest.newBuilder()
+      .uri(URI.create("https://kenya-api.netlify.app/api/v1/rivers/1"))
+      .GET().build();
+    HttpResponse&lt;String&gt; response = client.send(
+      request, HttpResponse.BodyHandlers.ofString()
+    );
+    System.out.println(response.body());
+  }
+}</code></pre>
+              </div>
+            </div>
+            <p class="response-label">Example response</p>
+            <div class="code-panel">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">{</span>
+    <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span>
+    <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Tana River"</span><span class="token-punct">,</span>
+    <span class="token-string">"length_km"</span><span class="token-punct">:</span> <span class="token-number">1000</span><span class="token-punct">,</span>
+    <span class="token-string">"source"</span><span class="token-punct">:</span> <span class="token-string">"Aberdare Ranges and Mount Kenya"</span><span class="token-punct">,</span>
+    <span class="token-string">"mouth"</span><span class="token-punct">:</span> <span class="token-string">"Indian Ocean"</span><span class="token-punct">,</span>
+    <span class="token-string">"drainage_system"</span><span class="token-punct">:</span> <span class="token-string">"Indian Ocean Drainage"</span><span class="token-punct">,</span>
+    <span class="token-string">"is_longest"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+    <span class="token-string">"counties"</span><span class="token-punct">:</span> <span class="token-brace">[</span><span class="token-string">"Nyeri"</span><span class="token-punct">,</span> <span class="token-string">"Nyandarua"</span><span class="token-punct">,</span> <span class="token-string">"Machakos"</span><span class="token-punct">,</span> <span class="token-string">"Kitui"</span><span class="token-punct">,</span> <span class="token-string">"Tana River"</span><span class="token-brace">]</span>
+  <span class="token-brace">}</span>
+<span class="token-brace">}</span></pre>
+              </div>
+            </div>
+            <button class="try-button" type="button">Try It</button>
+            <div class="try-panel">
+              <div class="try-panel-content"><pre class="code-block"><span class="token-comment">// Click "Try It" to fetch live data from the API</span></pre></div>
+            </div>
+          </div>
+
+          <!-- GET /rivers/county/:county_id -->
+          <div class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path" id="rivers-county">/rivers/county/:county_id</p>
+            </div>
+            <p class="endpoint-desc">Returns all rivers flowing through the given county. Example: <code>/rivers/county/47</code> returns rivers in Nairobi (county_id 47).</p>
+            <div class="code-panel tabbed" style="margin-bottom: 18px;">
+              <div class="code-tabs" role="tablist">
+                <button class="code-tab active" data-lang="curl" role="tab">cURL</button>
+                <button class="code-tab" data-lang="js" role="tab">JavaScript</button>
+                <button class="code-tab" data-lang="python" role="tab">Python</button>
+                <button class="code-tab" data-lang="php" role="tab">PHP</button>
+                <button class="code-tab" data-lang="go" role="tab">Go</button>
+                <button class="code-tab" data-lang="ruby" role="tab">Ruby</button>
+                <button class="code-tab" data-lang="java" role="tab">Java</button>
+              </div>
+              <div class="code-block-wrapper">
+                <button class="copy-btn" title="Copy to clipboard">Copy</button>
+                <pre class="code-block lang-curl active"><code>curl "https://kenya-api.netlify.app/api/v1/rivers/county/47"</code></pre>
+                <pre class="code-block lang-js"><code>const response = await fetch("https://kenya-api.netlify.app/api/v1/rivers/county/47");
+const data = await response.json();
+console.log(data);</code></pre>
+                <pre class="code-block lang-python"><code>import requests
+
+response = requests.get("https://kenya-api.netlify.app/api/v1/rivers/county/47")
+print(response.json())</code></pre>
+                <pre class="code-block lang-php"><code>&lt;?php
+$response = file_get_contents("https://kenya-api.netlify.app/api/v1/rivers/county/47");
+print_r(json_decode($response, true));
+?&gt;</code></pre>
+                <pre class="code-block lang-go"><code>package main
+
+import (
+  "fmt"
+  "io"
+  "net/http"
+)
+
+func main() {
+  resp, _ := http.Get("https://kenya-api.netlify.app/api/v1/rivers/county/47")
+  defer resp.Body.Close()
+  body, _ := io.ReadAll(resp.Body)
+  fmt.Println(string(body))
+}</code></pre>
+                <pre class="code-block lang-ruby"><code>require "net/http"
+require "json"
+
+url = URI("https://kenya-api.netlify.app/api/v1/rivers/county/47")
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+response = http.request(Net::HTTP::Get.new(url))
+puts JSON.parse(response.body)</code></pre>
+                <pre class="code-block lang-java"><code>import java.net.URI;
+import java.net.http.*;
+
+public class Main {
+  public static void main(String[] args) throws Exception {
+    HttpClient client = HttpClient.newHttpClient();
+    HttpRequest request = HttpRequest.newBuilder()
+      .uri(URI.create("https://kenya-api.netlify.app/api/v1/rivers/county/47"))
+      .GET().build();
+    HttpResponse&lt;String&gt; response = client.send(
+      request, HttpResponse.BodyHandlers.ofString()
+    );
+    System.out.println(response.body());
+  }
+}</code></pre>
+              </div>
+            </div>
+            <p class="response-label">Example response</p>
+            <div class="code-panel">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"county_id"</span><span class="token-punct">:</span> <span class="token-number">47</span><span class="token-punct">,</span>
+  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span>
+    <span class="token-brace">{</span>
+      <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">4</span><span class="token-punct">,</span>
+      <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Athi-Galana-Sabaki"</span><span class="token-punct">,</span>
+      <span class="token-string">"length_km"</span><span class="token-punct">:</span> <span class="token-number">390</span><span class="token-punct">,</span>
+      <span class="token-string">"drainage_system"</span><span class="token-punct">:</span> <span class="token-string">"Indian Ocean Drainage"</span>
+    <span class="token-brace">}</span>
+  <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre>
+              </div>
+            </div>
+            <button class="try-button" type="button">Try It</button>
+            <div class="try-panel">
+              <div class="try-panel-content"><pre class="code-block"><span class="token-comment">// Click "Try It" to fetch live data from the API</span></pre></div>
+            </div>
+          </div>
+
+          <!-- GET /rivers/drainage/:system -->
+          <div class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path" id="rivers-drainage">/rivers/drainage/:system</p>
+            </div>
+            <p class="endpoint-desc">Returns all rivers in a specific drainage system. Valid values: <code>Indian Ocean Drainage</code>, <code>Lake Victoria Drainage</code>, <code>Lake Turkana Drainage</code>, <code>Lake Natron Drainage</code>.</p>
+            <div class="code-panel tabbed" style="margin-bottom: 18px;">
+              <div class="code-tabs" role="tablist">
+                <button class="code-tab active" data-lang="curl" role="tab">cURL</button>
+                <button class="code-tab" data-lang="js" role="tab">JavaScript</button>
+                <button class="code-tab" data-lang="python" role="tab">Python</button>
+                <button class="code-tab" data-lang="php" role="tab">PHP</button>
+                <button class="code-tab" data-lang="go" role="tab">Go</button>
+                <button class="code-tab" data-lang="ruby" role="tab">Ruby</button>
+                <button class="code-tab" data-lang="java" role="tab">Java</button>
+              </div>
+              <div class="code-block-wrapper">
+                <button class="copy-btn" title="Copy to clipboard">Copy</button>
+                <pre class="code-block lang-curl active"><code>curl "https://kenya-api.netlify.app/api/v1/rivers/drainage/Lake%20Victoria%20Drainage"</code></pre>
+                <pre class="code-block lang-js"><code>const system = encodeURIComponent("Lake Victoria Drainage");
+const response = await fetch(`https://kenya-api.netlify.app/api/v1/rivers/drainage/${system}`);
+const data = await response.json();
+console.log(data);</code></pre>
+                <pre class="code-block lang-python"><code>import requests
+from urllib.parse import quote
+
+system = quote("Lake Victoria Drainage")
+response = requests.get(f"https://kenya-api.netlify.app/api/v1/rivers/drainage/{system}")
+print(response.json())</code></pre>
+                <pre class="code-block lang-php"><code>&lt;?php
+$system = urlencode("Lake Victoria Drainage");
+$response = file_get_contents("https://kenya-api.netlify.app/api/v1/rivers/drainage/{$system}");
+print_r(json_decode($response, true));
+?&gt;</code></pre>
+                <pre class="code-block lang-go"><code>package main
+
+import (
+  "fmt"
+  "io"
+  "net/http"
+  "net/url"
+)
+
+func main() {
+  system := url.PathEscape("Lake Victoria Drainage")
+  resp, _ := http.Get("https://kenya-api.netlify.app/api/v1/rivers/drainage/" + system)
+  defer resp.Body.Close()
+  body, _ := io.ReadAll(resp.Body)
+  fmt.Println(string(body))
+}</code></pre>
+                <pre class="code-block lang-ruby"><code>require "net/http"
+require "json"
+require "uri"
+
+system = URI.encode_uri_component("Lake Victoria Drainage")
+url = URI("https://kenya-api.netlify.app/api/v1/rivers/drainage/#{system}")
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+response = http.request(Net::HTTP::Get.new(url))
+puts JSON.parse(response.body)</code></pre>
+                <pre class="code-block lang-java"><code>import java.net.URI;
+import java.net.URLEncoder;
+import java.net.http.*;
+import java.nio.charset.StandardCharsets;
+
+public class Main {
+  public static void main(String[] args) throws Exception {
+    String system = URLEncoder.encode("Lake Victoria Drainage", StandardCharsets.UTF_8);
+    HttpClient client = HttpClient.newHttpClient();
+    HttpRequest request = HttpRequest.newBuilder()
+      .uri(URI.create("https://kenya-api.netlify.app/api/v1/rivers/drainage/" + system))
+      .GET().build();
+    HttpResponse&lt;String&gt; response = client.send(
+      request, HttpResponse.BodyHandlers.ofString()
+    );
+    System.out.println(response.body());
+  }
+}</code></pre>
+              </div>
+            </div>
+            <p class="response-label">Example response</p>
+            <div class="code-panel">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"drainage_system"</span><span class="token-punct">:</span> <span class="token-string">"Lake Victoria Drainage"</span><span class="token-punct">,</span>
+  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">5</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span> <span class="token-string">"..."</span> <span class="token-brace">]</span>
+<span class="token-brace">}</span></pre>
+              </div>
+            </div>
+            <button class="try-button" type="button">Try It</button>
+            <div class="try-panel">
+              <div class="try-panel-content"><pre class="code-block"><span class="token-comment">// Click "Try It" to fetch live data from the API</span></pre></div>
+            </div>
+          </div>
+
+          <!-- GET /rivers/search?q= -->
+          <div class="endpoint-card">
+            <div class="endpoint-head">
+              <span class="method-badge">GET</span>
+              <p class="endpoint-path" id="rivers-search">/rivers/search?q=</p>
+            </div>
+            <p class="endpoint-desc">Full-text search across river name, source, mouth, description, and counties. Minimum 2 characters. Example: <code>?q=tana</code>.</p>
+            <div class="code-panel tabbed" style="margin-bottom: 18px;">
+              <div class="code-tabs" role="tablist">
+                <button class="code-tab active" data-lang="curl" role="tab">cURL</button>
+                <button class="code-tab" data-lang="js" role="tab">JavaScript</button>
+                <button class="code-tab" data-lang="python" role="tab">Python</button>
+                <button class="code-tab" data-lang="php" role="tab">PHP</button>
+                <button class="code-tab" data-lang="go" role="tab">Go</button>
+                <button class="code-tab" data-lang="ruby" role="tab">Ruby</button>
+                <button class="code-tab" data-lang="java" role="tab">Java</button>
+              </div>
+              <div class="code-block-wrapper">
+                <button class="copy-btn" title="Copy to clipboard">Copy</button>
+                <pre class="code-block lang-curl active"><code>curl "https://kenya-api.netlify.app/api/v1/rivers/search?q=tana"</code></pre>
+                <pre class="code-block lang-js"><code>const response = await fetch("https://kenya-api.netlify.app/api/v1/rivers/search?q=tana");
+const data = await response.json();
+console.log(data);</code></pre>
+                <pre class="code-block lang-python"><code>import requests
+
+response = requests.get("https://kenya-api.netlify.app/api/v1/rivers/search", params={"q": "tana"})
+print(response.json())</code></pre>
+                <pre class="code-block lang-php"><code>&lt;?php
+$response = file_get_contents("https://kenya-api.netlify.app/api/v1/rivers/search?q=tana");
+print_r(json_decode($response, true));
+?&gt;</code></pre>
+                <pre class="code-block lang-go"><code>package main
+
+import (
+  "fmt"
+  "io"
+  "net/http"
+)
+
+func main() {
+  resp, _ := http.Get("https://kenya-api.netlify.app/api/v1/rivers/search?q=tana")
+  defer resp.Body.Close()
+  body, _ := io.ReadAll(resp.Body)
+  fmt.Println(string(body))
+}</code></pre>
+                <pre class="code-block lang-ruby"><code>require "net/http"
+require "json"
+
+url = URI("https://kenya-api.netlify.app/api/v1/rivers/search?q=tana")
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+response = http.request(Net::HTTP::Get.new(url))
+puts JSON.parse(response.body)</code></pre>
+                <pre class="code-block lang-java"><code>import java.net.URI;
+import java.net.http.*;
+
+public class Main {
+  public static void main(String[] args) throws Exception {
+    HttpClient client = HttpClient.newHttpClient();
+    HttpRequest request = HttpRequest.newBuilder()
+      .uri(URI.create("https://kenya-api.netlify.app/api/v1/rivers/search?q=tana"))
+      .GET().build();
+    HttpResponse&lt;String&gt; response = client.send(
+      request, HttpResponse.BodyHandlers.ofString()
+    );
+    System.out.println(response.body());
+  }
+}</code></pre>
+              </div>
+            </div>
+            <p class="response-label">Example response</p>
+            <div class="code-panel">
+              <div class="code-wrapper">
+                <button class="copy-button" type="button">Copy</button>
+                <pre class="code-block"><span class="token-brace">{</span>
+  <span class="token-string">"success"</span><span class="token-punct">:</span> <span class="token-boolean">true</span><span class="token-punct">,</span>
+  <span class="token-string">"query"</span><span class="token-punct">:</span> <span class="token-string">"tana"</span><span class="token-punct">,</span>
+  <span class="token-string">"count"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span>
+  <span class="token-string">"data"</span><span class="token-punct">:</span> <span class="token-brace">[</span>
+    <span class="token-brace">{</span>
+      <span class="token-string">"id"</span><span class="token-punct">:</span> <span class="token-number">1</span><span class="token-punct">,</span>
+      <span class="token-string">"name"</span><span class="token-punct">:</span> <span class="token-string">"Tana River"</span><span class="token-punct">,</span>
+      <span class="token-string">"length_km"</span><span class="token-punct">:</span> <span class="token-number">1000</span><span class="token-punct">,</span>
+      <span class="token-string">"is_longest"</span><span class="token-punct">:</span> <span class="token-boolean">true</span>
+    <span class="token-brace">}</span>
+  <span class="token-brace">]</span>
 <span class="token-brace">}</span></pre>
               </div>
             </div>
