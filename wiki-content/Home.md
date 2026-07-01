@@ -41,6 +41,7 @@ No API key or sign-up required.
 | [Postal Codes](Postal-Codes) | `/api/v1/postal-codes` | County and constituency postal codes |
 | [Lakes](Lakes) | `/api/v1/lakes` | 18 named lakes — Rift Valley, Nyanza, Coast, and Highlands |
 | [Rivers](Rivers) | `/api/v1/rivers` | 12 major rivers with length, source, mouth, and drainage system |
+| [Health Facilities](Health-Facilities) | `/api/v1/health-facilities` | 17,521+ KMHFR-registered facilities — live proxy, 24-hour cache |
 | [Parastatals](Parastatals) | `/api/v1/parastatals` | 246 state corporations across 16 sectors |
 | [Global Search](Global-Search) | `/api/v1/search` | Cross-resource search across all datasets |
 

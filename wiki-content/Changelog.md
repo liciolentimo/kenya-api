@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026 — Health Facilities Endpoint
+
+- **Health Facilities endpoint** — live proxy to KMHFR (17,521+ registered facilities)
+- Filters: `?county=`, `?facility_type=`, `?keph_level=`, `?owner_category=`, `?open_24hrs=`, `?has_beds=`
+- County lookup (`/county/:county_id`), search, and static reference routes (`/types`, `/keph-levels`)
+- 24-hour server-side cache per query; requires `KMHFR_API_TOKEN` env var
+
 ## 2026 — Rivers Endpoint
 
 - **Rivers endpoint** — 12 major rivers with length, source, mouth, and drainage system

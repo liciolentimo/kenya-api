@@ -23,6 +23,7 @@
 - [Postal Codes](Postal-Codes)
 - [Lakes](Lakes)
 - [Rivers](Rivers)
+- [Health Facilities](Health-Facilities)
 - [Parastatals](Parastatals)
 - [Global Search](Global-Search)
 

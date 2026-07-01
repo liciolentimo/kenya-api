@@ -34,6 +34,7 @@ KenyaAPI consolidates Kenya's public data into one consistent, developer-friendl
 | Wards | 1,263 |
 | Lakes | 18 |
 | Rivers | 12 |
+| Health Facilities | 17,521+ (live from KMHFR) |
 | Parks & Reserves | 35 |
 | Institutions | 700+ |
 | Parastatals | 246 |

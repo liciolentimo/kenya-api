@@ -8,7 +8,7 @@ function loadJSON(p) {
 function logPass(msg) { console.log('PASS:', msg); }
 function logFail(msg) { console.error('FAIL:', msg); }
 
-function run() {
+async function run() {
   const constituencies = loadJSON('data/constituencies.json');
   const counties = loadJSON('data/counties.json');
   const population = loadJSON('data/population.json');
@@ -597,10 +597,30 @@ function run() {
 
   if (ok) {
     console.log('\nALL CHECKS PASSED');
-    process.exit(0);
   } else {
     console.error('\nVALIDATION FAILED');
-    process.exit(2);
+  }
+
+  // KMHFR connectivity check (async, non-blocking for ok flag)
+  await checkKMHFR();
+
+  process.exit(ok ? 0 : 2);
+}
+
+async function checkKMHFR() {
+  try {
+    const res = await fetch(
+      'https://api.kmhfr.health.go.ke/api/v1/facilities/?format=json&page_size=1',
+      { signal: AbortSignal.timeout(8000) }
+    );
+    if (res.ok) {
+      const data = await res.json();
+      console.log(`\nKMHFR reachable — ${data.count} facilities registered`);
+    } else {
+      console.log(`\nKMHFR returned ${res.status}`);
+    }
+  } catch (e) {
+    console.log(`\nKMHFR unreachable: ${e.message}`);
   }
 }
 

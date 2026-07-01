@@ -160,6 +160,18 @@ https://kenya-api.netlify.app/api/v1
 | GET    | `/api/v1/lakes/county/:county_id`             | Lakes in a county                                  |
 | GET    | `/api/v1/lakes/search?q=`                     | Search by name, key feature, or description        |
 
+### Health Facilities
+| Method | Path                                                     | Description                                                           |
+|--------|----------------------------------------------------------|-----------------------------------------------------------------------|
+| GET    | `/api/v1/health-facilities`                              | Paginated list from KMHFR (?county, ?facility_type, ?keph_level, ?owner_category, ?open_24hrs, ?has_beds) |
+| GET    | `/api/v1/health-facilities/:code`                        | Single facility by KMHFR code                                         |
+| GET    | `/api/v1/health-facilities/county/:county_id`            | County facilities                                                     |
+| GET    | `/api/v1/health-facilities/search?q=`                    | Name search                                                           |
+| GET    | `/api/v1/health-facilities/types`                        | Facility type reference (static)                                      |
+| GET    | `/api/v1/health-facilities/keph-levels`                  | KEPH level reference (static)                                         |
+
+**Architecture note:** health-facilities uses LIVE PROXY pattern (not static JSON) — see `services/healthFacilitiesService.js`. KMHFR API is at `api.kmhfr.health.go.ke`. 24-hour in-memory cache per query. 17,521 facilities makes static JSON impractical. Requires `KMHFR_API_TOKEN` env var; proxy endpoints return 503 without it. Static routes (`/types`, `/keph-levels`) work without a token.
+
 ### Rivers
 | Method | Path                                          | Description                                        |
 |--------|-----------------------------------------------|----------------------------------------------------|
@@ -499,6 +511,7 @@ Valid `drainage_system` values: `Indian Ocean Drainage`, `Lake Victoria Drainage
 - **Parastatals**: State Corporations Act, Cap 446 / majira.co.ke — 246 state corporations across 16 sectors (2025)
 - **Lakes**: 33travels.com — 18 named lakes (2026)
 - **Rivers**: abiri.home.blog — 12 major rivers (2024)
+- **Health Facilities**: KMHFR — Ministry of Health Kenya, 17,521+ registered facilities, live proxy (not static data). Requires `KMHFR_API_TOKEN` env var.
 
 ---
 
